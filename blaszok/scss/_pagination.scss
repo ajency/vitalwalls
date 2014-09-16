@@ -1,0 +1,99 @@
+/* ========================================================================== *
+ * 5. Pagination
+ * ========================================================================== */
+
+.single .mpcth-post {
+	.mpcth-post-pagination {
+	 	font-size: 1.167em;
+	 	margin-top: -.5em;
+
+	 	a {
+	 		display: inline-block;
+	 		padding: .5em;
+	 		background: #ffffff;
+	 		border-radius: 100%;
+	 		border: 1px solid #eeeeee;
+	 		width: 1em;
+	 		height: 1em;
+			text-align: center;
+			line-height: 1em;
+
+			&[rel=next] {
+				width: 1.25em;
+				height: 1.25em;
+				position: relative;
+				z-index: 2;
+				margin-left: -.7em; // non-RTL
+				line-height: 1.4em;
+
+				i {
+					@include margin-left(.1em); // margin-left: .1em;
+				}
+			}
+			&:hover {
+				background: #f3f3f3;
+			}
+	 	}
+ 	}
+ }
+
+ .page-template-template-portfolio-php {
+	 #mpcth_pagination {
+ 		margin-top: -1em;
+ 	}
+ }
+
+ #mpcth_pagination {
+ 	text-align: center;
+ 	clear: both;
+ 	font-size: 1.167em;
+ 	margin-bottom: 1.714em;
+
+ 	> * {
+ 		display: inline-block;
+ 		padding: .5em;
+ 		margin: .4em;
+ 	}
+ }
+
+ /* Load More */
+#mpcth_load_more_wrapper,
+#mpcth_load_more {
+	display: none;
+}
+#mpcth_content_wrap.mpcth-load-more {
+	#mpcth_load_more {
+		position: relative;
+		display: inline-block;
+		padding: 1em;
+		text-transform: uppercase;
+
+		@include opacity(1);
+
+		.mpcth-load-more-icon {
+			position: absolute;
+			@include right(-23px); // right: -23px;
+			top: 1.75em;
+			width: 23px;
+			height: 6px;
+			margin-top: -4px;
+
+			background: url(images/load-more.gif) no-repeat center center;
+			background-size: 100% 100%;
+
+			@extend .transition;
+			@include opacity(0);
+		}
+
+		&.active {
+			@include opacity(.25);
+
+			.mpcth-load-more-icon {
+				@include opacity(1);
+			}
+		}
+	}
+	#mpcth_pagination .page-numbers {
+		display: none;
+	}
+}

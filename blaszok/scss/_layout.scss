@@ -1,0 +1,89 @@
+/* ========================================================================== *
+ * 2. Layout
+ * ========================================================================== */
+
+#mpcth_page_wrap {
+	min-height: 100%;
+	background: #ffffff;
+
+	a {
+		outline: none;
+		text-decoration: none;
+
+		@extend .transition;
+
+		&:hover {
+			color: inherit;
+		}
+	}
+
+	&.mpcth-boxed {
+		margin-left: auto;
+		margin-right: auto;
+		width: 960px;
+		box-shadow: $hover_shadow;
+
+		&.mpcth-floating-boxed {
+			margin-top: 2em;
+			margin-bottom: 2em;
+		}
+
+		@media #{$screen-large} {
+			.mpcth-responsive & {
+				width: 1200px;
+			}
+		}
+		@media #{$screen-normal} {
+			.mpcth-responsive & {
+				width: 768px;
+			}
+		}
+		@media #{$screen-medium} {
+			.mpcth-responsive & {
+				width: 100%;
+
+				&.mpcth-floating-boxed {
+					margin-top: 0;
+					margin-bottom: 0;
+				}
+			}
+		}
+	}
+}
+
+#mpcth_content_wrap {
+	padding: 0 20px;
+}
+
+#mpcth_main_container {
+	&:after {
+		@extend .after-clear;
+	}
+}
+
+#mpcth_main_container,
+#mpcth_footer_container .mpcth-footer-wrap,
+#mpcth_page_header_container .mpcth-header-wrap,
+.mpcth-boxed.mpcth-transparent-header #mpcth_page_header_wrap > div {
+	width: 960px;
+	margin: 0 auto;
+
+	@media #{$screen-large} {
+		.mpcth-responsive & {
+			width: 1200px;
+		}
+	}
+	@media #{$screen-normal} {
+		.mpcth-responsive & {
+			width: 768px;
+		}
+	}
+	@media #{$screen-medium} {
+		.mpcth-responsive & {
+			width: 100%;
+		}
+	}
+}
+.mpcth-full-width-header #mpcth_page_header_container .mpcth-header-wrap {
+	width: 100%;
+}

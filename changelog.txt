@@ -1,0 +1,338 @@
+Blaszok - Ultimate Multi-Purpose Resposive Theme
+----------------------------------------------------
+
+11/09/2014 - Version 2.0.3
+- UPDATED: Visual Composer 4.3.4
+- IMPROVED: WooCommerce 2.2 support
+- FIXED: Small CSS improvements
+
+----------------------------------------------------
+
+04/09/2014 - Version 2.0.2
+- NEW FEATURE: Disable Demo Install page
+- UPDATED: Revolution Slider 4.6.0
+- IMPROVED: WordPress 4.0 Compatibility
+- FIXED: Visual Composer carousel
+- FIXED: Large cart popup
+- FIXED: Small CSS improvements
+
+----------------------------------------------------
+
+22/08/2014 - Version 2.0.1
+- UPDATED: Visual Composer 4.3.3
+- FIXED: Text Block issue on some pages
+
+----------------------------------------------------
+
+18/08/2014 - Version 2.0
+- NEW FEATURE: Grid creator and shortcode
+- NEW FEATURE: Masonry Blog with Load More
+- NEW FEATURE: Portfolio Load More
+- NEW FEATURE: MailChimp support
+- NEW FEATURE: Shop styles for products slider
+- UPDATED: Visual Composer 4.3.2
+- UPDATED: LayerSlider 5.2.0
+- UPDATED: Documentation
+- UPDATED: Localization files
+- IMPROVED: Demo Installer content
+- FIXED: Small CSS improvements
+- FIXED: Main color issues with skins
+
+----------------------------------------------------
+
+04/08/2014 - Version 1.8.1
+- UPDATED: Visual Composer 4.3.1
+- FIXED: Columns display
+- FIXED: Sidebar display
+- FIXED: Transparent header colors
+- FIXED: Some issues with Visual Composer 4.3.1
+
+----------------------------------------------------
+
+31/07/2014 - Version 1.8.0
+- NEW FEATURE: RTL Support
+- NEW FEATURE: Configurable post thumbnail
+- NEW FEATURE: Brands slider external links
+- UPDATED: Visual Composer 4.3
+- UPDATED: LayerSlider 5.1.2
+- UPDATED: MPC plugins
+- UPDATED: Documentation
+- UPDATED: Localization files
+- IMPROVED: Demo Installer content
+- FIXED: Menu active/hover color
+- FIXED: Large cart popup
+
+----------------------------------------------------
+
+22/07/2014 - Version 1.7.0
+- NEW FEATURE: Demo Installer
+- UPDATED: Revolution Slider 4.5.95
+- UPDATED: Documentation
+- FIXED: Small CSS improvements to the shop
+
+----------------------------------------------------
+
+03/07/2014 - Version 1.6.1
+- IMPROVED: Performance
+- IMPROVED: Mobile experience and display
+- IMPROVED: Child theme styles
+- IMPROVED: Compatibility with W3 Total Cache and Better Wordpress Minify
+- UPDATED: Revolution Slider 4.5.6
+- UPDATED: WooCommerce Quickview 3.0.6
+- UPDATED: Documentation (with performance tips - up to 40% improvement)
+
+----------------------------------------------------
+
+18/06/2014 - Version 1.6.0
+- NEW FEATURE: ONE PAGE layout
+- NEW FEATURE: Scroll to #ID
+- NEW FEATURE: Sliders light arrows
+- NEW FEATURE: Simple icon columns
+- NEW FEATURE: Sticky header logo
+- NEW FEATURE: Separators width and alignment
+- NEW FEATURE: Icon shortcode
+- NEW FEATURE: Counter shortcode
+- UPDATED: Visual Composer 4.2.3
+- UPDATED: Revolution Slider 4.5.4
+- UPDATED: MPC plugins
+- UPDATED: Documentation
+- UPDATED: Localization files
+- FIXED: Revolution Slider responsiveness
+- FIXED: Pricing Tables display
+- FIXED: Flexslider arrows
+- FIXED: Back to top animation
+- FIXED: Gravity Forms display
+- FIXED: bbPress display
+
+----------------------------------------------------
+
+12/06/2014 - Version 1.5.1
+- FIXED: Update process of Visual Composer
+- FIXED: Added plugins files for manual install
+- FIXED: Some other small issues from 1.5.0 update
+
+----------------------------------------------------
+
+11/06/2014 - Version 1.5.0
+- NEW FEATURE: bbPress support
+- NEW FEATURE: Gravity Forms support
+- NEW FEATURE: Shop custom columns number 1-6
+- NEW FEATURE: Products accordion information
+- NEW FEATURE: Panel settings import/export
+— IMPROVED: Price filter on mobile
+- UPDATED: Visual Composer 4.2.2
+- UPDATED: Revolution Slider 4.5.2
+- FIXED: Revo Slider display issues
+- FIXED: Sidebar display on mobile
+- FIXED: Sidebar behavior on mobile
+- FIXED: Menu active custom color
+- FIXED: Social links redirect
+- FIXED: Coupon field display in cart
+
+----------------------------------------------------
+
+28/05/2014 - Version 1.4.0
+- NEW FEATURE: Transparent header (with custom colors, opacity and layout)
+- NEW FEATURE: Separate font sizes for page sections (header, sidebar, etc.)
+- NEW FEATURE: Advanced color settings (over 30) for page sections (header, sidebar, etc.)
+- NEW FEATURE: New mobile menu (icon in header with dropdown)
+- NEW FEATURE: Simple search dropdown
+- NEW FEATURE: Mobile logo
+- NEW FEATURE: Custom labels for WooCommerce tabs
+- NEW FEATURE: Custom font for menu
+- NEW FEATURE: Mobile sticky header
+- NEW FEATURE: Hiding footer segment for each page
+- NEW FEATURE: Hiding copyright segment for each page
+- NEW FEATURE: Header full width display
+- NEW FEATURE: Header image grid
+- IMPROVED: Custom CSS are now saved to separate file
+- IMPROVED: Bundled plugins update process
+- IMPROVED: Moved plugins from theme file
+- IMPROVED: All pages heading changed to H1
+- IMPROVED: Header buttons display as icons
+- IMPROVED: New social icons
+- UPDATED: MPC plugins
+- UPDATED: Visual Composer 4.2
+- UPDATED: CSS3 Pricing Tables 9.6
+- UPDATED: WooCommerce Quickview 3.0.5
+- UPDATED: FontAwesome 4.1
+- FIXED: Shop category permalinks issue
+- FIXED: Sliders arrows on mobile
+
+----------------------------------------------------
+
+14/05/2014 - Version 1.3.1
+- IMPROVED: Products slider (Sale products slider, sale badge)
+- IMPROVED: Woocommerce Sold Out Products support
+- UPDATED: MPC plugins
+- UPDATED: Documentation
+- UPDATED: Localization files
+- UPDATED: Visual Composer 4.1.3
+- FIXED: Quickview icon display
+- FIXED: Cart/Checkout order display
+
+----------------------------------------------------
+
+10/05/2014 - Version 1.3.0
+- NEW FEATURE: Quickview for products
+- NEW FEATURE: Shop categories/tags custom header image/shortcode
+- NEW FEATURE: Shop categories/tags custom sidebar settings
+- NEW FEATURE: Global disable hover effect on products
+- IMPROVED: Checkout display
+- IMPROVED: Fancy Product Designer support
+- IMPROVED: Woocommerce Smart Coupons support
+- UPDATED: MPC plugins
+- UPDATED: Woocommerce templates
+- FIXED: Fullwidth with sidebar template on Shop
+- FIXED: Products slider on desktop
+
+----------------------------------------------------
+
+30/04/2014 - Version 1.2.3
+- IMPROVED: External products display
+- UPDATED: New versions of MPC plugins with update notifications
+- UPDATED: Localization files
+- UPDATED: Slider Revolution 4.3.8
+- FIXED: Wishlist and checkout alignment in boxed layout
+- FIXED: Mobile cart duplication
+- FIXED: Updating cart saves products quantities
+- FIXED: Child theme translation
+
+----------------------------------------------------
+
+25/04/2014 - Version 1.2.2
+- FIXED: Wishlist display
+- FIXED: Page title duplication
+- FIXED: Mobile logo display
+
+----------------------------------------------------
+
+23/04/2014 - Version 1.2.1
+- UPDATED: Visual Composer 4.1.2
+- FIXED: Cart issues
+- FIXED: My account issues
+- FIXED: Google Maps
+- FIXED: Currency symbol space
+- FIXED: Sliders touch
+- FIXED: Mobile logo
+- FIXED: Sliders mobile display
+- FIXED: Parallax
+- FIXED: MPC Shortcodes button
+- FIXED: Fullwidth with sidebar template
+- FIXED: Background settings
+- FIXED: Visual Composer shortcodes
+
+----------------------------------------------------
+
+18/04/2014 - Version 1.2.0
+- NEW FEATURE: All sliders are now touch enabled
+- NEW FEATURE: Testimonials Visual Composer Shortcode
+- NEW FEATURE: Added two new product looks
+- NEW FEATURE: Custom Product tabs with WYSIWYG editor & short code support
+- NEW FEATURE: Size Guides: global or unique for a product
+- NEW FEATURE: Styled WooCommerce Subcategory Shop View
+- NEW FEATURE: Disable Responsive
+- NEW FEATURE: Turn Off Search Checkbox
+- NEW FEATURE: Secondary Header + Secondary Menu With Drop Down
+- NEW FEATURE: Turn Off Subscription
+- NEW FEATURE: Full Width Page + Sidebar
+- NEW FEATURE: Add text instead of subscription
+- NEW FEATURE: Pinterest added to share
+- NEW FEATURE: Back to Top: left, right, center & none settings.
+- NEW FEATURE: Added option - Don’t change product photo on hover.
+- IMPROVED: Cart - mobile friendly
+- IMPROVED: Wishlist, added button + tooltip
+- IMPROVED: Account View
+- IMPROVED: Search - Close search when clicked outside
+- IMPROVED: Icon List Shortcode
+- IMPROVED: Products number display option
+- IMPROVED: Documentation - completely new design
+- UPDATED: WordPress 3.9 Copatbility
+- UPDATED: Responsiveness
+- UPDATED: Visual Composer 4.1
+- UPDATED: Slider Revolution 4.3.6
+- FIXED: VAT Bug
+- FIXED: Mega Menu Bug
+- FIXED: FireFox Load More Bug
+- FIXED: Related Products Bug
+- FIXED: Currency in Search Field
+- FIXED: Skin issues
+
+----------------------------------------------------
+
+08/04/2014 - Version 1.1.1
+- NEW FEATURE: Compact Archive View (small thumbnails)
+- ADDED: New Header Layout (Logo above, menu & cart centered)
+- ADDED: Mobile Footer Check Box
+- UPDATED: Visual Composer to 4.0.4
+- UPDATED: Slider Revolution 4.3.4
+- FIXED: Contact Form Issue
+- FIXED: Carousel Bug (Not responsive)
+
+----------------------------------------------------
+
+03/04/2014 - Version 1.1.0
+- NEW FEATURE: Layer Slider 5 (worth $18)
+- NEW FEATURE: CSS3 Pricing Tables (worth $17)
+- NEW FEATURE: Masonry Shop
+- NEW FEATURE: Load More for masonry shop
+- ADDED: Home pages source in txt files
+- UPDATED: Documentation
+- UPDATED: Menu layouts, new style Menu, Cart, Logo
+- FIXED: Mobile cart expanding viewport
+- FIXED: Visual Composer teaser group responsive
+- FIXED: Carousel Bug (Not responsive)
+- FIXED: iOS bugs
+- FIXED: Adroid bugs
+- FIXED: Minor CSS fixes
+
+----------------------------------------------------
+
+28/03/2014 - Version 1.0.4
+- NEW FEATURE: Envato toolkit, Easy update
+- UPDATED: Documentation
+- FIXED: Required plugins install error
+- FIXED: WooCommerce single product image
+
+----------------------------------------------------
+
+27/03/2014 - Version 1.0.3
+- NEW FEATURE: Simple Lookbook Price Badges
+- NEW FEATURE: Row ID for page navigation
+- FIXED: IE Lookbooks
+- FIXED: Parallax behavior
+- FIXED: Portfolio spacing
+- FIXED: Titles underline
+- FIXED: Language & Currency drop downs
+- FIXED: Quote display
+
+----------------------------------------------------
+
+25/03/2014 - Version 1.0.2
+- NEW FEATURE: Option to remove Cart
+- NEW FEATURE: Option to remove Price
+- NEW FEATURE: Option to remove Add To Basket
+- NEW FEATURE: Option to choose different menu for mobile divices
+- NEW FEATURE: Added Child Theme
+- NEW FEATURE: Custom skin.css
+- UPDATED: Visual Composer 4.0.3
+- UPDATED: Documentation
+- UPDATED: PO File
+- FIXED: Reviews mobile issue
+- FIXED: Menu layout when scrolling
+- FIXED: Lookbook price issue
+- FIXED: Child theme issues
+- FIXED: Some minor CSS issues
+
+----------------------------------------------------
+
+20/03/2014 - Version 1.0.1
+- FIXED: "Login" redirects to "My Account"
+- FIXED: Cart mobile display
+- FIXED: Demo content URLs and Sliders imports
+- FIXED: WooCommerce shortcodes styles
+
+----------------------------------------------------
+
+19/03/2014 - Version 1.0
+- RELEASE

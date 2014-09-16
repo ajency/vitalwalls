@@ -1,0 +1,21 @@
+[vc_row margin_bottom="3em" overlay_color_opacity="50" overlay_pattern_opacity="50" padding="1.5em 0em 0em 0em"][vc_column width="1/1"][vc_cta_button call_text="Order Online And Get Free Delivery " title="See Our Awesome Menu" target="_self" position="cta_align_right" custom_color="#b59564" custom_icon="fa-cutlery" custom_pos="right" href="#"][/vc_column][/vc_row][vc_row margin_bottom="3em" overlay_color_opacity="50" overlay_pattern_opacity="50"][vc_column width="1/1"][mpc_vc_products_slider type="recent" number="8" category="268" tag="all"][/vc_column][/vc_row][vc_row font_color="#ffffff" padding="5em" margin_bottom="3em" bg_image="2093" bg_image_repeat="cover" overlay_color="#0a0a0a" overlay_color_opacity="50" overlay_pattern="1253" overlay_pattern_opacity="50" full_width="1" parallax="1"][vc_column width="1/1"][vc_column_text]
+<h2 style="text-align: center;">REVIEWS &amp; RECIPES</h2>
+[/vc_column_text][/vc_column][/vc_row][vc_row margin_bottom="3em" overlay_color_opacity="50" overlay_pattern_opacity="50"][vc_column width="1/4"][mpc_vc_quote quote="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam quis leo at mauris faucibus suscipit." author="John Doe"][/vc_column][vc_column width="1/4"][mpc_vc_quote quote=" Sed orci arcu, tincidunt at commodo in, consectetur sed enim. Vestibulum aliquet justo." author="Samantha Jones"][/vc_column][vc_column width="1/4"][mpc_vc_quote quote="Cras feugiat leo a nulla aliquet vitae auctor odio egestas. Phasellus iaculis posuere velit." author="Joanna Dark"][/vc_column][vc_column width="1/4"][mpc_vc_quote quote="Morbi ut ligula arcu. Nullam eleifend nisl facilisis turpis luctus a bibendum nisl vulputate. " author="John Lenon"][/vc_column][/vc_row][vc_row][vc_column width="1/1"][vc_row_inner][vc_column_inner width="1/3"][vc_single_image image="2044" img_link_target="_self" img_size="full"][vc_column_text]
+<h4 style="text-align: center;"><a href="#"><strong>CARBONARE</strong></a></h4>
+[/vc_column_text][/vc_column_inner][vc_column_inner width="1/3"][vc_single_image image="2054" img_link_target="_self" img_size="full"][vc_column_text]
+<h4 style="text-align: center;"><a href="#"><strong>SPAGHETTI</strong></a></h4>
+[/vc_column_text][/vc_column_inner][vc_column_inner width="1/3"][vc_single_image image="2056" img_link_target="_self" img_size="full"][vc_column_text]
+<h4 style="text-align: center;"><a href="#"><strong>PIZZA</strong></a></h4>
+[/vc_column_text][/vc_column_inner][/vc_row_inner][/vc_column][/vc_row][vc_row font_color="#ffffff" padding="5em" margin_bottom="3em" bg_image="2104" bg_image_repeat="cover" overlay_color="#0a0a0a" overlay_color_opacity="50" overlay_pattern="1253" overlay_pattern_opacity="50" full_width="1" parallax="1"][vc_column width="1/1"][vc_column_text]
+<h2 style="text-align: center;">STAY IN TOUCH</h2>
+[/vc_column_text][/vc_column][/vc_row][vc_row][vc_column width="1/1"][vc_row_inner][vc_column_inner width="1/1"][vc_gmaps type="m" zoom="16" bubble="1" link="https://maps.google.pl/maps?q=Langham+Street,+London,+United+Kingdom&amp;hl=en&amp;ll=51.518501,-0.143364&amp;spn=0.002877,0.008245&amp;sll=51.517456,-0.141202&amp;sspn=0.005755,0.01649&amp;oq=london,+langham&amp;t=h&amp;hnear=Langham+St,+London,+United+Kingdom&amp;z=18" size="300"][/vc_column_inner][/vc_row_inner][/vc_column][/vc_row][vc_row][vc_column width="1/3"][vc_row_inner el_class="mpc-small-bm"][vc_column_inner width="1/1"][vc_column_text]Lorem ipsum dolor sit amet, <strong>consectetur adipiscing elit</strong>. Vestibulum aliquet magna <a href="#">tincidunt fringilla</a>.
+
+We are available 24 Hours a day: <strong>(999) 123 654 987</strong>[/vc_column_text][/vc_column_inner][/vc_row_inner][vc_row_inner][vc_column_inner width="2/3"][vc_column_text]
+<ul>
+	<li><strong>Monday-Friday: </strong>8am to 9pm</li>
+	<li><strong>Saturday: </strong>10am to 8pm</li>
+	<li><strong>Sunday: </strong>Closed</li>
+</ul>
+[/vc_column_text][/vc_column_inner][vc_column_inner width="1/3"][vc_column_text]37E Picadily St.
+London, UK
+51-698[/vc_column_text][/vc_column_inner][/vc_row_inner][/vc_column][vc_column width="2/3"][contact-form-7 id="5"][/vc_column][/vc_row]
