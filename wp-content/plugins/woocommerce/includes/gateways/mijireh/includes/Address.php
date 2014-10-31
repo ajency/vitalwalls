@@ -1,6 +1,8 @@
 <?php
 
-if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
+if ( ! defined( 'ABSPATH' ) ) {
+	exit; // Exit if accessed directly
+}
 
 class Mijireh_Address extends Mijireh_Model {
 
@@ -39,7 +41,7 @@ class Mijireh_Address extends Mijireh_Model {
    */
   private function _check_required_fields() {
     $pass = true;
-    $fields = array('street', 'city', 'state_province', 'zip_code', 'country');
+    $fields = array('street', 'city', 'zip_code', 'country');
     foreach($fields as $f) {
       if(empty($this->_data[$f])) {
         $pass = false;

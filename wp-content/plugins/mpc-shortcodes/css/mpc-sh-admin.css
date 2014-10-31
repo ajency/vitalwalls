@@ -137,5 +137,24 @@
 	background-size: 20px 20px;
 }
 
-body #TB_overlay { z-index: 11000; }
-body #TB_window { z-index: 11100; }
+body #TB_overlay { z-index: 110000; }
+body #TB_window { z-index: 111000; }
+
+/* RTL */
+
+.rtl #TB_window.mpc-shp,
+.rtl #TB_window.mpc-shp #TB_ajaxContent {
+	direction: rtl;
+	text-align: right;
+}
+.rtl #mpc_shp_window .mpc-shp-option-field-wrap {
+	float: right;
+	padding-left: 20px;
+	padding-right: 0;
+}
+
+.rtl #mpc_shp_window .mpc-shp-option-description {
+	float: left;
+	border-right: 1px dotted #ddd;
+	border-left: none;
+}

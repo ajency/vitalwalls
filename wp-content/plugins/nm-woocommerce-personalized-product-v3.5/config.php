@@ -16,7 +16,7 @@ if (strtoupper(substr(PHP_OS, 0, 3)) === 'WIN') {
 
 function get_plugin_meta_productmeta(){
 	
-	$plugin_dir = 'nm-woocommerce-personalized-product-v3.5';
+	$plugin_dir = '/nm-woocommerce-personalized-product-v3.5';
 	
 	return array('name'			=> 'Personalized Product',
 							'dir_name'		=> $plugin_dir,

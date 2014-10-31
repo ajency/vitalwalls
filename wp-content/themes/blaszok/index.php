@@ -21,8 +21,6 @@ $query->query(array(
 	'paged' 	=> $paged
 ));
 
-$pagination_type = get_field('mpc_pagination_type');
-
 global $blog_layout;
 $blog_layout = 'full';
 if (get_field('mpc_blog_layout'))
@@ -107,12 +105,7 @@ if ($blog_layout == 'small') {
 			</div><!-- end #mpcth_content -->
 			<?php if ($query->max_num_pages > 1) { ?>
 			<div id="mpcth_pagination">
-				<?php
-					if ($pagination_type == 'loadmore')
-						mpcth_display_load_more($query);
-					else
-						mpcth_display_pagination($query);
-				?>
+				<?php mpcth_display_pagination($query); ?>
 			</div>
 			<?php } ?>
 		</div><!-- end #mpcth_content_wrap -->

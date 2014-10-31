@@ -8,7 +8,7 @@
 		@extend .after-clear;
 	}
 
-	> ul {
+	.mpcth-widget-column {
 		list-style: none;
 
 		&:after {
@@ -16,7 +16,7 @@
 		}
 
 		.widget {
-			float: left;
+			@include float(left); // float: left;
 			width: 100%;
 
 			@extend .box-sizing;
@@ -57,8 +57,8 @@
 		@media #{$screen-normal} {
 			.mpcth-responsive & {
 				.widget {
-					margin-left: -1px;
-					margin-right: -1px;
+					@include margin-left(-1px); // margin-left: -1px;
+					@include margin-right(-1px); // margin-right: -1px;
 					float: none;
 					display: inline-block;
 					vertical-align: top;
@@ -79,6 +79,10 @@
 	}
 }
 
+#mpcth_footer_extended_section + #mpcth_footer_copyrights_section {
+	margin-top: -1px;
+}
+
 #mpcth_footer_extended_content {
 	&:after {
 		content: '';
@@ -86,6 +90,10 @@
 		height: 1px;
 		background: #eeeeee;
 		margin: 0 20px;
+	}
+
+	+ #mpcth_footer_copyrights_wrap {
+		border-top: none;
 	}
 }
 
@@ -111,10 +119,11 @@
 	#mpcth_footer_copyrights {
 		display: inline-block;
 		text-transform: uppercase;
+		vertical-align: middle;
 	}
 
 	#mpcth_footer_socials {
-		float: right;
+		@include float(right); // float: right;
 		display: inline-block;
 	}
 
@@ -132,6 +141,10 @@
 		}
 	}
 }
+#mpcth_footer #mpcth_footer_copyrights_section #mpcth_footer_copyrights_wrap #mpcth_footer_socials {
+	font-size: 1.273em;
+	vertical-align: middle;
+}
 
 #mpcth_footer_extended_content,
 #mpcth_footer_content {
@@ -143,6 +156,30 @@
 				display: block;
 			}
 		}
+	}
+}
+
+.mpcth-use-advance-colors {
+	#mpcth_footer {
+		border: none;
+	}
+
+	#mpcth_footer_section {
+		border-top: 1px solid transparent;
+	}
+
+	#mpcth_footer_extended_content:after {
+		display: none;
+	}
+	#mpcth_footer_extended_section {
+		border-top: 1px solid transparent;
+	}
+
+	#mpcth_footer_copyrights_wrap {
+		border: none;
+	}
+	#mpcth_footer_copyrights_section {
+		border-top: 1px solid transparent;
 	}
 }
 
@@ -176,7 +213,7 @@
 		line-height: 1.15em;
 		display: inline-block;
 		vertical-align: top;
-		margin-left: .5em;
+		@include margin-left(.5em); // margin-left: .5em;
 
 		&.fa-angle-up {
 			display: none;
@@ -219,13 +256,20 @@
 	}
 
 	&.mpcth-back-to-top-position-left {
-		left: 15px;
+		@include left(15px); // left: 15px;
 	}
 	&.mpcth-back-to-top-position-center {
-		left: 50%;
-		margin-left: -25px;
+		@include left(50%); // left: 50%;
+		@include margin-left(-25px); // margin-left: -25px;
 	}
 	&.mpcth-back-to-top-position-right {
-		right: 15px;
+		@include right(15px); // right: 15px;
+	}
+
+	@media #{$screen-tiny} {
+		height: 30px;
+		width: 30px;
+		line-height: 28px;
+		font-size: 26px;
 	}
 }

@@ -1291,7 +1291,7 @@ class NM_PersonalizedProduct extends NM_Framwork_V1 {
 	 */
 	function delete_file() {
 		$dir_path = $this -> setup_file_directory ();
-		echo "file path along with the file name".$file_path = $dir_path . $_REQUEST ['file_name'];
+		$file_path = $dir_path . $_REQUEST ['file_name'];
 		
 		if (unlink ( $file_path )) {
 			echo __ ( 'File removed', 'nm-personalizedproduct' );

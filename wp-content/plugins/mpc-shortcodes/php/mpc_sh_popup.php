@@ -35,6 +35,10 @@ function mpc_sh_popup_markup() {
 							}
 						$output .= '</select>' . PHP_EOL;
 					break;
+
+					case 'checkbox':
+						$output .= '<input type="checkbox" class="mpc-shp-option-checkbox mpc-shp-option-field" name="' . $field . '" id="' . $field . '" ' . $value['std'] . ' />' . PHP_EOL;
+					break;
 				}
 
 				$output .= '</div>' . PHP_EOL;
@@ -74,7 +78,10 @@ function mpc_sh_popup_markup() {
 							var $field = $(this),
 								name = '{{'+ $field.attr('id').replace('mpc_shp_field_', '') + '}}';
 
-							shortcode = shortcode.replace(name, $field.val());
+							if ($field.is('[type=checkbox]'))
+								shortcode = shortcode.replace(name, $field.is(':checked'));
+							else
+								shortcode = shortcode.replace(name, $field.val());
 						});
 
 						if(window.tinymce) {

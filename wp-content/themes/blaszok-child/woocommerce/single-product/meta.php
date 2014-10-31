@@ -13,10 +13,6 @@ global $post, $product;
 ?>
 <div class="product_meta">
 
-	<div class="author-link">
-		Author: <?php echo the_author_posts_link(); ?>
-	</div>
-
 	<?php do_action( 'woocommerce_product_meta_start' ); ?>
 
 	<?php if ( wc_product_sku_enabled() && ( $product->get_sku() || $product->is_type( 'variable' ) ) ) : ?>

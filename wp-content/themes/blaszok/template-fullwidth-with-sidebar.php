@@ -48,7 +48,6 @@ if (function_exists('is_account_page') && is_account_page()) {
 										$order_received = strpos($order_url, '/order-received');
 										?>
 										<div class="mpcth-order-path">
-											<!-- <a href="<?php echo WC()->cart->get_cart_url(); ?>"><?php _e('Shopping Cart', 'mpcth'); ?></a> -->
 											<span><?php _e('Shopping Cart', 'mpcth'); ?></span>
 											<i class="fa fa-angle-right"></i>
 											<span <?php echo ! $order_received ? 'class="mpcth-color-main-color"' : ''; ?>><?php _e('Checkout Details', 'mpcth'); ?></span>
@@ -57,11 +56,11 @@ if (function_exists('is_account_page') && is_account_page()) {
 										</div>
 									<?php }
 								?>
-								<h4 class="mpcth-page-title mpcth-deco-header">
+								<h1 class="mpcth-page-title mpcth-deco-header">
 									<span class="mpcth-color-main-border">
 										<?php the_title(); ?>
 									</span>
-								</h4>
+								</h1>
 							</header>
 							<?php } ?>
 							<section class="mpcth-page-content">

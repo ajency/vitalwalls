@@ -4,7 +4,7 @@ Plugin Name: MPC Shortcodes
 Plugin URI: http://themeforest.net/user/mpc/
 Description: Basic inline shortcodes available from TinyMCE Editor. Created as an extension for all MPC Themes but should work everywhere with default styles.
 Author: MassivePixelCreation
-Version: 1.3.0
+Version: 2.0
 Author URI: http://themeforest.net/user/mpc/
 */
 
@@ -21,7 +21,7 @@ define('MPC_SHORTCODES_PATH', dirname(__FILE__));
 add_action('admin_enqueue_scripts', 'mpc_sh_admin_enqueue_scripts');
 function mpc_sh_admin_enqueue_scripts() {
 	wp_enqueue_style('wp-color-picker');
-	wp_enqueue_style('mpc-sh-admin-styles', MPC_SHORTCODES_URL . '/css/mpc-sh-admin.css');
+	wp_enqueue_style('mpc-sh-admin-styles', MPC_SHORTCODES_URL . 'css/mpc-sh-admin.css');
 
 	wp_enqueue_script('wp-color-picker');
 }
@@ -34,12 +34,12 @@ function mpc_sh_enqueue_scripts() {
 
 	if(isset($post->post_content)) {
 		if(!defined('MPC_THEME_ENABLED')) {
-			wp_enqueue_style('magnific-popup-css', MPC_SHORTCODES_URL . '/css/magnific-popup.min.css');
-			wp_enqueue_script('magnific-popup-js', MPC_SHORTCODES_URL . '/js/jquery.magnific-popup.min.js', array('jquery'), '0.9.6', true);
+			wp_enqueue_style('magnific-popup-css', MPC_SHORTCODES_URL . 'css/magnific-popup.min.css');
+			wp_enqueue_script('magnific-popup-js', MPC_SHORTCODES_URL . 'js/jquery.magnific-popup.min.js', array('jquery'), '0.9.6', true);
 		}
 
-		wp_enqueue_style('mpc-sh-styles', MPC_SHORTCODES_URL . '/css/mpc-sh.css');
-		wp_enqueue_script('mpc-sh-scripts', MPC_SHORTCODES_URL . '/js/mpc-sh.js', array('jquery'), '1.0', true);
+		wp_enqueue_style('mpc-sh-styles', MPC_SHORTCODES_URL . 'css/mpc-sh.css');
+		wp_enqueue_script('mpc-sh-scripts', MPC_SHORTCODES_URL . 'js/mpc-sh.js', array('jquery'), '1.0', true);
 	}
 }
 
@@ -55,7 +55,7 @@ function mpc_sh_register_buttons(){
 }
 
 function mpc_sh_plugin($array){
-	$array['mpc_sh'] = MPC_SHORTCODES_URL . '/js/mpc-sh-plugin.js';
+	$array['mpc_sh'] = MPC_SHORTCODES_URL . 'js/mpc-sh-plugin.js';
 	return $array;
 }
 

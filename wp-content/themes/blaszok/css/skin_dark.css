@@ -3,7 +3,24 @@
 /* ---------------------------------------------------------------- */
 
 /* COLOR */
+.bbpress #mpcth_content .bbp-template-notice,
+.bbpress #mpcth_content .bbp-reply-form .bbp-form input[type=text],
+.bbpress #mpcth_content .bbp-reply-form .bbp-form textarea,
+.bbpress #mpcth_content .bbp-topic-form .bbp-form input[type=text],
+.bbpress #mpcth_content .bbp-topic-form .bbp-form textarea,
+.bbpress #mpcth_content #bbp-user-wrapper #bbp-single-user-details #bbp-user-navigation a,
+.bbpress #mpcth_content #bbp-user-wrapper #bbp-your-profile .bbp-form input[type=text],
+.bbpress #mpcth_content #bbp-user-wrapper #bbp-your-profile .bbp-form input[type=password],
+.bbpress #mpcth_content #bbp-user-wrapper #bbp-your-profile .bbp-form textarea,
 html, body,
+#mpcth_header_second_section #mpcth_page_header_secondary_content .sub-menu a,
+#mpcth_page_header_wrap #mpcth_header_section .sub-menu a,
+#mpcth_page_header_wrap #mpcth_header_section #mpcth_nav .sub-menu a,
+#mpcth_page_wrap #mpcth_mini_cart,
+#mpcth_nav_mobile .mpcth-mobile-menu .page_item > a,
+#mpcth_nav_mobile .mpcth-mobile-menu .menu-item > a,
+#mpcth_nav_mobile #mpcth_mobile_menu .page_item > a,
+#mpcth_nav_mobile #mpcth_mobile_menu .menu-item > a,
 #mpcth_page_wrap #mpcth_toggle_mobile_menu,
 #mpcth_page_wrap .mpcthSelect.mpcthSelectHover,
 #mpcth_page_wrap #mpcth_smart_search_wrap #searchsubmit,
@@ -110,6 +127,42 @@ html, body,
 /* ---------------------------------------------------------------- */
 
 /* COLOR */
+#mpcth_page_wrap .gform_wrapper input[type=submit],
+.bbpress #mpcth_content #bbp_search,
+.bbpress #mpcth_content .bbp-breadcrumb,
+.bbpress #mpcth_content .bbp-header,
+.bbpress #mpcth_content .bbp-body .bbp-topic-pagination a,
+.bbpress #mpcth_content .bbp-search-results .forum .bbp-forum-header,
+.bbpress #mpcth_content .bbp-search-results .reply .bbp-reply-header,
+.bbpress #mpcth_content .bbp-search-results .topic .bbp-topic-header,
+.bbpress #mpcth_content .bbp-replies .forum .bbp-forum-header,
+.bbpress #mpcth_content .bbp-replies .reply .bbp-reply-header,
+.bbpress #mpcth_content .bbp-replies .topic .bbp-topic-header,
+.bbpress #mpcth_content .bbp-replies .topic .bbp-reply-header,
+.bbpress #mpcth_content .bbp-search-results .forum .bbp-forum-header .bbp-reply-permalink,
+.bbpress #mpcth_content .bbp-search-results .reply .bbp-reply-header .bbp-reply-permalink,
+.bbpress #mpcth_content .bbp-search-results .topic .bbp-topic-header .bbp-reply-permalink,
+.bbpress #mpcth_content .bbp-replies .forum .bbp-forum-header .bbp-reply-permalink,
+.bbpress #mpcth_content .bbp-replies .reply .bbp-reply-header .bbp-reply-permalink,
+.bbpress #mpcth_content .bbp-replies .topic .bbp-topic-header .bbp-reply-permalink,
+.bbpress #mpcth_content .bbp-replies .topic .bbp-reply-header .bbp-reply-permalink,
+.bbpress #mpcth_content .bbp-search-results .forum .bbp-forum-admin-links .bbp-admin-links a,
+.bbpress #mpcth_content .bbp-search-results .reply .bbp-reply-admin-links .bbp-admin-links a,
+.bbpress #mpcth_content .bbp-search-results .topic .bbp-topic-admin-links .bbp-admin-links a,
+.bbpress #mpcth_content .bbp-replies .forum .bbp-forum-admin-links .bbp-admin-links a,
+.bbpress #mpcth_content .bbp-replies .reply .bbp-reply-admin-links .bbp-admin-links a,
+.bbpress #mpcth_content .bbp-replies .topic .bbp-topic-admin-links .bbp-admin-links a,
+.bbpress #mpcth_content .bbp-replies .topic .bbp-reply-admin-links .bbp-admin-links a,
+.bbpress #mpcth_content .bbp-pagination,
+.bbpress #mpcth_content .bbp-reply-form .bbp-form label,
+.bbpress #mpcth_content .bbp-topic-form .bbp-form label,
+.bbpress #mpcth_content #bbp-user-wrapper #bbp-your-profile .bbp-form label,
+.bbpress #mpcth_content #bbp-user-wrapper .bbp-forums .subscription-toggle,
+.bbpress #mpcth_content #bbp-user-wrapper .bbp-forums .favorite-toggle,
+.bbpress #mpcth_content #bbp-user-wrapper .bbp-topics .subscription-toggle,
+.bbpress #mpcth_content #bbp-user-wrapper .bbp-topics .favorite-toggle,
+.bbpress #mpcth_content #bbp-user-wrapper .bbp-replies .subscription-toggle,
+.bbpress #mpcth_content #bbp-user-wrapper .bbp-replies .favorite-toggle,
 .woocommerce #mpcth_page_wrap .summary .yith-wcwl-add-to-wishlist a,
 #mpcth_page_wrap .mpcthSelect,
 #mpcth_page_header_content #mpcth_controls_wrap #mpcth_controls_container > a,
@@ -240,6 +293,7 @@ html, body,
 #mpcth_page_wrap #mpcth_menu .children:after,
 #mpcth_page_wrap #mpcth_menu .sub-menu:after,
 #mpcth_page_wrap #mpcth_mini_cart:after,
+#mpcth_page_wrap #mpcth_mini_search:after,
 #mpcth_page_wrap #mpcth_mega_menu .widget .sub-container > .sub-menu:after {
 	border-top-color: #222222;
 }
@@ -263,6 +317,8 @@ html, body,
 }
 
 /* BACKGROUND */
+.blog #mpcth_content.mpcth-blog-layout-masonry .mpcth-post .mpcth-post-wrap,
+.page-template-template-blog-php #mpcth_content.mpcth-blog-layout-masonry .mpcth-post .mpcth-post-wrap,
 #mpcth_page_header_secondary_content #mpcth_secondary_mini_menu ul,
 #mpcth_page_wrap #mpcth_toggle_mobile_sidebar,
 #mpcth_page_wrap #mpcth_toggle_mobile_menu,
@@ -270,6 +326,7 @@ html, body,
 #mpcth_page_wrap #mpcth_page_header_wrap.mpcth-sticky-header:hover,
 #mpcth_page_wrap #mpcth_page_header_secondary_content #lang_sel ul ul,
 #mpcth_page_wrap #mpcth_mini_cart,
+#mpcth_page_wrap #mpcth_mini_search,
 #mpcth_page_wrap .mpcth-menu .children,
 #mpcth_page_wrap .mpcth-menu .sub-menu,
 #mpcth_page_wrap #mpcth_menu .children,
@@ -282,7 +339,6 @@ html, body,
 #mpcth_page_wrap #mpcth_main #mpcth_content_wrap .wpb_call_to_action .wpb_call_text,
 #mpcth_page_wrap #mpcth_main #mpcth_content_wrap .wpb_posts_slider .flex-caption,
 #mpcth_page_wrap #mpcth_main .mpcth-items-slider .mpcth-slide,
-#mpcth_page_wrap #mpcth_main .mpcth-items-slider.mpc-vc-blog-posts-slider .mpcth-slide .mpcth-slide-trim,
 .woocommerce-page #mpcth_page_wrap .woocommerce-ordering .mpcthSelect,
 .woocommerce-page.single-product #mpcth_page_wrap #mpcth_content > .product .summary .variations_form .variations .value .mpcthSelect,
 #mpcth_page_wrap .woocommerce .products .product .mpcth-post-content,
@@ -309,9 +365,17 @@ html, body,
 #mpcth_page_wrap #mpcth_mobile_nav_wrap,
 .mpcth-sidebar-right #mpcth_page_wrap #mpcth_sidebar,
 .mpcth-sidebar-left #mpcth_page_wrap #mpcth_sidebar,
-#mpcth_page_wrap #mpcth_page_header_wrap {
+#mpcth_header_second_section,
+#mpcth_page_header_wrap #mpcth_header_section {
 	background-color: #222222;
 	background-color: rgba(34, 34, 34, 0.95);
+}
+#mpcth_page_wrap #mpcth_main .mpcth-items-slider.mpc-vc-blog-posts-slider .mpcth-slide .mpcth-slide-trim {
+	background: linear-gradient(to bottom, rgba(34,34,34, 0) 0%, rgba(34,34,34, 1) 90%);
+	background-image: -webkit-gradient(linear, 0% 0%, 0% 90%, from(rgba(34,34,34, 0)), to(rgba(34,34,34, 1)));
+	background-image: -moz-linear-gradient(rgba(34, 34, 34, 0) 0%, rgba(34, 34, 34, 1) 90%);
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#00222222, endColorstr=#ff222222);
+	-ms-filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#00222222, endColorstr=#ff222222);
 }
 
 /* BACKGROUND ! */
@@ -330,6 +394,27 @@ html, body,
 /* #FFFFFF - EXTEND
 /* ---------------------------------------------------------------- */
 
+#mpcth_page_wrap .gform_wrapper input,
+#mpcth_page_wrap .gform_wrapper select,
+#mpcth_page_wrap .gform_wrapper textarea,
+.bbpress #mpcth_content #bbp_search,
+.bbpress #mpcth_content .bbp-search-results .forum .bbp-forum-form,
+.bbpress #mpcth_content .bbp-search-results .reply .bbp-reply-form,
+.bbpress #mpcth_content .bbp-search-results .topic .bbp-topic-form,
+.bbpress #mpcth_content .bbp-replies .forum .bbp-forum-form,
+.bbpress #mpcth_content .bbp-replies .reply .bbp-reply-form,
+.bbpress #mpcth_content .bbp-replies .topic .bbp-topic-form,
+.bbpress #mpcth_content .bbp-replies .topic .bbp-reply-form,
+.bbpress #mpcth_content .bbp-reply-form .bbp-form input[type=text],
+.bbpress #mpcth_content .bbp-reply-form .bbp-form textarea,
+.bbpress #mpcth_content .bbp-topic-form .bbp-form input[type=text],
+.bbpress #mpcth_content .bbp-topic-form .bbp-form textarea,
+.bbpress #mpcth_content .bbp-reply-form .bbp-form .bbp-the-content-wrapper input[type=button],
+.bbpress #mpcth_content .bbp-topic-form .bbp-form .bbp-the-content-wrapper input[type=button],
+.bbpress #mpcth_content #bbp-user-wrapper #bbp-your-profile .bbp-form input[type=text],
+.bbpress #mpcth_content #bbp-user-wrapper #bbp-your-profile .bbp-form input[type=password],
+.bbpress #mpcth_content #bbp-user-wrapper #bbp-your-profile .bbp-form textarea,
+#mpcth_page_wrap #mpcth_mini_search #s,
 #mpcth_page_wrap .mpcthSelect,
 .single #mpcth_page_wrap .mpcth-post .mpcth-post-pagination a,
 #mpcth_page_wrap .widget input,
@@ -342,8 +427,8 @@ html, body,
 #mpcth_page_wrap #mpcth_main .mpcth-post .flexslider#main_slider .mpcth-lightbox .fa,
 #mpcth_page_wrap #mpcth_main .mpcth-page .flexslider#main_slider .mpcth-lightbox .fa,
 #mpcth_page_wrap #mpcth_main #mpcth_content_wrap .wpb_toggle .mpcth-toggle-mark,
-#mpcth_page_wrap #mpcth_main #mpcth_content_wrap .vc-carousel .vc-carousel-control.vc-left,
-#mpcth_page_wrap #mpcth_main #mpcth_content_wrap .vc-carousel .vc-carousel-control.vc-right,
+#mpcth_page_wrap #mpcth_main #mpcth_content_wrap .vc_carousel .vc_carousel-control.vc_left,
+#mpcth_page_wrap #mpcth_main #mpcth_content_wrap .vc_carousel .vc_carousel-control.vc_right,
 #mpcth_page_wrap #mpcth_main .mpcth-items-slider-wrap .mpcth-items-slider-prev,
 #mpcth_page_wrap #mpcth_main .mpcth-items-slider-wrap .mpcth-items-slider-next,
 .woocommerce-page #mpcth_page_wrap .orderby,
@@ -364,13 +449,43 @@ html, body,
 	background-color: #333333 !important;
 }
 
+textarea,
+input[type=text],
+input[type=password] {
+	background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, from(rgb(51, 51, 51)), to(rgb(51, 51, 51)));
+}
+
 /* ---------------------------------------------------------------- */
 /* #EEEEEE
 /* ---------------------------------------------------------------- */
 
 /* BORDER TOP */
-body #mpcth_page_wrap .vc_separator .vc_sep_holder .vc_sep_line,
+.bbpress #mpcth_content .bbp-topics,
+.bbpress #mpcth_content .bbp-replies,
+.bbpress #mpcth_content .bbp-forums,
+.bbpress #mpcth_content .bbp-search-results .forum .bbp-forum-admin-links .bbp-admin-links,
+.bbpress #mpcth_content .bbp-search-results .reply .bbp-reply-admin-links .bbp-admin-links,
+.bbpress #mpcth_content .bbp-search-results .topic .bbp-topic-admin-links .bbp-admin-links,
+.bbpress #mpcth_content .bbp-replies .forum .bbp-forum-admin-links .bbp-admin-links,
+.bbpress #mpcth_content .bbp-replies .reply .bbp-reply-admin-links .bbp-admin-links,
+.bbpress #mpcth_content .bbp-replies .topic .bbp-topic-admin-links .bbp-admin-links,
+.bbpress #mpcth_content .bbp-replies .topic .bbp-reply-admin-links .bbp-admin-links,
+.bbpress #mpcth_content .bbp-search-results .forum .bbp-forum-form,
+.bbpress #mpcth_content .bbp-search-results .reply .bbp-reply-form,
+.bbpress #mpcth_content .bbp-search-results .topic .bbp-topic-form,
+.bbpress #mpcth_content .bbp-replies .forum .bbp-forum-form,
+.bbpress #mpcth_content .bbp-replies .reply .bbp-reply-form,
+.bbpress #mpcth_content .bbp-replies .topic .bbp-topic-form,
+.bbpress #mpcth_content .bbp-replies .topic .bbp-reply-form,
+.bbpress #mpcth_content .bbp-search-results .forum .bbp-forum-title,
+.bbpress #mpcth_content .bbp-search-results .reply .bbp-reply-title,
+.bbpress #mpcth_content .bbp-search-results .topic .bbp-topic-title,
+.bbpress #mpcth_content #bbp-user-wrapper #bbp-single-user-details #bbp-user-navigation,
+.bbpress #mpcth_content #bbp-user-wrapper #bbp-user-profile .bbp-user-section,
+#mpcth_simple_mobile_nav_wrap,
+/*body #mpcth_page_wrap .vc_separator .vc_sep_holder .vc_sep_line,*/
 #mpcth_page_wrap #mpcth_mini_cart:before,
+#mpcth_page_wrap #mpcth_mini_search:before,
 #mpcth_page_wrap #mpcth_footer,
 #mpcth_page_wrap #mpcth_footer_copyrights_wrap,
 #mpcth_page_wrap #mpcth_page_header_secondary_content.mpcth-header-position-bottom,
@@ -408,6 +523,13 @@ body #mpcth_page_wrap .vc_separator .vc_sep_holder .vc_sep_line,
 }
 
 /* BORDER RIGHT */
+.bbpress #mpcth_content .bbp-search-results .forum .bbp-forum-author,
+.bbpress #mpcth_content .bbp-search-results .reply .bbp-reply-author,
+.bbpress #mpcth_content .bbp-search-results .topic .bbp-topic-author,
+.bbpress #mpcth_content .bbp-replies .forum .bbp-forum-author,
+.bbpress #mpcth_content .bbp-replies .reply .bbp-reply-author,
+.bbpress #mpcth_content .bbp-replies .topic .bbp-topic-author,
+.bbpress #mpcth_content .bbp-replies .topic .bbp-reply-author,
 .mpcth-sidebar-left #mpcth_page_wrap #mpcth_sidebar,
 .mpcth-sidebar-right #mpcth_page_wrap #mpcth_sidebar .mpcth-sidebar-arrow:before,
 .mpcth-sidebar-right #mpcth_page_wrap #mpcth_content_wrap,
@@ -417,7 +539,32 @@ body #mpcth_page_wrap .vc_separator .vc_sep_holder .vc_sep_line,
 	border-right-color: #444444;
 }
 
+.rtl.bbpress #mpcth_content .bbp-search-results .forum .bbp-forum-author,
+.rtl.bbpress #mpcth_content .bbp-search-results .reply .bbp-reply-author,
+.rtl.bbpress #mpcth_content .bbp-search-results .topic .bbp-topic-author,
+.rtl.bbpress #mpcth_content .bbp-replies .forum .bbp-forum-author,
+.rtl.bbpress #mpcth_content .bbp-replies .reply .bbp-reply-author,
+.rtl.bbpress #mpcth_content .bbp-replies .topic .bbp-topic-author,
+.rtl.bbpress #mpcth_content .bbp-replies .topic .bbp-reply-author,
+.rtl.single-mpc_portfolio #mpcth_page_wrap .mpcth-post .mpcth-post-content .mpcth-post-meta .mpcth-categories,
+.rtl #mpcth_page_wrap #mpcth_main #mpcth_content_wrap .wpb_tour .wpb_tabs_nav,
+.rtl.woocommerce-page.single-product #mpcth_page_wrap #mpcth_content > .product .woocommerce-tabs #review_form_wrapper .stars a {
+	border-left-color: #444444;
+}
+
 /* BORDER BOTTOM */
+.bbpress #mpcth_content .bbp-header,
+.bbpress #mpcth_content .bbp-body .topic,
+.bbpress #mpcth_content .bbp-body .forum,
+.bbpress #mpcth_content .bbp-search-results .forum .bbp-forum-header,
+.bbpress #mpcth_content .bbp-search-results .reply .bbp-reply-header,
+.bbpress #mpcth_content .bbp-search-results .topic .bbp-topic-header,
+.bbpress #mpcth_content .bbp-replies .forum .bbp-forum-header,
+.bbpress #mpcth_content .bbp-replies .reply .bbp-reply-header,
+.bbpress #mpcth_content .bbp-replies .topic .bbp-topic-header,
+.bbpress #mpcth_content .bbp-replies .topic .bbp-reply-header,
+.bbpress #mpcth_content #bbp-user-wrapper #bbp-single-user-details #bbp-user-navigation a,
+.bbpress #mpcth_content #bbp-user-wrapper #bbp-user-profile .bbp-user-section > p,
 #mpcth_page_wrap #mpcth_nav_mobile .mpcth-mobile-menu .page_item.page_item_has_children > a,
 #mpcth_page_wrap #mpcth_nav_mobile .mpcth-mobile-menu .page_item.menu-item-has-children > a,
 #mpcth_page_wrap #mpcth_nav_mobile .mpcth-mobile-menu .menu-item.page_item_has_children > a,
@@ -472,8 +619,23 @@ body #mpcth_page_wrap .vc_separator .vc_sep_holder .vc_sep_line,
 .woocommerce-checkout #mpcth_page_wrap #mpcth_content ul.order_details {
 	border-bottom-color: #444444;
 }
+@media only screen and (max-width: 480px) {
+  .mpcth-responsive .bbpress #mpcth_content .bbp-search-results .forum .bbp-forum-author,
+  .mpcth-responsive .bbpress #mpcth_content .bbp-search-results .reply .bbp-reply-author,
+  .mpcth-responsive .bbpress #mpcth_content .bbp-search-results .topic .bbp-topic-author,
+  .mpcth-responsive .bbpress #mpcth_content .bbp-replies .forum .bbp-forum-author,
+  .mpcth-responsive .bbpress #mpcth_content .bbp-replies .reply .bbp-reply-author,
+  .mpcth-responsive .bbpress #mpcth_content .bbp-replies .topic .bbp-topic-author,
+  .mpcth-responsive .bbpress #mpcth_content .bbp-replies .topic .bbp-reply-author {
+	border-bottom-color: #dddddd;
+  }
+  .mpcth-responsive .woocommerce-page.single-product #mpcth_page_wrap #mpcth_content > .product .woocommerce-tabs .tabs li {
+	border-bottom-color: #444444;
+  }
+}
 
 /* BORDER LEFT */
+#mpcth_page_wrap #mpcth_page_header_secondary_content #mpcth_newsletter:before,
 #mpcth_page_wrap #mpcth_page_header_secondary_content #mpcth_secondary_menu:before,
 #mpcth_page_wrap #mpcth_page_header_secondary_content #mpcth_secondary_mini_menu:before,
 .mpcth-sidebar-left #mpcth_page_wrap #mpcth_sidebar .mpcth-sidebar-arrow:before,
@@ -494,13 +656,66 @@ body #mpcth_page_wrap .vc_separator .vc_sep_holder .vc_sep_line,
 	border-left-color: #444444;
 }
 
+.rtl.blog #mpcth_page_wrap #mpcth_content .mpcth-post .mpcth-post-footer .mpcth-comments,
+.rtl.page-template-template-blog-php #mpcth_page_wrap #mpcth_content .mpcth-post .mpcth-post-footer .mpcth-comments,
+.rtl.search.search-results #mpcth_page_wrap #mpcth_content .mpcth-post .mpcth-post-footer .mpcth-comments,
+.rtl.archive.tax-mpc_portfolio_cat #mpcth_page_wrap #mpcth_content .mpcth-post .mpcth-post-footer .mpcth-comments,
+.rtl.archive.author #mpcth_page_wrap #mpcth_content .mpcth-post .mpcth-post-footer .mpcth-comments,
+.rtl.archive.date #mpcth_page_wrap #mpcth_content .mpcth-post .mpcth-post-footer .mpcth-comments,
+.rtl.archive.tag #mpcth_page_wrap #mpcth_content .mpcth-post .mpcth-post-footer .mpcth-comments,
+.rtl.archive.category #mpcth_page_wrap #mpcth_content .mpcth-post .mpcth-post-footer .mpcth-comments,
+.rtl.single-post #mpcth_page_wrap .mpcth-post .mpcth-post-content .mpcth-post-meta .mpcth-comments,
+.rtl #mpcth_page_wrap #mpcth_main #mpcth_content_wrap .wpb_tour .wpb_tab,
+.rtl #mpcth_page_wrap .woocommerce .products .product .mpcth-post-content .mpcth-cart-wrap,
+.rtl.woocommerce #mpcth_page_wrap .products .product .mpcth-post-content .mpcth-cart-wrap {
+	border-right-color: #444444;
+}
+
 /* BORDER */
+.blog #mpcth_content.mpcth-blog-layout-masonry .mpcth-post .mpcth-post-wrap,
+.page-template-template-blog-php #mpcth_content.mpcth-blog-layout-masonry .mpcth-post .mpcth-post-wrap,
+.woocommerce-checkout #mpcth_page_wrap #mpcth_content .checkout_coupon,
+#mpcth_page_wrap .gform_wrapper input,
+#mpcth_page_wrap .gform_wrapper select,
+#mpcth_page_wrap .gform_wrapper textarea,
+.bbpress #mpcth_content #bbp_search,
+.bbpress #mpcth_content .bbp-template-notice,
+.bbpress #mpcth_content .bbp-search-results .forum,
+.bbpress #mpcth_content .bbp-search-results .reply,
+.bbpress #mpcth_content .bbp-search-results .topic,
+.bbpress #mpcth_content .bbp-replies .forum,
+.bbpress #mpcth_content .bbp-replies .reply,
+.bbpress #mpcth_content .bbp-replies .topic,
+.bbpress #mpcth_content .bbp-reply-form .bbp-form,
+.bbpress #mpcth_content .bbp-topic-form .bbp-form,
+.bbpress #mpcth_content .bbp-reply-form .bbp-form legend,
+.bbpress #mpcth_content .bbp-topic-form .bbp-form legend,
+.bbpress #mpcth_content .bbp-reply-form .bbp-form input[type=text],
+.bbpress #mpcth_content .bbp-reply-form .bbp-form textarea,
+.bbpress #mpcth_content .bbp-topic-form .bbp-form input[type=text],
+.bbpress #mpcth_content .bbp-topic-form .bbp-form textarea,
+.bbpress #mpcth_content .bbp-reply-form .bbp-form .bbp-the-content-wrapper .quicktags-toolbar,
+.bbpress #mpcth_content .bbp-topic-form .bbp-form .bbp-the-content-wrapper .quicktags-toolbar,
+.bbpress #mpcth_content #bbp-user-wrapper #bbp-your-profile .bbp-form,
+.bbpress #mpcth_content #bbp-user-wrapper #bbp-your-profile .bbp-form legend,
+.bbpress #mpcth_content #bbp-user-wrapper #bbp-your-profile .bbp-form input[type=text],
+.bbpress #mpcth_content #bbp-user-wrapper #bbp-your-profile .bbp-form input[type=password],
+.bbpress #mpcth_content #bbp-user-wrapper #bbp-your-profile .bbp-form textarea,
+.bbpress #mpcth_content #bbp-user-wrapper #bbp-your-profile .bbp-form .bbp-form .description,
+.bbpress #mpcth_content #bbp-user-wrapper .bbp-forums .subscription-toggle,
+.bbpress #mpcth_content #bbp-user-wrapper .bbp-forums .favorite-toggle,
+.bbpress #mpcth_content #bbp-user-wrapper .bbp-topics .subscription-toggle,
+.bbpress #mpcth_content #bbp-user-wrapper .bbp-topics .favorite-toggle,
+.bbpress #mpcth_content #bbp-user-wrapper .bbp-replies .subscription-toggle,
+.bbpress #mpcth_content #bbp-user-wrapper .bbp-replies .favorite-toggle,
 #mpcth_page_header_secondary_content #mpcth_secondary_mini_menu ul,
 #mpcth_page_wrap #mpcth_main #mpcth_content_wrap .vc_separator.vc_sep_color_grey .vc_sep_line,
 #mpcth_page_wrap #mpcth_main #mpcth_content_wrap .vc_separator.vc_sep_color_grey > h4,
 #mpcth_page_wrap #mpcth_page_header_secondary_content #lang_sel ul ul,
 #mpcth_page_wrap #mpcth_mini_cart,
 #mpcth_page_wrap #mpcth_mini_cart .mpcth-mini-cart-products .mpcth-mini-cart-thumbnail img,
+#mpcth_page_wrap #mpcth_mini_search,
+#mpcth_page_wrap #mpcth_mini_search #s,
 #mpcth_page_wrap .mpc-vc-portfolio-posts-slider .mpcth-post .mpcth-post-header .mpcth-post-thumbnail,
 .page-template-template-portfolio-php #mpcth_page_wrap #mpcth_content .mpcth-post .mpcth-post-header .mpcth-post-thumbnail,
 #mpcth_page_wrap .format-gallery .mpcth-post-thumbnail #main_thumbs .flex-viewport li,
@@ -530,9 +745,9 @@ body #mpcth_page_wrap .vc_separator .vc_sep_holder .vc_sep_line,
 #mpcth_page_wrap #mpcth_main #mpcth_content_wrap .vc_text_separator > div,
 #mpcth_page_wrap #mpcth_main #mpcth_content_wrap .wpb_toggle .mpcth-toggle-mark,
 #mpcth_page_wrap #mpcth_main #mpcth_content_wrap .wpb_call_to_action .wpb_call_text,
-#mpcth_page_wrap #mpcth_main #mpcth_content_wrap .vc-carousel .vc-carousel-control.vc-left,
-#mpcth_page_wrap #mpcth_main #mpcth_content_wrap .vc-carousel .vc-carousel-control.vc-right,
-#mpcth_page_wrap #mpcth_main #mpcth_content_wrap .vc-carousel.vc-per-view-more .vc-carousel-slideline .vc-carousel-slideline-inner > .vc-item > .vc-inner,
+#mpcth_page_wrap #mpcth_main #mpcth_content_wrap .vc_carousel .vc_carousel-control.vc_left,
+#mpcth_page_wrap #mpcth_main #mpcth_content_wrap .vc_carousel .vc_carousel-control.vc_right,
+#mpcth_page_wrap #mpcth_main #mpcth_content_wrap .vc_carousel.vc_per-view-more .vc_carousel-slideline .vc_carousel-slideline-inner > .vc_item > .vc_inner,
 #mpcth_page_wrap #mpcth_main #mpcth_content_wrap .wpb_teaser_grid .wpb_thumbnails li,
 #mpcth_page_wrap #mpcth_main #mpcth_content_wrap .wpb_posts_slider .flex-caption,
 #mpcth_page_wrap #mpcth_main .mpcth-items-slider-wrap .mpcth-items-slider-prev,
@@ -619,6 +834,17 @@ body #mpcth_page_wrap .vc_separator .vc_sep_holder .vc_sep_line,
 /* ---------------------------------------------------------------- */
 
 /* BACKGROUND */
+#mpcth_page_wrap .gform_wrapper input[type=submit],
+#bbpress-forums #bbp_search_submit,
+#bbpress-forums button.button,
+#bbpress-forums input.button,
+#bbpress-forums a.button,
+.bbpress #mpcth_content #bbp-user-wrapper .bbp-forums .subscription-toggle,
+.bbpress #mpcth_content #bbp-user-wrapper .bbp-forums .favorite-toggle,
+.bbpress #mpcth_content #bbp-user-wrapper .bbp-topics .subscription-toggle,
+.bbpress #mpcth_content #bbp-user-wrapper .bbp-topics .favorite-toggle,
+.bbpress #mpcth_content #bbp-user-wrapper .bbp-replies .subscription-toggle,
+.bbpress #mpcth_content #bbp-user-wrapper .bbp-replies .favorite-toggle,
 .woocommerce #mpcth_page_wrap .summary .yith-wcwl-add-to-wishlist a,
 #mpcth_page_wrap .s2_form_widget form input[type=submit],
 #mpcth_smart_search_wrap #searchsubmit,
@@ -645,8 +871,8 @@ body #mpcth_page_wrap .vc_separator .vc_sep_holder .vc_sep_line,
 #mpcth_page_wrap #mpcth_main .mpcth-page .flexslider .flex-direction-nav a:hover,
 #mpcth_page_wrap #mpcth_main .mpcth-post .flexslider#main_slider .mpcth-lightbox .fa:hover,
 #mpcth_page_wrap #mpcth_main .mpcth-page .flexslider#main_slider .mpcth-lightbox .fa:hover,
-#mpcth_page_wrap #mpcth_main #mpcth_content_wrap .vc-carousel .vc-carousel-control.vc-left:hover,
-#mpcth_page_wrap #mpcth_main #mpcth_content_wrap .vc-carousel .vc-carousel-control.vc-right:hover,
+#mpcth_page_wrap #mpcth_main #mpcth_content_wrap .vc_carousel .vc_carousel-control.vc_left:hover,
+#mpcth_page_wrap #mpcth_main #mpcth_content_wrap .vc_carousel .vc_carousel-control.vc_right:hover,
 #mpcth_page_wrap #mpcth_main .mpcth-items-slider-wrap .mpcth-items-slider-prev:hover,
 #mpcth_page_wrap #mpcth_main .mpcth-items-slider-wrap .mpcth-items-slider-next:hover,
 #mpcth_page_wrap #mpcth_smart_search_wrap #searchsubmit:hover,
@@ -694,6 +920,11 @@ body #mpcth_page_wrap .vc_separator .vc_sep_holder .vc_sep_line,
 /* ---------------------------------------------------------------- */
 
 /* BACKGROUND */
+.bbpress #mpcth_content .bbp-body .bbp-topic-pagination a,
+.bbpress #mpcth_content .bbp-reply-form .bbp-form .bbp-the-content-wrapper .quicktags-toolbar,
+.bbpress #mpcth_content .bbp-topic-form .bbp-form .bbp-the-content-wrapper .quicktags-toolbar,
+.bbpress #mpcth_content #bbp-user-wrapper #bbp-your-profile .bbp-form .bbp-form .description,
+#mpcth_simple_mobile_nav_wrap,
 #mpcth_page_wrap #mpcth_smart_search_wrap,
 #mpcth_page_wrap #mpcth_smart_search_wrap select,
 #mpcth_page_wrap #mpcth_smart_search_wrap input[type=text],
@@ -715,6 +946,14 @@ body #mpcth_page_wrap .vc_separator .vc_sep_holder .vc_sep_line,
 /* ---------------------------------------------------------------- */
 
 /* BACKGROUND */
+.bbpress #mpcth_content .bbp-template-notice,
+.bbpress #mpcth_content .bbp-search-results .forum .bbp-forum-author,
+.bbpress #mpcth_content .bbp-search-results .reply .bbp-reply-author,
+.bbpress #mpcth_content .bbp-search-results .topic .bbp-topic-author,
+.bbpress #mpcth_content .bbp-replies .forum .bbp-forum-author,
+.bbpress #mpcth_content .bbp-replies .reply .bbp-reply-author,
+.bbpress #mpcth_content .bbp-replies .topic .bbp-topic-author,
+.bbpress #mpcth_content .bbp-replies .topic .bbp-reply-author,
 .woocommerce-page #mpcth_page_wrap .woocommerce-info,
 .woocommerce-page #mpcth_page_wrap .woocommerce-error,
 .woocommerce-page #mpcth_page_wrap .woocommerce-message {
@@ -725,16 +964,23 @@ body #mpcth_page_wrap .vc_separator .vc_sep_holder .vc_sep_line,
 /* PRE
 /* ---------------------------------------------------------------- */
 
-#mpcth_page_wrap pre,
-#mpcth_page_wrap code {
+#mpcth_page_wrap #bbpress-forums pre,
+#mpcth_page_wrap pre {
 	background-color: #333333;
 	border-color: #555555;
+	color: #999;
 	background-image: linear-gradient(bottom, #333333 50%, #393939 50%);
 	background-image: -o-linear-gradient(bottom, #333333 50%, #393939 50%);
 	background-image: -moz-linear-gradient(bottom, #333333 50%, #393939 50%);
 	background-image: -webkit-linear-gradient(bottom, #333333 50%, #393939 50%);
 	background-image: -ms-linear-gradient(bottom, #333333 50%, #393939 50%);
 	background-image: -webkit-gradient(linear, left bottom, left top, color-stop(0.5, #333333), color-stop(0.5, #393939));
+}
+
+#mpcth_page_wrap code {
+	background-color: #333333;
+	border-color: #555555;
+	color: #999;
 }
 
 /* ---------------------------------------------------------------- */
@@ -750,15 +996,13 @@ body #mpcth_page_wrap .vc_separator .vc_sep_holder .vc_sep_line,
 /* OPACITY BORDER
 /* ---------------------------------------------------------------- */
 
+.bbpress #mpcth_content .bbp-body .bbp-topic-pagination a,
 .woocommerce #mpcth_page_wrap .summary .yith-wcwl-add-to-wishlist a,
 #mpcth_page_wrap .s2_form_widget form input[type=submit],
 #mpcth_page_wrap #mpcth_smart_search_wrap #searchsubmit,
 #mpcth_page_wrap .mpcthSelect,
 #mpcth_page_wrap #mpcth_page_header_content #mpcth_controls_wrap #mpcth_controls_container > a,
 #mpcth_page_wrap #mpcth_mini_cart .button,
-#mpcth_page_wrap #mpcth_smart_search_wrap select,
-#mpcth_page_wrap #mpcth_smart_search_wrap input[type=text],
-#mpcth_page_wrap #mpcth_smart_search_wrap .mpcthSelect,
 .blog #mpcth_page_wrap #mpcth_content .mpcth-post .mpcth-post-footer .mpcth-read-more,
 .page-template-template-blog-php #mpcth_page_wrap #mpcth_content .mpcth-post .mpcth-post-footer .mpcth-read-more,
 .search.search-results #mpcth_page_wrap #mpcth_content .mpcth-post .mpcth-post-footer .mpcth-read-more,
@@ -797,6 +1041,11 @@ body #mpcth_page_wrap .vc_separator .vc_sep_holder .vc_sep_line,
 	border: 1px solid rgba(255, 255, 255, 0.1);
 }
 
+#mpcth_page_wrap #mpcth_smart_search_wrap input[type=text],
+#mpcth_page_wrap #mpcth_smart_search_wrap .mpcthSelect {
+	border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
 /* ---------------------------------------------------------------- */
 /* BOX SHADOW
 /* ---------------------------------------------------------------- */
@@ -807,6 +1056,7 @@ body #mpcth_page_wrap .vc_separator .vc_sep_holder .vc_sep_line,
 }
 
 #mpcth_page_wrap #mpcth_mini_cart,
+#mpcth_page_wrap #mpcth_mini_search,
 #mpcth_page_wrap .mpcth-menu .children,
 #mpcth_page_wrap .mpcth-menu .sub-menu,
 #mpcth_page_wrap #mpcth_menu .children,
@@ -815,6 +1065,21 @@ body #mpcth_page_wrap .vc_separator .vc_sep_holder .vc_sep_line,
 	box-shadow: 0 2px 5px -2px rgba(255, 255, 255, 0.3);
 }
 
+.bbpress #mpcth_content #bbp_search:hover, .bbpress #mpcth_content #bbp_search:active,
+.bbpress #mpcth_content .bbp-reply-form .bbp-form input[type=text]:hover,
+.bbpress #mpcth_content .bbp-reply-form .bbp-form input[type=text]:focus,
+.bbpress #mpcth_content .bbp-reply-form .bbp-form textarea:hover,
+.bbpress #mpcth_content .bbp-reply-form .bbp-form textarea:focus,
+.bbpress #mpcth_content .bbp-topic-form .bbp-form input[type=text]:hover,
+.bbpress #mpcth_content .bbp-topic-form .bbp-form input[type=text]:focus,
+.bbpress #mpcth_content .bbp-topic-form .bbp-form textarea:hover,
+.bbpress #mpcth_content .bbp-topic-form .bbp-form textarea:focus,
+.bbpress #mpcth_content #bbp-user-wrapper #bbp-your-profile .bbp-form input[type=text]:hover,
+.bbpress #mpcth_content #bbp-user-wrapper #bbp-your-profile .bbp-form input[type=text]:focus,
+.bbpress #mpcth_content #bbp-user-wrapper #bbp-your-profile .bbp-form input[type=password]:hover,
+.bbpress #mpcth_content #bbp-user-wrapper #bbp-your-profile .bbp-form input[type=password]:focus,
+.bbpress #mpcth_content #bbp-user-wrapper #bbp-your-profile .bbp-form textarea:hover,
+.bbpress #mpcth_content #bbp-user-wrapper #bbp-your-profile .bbp-form textarea:focus,
 #mpcth_page_wrap .mpcthSelect.mpcthSelectHover,
 #mpcth_page_wrap .mpc-vc-portfolio-posts-slider .mpcth-post .mpcth-post-content,
 .page-template-template-portfolio-php #mpcth_page_wrap #mpcth_content .mpcth-post .mpcth-post-content,

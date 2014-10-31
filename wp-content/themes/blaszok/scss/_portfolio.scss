@@ -23,7 +23,7 @@
 
 		li {
 			display: inline-block;
-			padding: .5em .75em;
+			@include padding(.5em, 0, .5em, 1.5em); // padding: .5em 0 .5em 1.5em;
 			cursor: pointer;
 			list-style: none;
 
@@ -35,7 +35,12 @@
 		}
 
 		span {
+			@include margin-right(-.75em); // margin-right: -.75em;
 			color: #999999;
+
+			@media #{$screen-normal} {
+				@include margin-right(0); // margin-right: 0;
+			}
 		}
 
 		select {
@@ -79,17 +84,17 @@
 		}
 	}
 	#mpcth_portfolio_sorts {
-		float: left;
-		padding-left: 20px;
+		@include float(left); // float: left;
+		@include padding-left(20px); // padding-left: 20px;
 	}
 	#mpcth_portfolio_filters {
-		float: right;
-		padding-right: 20px;
+		@include float(right); // float: right;
+		@include padding-right(20px); // padding-right: 20px;
 	}
 }
 
-.mpc-vc-portfolio-posts-slider,
-.page-template-template-portfolio-php #mpcth_content {
+#mpcth_page_wrap .mpc-vc-portfolio-posts-slider,
+.page-template-template-portfolio-php #mpcth_page_wrap #mpcth_content {
 	text-align: justify;
 	font-size: 0;
 	clear: both;
@@ -157,7 +162,7 @@
 				position: absolute;
 				z-index: 2;
 				top: .5em;
-				right: .5em;
+				@include right(.5em); // right: .5em;
 				font-size: 1.5em;
 				padding: .5em;
 

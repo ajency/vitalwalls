@@ -34,7 +34,7 @@ function mpcth_optionsframework_fields() {
 	} else {
 		$mpcth_option_name = 'mpcth_optionsframework';
 	}
-	// print_r($mpcth_option_name);
+
 	$mpcth_settings = get_option($mpcth_option_name);
 	$mpcth_options = mpcth_optionsframework_options();
 

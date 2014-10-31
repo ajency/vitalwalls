@@ -38,6 +38,12 @@ function mpcth_theme_setup(){
 	load_child_theme_textdomain( 'mpcth', get_stylesheet_directory() . '/languages' );
 }
 
+/* WooCommerce jquery.cookie server issue workaround */
+add_action('init', 'mpcth_woo_fix');
+function mpcth_woo_fix() {
+	wp_register_script('jquery-cookie', MPC_THEME_URI . '/js/jquery.cokies' . (defined( 'SCRIPT_DEBUG' ) && SCRIPT_DEBUG ? '' : '.min') . '.js', array('jquery'), '1.3.1', true);
+}
+
 /* ---------------------------------------------------------------- */
 /* Location Files
 /* ---------------------------------------------------------------- */
@@ -72,6 +78,19 @@ function mpcth_wp_title($title, $sep) {
 }
 
 /* ---------------------------------------------------------------- */
+/* Panel notice
+/* ---------------------------------------------------------------- */
+add_action('admin_notices', 'mpcth_theme_update');
+function mpcth_theme_update() {
+	$mpc_theme = wp_get_theme();
+	$saved_version = get_option('mpc_theme_version');
+
+	if($mpc_theme->get('Version') !== $saved_version) {
+		echo '<div id="mpcth_theme_update" class="updated fade"><p><strong>' . __('Blaszok theme', 'mpcth') . '</strong> ' . __('was successfully updated. Please go to', 'mpcth') . ' <em>' . __('Theme Options', 'mpcth') . '</em>.</p></div>';
+	}
+}
+
+/* ---------------------------------------------------------------- */
 /* Enqueue theme scripts and styles
 /* ---------------------------------------------------------------- */
 add_action('wp_enqueue_scripts', 'mpcth_enqueue_scripts');
@@ -95,88 +114,103 @@ function mpcth_enqueue_scripts() {
 			wp_enqueue_style('mpc-heading-font', "$protocol://fonts.googleapis.com/css?family=Lato:700");
 		}
 	}
-
-	$main_color = isset($mpcth_options['mpcth_color_main']) ? $mpcth_options['mpcth_color_main'] : '#B163A3';
-	$base_font_size = isset($mpcth_options['mpcth_base_font_size']) ? $mpcth_options['mpcth_base_font_size'] : '12px';
-	$custom_styles = "
-	body {font-size: $base_font_size;}
-	#mpcth_page_wrap #mpcth_sidebar a:hover,#mpcth_page_wrap #mpcth_footer a:hover,a {color: $main_color;}
-	#mpcth_page_wrap .mpcth-color-main-color,#mpcth_page_wrap .mpcth-color-main-color-hover:hover {color: $main_color;}
-	#mpcth_page_wrap .mpcth-color-main-background,#mpcth_page_wrap .mpcth-color-main-background-hover:hover {background-color: $main_color;}
-	#mpcth_page_wrap .mpcth-color-main-border,#mpcth_page_wrap .mpcth-color-main-border-hover:hover {border-color: $main_color !important;}
-	#jckqv .woocommerce-product-rating .star-rating span:before,#mpcth_page_wrap .woocommerce .mpcth-post-header .mpcth-quick-view .fa:hover,.woocommerce-page #mpcth_page_wrap .mpcth-post-header .mpcth-quick-view .fa:hover,#mpcth_back_to_top:hover,.woocommerce #mpcth_page_wrap .mpcth-shop-style-slim .products .product .mpcth-post-content .fa,.woocommerce #mpcth_page_wrap .mpcth-shop-style-slim .products .product .mpcth-post-content a:hover,.woocommerce #mpcth_page_wrap .mpcth-shop-style-center .products .product .mpcth-post-content .fa,.woocommerce #mpcth_page_wrap .mpcth-shop-style-center .products .product .mpcth-post-content a:hover,.woocommerce #mpcth_page_wrap .mpcth-shop-style-slim .products .product .mpcth-post-content .add_to_cart_button i,.page-template-template-blog-php #mpcth_content .mpcth-post .mpcth-post-title > a:hover,.archive #mpcth_page_wrap #mpcth_content .mpcth-post .mpcth-post-title > a:hover,#mpcth_page_wrap .mpcth-mobile-menu .page_item > a:hover,#mpcth_page_wrap .mpcth-mobile-menu .menu-item > a:hover,#mpcth_page_wrap .mpcth-mobile-menu .page_item.current-menu-item > a,#mpcth_page_wrap .mpcth-mobile-menu .menu-item.current-menu-item > a,.woocommerce-page.single-product #mpcth_page_wrap #mpcth_content > .product .summary .stock.out-of-stock,.woocommerce-wishlist #mpcth_page_wrap #mpcth_content .yith-wcwl-share li a:hover,#mpcth_page_wrap .wpcf7 .contact-form-input label,#mpcth_page_wrap .wpcf7 .contact-form-message label,#mpcth_page_wrap .woocommerce.widget.widget_layered_nav .chosen a,#mpcth_page_wrap #mpcth_page_header_secondary_content #mpcth_newsletter input[type=submit]:hover,#mpcth_page_wrap #mpcth_smart_search_wrap .mpcthSelect,.woocommerce-page.single-product #mpcth_page_wrap #mpcth_content > .product .star-rating span,#mpcth_page_wrap .widget_product_categories .product-categories .cat-item.current-cat > a,#mpcth_page_wrap .products .product .mpcth-post-content .product_type_variable:hover,#mpcth_page_wrap .products .product .mpcth-post-content .add_to_cart_button:hover,.woocommerce-page.single-product #mpcth_page_wrap #mpcth_content > .product .woocommerce-tabs #review_form_wrapper .stars a:hover,#mpcth_page_wrap #mpcth_comments #mpcth_comments_wrap .mpcth-comment-header a:hover,#mpcth_page_wrap .widget .product_list_widget li .star-rating > span,#mpcth_page_wrap .widget .product_list_widget li a,#mpcth_page_wrap #mpcth_main .nivoSlider .nivo-directionNav a,#mpcth_page_wrap #mpcth_main .rev_slider_wrapper .tparrows.default,#mpcth_page_wrap #mpcth_main .flexslider .flex-direction-nav a,#mpcth_page_wrap #mpcth_main .widget a:hover,#mpcth_page_wrap #mpcth_main .widget.widget_text a,#mpcth_page_wrap .widget.mpc-w-twitter-widget a,#mpcth_page_wrap .mpc-sc-tooltip-wrap .mpc-sc-tooltip-text,#mpcth_page_wrap #mpcth_smart_search_wrap select,#mpcth_page_wrap #mpcth_smart_search_wrap input,#mpcth_page_wrap #mpcth_page_header_secondary_content a:hover,#mpcth_page_wrap #mpcth_main .vc_text_separator > div,.woocommerce-page.single-product #mpcth_page_wrap #mpcth_content > .product .woocommerce-tabs .tabs li.active a,.woocommerce-page.single-product #mpcth_page_wrap #mpcth_content > .product .woocommerce-tabs .tabs li:hover a,.woocommerce-page #mpcth_page_wrap .woocommerce-breadcrumb a,#mpcth_page_wrap #mpcth_main #mpcth_content_wrap .wpb_accordion_header.ui-state-active a,#mpcth_page_wrap #mpcth_main #mpcth_content_wrap .wpb_accordion_header:hover a,#mpcth_page_wrap #mpcth_main #mpcth_content_wrap .wpb_toggle.wpb_toggle_title_active .mpcth-title-wrap,#mpcth_page_wrap #mpcth_main #mpcth_content_wrap .wpb_toggle:hover .mpcth-title-wrap,#mpcth_page_wrap #mpcth_main #mpcth_content_wrap .wpb_toggle.wpb_toggle_title_active .mpcth-toggle-mark,#mpcth_page_wrap #mpcth_main #mpcth_content_wrap .wpb_toggle:hover .mpcth-toggle-mark,#mpcth_page_wrap #mpcth_main #mpcth_content_wrap .wpb_tabs .wpb_tabs_nav > li.ui-state-active > a,#mpcth_page_wrap #mpcth_main #mpcth_content_wrap .wpb_tabs .wpb_tabs_nav > li.ui-state-hover > a,#mpcth_page_wrap #mpcth_main #mpcth_content_wrap .wpb_tour .wpb_tabs_nav > li.ui-state-active > a > span,#mpcth_page_wrap #mpcth_main #mpcth_content_wrap .wpb_tour .wpb_tabs_nav > li.ui-state-hover > a > span,#mpcth_page_wrap .mpcth-menu .page_item:hover > a,#mpcth_page_wrap .mpcth-menu .menu-item:hover > a,#mpcth_page_wrap .mpcth-menu .page_item.current-menu-item > a,#mpcth_page_wrap .mpcth-menu .menu-item.current-menu-item > a,#mpcth_page_wrap #mpcth_mega_menu .widget ul .menu-item > a:hover,#mpcth_page_wrap #mpcth_mega_menu .widget .sub-container > .sub-menu li > a:hover,#mpcth_page_wrap #mpcth_mega_menu .widget ul .menu-item.current-page-ancestor > a,#mpcth_page_wrap #mpcth_mega_menu .widget ul .menu-item.current-menu-item > a,#mpcth_page_wrap #mpcth_nav .current-page-ancestor > a,#mpcth_page_wrap #mpcth_nav .current-menu-ancestor > a,#mpcth_page_wrap #mpcth_nav .current_page_ancestor > a,#mpcth_page_wrap .widget_nav_menu .page_item.current-menu-item > a,#mpcth_page_wrap .widget_nav_menu .menu-item.current-menu-item > a,#mpcth_page_wrap .widget_nav_menu .current-page-ancestor > a,#mpcth_page_wrap .widget_nav_menu .current-menu-ancestor > a,#mpcth_page_wrap .widget_nav_menu .current_page_ancestor > a,#mpcth_page_wrap .mpcth-socials-list li a:hover,#mpcth_page_wrap #mpcth_content .product .mpcth-post-content .price ins .amount,.woocommerce-page #mpcth_page_wrap #mpcth_content .products .product .mpcth-post-categories a:hover,.page-template-template-portfolio-php #mpcth_page_wrap #mpcth_content .mpcth-post .mpcth-post-content .mpcth-post-categories a:hover,.page-template-template-portfolio-php #mpcth_page_wrap #mpcth_portfolio_sorts li.active,.page-template-template-portfolio-php #mpcth_page_wrap #mpcth_portfolio_filters li.active {color: $main_color;}
-	#jckqv #jckqv_summary .onsale,#jckqv #jckqv_summary .yith-wcwl-add-to-wishlist a:hover,#jckqv #jckqv_summary .single_add_to_cart_button,#jckqv #jckqv_summary h1:after,#jckqv #jckqv_summary .product_meta:after,.woocommerce-wishlist #mpcth_page_wrap #mpcth_content a.button,#mpcth_page_wrap #mpcth_mini_cart .button:hover,#mpcth_page_wrap #mpcth_mini_cart .button.alt,.woocommerce-page.single-product #mpcth_page_wrap #mpcth_content > .product .summary .yith-wcwl-add-to-wishlist a:hover,.page-template-template-blog-php #mpcth_content .mpcth-post .mpcth-post-footer .mpcth-read-more:hover,.archive #mpcth_page_wrap #mpcth_content .mpcth-post .mpcth-post-footer .mpcth-read-more:hover,.blog #mpcth_page_wrap #mpcth_content .mpcth-post .mpcth-post-footer .mpcth-read-more:hover,.woocommerce-page.single-product #mpcth_page_wrap .cart .quantity .plus-wrap:hover,.woocommerce-page.single-product #mpcth_page_wrap .cart .quantity .minus-wrap:hover,.woocommerce-cart #mpcth_page_wrap .cart .quantity .plus-wrap:hover,.woocommerce-cart #mpcth_page_wrap .cart .quantity .minus-wrap:hover,#mpcth_page_wrap #mpcth_main #mpcth_content_wrap .vc_separator.mpcth-separator .vc_sep_holder_l .vc_sep_line:before,#mpcth_page_wrap #mpcth_smart_search_wrap #searchsubmit,#mpcth_page_wrap .s2_form_widget form input[type=submit]:hover,#mpcth_page_wrap .mpcth-menu-label-hot,#mpcth_page_wrap .bra-photostream-widget ul li:hover a,.woocommerce-page.single-product #mpcth_page_wrap .cart .single_add_to_cart_button:hover,.woocommerce-cart #mpcth_page_wrap .cart .single_add_to_cart_button:hover,#mpcth_page_wrap .wpcf7 .form-submit .wpcf7-submit:hover,#mpcth_page_wrap #review_form_wrapper #submit:hover,#mpcth_page_wrap .widget #searchform #searchsubmit:hover,#mpcth_page_wrap .widget #searchform #searchsubmit.alt,.woocommerce-page.single-product #mpcth_page_wrap #mpcth_content > .product .product_meta:after,.woocommerce-page.single-product #mpcth_page_wrap #mpcth_content > .product .product_share:after,#mpcth_page_wrap .woocommerce #review_form_wrapper #submit:hover,#mpcth_page_wrap .woocommerce button.button:hover,#mpcth_page_wrap .woocommerce input.button:hover,#mpcth_page_wrap .woocommerce a.button:hover,.woocommerce #mpcth_page_wrap #review_form_wrapper #submit:hover,.woocommerce #mpcth_page_wrap button.button:hover,.woocommerce #mpcth_page_wrap input.button:hover,.woocommerce #mpcth_page_wrap a.button:hover,#mpcth_page_wrap .woocommerce #review_form_wrapper #submit.alt,#mpcth_page_wrap .woocommerce button.button.alt,#mpcth_page_wrap .woocommerce input.button.alt,#mpcth_page_wrap .woocommerce a.button.alt,.woocommerce #mpcth_page_wrap #review_form_wrapper #submit.alt,.woocommerce #mpcth_page_wrap button.button.alt,.woocommerce #mpcth_page_wrap input.button.alt,.woocommerce #mpcth_page_wrap a.button.alt,#mpcth_page_wrap #mpcth_main .wpb_separator:before,#mpcth_page_wrap #mpcth_main .vc_text_separator:before,#mpcth_page_wrap .woocommerce.widget.widget_layered_nav_filters .chosen a,#mpcth_page_wrap #mpcth_page_header_content #mpcth_controls_wrap #mpcth_controls_container > a:hover,#mpcth_page_wrap #mpcth_page_header_content #mpcth_controls_wrap #mpcth_controls_container > a.active,#mpcth_page_wrap .woocommerce.widget.widget_price_filter .ui-slider-handle,#mpcth_page_wrap .woocommerce.widget.widget_price_filter .ui-slider-range,#mpcth_page_wrap .woocommerce.widget.widget_price_filter .button:hover,#mpcth_page_wrap #mpcth_comments #respond #mpcth_comment_form .form-submit input:hover,.blog #mpcth_page_wrap #mpcth_content .post .mpcth-post-thumbnail .mpcth-lightbox,.page-template-template-blog-php #mpcth_page_wrap #mpcth_content .post .mpcth-post-thumbnail .mpcth-lightbox,#mpcth_page_wrap #mpcth_main .vc-carousel .vc-carousel-indicators li,#mpcth_page_wrap #mpcth_main .wpb_posts_slider .nivo-controlNav a,#mpcth_page_wrap #mpcth_main .flexslider .flex-control-nav li a,#mpcth_page_wrap #mpcth_main .rev_slider_wrapper .tp-bullets.simplebullets.round .bullet {background-color: $main_color;}
-	#mpcth_back_to_top:hover,#mpcth_page_wrap .mpc-sc-tooltip-wrap .mpc-sc-tooltip-text,#mpcth_page_wrap .mpcth-deco-header span,.woocommerce-page.single-product #mpcth_page_wrap #mpcth_content > .product .woocommerce-tabs #review_form_wrapper #reply-title,.woocommerce-page.single-product #mpcth_page_wrap #mpcth_content > .product .woocommerce-tabs .tabs li.active a,.woocommerce-page.single-product #mpcth_page_wrap #mpcth_content > .product .woocommerce-tabs .tabs li:hover a,#mpcth_page_wrap #mpcth_main #mpcth_content_wrap .wpb_accordion_header.ui-state-active a,#mpcth_page_wrap #mpcth_main #mpcth_content_wrap .wpb_accordion_header:hover a,#mpcth_page_wrap #mpcth_main #mpcth_content_wrap .wpb_toggle.wpb_toggle_title_active .mpcth-title-wrap,#mpcth_page_wrap #mpcth_main #mpcth_content_wrap .wpb_toggle:hover .mpcth-title-wrap,#mpcth_page_wrap #mpcth_main #mpcth_content_wrap .wpb_toggle.wpb_toggle_title_active .mpcth-toggle-mark,#mpcth_page_wrap #mpcth_main #mpcth_content_wrap .wpb_toggle:hover .mpcth-toggle-mark,#mpcth_page_wrap #mpcth_main #mpcth_content_wrap .wpb_tabs .wpb_tabs_nav > li.ui-state-active > a,#mpcth_page_wrap #mpcth_main #mpcth_content_wrap .wpb_tabs .wpb_tabs_nav > li.ui-state-hover > a,#mpcth_page_wrap #mpcth_main #mpcth_content_wrap .wpb_tour .wpb_tabs_nav > li.ui-state-active > a > span,#mpcth_page_wrap #mpcth_main #mpcth_content_wrap .wpb_tour .wpb_tabs_nav > li.ui-state-hover > a > span,#mpcth_page_wrap #mpcth_comments #reply-title,#mpcth_page_wrap #mpcth_main .vc-carousel .vc-carousel-indicators li.vc-active,#mpcth_page_wrap #mpcth_main .wpb_posts_slider .nivo-controlNav a.active,#mpcth_page_wrap #mpcth_main .flexslider .flex-control-nav li a.flex-active,#mpcth_page_wrap #mpcth_main .rev_slider_wrapper .tp-bullets.simplebullets.round .bullet.selected,#mpcth_page_wrap .page_item.menu-item-has-children:after,#mpcth_page_wrap .menu-item.menu-item-has-children:after,#mpcth_page_wrap .page_item.menu-item-has-children:after,#mpcth_page_wrap .menu-item.menu-item-has-children:after {border-color: $main_color;}
-	#mpcth_page_wrap #mpcth_main .wpb_call_to_action.cta_align_bottom .wpb_button_a:after {border-bottom-color: $main_color;}
-	#mpcth_page_wrap .mpcth-list-item:before,#mpcth_page_wrap ul li:before, #mpcth_page_wrap #mpcth_main ul li:before,ol li:before,#mpcth_page_wrap #mpcth_page_header_secondary_content #mpcth_newsletter .mpcth-newsletter-toggle:before,#mpcth_page_wrap #mpcth_page_header_secondary_content #mpcth_newsletter form:before,#mpcth_page_wrap #mpcth_page_header_secondary_content #mpcth_newsletter .mpcth-newsletter-subscribe:before,#mpcth_page_wrap #mpcth_main .wpb_call_to_action.cta_align_left .wpb_button_a:after {border-left-color: $main_color;}
-	#mpcth_page_wrap #mpcth_main .wpb_call_to_action.cta_align_right .wpb_button_a:after {border-right-color: $main_color;}
-	#jckqv #jckqv_summary .mpcth-sale-wrap:before, #mpcth_page_wrap .woocommerce .mpcth-sale-wrap:before, .woocommerce-page #mpcth_page_wrap .mpcth-sale-wrap:before {border-bottom-color: " . mpcth_adjust_brightness($main_color, -25) . ";}
-	#mpcth_page_wrap .woocommerce .mpcth-sale-wrap:after, .woocommerce-page #mpcth_page_wrap .mpcth-sale-wrap:after {border-left-color: " . mpcth_adjust_brightness($main_color, -25) . ";}
-	#jckqv #jckqv_summary .mpcth-sale-wrap:after, #mpcth_page_wrap .mpcth-thumbs-sale-swap #jckWooThumbs_img_wrap + .mpcth-sale-wrap:after {border-right-color: " . mpcth_adjust_brightness($main_color, -25) . ";}
-	#mpcth_page_wrap #mpcth_smart_search_wrap #s::-webkit-input-placeholder,#mpcth_page_wrap #mpcth_smart_search_wrap #s::-webkit-input-placeholder {color: $main_color;}
-	#mpcth_page_wrap #mpcth_smart_search_wrap #s:-moz-placeholder,#mpcth_page_wrap #mpcth_smart_search_wrap #s:-moz-placeholder {color: $main_color;}
-	#mpcth_page_wrap #mpcth_smart_search_wrap #s::-moz-placeholder,#mpcth_page_wrap #mpcth_smart_search_wrap #s::-moz-placeholder {color: $main_color;}
-	#mpcth_page_wrap #mpcth_smart_search_wrap #s:-ms-input-placeholder,#mpcth_page_wrap #mpcth_smart_search_wrap #s:-ms-input-placeholder {color: $main_color;}";
-
-	if (isset($content_family)) {
-		$custom_styles .= "body {";
-			$custom_styles .= "font-family: " . str_replace('+', ' ', $content_family) . ";";
-			if (!empty($mpcth_options['mpcth_content_font']['font-style'])) {
-				$custom_styles .= "font-style: {$mpcth_options['mpcth_content_font']['font-style']};";
-			}
-			if (!empty($mpcth_options['mpcth_content_font']['font-weight']) && $mpcth_options['mpcth_content_font']['font-weight'] != 'regular') {
-				$custom_styles .= "font-weight: {$mpcth_options['mpcth_content_font']['font-weight']};";
-			}
-		$custom_styles .= "}";
-	}
-	if (isset($heading_family)) {
-		$custom_styles .= "h1, h2, h3, h4, h5, h6,";
-		$custom_styles .= "#jckqv h1, #jckqv h2, #jckqv h3, #jckqv h4, #jckqv h5, #jckqv h6 {";
-			$custom_styles .= "font-family: " . str_replace('+', ' ', $heading_family) . ";";
-			if (!empty($mpcth_options['mpcth_heading_font']['font-style'])) {
-				$custom_styles .= "font-style: {$mpcth_options['mpcth_heading_font']['font-style']};";
-			}
-			if (!empty($mpcth_options['mpcth_heading_font']['font-weight']) && $mpcth_options['mpcth_heading_font']['font-weight'] != 'regular') {
-				$custom_styles .= "font-weight: {$mpcth_options['mpcth_heading_font']['font-weight']};";
-			}
-		$custom_styles .= "}";
+	if (isset($mpcth_options['mpcth_menu_font']) && is_array($mpcth_options['mpcth_menu_font'])) {
+		if ($mpcth_options['mpcth_menu_font']['type'] == 'google') {
+			$menu_family = str_replace(' ', '+', $mpcth_options['mpcth_menu_font']['family']);
+			$menu_style = $mpcth_options['mpcth_menu_font']['style'] != 'regular' ? ':' . $mpcth_options['mpcth_menu_font']['style'] : '';
+			wp_enqueue_style('mpc-menu-font', "$protocol://fonts.googleapis.com/css?family={$menu_family}{$menu_style}");
+		}
 	}
 
-	$menu_id = get_nav_menu_locations();
-	if(isset($menu_id['mpcth_menu'])) {
-		$menu_items = wp_get_nav_menu_items($menu_id['mpcth_menu']);
+	if (! is_rtl())
+		wp_enqueue_style('mpc-styles', get_template_directory_uri() . '/style.css');
+	else
+		wp_enqueue_style('mpc-styles', get_template_directory_uri() . '/style-rtl.css');
 
-		if (! empty($menu_items))
-			foreach ($menu_items as $item) {
-				if ($item->menu_item_parent === '0') {
-					$custom_styles .= "#mpcth_page_wrap #mpcth_mega_menu .menu-item-$item->ID > .sub-container > .sub-menu {";
-
-					if (isset($mpcth_options['mpcth_menu_bg_image_' . $item->object_id]) && $mpcth_options['mpcth_menu_bg_image_' . $item->object_id] != '') {
-						$custom_styles .= "background-image: url('" . $mpcth_options['mpcth_menu_bg_image_' . $item->object_id] . "');";
-						$custom_styles .= "background-repeat: no-repeat;";
-					}
-					if (isset($mpcth_options['mpcth_menu_bg_align_' . $item->object_id]) && $mpcth_options['mpcth_menu_bg_align_' . $item->object_id] != '') {
-						$custom_styles .= "background-position: " . $mpcth_options['mpcth_menu_bg_align_' . $item->object_id] . ";";
-					} else {
-						$custom_styles .= "background-position: bottom center;";
-					}
-					if (isset($mpcth_options['mpcth_menu_bg_padding_' . $item->object_id]) && $mpcth_options['mpcth_menu_bg_padding_' . $item->object_id] != '')
-						$custom_styles .= "padding: 1.5em " . $mpcth_options['mpcth_menu_bg_padding_' . $item->object_id] . ";";
-
-					$custom_styles .= "}";
-				}
-			}
-	}
-
-	if (isset($mpcth_options['mpcth_custom_css'])) {
-		$custom_styles .= html_entity_decode(stripslashes(stripslashes($mpcth_options['mpcth_custom_css'])));
-	}
-
-	wp_enqueue_style('mpc-styles', get_stylesheet_directory_uri() . '/style.css');
-	wp_add_inline_style('mpc-styles', $custom_styles);
+//	if (get_template_directory_uri() != get_stylesheet_directory_uri())
+//		wp_enqueue_style('mpc-styles-child', get_stylesheet_directory_uri() . '/style.css');
 
 	if ($mpcth_options['mpcth_theme_skin'] != 'default')
 		wp_enqueue_style('mpc-skins-styles', get_template_directory_uri() . '/css/' . $mpcth_options['mpcth_theme_skin'] . '.css');
+
+	wp_enqueue_style('mpc-styles-custom', get_stylesheet_directory_uri() . '/style_custom.css');
+
+	/* Transparent Header */
+	// $enable_transparent_header = get_field('mpc_enable_transparent_header') && get_field('mpc_header_content') != '';
+	$enable_transparent_header = get_field('mpc_enable_transparent_header');
+	if ($enable_transparent_header) {
+		$force_simple_buttons = $enable_transparent_header && get_field('mpc_force_simple_buttons');
+		$background_opacity = $enable_transparent_header ? get_field('mpc_background_opacity') : false;
+		$force_background_color = $enable_transparent_header ? get_field('mpc_force_background_color') : false;
+		$force_font_color = $enable_transparent_header ? get_field('mpc_force_font_color') : false;
+		$sticky_force_background_color = $enable_transparent_header ? get_field('mpc_force_background_color_sticky') : false;
+		$sticky_force_font_color = $enable_transparent_header ? get_field('mpc_force_font_color_sticky') : false;
+
+		$rgba_background = mpcth_hex_to_rgba($force_background_color, $background_opacity / 100);
+		$sticky_rgba_background = mpcth_hex_to_rgba($sticky_force_background_color, .95);
+
+		$custom_styles = "";
+
+		if ($force_font_color !== '')
+			$custom_styles .= "
+#mpcth_header_second_section #mpcth_page_header_secondary_content,
+#mpcth_header_second_section #mpcth_page_header_secondary_content a,
+#mpcth_header_second_section,
+#mpcth_page_header_wrap #mpcth_header_section,
+#mpcth_page_header_wrap #mpcth_header_section a,
+#mpcth_page_header_wrap #mpcth_header_section #mpcth_nav a,
+#mpcth_page_header_wrap.mpcth-simple-buttons-enabled #mpcth_header_section #mpcth_controls_wrap #mpcth_controls_container > a
+		{ color: $force_font_color; }
+
+#mpcth_nav .mpcth-menu > .page_item.menu-item-has-children > a:after,
+#mpcth_nav .mpcth-menu > .menu-item.menu-item-has-children > a:after,
+#mpcth_header_section #mpcth_page_header_content #mpcth_mega_menu .menu-item-has-children > a:after
+		{ border-color: $force_font_color; }";
+
+		if ($sticky_force_font_color !== '')
+			$custom_styles .= "
+.mpcth-sticky-header #mpcth_header_second_section #mpcth_page_header_secondary_content,
+.mpcth-sticky-header #mpcth_header_second_section #mpcth_page_header_secondary_content a,
+.mpcth-sticky-header #mpcth_header_second_section,
+#mpcth_page_header_wrap.mpcth-sticky-header #mpcth_header_section,
+#mpcth_page_header_wrap.mpcth-sticky-header #mpcth_header_section a,
+#mpcth_page_header_wrap.mpcth-sticky-header #mpcth_header_section #mpcth_nav .mpcth-menu > li > a,
+#mpcth_page_header_wrap.mpcth-sticky-header #mpcth_header_section #mpcth_nav .menu > li > a,
+#mpcth_page_header_wrap.mpcth-sticky-header.mpcth-simple-buttons-enabled #mpcth_header_section #mpcth_controls_wrap #mpcth_controls_container > a
+		{ color: $sticky_force_font_color; }
+
+.mpcth-sticky-header #mpcth_nav .mpcth-menu > .page_item.menu-item-has-children > a:after,
+.mpcth-sticky-header #mpcth_nav .mpcth-menu > .menu-item.menu-item-has-children > a:after,
+.mpcth-sticky-header #mpcth_header_section #mpcth_page_header_content #mpcth_mega_menu .menu-item-has-children > a:after
+		{ border-color: $sticky_force_font_color; }";
+
+		if ($force_background_color !== '')
+			$custom_styles .= "
+#mpcth_page_header_wrap #mpcth_header_section,
+#mpcth_page_header_wrap #mpcth_header_second_section
+		{
+			background-color: transparent;
+			background-color: rgba($rgba_background[0], $rgba_background[1], $rgba_background[2], $rgba_background[3]);
+		}";
+
+		if ($sticky_force_background_color !== '')
+			$custom_styles .= "
+#mpcth_page_header_wrap.mpcth-sticky-header #mpcth_header_section,
+#mpcth_page_header_wrap.mpcth-sticky-header:hover #mpcth_header_section,
+#mpcth_page_header_wrap.mpcth-sticky-header #mpcth_header_second_section
+		{
+			background-color: $sticky_force_background_color;
+			background-color: rgba($sticky_rgba_background[0], $sticky_rgba_background[1], $sticky_rgba_background[2], $sticky_rgba_background[3]);
+		}";
+
+		$custom_styles .= "
+#mpcth_page_header_wrap #mpcth_header_second_section,
+#mpcth_page_header_wrap #mpcth_header_section
+		{ border: none; }";
+
+		wp_add_inline_style('mpc-styles-custom', $custom_styles);
+	}
+	/* END - Transparent Header */
 
 	wp_enqueue_style('font-awesome', MPC_THEME_URI . '/fonts/font-awesome.css');
 	wp_enqueue_style('mpc-theme-plugins-css', MPC_THEME_URI . '/css/plugins.min.css');
@@ -208,6 +242,20 @@ if (! is_admin() && ! function_exists('get_field')) {
 	function get_field($name) {
 		return false;
 	}
+}
+
+/* ---------------------------------------------------------------- */
+/* Cache Google Webfonts
+/* ---------------------------------------------------------------- */
+add_action('wp_ajax_mpcth_cache_google_webfonts', 'mpcth_cache_google_webfonts');
+function mpcth_cache_google_webfonts() {
+	$google_webfonts = isset($_POST['google_webfonts']) ? $_POST['google_webfonts'] : '';
+
+	if(!empty($google_webfonts)) {
+		set_transient('mpcth_google_webfonts', $google_webfonts, DAY_IN_SECONDS);
+	}
+
+	die();
 }
 
 /* ---------------------------------------------------------------- */
@@ -301,6 +349,11 @@ if (function_exists('register_nav_menus')) {
 }
 
 /* ---------------------------------------------------------------- */
+/* Register demo install
+/* ---------------------------------------------------------------- */
+require_once(MPC_THEME_PATH . '/demos/demo_content_install.php');
+
+/* ---------------------------------------------------------------- */
 /* Get sidebar position
 /* ---------------------------------------------------------------- */
 function mpcth_get_sidebar_position() {
@@ -346,14 +399,21 @@ function mpcth_get_sidebar_position() {
 		$sidebar_position = $mpcth_options['mpcth_error_sidebar'];
 	} elseif ($enable_custom_sidebar_position) {
 		$sidebar_position = $custom_sidebar_position;
-	} elseif (is_page()) {
-		if (isset($post_meta['_wp_page_template'][0]) && ($post_meta['_wp_page_template'][0] == 'template-lookbook.php' || $post_meta['_wp_page_template'][0] == 'template-fullwidth.php'))
-			$sidebar_position = 'none';
 	} elseif (is_single()) {
 		if ($post_type == 'post')
 			$sidebar_position = $mpcth_options['mpcth_blog_post_sidebar'];
 		elseif ($post_type == 'mpc_portfolio' && isset($mpcth_options['mpcth_portfolio_post_sidebar']))
 			$sidebar_position = $mpcth_options['mpcth_portfolio_post_sidebar'];
+	}
+
+	if (isset($post_meta['_wp_page_template'][0]) && ($post_meta['_wp_page_template'][0] == 'template-lookbook.php' || $post_meta['_wp_page_template'][0] == 'template-fullwidth.php'))
+			$sidebar_position = 'none';
+
+	if (class_exists('bbPress') && is_bbpress()) {
+		if (isset($mpcth_options['mpcth_forum_sidebar']))
+			$sidebar_position = $mpcth_options['mpcth_forum_sidebar'];
+		else
+			$sidebar_position = 'none';
 	}
 
 	return $sidebar_position;
@@ -369,7 +429,7 @@ function mpcth_display_social_list() {
 		foreach($mpcth_options['mpcth_socials'] as $name => $enable) {
 			if($enable) {
 				echo '<li>';
-					echo '<a href="' . ($name == 'envelope' ? 'mailto:' : '') . $mpcth_options['mpcth_social_' . $name]. '" class="mpcth-social-' . $name . '">';
+					echo '<a href="' . ($name == 'envelope' ? 'mailto:' . $mpcth_options['mpcth_social_' . $name] : esc_url($mpcth_options['mpcth_social_' . $name])) . '" class="mpcth-social-' . $name . '">';
 						echo '<i class="fa fa-' . $name . '"></i>';
 					echo '</a>';
 				echo '</li>';
@@ -438,8 +498,8 @@ function mpcth_display_pagination($query = '') {
 	echo paginate_links(array(
 		'base' => str_replace(999999, '%#%', esc_url(get_pagenum_link(999999))),
 		'current' => max(1, $paged),
-		'prev_text' => '<i class="fa fa-angle-left"></i>',
-		'next_text' => '<i class="fa fa-angle-right"></i>',
+		'prev_text' => '<i class="fa fa-angle-' . (is_rtl() ? 'right' : 'left') . '"></i>',
+		'next_text' => '<i class="fa fa-angle-' . (is_rtl() ? 'left' : 'right') . '"></i>',
 		'total' => $query->max_num_pages
 	));
 }
@@ -448,22 +508,25 @@ function mpcth_display_pagination($query = '') {
 /* Display load more
 /* ---------------------------------------------------------------- */
 function mpcth_display_load_more($query) {
-	global $paged;
-
-	$load_more_settings = array(
-		'pages_current'		=> $paged,
-		'pages_total'		=> $query->max_num_pages,
-		'pages_next_link'	=> next_posts($query->max_num_pages, false),
-		'posts_per_page'	=> $query->post_count,
-		'posts_total'		=> $query->found_posts
-	);
-
-	wp_localize_script('mpc-theme-main-js', 'lminfo', $load_more_settings);
-
-	echo '<div id="mpcth_load_more_wrap">';
-		echo '<a id="mpcth_load_more" href="#">' . __('Load More', 'mpcth') . '</a>';
-		echo '<div id="mpcth_load_more_container"></div>';
-	echo '</div>';
+	if ($query->max_num_pages <= 1)
+		return;
+	?>
+	<a href="#" id="mpcth_load_more"><?php _e('Load more', 'mpcth'); ?><span class="mpcth-load-more-icon"></span></a>
+	<?php
+		echo paginate_links(array(
+			'base' 			=> str_replace(999999, '%#%', get_pagenum_link(999999)),
+			'format' 		=> '',
+			'current' 		=> max(1, get_query_var('paged')),
+			'total' 		=> $query->max_num_pages,
+			'prev_text' 	=> '',
+			'next_text' 	=> '',
+			'type'			=> 'list',
+			'end_size'		=> 1,
+			'mid_size'		=> 1
+		));
+	?>
+	<div id="mpcth_load_more_wrapper" data-max-pages="<?php echo $query->max_num_pages; ?>"></div>
+	<?php
 }
 
 /* ---------------------------------------------------------------- */
@@ -511,7 +574,8 @@ function mpcth_display_secondary_menu() {
 
 		if (! empty($yith_wcwl)) {
 			// echo '<span class="mpcth-menu-divider"></span>';
-			echo '<a href="' . $yith_wcwl->get_wishlist_url() . '" class="mpcth-wc-wishlist">' . __('Wishlist', 'mpcth') . '</a>';
+			$wishlist_name = get_option('yith_wcwl_wishlist_title');
+			echo '<a href="' . $yith_wcwl->get_wishlist_url() . '" class="mpcth-wc-wishlist">' . $wishlist_name . '</a>';
 		}
 
 		if (class_exists('WooCommerce'))
@@ -529,6 +593,26 @@ function mpcth_display_secondary_menu() {
 				'menu_class' => 'mpcth-secondary-mini-menu'
 			));
 	echo '</div>';
+}
+
+add_filter('woocommerce_product_description_tab_title', 'my_product_description_tab_title');
+function my_product_description_tab_title($default) {
+	global $mpcth_options;
+
+	if (isset($mpcth_options['mpcth_tab_description_label']) && $mpcth_options['mpcth_tab_description_label'] != '')
+		$default = $mpcth_options['mpcth_tab_description_label'];
+
+	echo $default;
+}
+
+add_filter('woocommerce_product_additional_information_tab_title', 'my_product_additional_information_tab_title');
+function my_product_additional_information_tab_title($default) {
+	global $mpcth_options;
+
+	if (isset($mpcth_options['mpcth_tab_additional_information_label']) && $mpcth_options['mpcth_tab_additional_information_label'] != '')
+		$default = $mpcth_options['mpcth_tab_additional_information_label'];
+
+	echo $default;
 }
 
 /* ---------------------------------------------------------------- */
@@ -552,7 +636,7 @@ function mpcth_display_newsletter() {
 					echo $message;
 				echo '</span>';
 			echo '</div>';
-		} elseif (shortcode_exists('subscribe2')) {
+		} elseif (shortcode_exists('subscribe2') || shortcode_exists('mc4wp_form')) {
 			echo '<div id="mpcth_newsletter">';
 				echo '<a href="#" class="mpcth-newsletter-toggle">';
 					if(isset($mpcth_options['mpcth_newsletter_text']))
@@ -561,7 +645,10 @@ function mpcth_display_newsletter() {
 						_e('Sign up for our newsletter', 'mpcth');
 				echo '</a>';
 
-				echo do_shortcode('[subscribe2]');
+				if (shortcode_exists('subscribe2'))
+					echo do_shortcode('[subscribe2]');
+				else
+					echo do_shortcode('[mc4wp_form]');
 			echo '</div>';
 		}
 	}
@@ -577,21 +664,25 @@ function mpcth_display_secondary_header() {
 	if ($mpcth_options['mpcth_header_secondary_layout'])
 		$header_order = $mpcth_options['mpcth_header_secondary_layout'];
 
-	$header_order_items = explode('_', $header_order);
-
 	echo '<div id="mpcth_page_header_secondary_content" class="mpcth-header-order-' . $header_order . ' mpcth-header-position-' . $mpcth_options['mpcth_header_secondary_position'] . '">';
-		foreach ($header_order_items as $item) {
-			if ($item == 'n')
-				mpcth_display_newsletter();
-
-			if ($item == 's')
-				mpcth_display_secondary_menu();
-
-			if ($item == 'm') {
-				echo '<ul id="mpcth_header_socials" class="mpcth-socials-list">';
-					mpcth_display_social_list();
-				echo '</ul>';
-			}
+		if ($header_order == 'n_s_m') {
+			mpcth_display_newsletter();
+			mpcth_display_secondary_menu();
+			echo '<ul id="mpcth_header_socials" class="mpcth-socials-list">';
+				mpcth_display_social_list();
+			echo '</ul>';
+		} elseif ($header_order == 's_m_n') {
+			echo '<ul id="mpcth_header_socials" class="mpcth-socials-list">';
+				mpcth_display_social_list();
+			echo '</ul>';
+			mpcth_display_newsletter();
+			mpcth_display_secondary_menu();
+		} elseif ($header_order == 'm_n_s') {
+			mpcth_display_secondary_menu();
+			mpcth_display_newsletter();
+			echo '<ul id="mpcth_header_socials" class="mpcth-socials-list">';
+				mpcth_display_social_list();
+			echo '</ul>';
 		}
 	echo '</div>';
 }
@@ -635,170 +726,7 @@ require_once MPC_THEME_PATH . '/autoimport/custom_metaboxes.php';
 /* ---------------------------------------------------------------- */
 require_once(MPC_THEME_PATH . '/php/class-tgm-plugin-activation.php');
 
-add_action('tgmpa_register', 'mpcth_install_require_plugins');
-function mpcth_install_require_plugins() {
-	$plugins = array(
-		array(
-			'name'		=> 'MPC Extensions',
-			'slug'		=> 'mpc-extensions',
-			'source'	=> MPC_THEME_URI . '/plugins/mpc-extensions.zip',
-			'required'	=> true,
-		),
-		array(
-			'name'		=> 'MPC Widgets',
-			'slug'		=> 'mpc-widgets',
-			'source'	=> MPC_THEME_URI . '/plugins/mpc-widgets.zip',
-			'required'	=> true,
-		),
-		array(
-			'name'		=> 'MPC Shortcodes',
-			'slug'		=> 'mpc-shortcodes',
-			'source'	=> MPC_THEME_URI . '/plugins/mpc-shortcodes.zip',
-			'required'	=> true,
-		),
-		array(
-			'name'		=> 'Visual Composer',
-			'slug'		=> 'js_composer',
-			'source'	=> MPC_THEME_URI . '/plugins/js_composer.zip',
-			'required'	=> true,
-			'version'	=> '4.1.2',
-		),
-		array(
-			'name'		=> 'ACF Repeater',
-			'slug'		=> 'acf-repeater',
-			'source'	=> MPC_THEME_URI . '/plugins/acf-repeater.zip',
-			'required'	=> true,
-		),
-		array(
-			'name'		=> 'ACF Gallery',
-			'slug'		=> 'acf-gallery',
-			'source'	=> MPC_THEME_URI . '/plugins/acf-gallery.zip',
-			'required'	=> true,
-		),
-		array(
-			'name'		=> 'Revolution Slider',
-			'slug'		=> 'revslider',
-			'source'	=> MPC_THEME_URI . '/plugins/revslider.zip',
-			'required'	=> false,
-		),
-		array(
-			'name'		=> 'Get Kudos',
-			'slug'		=> 'getkudos',
-			'source'	=> MPC_THEME_URI . '/plugins/getkudos.zip',
-			'required'	=> false,
-		),
-		array(
-			'name'		=> 'Woocommerce Quickview',
-			'slug'		=> 'jck_woo_quickview',
-			'source'	=> MPC_THEME_URI . '/plugins/jck_woo_quickview.zip',
-			'required'	=> false,
-		),
-		array(
-			'name'		=> 'Envato Toolkit',
-			'slug'		=> 'envato-wordpress-toolkit',
-			'source'	=> MPC_THEME_URI . '/plugins/envato-wordpress-toolkit.zip',
-			'required'	=> false,
-		),
-		array(
-			'name'		=> 'LayerSlider',
-			'slug'		=> 'LayerSlider',
-			'source'	=> 'http://blaszok.mpcthemes.com/plugins/layerslider_wp.zip',
-			'required'	=> false,
-		),
-		array(
-			'name'		=> 'CSS3 Pricing Tables Grids',
-			'slug'		=> 'css3_web_pricing_tables_grids',
-			'source'	=> 'http://blaszok.mpcthemes.com/plugins/css3-responsive-web-pricing-tables.zip',
-			'required'	=> false,
-		),
-
-		array(
-			'name'		=> 'Advanced Custom Fields',
-			'slug'		=> 'advanced-custom-fields',
-			'required'	=> true,
-		),
-		array(
-			'name'		=> 'Contact Form 7',
-			'slug'		=> 'contact-form-7',
-			'required'	=> false,
-		),
-		array(
-			'name'		=> 'Woo Sidebars',
-			'slug'		=> 'woosidebars',
-			'required'	=> false,
-		),
-		array(
-			'name'		=> 'Woo Commerce',
-			'slug'		=> 'woocommerce',
-			'required'	=> false,
-		),
-		array(
-			'name'		=> 'WordPress SEO by Yoast',
-			'slug'		=> 'wordpress-seo',
-			'required'	=> false,
-		),
-		array(
-			'name'		=> 'Subscribe2',
-			'slug'		=> 'subscribe2',
-			'required'	=> false,
-		),
-		array(
-			'name'		=> 'YITH Wishlist',
-			'slug'		=> 'yith-woocommerce-wishlist',
-			'required'	=> false,
-		),
-		array(
-			'name'		=> 'Brankic Photostream',
-			'slug'		=> 'brankic-photostream-widget',
-			'required'	=> false,
-		),
-		array(
-			'name'		=> 'jQuery Mega Menu',
-			'slug'		=> 'jquery-mega-menu',
-			'required'	=> false,
-		),
-	);
-
-	/**
-	 * Array of configuration settings. Amend each line as needed.
-	 * If you want the default strings to be available under your own theme domain,
-	 * leave the strings uncommented.
-	 * Some of the strings are added into a sprintf, so see the comments at the
-	 * end of each line for what each argument will be.
-	 */
-	$config = array(
-		'domain'       		=> 'mpcth',         	// Text domain - likely want to be the same as your theme.
-		'default_path' 		=> '',                         	// Default absolute path to pre-packaged plugins
-		'parent_menu_slug' 	=> 'themes.php', 				// Default parent menu slug
-		'parent_url_slug' 	=> 'themes.php', 				// Default parent URL slug
-		'menu'         		=> 'install-required-plugins', 	// Menu slug
-		'has_notices'      	=> true,                       	// Show admin notices or not
-		'is_automatic'    	=> false,					   	// Automatically activate plugins after installation or not
-		'message' 			=> '',							// Message to output right before the plugins table
-		'strings'      		=> array(
-			'page_title'                       			=> __( 'Install Required Plugins', 'mpcth' ),
-			'menu_title'                       			=> __( 'Install Plugins', 'mpcth' ),
-			'installing'                       			=> __( 'Installing Plugin: %s', 'mpcth' ), // %1$s = plugin name
-			'oops'                             			=> __( 'Something went wrong with the plugin API.', 'mpcth' ),
-			'notice_can_install_required'     			=> _n_noop( 'This theme requires the following plugin: %1$s.', 'This theme requires the following plugins: %1$s.' ), // %1$s = plugin name(s)
-			'notice_can_install_recommended'			=> _n_noop( 'This theme recommends the following plugin: %1$s.', 'This theme recommends the following plugins: %1$s.' ), // %1$s = plugin name(s)
-			'notice_cannot_install'  					=> _n_noop( 'Sorry, but you do not have the correct permissions to install the %s plugin. Contact the administrator of this site for help on getting the plugin installed.', 'Sorry, but you do not have the correct permissions to install the %s plugins. Contact the administrator of this site for help on getting the plugins installed.' ), // %1$s = plugin name(s)
-			'notice_can_activate_required'    			=> _n_noop( 'The following required plugin is currently inactive: %1$s.', 'The following required plugins are currently inactive: %1$s.' ), // %1$s = plugin name(s)
-			'notice_can_activate_recommended'			=> _n_noop( 'The following recommended plugin is currently inactive: %1$s.', 'The following recommended plugins are currently inactive: %1$s.' ), // %1$s = plugin name(s)
-			'notice_cannot_activate' 					=> _n_noop( 'Sorry, but you do not have the correct permissions to activate the %s plugin. Contact the administrator of this site for help on getting the plugin activated.', 'Sorry, but you do not have the correct permissions to activate the %s plugins. Contact the administrator of this site for help on getting the plugins activated.' ), // %1$s = plugin name(s)
-			'notice_ask_to_update' 						=> _n_noop( 'The following plugin needs to be updated to its latest version to ensure maximum compatibility with this theme: %1$s.', 'The following plugins need to be updated to their latest version to ensure maximum compatibility with this theme: %1$s.' ), // %1$s = plugin name(s)
-			'notice_cannot_update' 						=> _n_noop( 'Sorry, but you do not have the correct permissions to update the %s plugin. Contact the administrator of this site for help on getting the plugin updated.', 'Sorry, but you do not have the correct permissions to update the %s plugins. Contact the administrator of this site for help on getting the plugins updated.' ), // %1$s = plugin name(s)
-			'install_link' 					  			=> _n_noop( 'Begin installing plugin', 'Begin installing plugins' ),
-			'activate_link' 				  			=> _n_noop( 'Activate installed plugin', 'Activate installed plugins' ),
-			'return'                           			=> __( 'Return to Required Plugins Installer', 'mpcth' ),
-			'plugin_activated'                 			=> __( 'Plugin activated successfully.', 'mpcth' ),
-			'complete' 									=> __( 'All plugins installed and activated successfully. %s', 'mpcth' ), // %1$s = dashboard link
-			'nag_type'									=> 'updated' // Determines admin notice type - can only be 'updated' or 'error'
-		)
-	);
-
-	tgmpa( $plugins, $config );
-}
+require_once(MPC_THEME_PATH . '/php/mpc-bundle-plugins.php');
 
 /* ---------------------------------------------------------------- */
 /* Activation theme
@@ -817,6 +745,86 @@ function mpcth_flush_rewrite_rules() {
 }
 
 /* ---------------------------------------------------------------- */
+/* bbPress
+/* ---------------------------------------------------------------- */
+
+// add_filter('bbp_register_forum_post_type', 'mpcth_bbp_register_post_type');
+// add_filter('bbp_register_topic_post_type', 'mpcth_bbp_register_post_type');
+// add_filter('bbp_register_reply_post_type', 'mpcth_bbp_register_post_type');
+// function mpcth_bbp_register_post_type($args) {
+// 	$args['menu_position'] = 60;
+
+// 	return $args;
+// }
+
+add_filter('bbp_topic_pagination', 'mpcth_bbp_change_pagination_arrows');
+add_filter('bbp_search_results_pagination', 'mpcth_bbp_change_pagination_arrows');
+add_filter('bbp_replies_pagination', 'mpcth_bbp_change_pagination_arrows');
+function mpcth_bbp_change_pagination_arrows($args) {
+	$args['prev_text'] = '<i class="fa fa-angle-' . (is_rtl() ? 'right' : 'left') . '"></i>';
+	$args['next_text'] = '<i class="fa fa-angle-' . (is_rtl() ? 'left' : 'right') . '"></i>';
+
+	return $args;
+}
+
+add_filter('bbp_before_get_breadcrumb_parse_args', 'mpcth_bbp_change_separator_arrows', 1);
+function mpcth_bbp_change_separator_arrows($args) {
+	$args['sep'] = '<i class="fa fa-angle-' . (is_rtl() ? 'left' : 'right') . '"></i>';
+
+	return apply_filters('bbpsswap_filter_breadcrumb_sep', $args);
+}
+
+add_action('bbp_theme_before_topic_form_tags', 'mpcth_bbp_open_form_section_wrapper');
+add_action('bbp_theme_before_topic_form_forum', 'mpcth_bbp_open_form_section_wrapper');
+add_action('bbp_theme_before_topic_form_type', 'mpcth_bbp_open_form_section_wrapper');
+add_action('bbp_theme_before_topic_form_status', 'mpcth_bbp_open_form_section_wrapper');
+add_action('bbp_theme_before_topic_form_revisions', 'mpcth_bbp_open_form_section_wrapper');
+add_action('bbp_theme_before_reply_form_tags', 'mpcth_bbp_open_form_section_wrapper');
+add_action('bbp_theme_before_reply_form_revisions', 'mpcth_bbp_open_form_section_wrapper');
+function mpcth_bbp_open_form_section_wrapper() {
+	echo '<div class="mpcth-bbp-form-section">';
+}
+
+add_action('bbp_theme_after_topic_form_tags', 'mpcth_bbp_close_form_section_wrapper');
+add_action('bbp_theme_after_topic_form_forum', 'mpcth_bbp_close_form_section_wrapper');
+add_action('bbp_theme_after_topic_form_type', 'mpcth_bbp_close_form_section_wrapper');
+add_action('bbp_theme_after_topic_form_status', 'mpcth_bbp_close_form_section_wrapper');
+add_action('bbp_theme_after_topic_form_revisions', 'mpcth_bbp_close_form_section_wrapper');
+add_action('bbp_theme_after_reply_form_tags', 'mpcth_bbp_close_form_section_wrapper');
+add_action('bbp_theme_after_reply_form_revisions', 'mpcth_bbp_close_form_section_wrapper');
+function mpcth_bbp_close_form_section_wrapper() {
+	echo '</div>';
+}
+
+add_action('bbp_theme_before_topic_form_subscriptions', 'mpcth_bbp_open_form_subscriptions_wrapper');
+add_action('bbp_theme_before_reply_form_subscription', 'mpcth_bbp_open_form_subscriptions_wrapper');
+function mpcth_bbp_open_form_subscriptions_wrapper() {
+	echo '<div class="mpcth-bbp-form-subscriptions">';
+}
+
+add_action('bbp_theme_after_topic_form_subscriptions', 'mpcth_bbp_close_form_subscriptions_wrapper');
+add_action('bbp_theme_after_reply_form_subscription', 'mpcth_bbp_close_form_subscriptions_wrapper');
+function mpcth_bbp_close_form_subscriptions_wrapper() {
+	echo '</div>';
+}
+
+add_action('bbp_theme_before_topic_form_title', 'mpcth_bbp_open_form_title_wrapper');
+function mpcth_bbp_open_form_title_wrapper() {
+	echo '<div class="mpcth-bbp-form-title">';
+}
+
+add_action('bbp_theme_after_topic_form_title', 'mpcth_bbp_close_form_title_wrapper');
+function mpcth_bbp_close_form_title_wrapper() {
+	echo '</div>';
+}
+
+add_filter('bbp_get_single_forum_description', 'mpcth_bbp_blank_notice');
+add_filter('bbp_get_single_topic_description', 'mpcth_bbp_blank_notice');
+function mpcth_bbp_blank_notice() {
+	return '';
+}
+
+/* ---------------------------------------------------------------- */
 /* WooCommerce
 /* ---------------------------------------------------------------- */
 
@@ -829,6 +837,7 @@ add_action('woocommerce_after_main_content', 'mpcth_theme_wrapper_end', 10);
 
 function mpcth_theme_wrapper_start() {
 	global $mpcth_options;
+	global $sidebar_position;
 	global $shop_style;
 
 	if (! empty($_GET['product_style'])) {
@@ -854,6 +863,21 @@ function mpcth_theme_wrapper_start() {
 	if (! is_shop() && ! is_product_category() && ! is_product_tag())
 		$shop_style = 'default';
 
+	if ($sidebar_position == 'none')
+		$columns = 4;
+	else
+		$columns = 3;
+
+	if ($shop_style == 'default' && isset($mpcth_options['mpcth_shop_columns_def']) && $mpcth_options['mpcth_shop_columns_def'])
+		$columns = $mpcth_options['mpcth_shop_columns_def'];
+	elseif ($shop_style != 'default' && isset($mpcth_options['mpcth_shop_columns_ext']) && $mpcth_options['mpcth_shop_columns_ext'])
+		$columns = $mpcth_options['mpcth_shop_columns_ext'];
+
+	if (! is_shop() && ! is_product_category() && ! is_product_tag())
+		$columns = '';
+	else
+		$columns = ' mpcth-shop-columns-' . $columns;
+
 	echo '<div id="mpcth_main">';
 		if (is_shop()) {
 			$shop_id = get_option('woocommerce_shop_page_id');
@@ -868,7 +892,7 @@ function mpcth_theme_wrapper_start() {
 		echo '<div id="mpcth_main_container">';
 			get_sidebar();
 			echo '<div id="mpcth_content_wrap">';
-				echo '<div id="mpcth_content" class="mpcth-shop-style-' . $shop_style . '">';
+				echo '<div id="mpcth_content" class="mpcth-shop-style-' . $shop_style . $columns . '">';
 }
 
 function mpcth_theme_wrapper_end() {
@@ -915,10 +939,11 @@ remove_action('woocommerce_single_product_summary', 'woocommerce_template_single
 // From price
 add_filter('woocommerce_variable_price_html', 'mpcth_custom_price', 10);
 add_filter('woocommerce_grouped_price_html', 'mpcth_custom_price', 10);
-add_filter('woocommerce_variable_sale_price_html', 'mpcth_custom_price', 10);
+// add_filter('woocommerce_variable_sale_price_html', 'mpcth_custom_price', 10);
 
 function mpcth_custom_price($price){
 	$prices = explode('&ndash;', $price);
+
 	if (count($prices) == 2)
 		return '<span class="mpcth-from-price">' . __('From: ', 'mpcth') . '</span>' . $prices[0];
 	else
@@ -1028,83 +1053,7 @@ function mpcth_print_custom_product_tabs($title, $atts) {
 	echo $custom_tabs[$index]['mpc_custom_tab_content'];
 }
 
-add_filter('add_to_cart_fragments', 'mpcth_wc_ajaxify_mini_cart_icon');
-function mpcth_wc_ajaxify_mini_cart_icon($fragments) {
-	ob_start();
 
-	?>
-	<span class="mpcth-mini-cart-icon-info">
-		<?php if (sizeof( WC()->cart->get_cart()) > 0) { ?>
-			<?php echo __('Subtotal', 'mpcth'); ?>: <?php echo WC()->cart->get_cart_subtotal(); ?> (<?php echo WC()->cart->cart_contents_count; ?>)
-		<?php } ?>
-	</span>
-
-	<?php
-
-	$fragments['span.mpcth-mini-cart-icon-info'] = ob_get_clean();
-
-	return $fragments;
-}
-
-add_filter('add_to_cart_fragments', 'mpcth_wc_ajaxify_mini_cart');
-function mpcth_wc_ajaxify_mini_cart($fragments) {
-	ob_start();
-
-	mpcth_wc_print_mini_cart();
-
-	$fragments['div#mpcth_mini_cart_wrap'] = ob_get_clean();
-
-	return $fragments;
-}
-
-function mpcth_wc_print_mini_cart() {
-	if (function_exists('is_woocommerce')) {
-	?>
-	<div id="mpcth_mini_cart_wrap">
-		<?php if ( sizeof( WC()->cart->get_cart() ) > 0 ) : ?>
-			<ul class="mpcth-mini-cart-products">
-				<?php foreach ( WC()->cart->get_cart() as $cart_item_key => $cart_item ) :
-					$_product = $cart_item['data'];
-
-					// Only display if allowed
-					if ( ! apply_filters('woocommerce_widget_cart_item_visible', true, $cart_item, $cart_item_key ) || ! $_product->exists() || $cart_item['quantity'] == 0 )
-						continue;
-
-					// Get price
-					$product_price = get_option( 'woocommerce_tax_display_cart' ) == 'excl' ? $_product->get_price_excluding_tax() : $_product->get_price_including_tax();
-					$product_price = apply_filters( 'woocommerce_cart_item_price', WC()->cart->get_product_price($_product), $cart_item, $cart_item_key );
-					?>
-
-					<li class="mpcth-mini-cart-product">
-						<span class="mpcth-mini-cart-thumbnail">
-							<?php echo $_product->get_image(); ?>
-							<?php echo apply_filters( 'woocommerce_cart_item_remove_link', '<a href="' . esc_url( WC()->cart->get_remove_url( $cart_item_key ) ) . '" class="mpcth-mini-cart-remove mpcth-color-main-color" title="' . __( 'Remove this item', 'woocommerce' ) . '">&times;</a>', $cart_item_key ); ?>
-						</span>
-						<span class="mpcth-mini-cart-info">
-							<a class="mpcth-mini-cart-title" href="<?php echo get_permalink( $cart_item['product_id'] ); ?>">
-								<?php echo apply_filters('woocommerce_widget_cart_product_title', $_product->get_title(), $_product ); ?>
-							</a>
-							<?php echo apply_filters( 'woocommerce_widget_cart_item_price', '<span class="mpcth-mini-cart-price">' . __('Unit Price', 'mpcth') . ': ' . $product_price . '</span>', $cart_item, $cart_item_key ); ?>
-							<?php echo apply_filters( 'woocommerce_widget_cart_item_quantity', '<span class="mpcth-mini-cart-quantity">' . __('Quantity', 'mpcth') . ': ' . $cart_item['quantity'] . '</span>', $cart_item, $cart_item_key ); ?>
-						</span>
-					</li>
-
-				<?php endforeach; ?>
-			</ul><!-- end .mpcth-mini-cart-products -->
-		<?php else : ?>
-			<p class="mpcth-mini-cart-product-empty"><?php _e( 'No products in the cart.', 'woocommerce' ); ?></p>
-		<?php endif; ?>
-
-		<?php if (sizeof( WC()->cart->get_cart()) > 0) : ?>
-			<p class="mpcth-mini-cart-subtotal mpcth-color-main-color"><?php _e( 'Cart Subtotal', 'woocommerce' ); ?>: <?php echo WC()->cart->get_cart_subtotal(); ?></p>
-
-			<a href="<?php echo WC()->cart->get_cart_url(); ?>" class="button cart mpcth-color-main-background-hover"><?php _e( 'View Cart', 'woocommerce' ); ?></a>
-			<a href="<?php echo WC()->cart->get_checkout_url(); ?>" class="button alt checkout mpcth-color-main-background"><?php _e( 'Proceed to Checkout', 'woocommerce' ); ?></a>
-		<?php endif; ?>
-	</div>
-	<?php
-	}
-}
 
 add_action('woocommerce_after_add_to_cart_button', 'mpcth_add_wishlist', 5);
 function mpcth_add_wishlist() {

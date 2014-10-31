@@ -24,6 +24,15 @@ if(function_exists("register_field_group")) {
 				'message' => 'Hide Title',
 				'default_value' => 0,
 			),
+			array (
+				'key' => 'field_537ca47225154',
+				'label' => 'Force Header Full Width',
+				'name' => 'mpc_force_header_full_width',
+				'type' => 'true_false',
+				'instructions' => 'Check this if you want to force full width display of page menu.',
+				'message' => 'Force Header Full Width',
+				'default_value' => 0,
+			),
 		),
 		'location' => array (
 			array (
@@ -51,6 +60,200 @@ if(function_exists("register_field_group")) {
 					'value' => 'template-fullwidth-with-sidebar.php',
 					'order_no' => 0,
 					'group_no' => 3,
+				),
+			),
+		),
+		'options' => array (
+			'position' => 'normal',
+			'layout' => 'default',
+			'hide_on_screen' => array (
+			),
+		),
+		'menu_order' => 0,
+	));
+
+	/* Transparent Header */
+	register_field_group(array (
+		'id' => 'acf_transparent-header',
+		'title' => 'Transparent Header',
+		'fields' => array (
+			array (
+				'key' => 'field_537dce9aae183',
+				'label' => 'Enable Transparent Header',
+				'name' => 'mpc_enable_transparent_header',
+				'type' => 'true_false',
+				'instructions' => 'Check this if you want to move header section under transparent page menu.',
+				'message' => 'Enable Transparent Header',
+				'default_value' => 0,
+			),
+			array (
+				'key' => 'field_537dd1c5beb38',
+				'label' => 'Force Simple Buttons',
+				'name' => 'mpc_force_simple_buttons',
+				'type' => 'true_false',
+				'instructions' => 'Check this if you want to display header buttons as icons.',
+				'conditional_logic' => array (
+					'status' => 1,
+					'rules' => array (
+						array (
+							'field' => 'field_537dce9aae183',
+							'operator' => '==',
+							'value' => '1',
+						),
+					),
+					'allorany' => 'all',
+				),
+				'message' => 'Enable Force Simple Buttons',
+				'default_value' => 0,
+			),
+			array (
+				'key' => 'field_537f3578e61ae',
+				'label' => 'Vertical Center Elements',
+				'name' => 'mpc_vertical_center_elements',
+				'type' => 'true_false',
+				'instructions' => 'Check this if your want to vertically center the logo, menu and buttons.',
+				'conditional_logic' => array (
+					'status' => 1,
+					'rules' => array (
+						array (
+							'field' => 'field_537dce9aae183',
+							'operator' => '==',
+							'value' => '1',
+						),
+					),
+					'allorany' => 'all',
+				),
+				'message' => 'Vertical Center Elements',
+				'default_value' => 0,
+			),
+			array (
+				'key' => 'field_537dd78871134',
+				'label' => 'Force Font Color',
+				'name' => 'mpc_force_font_color',
+				'type' => 'color_picker',
+				'instructions' => 'Specify the header font color.',
+				'conditional_logic' => array (
+					'status' => 1,
+					'rules' => array (
+						array (
+							'field' => 'field_537dce9aae183',
+							'operator' => '==',
+							'value' => '1',
+						),
+					),
+					'allorany' => 'all',
+				),
+				'default_value' => '#ffffff',
+			),
+			array (
+				'key' => 'field_537ddd94ed290',
+				'label' => 'Force Background Color',
+				'name' => 'mpc_force_background_color',
+				'type' => 'color_picker',
+				'instructions' => 'Specify the header background color.',
+				'conditional_logic' => array (
+					'status' => 1,
+					'rules' => array (
+						array (
+							'field' => 'field_537dce9aae183',
+							'operator' => '==',
+							'value' => '1',
+						),
+					),
+					'allorany' => 'all',
+				),
+				'default_value' => '#ffffff',
+			),
+			array (
+				'key' => 'field_537dcee0ae184',
+				'label' => 'Background Opacity',
+				'name' => 'mpc_background_opacity',
+				'type' => 'number',
+				'instructions' => 'Specify the percentage value of header background opacity.',
+				'conditional_logic' => array (
+					'status' => 1,
+					'rules' => array (
+						array (
+							'field' => 'field_537dce9aae183',
+							'operator' => '==',
+							'value' => '1',
+						),
+					),
+					'allorany' => 'all',
+				),
+				'default_value' => 25,
+				'placeholder' => '',
+				'prepend' => '',
+				'append' => '%',
+				'min' => 0,
+				'max' => 100,
+				'step' => 1,
+			),
+			array (
+				'key' => 'field_537dea8776ffe',
+				'label' => 'Force Font Color - Sticky',
+				'name' => 'mpc_force_font_color_sticky',
+				'type' => 'color_picker',
+				'instructions' => 'Specify the sticky header font color.',
+				'conditional_logic' => array (
+					'status' => 1,
+					'rules' => array (
+						array (
+							'field' => 'field_537dce9aae183',
+							'operator' => '==',
+							'value' => '1',
+						),
+					),
+					'allorany' => 'all',
+				),
+				'default_value' => '#666666',
+			),
+			array (
+				'key' => 'field_537deaa576fff',
+				'label' => 'Force Background Color - Sticky',
+				'name' => 'mpc_force_background_color_sticky',
+				'type' => 'color_picker',
+				'instructions' => 'Specify the sticky header background color.',
+				'conditional_logic' => array (
+					'status' => 1,
+					'rules' => array (
+						array (
+							'field' => 'field_537dce9aae183',
+							'operator' => '==',
+							'value' => '1',
+						),
+					),
+					'allorany' => 'all',
+				),
+				'default_value' => '#ffffff',
+			),
+		),
+		'location' => array (
+			array (
+				array (
+					'param' => 'page_template',
+					'operator' => '==',
+					'value' => 'template-fullwidth.php',
+					'order_no' => 0,
+					'group_no' => 0,
+				),
+			),
+			array (
+				array (
+					'param' => 'page_template',
+					'operator' => '==',
+					'value' => 'template-fullwidth-with-sidebar.php',
+					'order_no' => 0,
+					'group_no' => 1,
+				),
+			),
+			array (
+				array (
+					'param' => 'page_template',
+					'operator' => '==',
+					'value' => 'template-lookbook.php',
+					'order_no' => 0,
+					'group_no' => 2,
 				),
 			),
 		),
@@ -182,7 +385,7 @@ if(function_exists("register_field_group")) {
 	/* Extended Footer */
 	register_field_group(array (
 		'id' => 'acf_extended-footer',
-		'title' => 'Extended Footer',
+		'title' => 'Footer',
 		'fields' => array (
 			array (
 				'key' => 'field_5315b1e623106',
@@ -191,6 +394,24 @@ if(function_exists("register_field_group")) {
 				'type' => 'true_false',
 				'instructions' => 'Check this if you want to hide extended footer for this page.',
 				'message' => 'Hide Extended Footer',
+				'default_value' => 0,
+			),
+			array (
+				'key' => 'field_537b08b894428',
+				'label' => 'Hide Footer',
+				'name' => 'mpc_hide_footer',
+				'type' => 'true_false',
+				'instructions' => 'Check this if you want to hide footer for this page.',
+				'message' => 'Hide Footer',
+				'default_value' => 0,
+			),
+			array (
+				'key' => 'field_537b08e994429',
+				'label' => 'Hide Copyright',
+				'name' => 'mpc_hide_copyright',
+				'type' => 'true_false',
+				'instructions' => 'Check this if you want to hide copyright for this page.',
+				'message' => 'Hide Copyright',
 				'default_value' => 0,
 			),
 		),
@@ -553,6 +774,15 @@ if(function_exists("register_field_group")) {
 				'step' => 1,
 			),
 			array (
+				'key' => 'field_53e1d8f4f889f',
+				'label' => 'Load More',
+				'name' => 'mpc_portfolio_load_more',
+				'type' => 'true_false',
+				'instructions' => 'Check this if you want to display load more as pagination.',
+				'message' => 'Load More',
+				'default_value' => 0,
+			),
+			array (
 				'key' => 'field_529f03a731dee',
 				'label' => __('Enable Category Filters', 'mpcth'),
 				'name' => 'mpc_enable_category_filters',
@@ -609,11 +839,52 @@ if(function_exists("register_field_group")) {
 				'choices' => array (
 					'full' => 'Full width thumbnails',
 					'small' => 'Small thumbnails',
+					'masonry' => 'Masonry',
+					'masonry_load_more' => 'Masonry with Load More',
 				),
 				'default_value' => 'full',
 				'allow_null' => 0,
 				'multiple' => 0,
 			),
+			array (
+				'key' => 'field_53db581674055',
+				'label' => __('Blog Columns', 'mpcth'),
+				'name' => 'mpc_blog_columns',
+				'type' => 'number',
+				'conditional_logic' => array (
+					'status' => 1,
+					'rules' => array (
+						array (
+							'field' => 'field_52fe1370f5e02',
+							'operator' => '==',
+							'value' => 'masonry',
+						),
+						array (
+							'field' => 'field_52fe1370f5e02',
+							'operator' => '==',
+							'value' => 'masonry_load_more',
+						),
+					),
+					'allorany' => 'any',
+				),
+				'instructions' => __('Select the number of blog columns.', 'mpcth'),
+				'default_value' => 3,
+				'placeholder' => '',
+				'prepend' => '',
+				'append' => __('Columns', 'mpcth'),
+				'min' => 2,
+				'max' => 3,
+				'step' => 1,
+			),
+			// array (
+			// 	'key' => 'field_53e1d8f4f889f',
+			// 	'label' => 'Load More',
+			// 	'name' => 'mpc_blog_load_more',
+			// 	'type' => 'true_false',
+			// 	'instructions' => 'Check this if you want to display load more as pagination.',
+			// 	'message' => 'Load More',
+			// 	'default_value' => 0,
+			// ),
 		),
 		'location' => array (
 			array (
@@ -621,6 +892,41 @@ if(function_exists("register_field_group")) {
 					'param' => 'page_template',
 					'operator' => '==',
 					'value' => 'template-blog.php',
+					'order_no' => 0,
+					'group_no' => 0,
+				),
+			),
+		),
+		'options' => array (
+			'position' => 'normal',
+			'layout' => 'default',
+			'hide_on_screen' => array (
+			),
+		),
+		'menu_order' => 0,
+	));
+
+	/* Post Settings */
+	register_field_group(array (
+		'id' => 'acf_post-settings',
+		'title' => 'Post Settings',
+		'fields' => array (
+			array (
+				'key' => 'field_53ba6e8d6a9fc',
+				'label' => 'Hide Post Thumbnail',
+				'name' => 'mpc_hide_post_thumbnail',
+				'type' => 'true_false',
+				'instructions' => 'Check this if you want to hide the default full width thumbnail for this post.',
+				'message' => 'Hide Post Thumbnail',
+				'default_value' => 0,
+			),
+		),
+		'location' => array (
+			array (
+				array (
+					'param' => 'post_type',
+					'operator' => '==',
+					'value' => 'post',
 					'order_no' => 0,
 					'group_no' => 0,
 				),

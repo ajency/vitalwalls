@@ -13,7 +13,6 @@ get_header();
 
 global $page_id;
 global $paged;
-
 ?>
 
 <div id="mpcth_main">
@@ -33,21 +32,32 @@ global $paged;
 						$link = get_field('mpc_link_url');
 						if($post_format == 'link' && isset($link))
 							$title = '<a href="' . $link . '" class="mpcth-color-main-color-hover" title="' . get_the_title() . '">' . get_the_title() . '<i class="fa fa-external-link"></i></a>';
+
+						$hide_thumbnail = get_field('mpc_hide_post_thumbnail');
 					?>
 						<article id="post-<?php the_ID(); ?>" <?php post_class('mpcth-post'); ?> >
 							<header class="mpcth-post-header">
 								<div class="mpcth-post-pagination">
-									<?php previous_post_link('%link', '<i class="fa fa-angle-left"></i>'); ?>
-									<?php next_post_link('%link', '<i class="fa fa-angle-right"></i>'); ?>
+								<?php
+									if (! is_rtl()) {
+										previous_post_link('%link', '<i class="fa fa-angle-left"></i>');
+										next_post_link('%link', '<i class="fa fa-angle-right"></i>');
+									} else {
+										next_post_link('%link', '<i class="fa fa-angle-right"></i>');
+										previous_post_link('%link', '<i class="fa fa-angle-left"></i>');
+									}
+								?>
 								</div>
-								<h4 class="mpcth-post-title">
+								<h1 class="mpcth-post-title">
 									<span class="mpcth-color-main-border">
 										<?php echo $title; ?>
 									</span>
-								</h4>
-								<div class="mpcth-post-thumbnail">
-									<?php get_template_part('post-format', $post_format); ?>
-								</div>
+								</h1>
+								<?php if (! $hide_thumbnail) { ?>
+									<div class="mpcth-post-thumbnail">
+										<?php get_template_part('post-format', $post_format); ?>
+									</div>
+								<?php } ?>
 							</header>
 							<section class="mpcth-post-content">
 								<div class="mpcth-post-content-wrap">

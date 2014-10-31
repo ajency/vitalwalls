@@ -9,9 +9,9 @@
 
 	.form-submit {
 		position: relative;
-		float: right;
+		@include float(right); // float: right;
 		width: 32.5%;
-		padding-left: 20px;
+		@include padding-left(20px); // padding-left: 20px;
 		margin-bottom: 2em;
 
 		@extend .box-sizing;
@@ -40,7 +40,7 @@
 		.ajax-loader {
 			position: absolute;
 			top: .55em;
-			right: .5em;
+			@include right(.5em); // right: .5em;
 		}
 
 		@media #{$screen-medium} {
@@ -51,13 +51,13 @@
 		@media #{$screen-small} {
 			.mpcth-responsive & {
 				width: 100%;
-				padding-left: 0;
+				@include padding-left(0); // padding-left: 0;
 			}
 		}
 	}
 
 	.contact-form-input {
-		float: left;
+		@include float(left); // float: left;
 		position: relative;
 		width: 32.5%;
 		margin-bottom: 2em;
@@ -74,7 +74,7 @@
 			text-transform: uppercase;
 			position: absolute;
 			top: 0;
-			left: 1em;
+			@include left(1em); // left: 1em;
 			z-index: 1;
 			font-style: italic;
 
@@ -110,15 +110,15 @@
 		}
 
 		&.input-name {
-			padding-right: 20px;
+			@include padding-right(20px); // padding-right: 20px;
 		}
 		&.input-mail {
 			width: 35%;
-			padding-right: 20px;
-			padding-left: 20px;
+			@include padding-right(20px); // padding-right: 20px;
+			@include padding-left(20px); // padding-left: 20px;
 		}
 		&.input-website {
-			padding-left: 20px;
+			@include padding-left(20px); // padding-left: 20px;
 		}
 
 		@media #{$screen-medium} {
@@ -127,8 +127,8 @@
 				&.input-mail,
 				&.input-website {
 					width: 100%;
-					padding-left: 0;
-					padding-right: 0;
+					@include padding-left(0); // padding-left: 0;
+					@include padding-right(0); // padding-right: 0;
 				}
 			}
 		}
@@ -147,7 +147,7 @@
 			text-transform: uppercase;
 			position: absolute;
 			top: 0;
-			left: 1em;
+			@include left(1em); // left: 1em;
 			z-index: 1;
 			font-style: italic;
 
@@ -192,7 +192,7 @@
 
 	.wpcf7-mail-sent-ok,
 	.wpcf7-validation-errors {
-		float: left;
+		@include float(left); // float: left;
 		display: block;
 		margin: 1em 0 0 0;
 		padding: .5em 1em;
@@ -206,12 +206,16 @@
 		@extend .box-sizing;
 	}
 	.wpcf7-mail-sent-ok {
-		 color: #27C200;
+		color: #27C200;
 		border: 1px solid #27C200;
 	}
 }
 
-.vc_span2, .vc_span3, .vc_span4, .vc_span6 {
+.vc_col-xs-2, .vc_col-xs-3, .vc_col-xs-4, .vc_col-xs-5, .vc_col-xs-6,
+.vc_col-sm-2, .vc_col-sm-3, .vc_col-sm-4, .vc_col-sm-5, .vc_col-sm-6,
+.vc_col-md-2, .vc_col-md-3, .vc_col-md-4, .vc_col-md-5, .vc_col-md-6,
+.vc_col-lg-2, .vc_col-lg-3, .vc_col-lg-4, .vc_col-lg-5, .vc_col-lg-6,
+.vc_span2, .vc_span3, .vc_span4, .vc_span5, .vc_span6 {
 	.wpcf7 {
 		.form-submit,
 		.contact-form-input {

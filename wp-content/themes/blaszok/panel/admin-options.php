@@ -36,21 +36,100 @@ function mpcth_optionsframework_options() {
 		/* FONT SIZES */
 		'baseFontSize' => '12px',
 
+		'advanceFontSizes' => array(
+			'headerMenu'           => '12px',
+			'headerDropdown'       => '12px',
+			'headerButton'         => '12px',
+
+			'headerSearch'         => '12px',
+
+			'headerSecond'         => '11px',
+			'headerSecondDropdown' => '12px',
+
+			'contentHeader'        => '16px',
+			'contentContent'       => '13px',
+			'contentSmall'         => '12px',
+
+			'sidebarHeader'        => '13px',
+			'sidebarContent'       => '13px',
+			'sidebarSmall'         => '12px',
+
+			'footerHeader'         => '13px',
+			'footerContent'        => '13px',
+			'footerSmall'          => '12px',
+
+			'footerExHeader'       => '13px',
+			'footerExContent'      => '13px',
+			'footerExSmall'        => '12px',
+
+			'footerCopyright'      => '12px',
+		),
+
 		/* COLORS */
 		'mainColor' => '#b363a0',
 		'bgColor'   => '#ffffff',
+
+		'advanceColors' => array(
+			'headerBackground'       => '#ffffff',
+			'headerBorder'           => '#eeeeee',
+			'headerFont'             => '#666666',
+			'headerActive'           => '#b363a0',
+
+			'headerSecondBackground' => '#ffffff',
+			'headerSecondBorder'     => '#eeeeee',
+			'headerSecondFont'       => '#666666',
+			'headerSecondActive'     => '#b363a0',
+
+			'dropdownBackground'     => '#ffffff',
+			'dropdownBorder'         => '#eeeeee',
+			'dropdownFont'           => '#666666',
+			'dropdownActive'         => '#b363a0',
+
+			'searchBackground'       => '#ffffff',
+			'searchBorder'           => '#eeeeee',
+			'searchFont'             => '#666666',
+			'searchActive'           => '#b363a0',
+
+			'sidebarBackground'      => '#ffffff',
+			'sidebarBorder'          => '#eeeeee',
+			'sidebarFont'            => '#666666',
+			'sidebarActive'          => '#b363a0',
+
+			'contentBackground'      => '#ffffff',
+			'contentBorder'          => '#eeeeee',
+			'contentFont'            => '#666666',
+
+			'footerBackground'       => '#ffffff',
+			'footerBorder'           => '#eeeeee',
+			'footerFont'             => '#666666',
+			'footerActive'           => '#b363a0',
+
+			'footerExBackground'     => '#ffffff',
+			'footerExBorder'         => '#eeeeee',
+			'footerExFont'           => '#666666',
+			'footerExActive'         => '#b363a0',
+
+			'copyrightBackground'    => '#ffffff',
+			'copyrightBorder'        => '#eeeeee',
+			'copyrightFont'          => '#666666',
+			'copyrightActive'        => '#b363a0',
+		),
 
 		/* DISPLAY */
 		'boxedType' => 'fullwidth',
 		'themeSkin' => 'default',
 
 		/* HEADER */
-		'headerMainLayout'   => 'l_m_s',
-		'newsletterText'     => __('Sign up to newsletter', 'mpcth'),
-		'enableMegaMenu'     => '0',
-		'enableHeaderSearch' => '1',
-		'enableSmartSearch'  => '0',
-		'enableStickyHeader' => '1',
+		'headerMainLayout'         => 'l_m_s',
+		'newsletterText'           => __('Sign up to newsletter', 'mpcth'),
+		'enableMegaMenu'           => '0',
+		'enableHeaderSearch'       => '1',
+		'enableSmartSearch'        => '0',
+		'enableStickyHeader'       => '1',
+		'enableMobileStickyHeader' => '0',
+		'enableSimpleMenu'         => '0',
+		'enableSimpleMenuLabel'    => '0',
+		'enableSimpleButtons'      => '0',
 
 		'enableSecondaryHeader'   => '1',
 		'headerSecondaryLayout'   => 'n_s_m',
@@ -67,6 +146,9 @@ function mpcth_optionsframework_options() {
 
 		'enableCopyrights' => '1',
 		'copyrightText'    => __('Copyright MassivePixelCreation 2013', 'mpcth'),
+
+		/* WOOCOMMERCE */
+		'shopColNum' => '4',
 	 );
 
 	$footer_columns = array(
@@ -74,6 +156,19 @@ function mpcth_optionsframework_options() {
 		'2' => '2',
 		'3' => '3',
 		'4' => '4'
+	);
+
+	$shop_columns_def = array(
+		'2' => '2',
+		'3' => '3',
+		'4' => '4'
+	);
+	$shop_columns_ext = array(
+		'2' => '2',
+		'3' => '3',
+		'4' => '4',
+		'5' => '5',
+		'6' => '6'
 	);
 
 	$back_to_top_position = array(
@@ -159,39 +254,7 @@ function mpcth_optionsframework_options() {
 	 );
 
 	$socials = array(
-		"adn"            => "",
-		"android"        => "",
-		"apple"          => "",
-		"bitbucket"      => "",
-		"css3"           => "",
-		"dribbble"       => "",
-		"dropbox"        => "",
-		"envelope"       => "",
-		"facebook"       => "",
-		"flickr"         => "",
-		"foursquare"     => "",
-		"github"         => "",
-		"gittip"         => "",
-		"google-plus"    => "",
-		"html5"          => "",
-		"instagram"      => "",
-		"linkedin"       => "",
-		"linux"          => "",
-		"maxcdn"         => "",
-		"pinterest"      => "",
-		"renren"         => "",
-		"rss"            => "",
-		"skype"          => "",
-		"stack-exchange" => "",
-		"trello"         => "",
-		"tumblr"         => "",
-		"twitter"        => "",
-		"vimeo-square"   => "",
-		"vk"             => "",
-		"weibo"          => "",
-		"windows"        => "",
-		"xing"           => "",
-		"youtube"        => ""
+		"adn" => "", "android" => "", "apple" => "", "behance" => "", "bitbucket" => "", "btc" => "", "codepen" => "", "css3" => "", "delicious" => "", "deviantart" => "", "digg" => "", "dribbble" => "", "dropbox" => "", "drupal" => "", "empire" => "", "envelope" => "", "facebook" => "", "flickr" => "", "foursquare" => "", "ge" => "", "git" => "", "github" => "", "gittip" => "", "google" => "", "google-plus" => "", "hacker-news" => "", "html5" => "", "instagram" => "", "joomla" => "", "jsfiddle" => "", "linkedin" => "", "linux" => "", "maxcdn" => "", "openid" => "", "pagelines" => "", "pied-piper" => "", "pinterest" => "", "qq" => "", "rebel" => "", "reddit" => "", "renren" => "", "rss" => "", "share-alt" => "", "skype" => "", "slack" => "", "soundcloud" => "", "spotify" => "", "stack-exchange" => "", "stack-overflow" => "", "steam" => "", "stumbleupon" => "", "tencent-weibo" => "", "trello" => "", "tumblr" => "", "twitter" => "", "vimeo-square" => "", "vine" => "", "vk" => "", "wechat" => "", "weibo" => "", "windows" => "", "wordpress" => "", "xing" => "", "yahoo" => "", "youtube" => ""
 	 );
 
 	$options = array();
@@ -252,6 +315,20 @@ function mpcth_optionsframework_options() {
 		"class" 	=> "mpcth_analytics_code" );
 
 /* ---------------------------------------------------------------- */
+/* Demo Wizard
+/* ---------------------------------------------------------------- */
+	$options[] = array(
+		"name" => __("Demo Wizard", 'mpcth'),
+		"type" => "accordion");
+
+	$options['mpcth_disable_demo_wizard'] = array(
+		"id" 	=> "mpcth_disable_demo_wizard",
+		"name" 	=> __("Disable Demo Wizard", 'mpcth'),
+		"desc" 	=> __("Check this option to disable demo wizard.", 'mpcth'),
+		"type" 	=> "checkbox",
+		"std" 	=> "0" );
+
+/* ---------------------------------------------------------------- */
 /* Fonts
 /* ---------------------------------------------------------------- */
 	$options[] = array(
@@ -277,6 +354,13 @@ function mpcth_optionsframework_options() {
 		"id" 	=> "mpcth_content_font",
 		"name" 	=> __("Content Font", 'mpcth'),
 		"desc" 	=> __("Specify content font.", 'mpcth'),
+		"type" 	=> "font_select",
+		"std" 	=> "default" );
+
+	$options['mpcth_menu_font'] = array(
+		"id" 	=> "mpcth_menu_font",
+		"name" 	=> __("Menu Font", 'mpcth'),
+		"desc" 	=> __("Specify menu font.", 'mpcth'),
 		"type" 	=> "font_select",
 		"std" 	=> "default" );
 
@@ -341,6 +425,38 @@ function mpcth_optionsframework_options() {
 		"id" 	=> "mpcth_logo_2x",
 		"name" 	=> __("Upload Retina Logo", 'mpcth'),
 		"desc" 	=> __("Upload your retina logo here.", 'mpcth'),
+		"class" => "mpcth_logo",
+		"type" 	=> "upload",
+		"std"	=> "" );
+
+	$options['mpcth_logo_mobile'] = array(
+		"id" 	=> "mpcth_logo_mobile",
+		"name" 	=> __("Upload Mobile Logo", 'mpcth'),
+		"desc" 	=> __("Upload your mobile logo here (leave empty to use default logo).", 'mpcth'),
+		"class" => "mpcth_logo",
+		"type" 	=> "upload",
+		"std"	=> "" );
+
+	$options['mpcth_logo_mobile_2x'] = array(
+		"id" 	=> "mpcth_logo_mobile_2x",
+		"name" 	=> __("Upload Retina Mobile Logo", 'mpcth'),
+		"desc" 	=> __("Upload your retina mobile logo here (leave empty to use default logo).", 'mpcth'),
+		"class" => "mpcth_logo",
+		"type" 	=> "upload",
+		"std"	=> "" );
+
+	$options['mpcth_logo_sticky'] = array(
+		"id" 	=> "mpcth_logo_sticky",
+		"name" 	=> __("Upload Sticky Logo", 'mpcth'),
+		"desc" 	=> __("Upload your sticky logo here.", 'mpcth'),
+		"class" => "mpcth_logo",
+		"type" 	=> "upload",
+		"std"	=> "" );
+
+	$options['mpcth_logo_sticky_2x'] = array(
+		"id" 	=> "mpcth_logo_sticky_2x",
+		"name" 	=> __("Upload Sticky Retina Logo", 'mpcth'),
+		"desc" 	=> __("Upload your sticky retina logo here.", 'mpcth'),
 		"class" => "mpcth_logo",
 		"type" 	=> "upload",
 		"std"	=> "" );
@@ -433,6 +549,20 @@ function mpcth_optionsframework_options() {
 			'left' 	=> 'left'
 		) );
 
+	if (class_exists('bbPress')) {
+		$options['mpcth_forum_sidebar'] = array(
+			"id" 		=> "mpcth_forum_sidebar",
+			"name" 		=> __("Default Forum Sidebar Position", 'mpcth'),
+			"desc" 		=> __("Set the default sidebar position for forum page.", 'mpcth'),
+			"type" 		=> "sidebar",
+			"std" 		=> "right",
+			"options" 	=> array(
+				'right' => 'right',
+				'none' 	=> 'none',
+				'left' 	=> 'left'
+			) );
+	}
+
 /* ---------------------------------------------------------------- */
 /* Header
 /* ---------------------------------------------------------------- */
@@ -444,7 +574,6 @@ function mpcth_optionsframework_options() {
 		"id" 		=> "mpcth_header_main_layout",
 		"name" 		=> __("Main Header Layout", 'mpcth'),
 		"desc" 		=> __("Choose one of main header layouts.", 'mpcth'),
-		"class" 	=> "header_main_layouts",
 		"type" 		=> "select",
 		"std" 		=> $default_values['headerMainLayout'],
 		"options" 	=> $header_main_layouts );
@@ -453,7 +582,6 @@ function mpcth_optionsframework_options() {
 		"id" 		=> "mpcth_enable_mega_menu",
 		"name" 		=> __("Enable Mega Menu", 'mpcth'),
 		"desc" 		=> __("Specify if you want to display mega menu.", 'mpcth'),
-		"class" 	=> "mpcth_enable_mega_menu",
 		"type" 		=> "checkbox",
 		"std" 		=> $default_values['enableMegaMenu']);
 
@@ -461,7 +589,6 @@ function mpcth_optionsframework_options() {
 		"id" 		=> "mpcth_enable_header_search",
 		"name" 		=> __("Enable Search", 'mpcth'),
 		"desc" 		=> __("Specify if you want to display search in header.", 'mpcth'),
-		"class" 	=> "mpcth_enable_header_search",
 		"type" 		=> "checkbox",
 		"std" 		=> $default_values['enableHeaderSearch']);
 
@@ -469,7 +596,6 @@ function mpcth_optionsframework_options() {
 		"id" 		=> "mpcth_enable_smart_search",
 		"name" 		=> __("Enable Smart Search", 'mpcth'),
 		"desc" 		=> __("Specify if you want to display smart search.", 'mpcth'),
-		"class" 	=> "mpcth_enable_smart_search",
 		"type" 		=> "checkbox",
 		"std" 		=> $default_values['enableSmartSearch']);
 
@@ -477,9 +603,39 @@ function mpcth_optionsframework_options() {
 		"id" 		=> "mpcth_enable_sticky_header",
 		"name" 		=> __("Enable Sticky Header", 'mpcth'),
 		"desc" 		=> __("Specify if you want to show sticky header at the top of page.", 'mpcth'),
-		"class" 	=> "mpcth_enable_sticky_header",
 		"type" 		=> "checkbox",
 		"std" 		=> $default_values['enableStickyHeader']);
+
+	$options['mpcth_enable_mobile_sticky_header'] = array(
+		"id" 		=> "mpcth_enable_mobile_sticky_header",
+		"name" 		=> __("Enable Mobile Sticky Header", 'mpcth'),
+		"desc" 		=> __("Specify if you want to show sticky header at the top of page on mobile.", 'mpcth'),
+		"type" 		=> "checkbox",
+		"std" 		=> $default_values['enableMobileStickyHeader']);
+
+	$options['mpcth_enable_simple_menu'] = array(
+		"id" 				=> "mpcth_enable_simple_menu",
+		"name" 				=> __("Enable Simple Menu", 'mpcth'),
+		"desc" 				=> __("Specify if you want to display simple slide down mobile menu under the header. It will disable the side menu.", 'mpcth'),
+		"type" 				=> "checkbox",
+		"std" 				=> $default_values['enableSimpleMenu'],
+		"additional_fun" 	=> "hide",
+		"hide_class" 		=> "simple_menu_label" );
+
+	$options['mpcth_enable_simple_menu_label'] = array(
+		"id" 		=> "mpcth_enable_simple_menu_label",
+		"name" 		=> __("Enable Simple Menu Label", 'mpcth'),
+		"desc" 		=> __("Specify if you want to display \"Menu\" label for simple menu button.", 'mpcth'),
+		"class" 	=> "simple_menu_label",
+		"type" 		=> "checkbox",
+		"std" 		=> $default_values['enableSimpleMenuLabel']);
+
+	$options['mpcth_enable_simple_buttons'] = array(
+		"id" 		=> "mpcth_enable_simple_buttons",
+		"name" 		=> __("Enable Simple Buttons", 'mpcth'),
+		"desc" 		=> __("Specify if you want to display simple buttons (only icon).", 'mpcth'),
+		"type" 		=> "checkbox",
+		"std" 		=> $default_values['enableSimpleButtons']);
 
 /* ---------------------------------------------------------------- */
 /* Secondary Header
@@ -680,7 +836,7 @@ function mpcth_optionsframework_options() {
 		"type" => "heading" );
 
 /* ---------------------------------------------------------------- */
-/* Color
+/* Colors
 /* ---------------------------------------------------------------- */
 	$options[] = array(
 		"name" 					=> __("Colors", 'mpcth'),
@@ -852,23 +1008,66 @@ function mpcth_optionsframework_options() {
 		"type" 				=> "checkbox",
 		"std" 				=> "0",
 		"additional_fun" 	=> "hide",
-		"hide_class" 		=> "mpcth_enable_shop_load_more" );
+		"hide_class" 		=> "mpcth_masonry_options" );
 
 	$options['mpcth_enable_shop_load_more'] = array(
 		"id" 	=> "mpcth_enable_shop_load_more",
 		"name" 	=> __("Shop Load More", 'mpcth'),
 		"desc" 	=> __("Check this option if you want to enable load more on \"Shop\" page.", 'mpcth'),
-		"class" => "mpcth_enable_shop_load_more",
+		"class" => "mpcth_masonry_options",
 		"type" 	=> "checkbox",
 		"std" 	=> "0" );
 
+	// $options['mpcth_enable_shop_dynamic_height'] = array(
+	// 	"id" 	=> "mpcth_enable_shop_dynamic_height",
+	// 	"name" 	=> __("Shop Dynamic Height", 'mpcth'),
+	// 	"desc" 	=> __("Check this option if you want to enable dynamic products height on \"Shop\" page.", 'mpcth'),
+	// 	"class" => "mpcth_masonry_options",
+	// 	"type" 	=> "checkbox",
+	// 	"std" 	=> "0" );
+
 	$options['mpcth_shop_style'] = array(
-		"id" 		=> "mpcth_shop_style",
-		"name" 		=> __("Shop Style", 'mpcth'),
-		"desc" 		=> __("Choose one of shop styles.", 'mpcth'),
+		"id" 				=> "mpcth_shop_style",
+		"name" 				=> __("Shop Style", 'mpcth'),
+		"desc" 				=> __("Choose one of shop styles.", 'mpcth'),
+		"type" 				=> "select",
+		"std" 				=> 'default',
+		"options" 			=> $shop_styles,
+		"additional_fun" 	=> "swap",
+		"options_class" 	=> array('shop_columns_def', 'shop_columns_ext', 'shop_columns_ext') );
+
+	$options['mpcth_shop_columns_def'] = array(
+		"id" 		=> "mpcth_shop_columns_def",
+		"name" 		=> __("Shop Columns Number (Default style)", 'mpcth'),
+		"desc" 		=> __("Specify default number of shop columns for default style.", 'mpcth'),
+		"class" 	=> "shop_columns_def",
+		"type" 		=> "select",
+		"std" 		=> $default_values['shopColNum'],
+		"options" 	=> $shop_columns_def );
+
+	$options['mpcth_shop_columns_ext'] = array(
+		"id" 		=> "mpcth_shop_columns_ext",
+		"name" 		=> __("Shop Columns Number (Other styles)", 'mpcth'),
+		"desc" 		=> __("Specify default number of shop columns for other styles.", 'mpcth'),
+		"class" 	=> "shop_columns_ext",
+		"type" 		=> "select",
+		"std" 		=> $default_values['shopColNum'],
+		"options" 	=> $shop_columns_ext );
+
+	$options['mpcth_products_slider_style'] = array(
+		"id" 		=> "mpcth_products_slider_style",
+		"name" 		=> __("Products Slider Style", 'mpcth'),
+		"desc" 		=> __("Choose one of products slider styles.", 'mpcth'),
 		"type" 		=> "select",
 		"std" 		=> 'default',
 		"options" 	=> $shop_styles );
+
+	$options['mpcth_product_accordions'] = array(
+		"id" 		=> "mpcth_product_accordions",
+		"name" 		=> __("Product Accordions", 'mpcth'),
+		"desc" 		=> __("Check this option if you want to change tabs to accordions for products descriptions.", 'mpcth'),
+		"type" 		=> "checkbox",
+		"std" 		=> "0" );
 
 	$options['mpcth_enable_size_guide'] = array(
 		"id" 				=> "mpcth_enable_size_guide",
@@ -880,11 +1079,11 @@ function mpcth_optionsframework_options() {
 		"hide_class" 		=> "mpcth_size_quide" );
 
 	$options['mpcth_size_quide'] = array(
-		"id" 	=> "mpcth_size_quide",
-		"name" 	=> __("Size Guide Image", 'mpcth'),
-		"desc" 	=> __("Upload your size guide image here.", 'mpcth'),
-		"class" => "mpcth_size_quide",
-		"type" 	=> "upload" );
+		"id" 		=> "mpcth_size_quide",
+		"name" 		=> __("Size Guide Image", 'mpcth'),
+		"desc" 		=> __("Upload your size guide image here.", 'mpcth'),
+		"class" 	=> "mpcth_size_quide",
+		"type" 		=> "upload" );
 
 	$options['mpcth_disable_header_cart'] = array(
 		"id" 		=> "mpcth_disable_header_cart",
@@ -917,6 +1116,20 @@ function mpcth_optionsframework_options() {
 		"type" 		=> "checkbox",
 		"std" 		=> "0" );
 
+	$options['mpcth_tab_description_label'] = array(
+		"id" 	=> "mpcth_tab_description_label",
+		"name" 	=> __("\"Description\" Tab Label", 'mpcth'),
+		"desc" 	=> __('Specify your custom label for product "Description" label.', 'mpcth'),
+		"type" 	=> "text",
+		"std" 	=> "" );
+
+	$options['mpcth_tab_additional_information_label'] = array(
+		"id" 	=> "mpcth_tab_additional_information_label",
+		"name" 	=> __("\"Additional Information\" Tab Label", 'mpcth'),
+		"desc" 	=> __('Specify your custom label for product "Additional Information" label.', 'mpcth'),
+		"type" 	=> "text",
+		"std" 	=> "" );
+
 /* ---------------------------------------------------------------- */
 /* Custom CSS
 /* ---------------------------------------------------------------- */
@@ -930,6 +1143,539 @@ function mpcth_optionsframework_options() {
 		"desc" 		=> __('Insert your custom CSS.', 'mpcth'),
 		"type" 		=> "textarea-big",
 		"std" 		=> "", );
+
+	$options['mpcth_overwrite_shortcodes_colors'] = array(
+		"id" 		=> "mpcth_overwrite_shortcodes_colors",
+		"name" 		=> __("Overwrite Shortcodes Colors", 'mpcth'),
+		"desc" 		=> __("Check this option if you want to overwrite shortcodes colors with the Main Color.", 'mpcth'),
+		"type" 		=> "checkbox",
+		"std" 		=> "0" );
+
+/* ---------------------------------------------------------------- */
+/* Styles
+/* ---------------------------------------------------------------- */
+	$options[] = array(
+		"name" => __("Styles", 'mpcth'),
+		"icon" => "fa fa-fw fa-magic",
+		"type" => "heading" );
+
+/* ---------------------------------------------------------------- */
+/* Options
+/* ---------------------------------------------------------------- */
+	$options[] = array(
+		"name" => __("Options", 'mpcth'),
+		"type" => "accordion");
+
+	$options['mpcth_use_advance_colors'] = array(
+		"id" 	=> "mpcth_use_advance_colors",
+		"name" 	=> __("Use Advance Colors", 'mpcth'),
+		"desc" 	=> __("Check this option if you want to use the below colors.", 'mpcth'),
+		"type" 	=> "checkbox",
+		"std" 	=> 0 );
+
+	$options['mpcth_use_advance_font_sizes'] = array(
+		"id" 	=> "mpcth_use_advance_font_sizes",
+		"name" 	=> __("Use Advance Font Sizes", 'mpcth'),
+		"desc" 	=> __("Check this option if you want to use the below font sizes.", 'mpcth'),
+		"type" 	=> "checkbox",
+		"std" 	=> 0 );
+
+/* ---------------------------------------------------------------- */
+/* Header
+/* ---------------------------------------------------------------- */
+	$options[] = array(
+		"name" => __("Header", 'mpcth'),
+		"type" => "accordion");
+
+	/* Colors */
+	$options['mpcth_colors_header_background'] = array(
+		"id" 	=> "mpcth_colors_header_background",
+		"name" 	=> __("Header Background", 'mpcth'),
+		"desc" 	=> __("Specify header background color.", 'mpcth'),
+		"type" 	=> "color",
+		"std" 	=> $default_values['advanceColors']['headerBackground'] );
+
+	$options['mpcth_colors_header_border'] = array(
+		"id" 	=> "mpcth_colors_header_border",
+		"name" 	=> __("Header Border", 'mpcth'),
+		"desc" 	=> __("Specify header border color.", 'mpcth'),
+		"type" 	=> "color",
+		"std" 	=> $default_values['advanceColors']['headerBorder'] );
+
+	$options['mpcth_colors_header_font'] = array(
+		"id" 	=> "mpcth_colors_header_font",
+		"name" 	=> __("Header Font", 'mpcth'),
+		"desc" 	=> __("Specify header font color.", 'mpcth'),
+		"type" 	=> "color",
+		"std" 	=> $default_values['advanceColors']['headerFont'] );
+
+	$options['mpcth_colors_header_active'] = array(
+		"id" 	=> "mpcth_colors_header_active",
+		"name" 	=> __("Header Active/Hover", 'mpcth'),
+		"desc" 	=> __("Specify header active/hover color.", 'mpcth'),
+		"type" 	=> "color",
+		"std" 	=> $default_values['advanceColors']['headerActive'] );
+
+	/* Sizes */
+	$options['mpcth_font_sizes_header_menu'] = array(
+		"id" 	=> "mpcth_font_sizes_header_menu",
+		"name" 	=> __("Header Menu", 'mpcth'),
+		"desc" 	=> __("Specify header menu font size.", 'mpcth'),
+		"type" 	=> "slider",
+		"std" 	=> $default_values['advanceFontSizes']['headerMenu'],
+	 	"min" 	=> "8",
+	 	"max" 	=> "64" );
+
+	$options['mpcth_font_sizes_header_button'] = array(
+		"id" 	=> "mpcth_font_sizes_header_button",
+		"name" 	=> __("Header Button", 'mpcth'),
+		"desc" 	=> __("Specify header button font size.", 'mpcth'),
+		"type" 	=> "slider",
+		"std" 	=> $default_values['advanceFontSizes']['headerButton'],
+	 	"min" 	=> "8",
+	 	"max" 	=> "64" );
+
+/* ---------------------------------------------------------------- */
+/* Secondary Header
+/* ---------------------------------------------------------------- */
+	$options[] = array(
+		"name" => __("Secondary Header", 'mpcth'),
+		"type" => "accordion");
+
+	/* Colors */
+	$options['mpcth_colors_header_second_background'] = array(
+		"id" 	=> "mpcth_colors_header_second_background",
+		"name" 	=> __("Secondary Header Background", 'mpcth'),
+		"desc" 	=> __("Specify secondary header background color.", 'mpcth'),
+		"type" 	=> "color",
+		"std" 	=> $default_values['advanceColors']['headerSecondBackground'] );
+
+	$options['mpcth_colors_header_second_border'] = array(
+		"id" 	=> "mpcth_colors_header_second_border",
+		"name" 	=> __("Secondary Header Border", 'mpcth'),
+		"desc" 	=> __("Specify secondary header border color.", 'mpcth'),
+		"type" 	=> "color",
+		"std" 	=> $default_values['advanceColors']['headerSecondBorder'] );
+
+	$options['mpcth_colors_header_second_font'] = array(
+		"id" 	=> "mpcth_colors_header_second_font",
+		"name" 	=> __("Secondary Header Font", 'mpcth'),
+		"desc" 	=> __("Specify secondary header font color.", 'mpcth'),
+		"type" 	=> "color",
+		"std" 	=> $default_values['advanceColors']['headerSecondFont'] );
+
+	$options['mpcth_colors_header_second_active'] = array(
+		"id" 	=> "mpcth_colors_header_second_active",
+		"name" 	=> __("Secondary Header Active/Hover", 'mpcth'),
+		"desc" 	=> __("Specify secondary header active/hover color.", 'mpcth'),
+		"type" 	=> "color",
+		"std" 	=> $default_values['advanceColors']['headerSecondActive'] );
+
+	/* Sizes */
+	$options['mpcth_font_sizes_header_second'] = array(
+		"id" 	=> "mpcth_font_sizes_header_second",
+		"name" 	=> __("Secondary Header", 'mpcth'),
+		"desc" 	=> __("Specify secondary header font size.", 'mpcth'),
+		"type" 	=> "slider",
+		"std" 	=> $default_values['advanceFontSizes']['headerSecond'],
+	 	"min" 	=> "8",
+	 	"max" 	=> "64" );
+
+/* ---------------------------------------------------------------- */
+/* Dropdowns
+/* ---------------------------------------------------------------- */
+	$options[] = array(
+		"name" => __("Dropdowns", 'mpcth'),
+		"type" => "accordion");
+
+	/* Colors */
+	$options['mpcth_colors_dropdown_background'] = array(
+		"id" 	=> "mpcth_colors_dropdown_background",
+		"name" 	=> __("Dropdown Background", 'mpcth'),
+		"desc" 	=> __("Specify dropdown background color.", 'mpcth'),
+		"type" 	=> "color",
+		"std" 	=> $default_values['advanceColors']['dropdownBackground'] );
+
+	$options['mpcth_colors_dropdown_border'] = array(
+		"id" 	=> "mpcth_colors_dropdown_border",
+		"name" 	=> __("Dropdown Border", 'mpcth'),
+		"desc" 	=> __("Specify dropdown border color.", 'mpcth'),
+		"type" 	=> "color",
+		"std" 	=> $default_values['advanceColors']['dropdownBorder'] );
+
+	$options['mpcth_colors_dropdown_font'] = array(
+		"id" 	=> "mpcth_colors_dropdown_font",
+		"name" 	=> __("Dropdown Font", 'mpcth'),
+		"desc" 	=> __("Specify dropdown font color.", 'mpcth'),
+		"type" 	=> "color",
+		"std" 	=> $default_values['advanceColors']['dropdownFont'] );
+
+	$options['mpcth_colors_dropdown_active'] = array(
+		"id" 	=> "mpcth_colors_dropdown_active",
+		"name" 	=> __("Dropdown Active/Hover", 'mpcth'),
+		"desc" 	=> __("Specify dropdown active/hover color.", 'mpcth'),
+		"type" 	=> "color",
+		"std" 	=> $default_values['advanceColors']['dropdownActive'] );
+
+	/* Sizes */
+	$options['mpcth_font_sizes_header_dropdown'] = array(
+		"id" 	=> "mpcth_font_sizes_header_dropdown",
+		"name" 	=> __("Header Dropdown", 'mpcth'),
+		"desc" 	=> __("Specify header dropdown font size.", 'mpcth'),
+		"type" 	=> "slider",
+		"std" 	=> $default_values['advanceFontSizes']['headerDropdown'],
+	 	"min" 	=> "8",
+	 	"max" 	=> "64" );
+
+	$options['mpcth_font_sizes_header_second_dropdown'] = array(
+		"id" 	=> "mpcth_font_sizes_header_second_dropdown",
+		"name" 	=> __("Secondary Header Dropdown", 'mpcth'),
+		"desc" 	=> __("Specify secondary header dropdown font size.", 'mpcth'),
+		"type" 	=> "slider",
+		"std" 	=> $default_values['advanceFontSizes']['headerSecondDropdown'],
+	 	"min" 	=> "8",
+	 	"max" 	=> "64" );
+
+/* ---------------------------------------------------------------- */
+/* Search
+/* ---------------------------------------------------------------- */
+	$options[] = array(
+		"name" => __("Search", 'mpcth'),
+		"type" => "accordion");
+
+	/* Colors */
+	$options['mpcth_colors_search_background'] = array(
+		"id" 	=> "mpcth_colors_search_background",
+		"name" 	=> __("Search Background", 'mpcth'),
+		"desc" 	=> __("Specify search background color.", 'mpcth'),
+		"type" 	=> "color",
+		"std" 	=> $default_values['advanceColors']['searchBackground'] );
+
+	$options['mpcth_colors_search_border'] = array(
+		"id" 	=> "mpcth_colors_search_border",
+		"name" 	=> __("Search Border", 'mpcth'),
+		"desc" 	=> __("Specify search border color.", 'mpcth'),
+		"type" 	=> "color",
+		"std" 	=> $default_values['advanceColors']['searchBorder'] );
+
+	$options['mpcth_colors_search_font'] = array(
+		"id" 	=> "mpcth_colors_search_font",
+		"name" 	=> __("Search Font", 'mpcth'),
+		"desc" 	=> __("Specify search font color.", 'mpcth'),
+		"type" 	=> "color",
+		"std" 	=> $default_values['advanceColors']['searchFont'] );
+
+	$options['mpcth_colors_search_active'] = array(
+		"id" 	=> "mpcth_colors_search_active",
+		"name" 	=> __("Search Active/Hover", 'mpcth'),
+		"desc" 	=> __("Specify search active/hover color.", 'mpcth'),
+		"type" 	=> "color",
+		"std" 	=> $default_values['advanceColors']['searchActive'] );
+
+	/* Sizes */
+	$options['mpcth_font_sizes_header_search'] = array(
+		"id" 	=> "mpcth_font_sizes_header_search",
+		"name" 	=> __("Search", 'mpcth'),
+		"desc" 	=> __("Specify search font size.", 'mpcth'),
+		"type" 	=> "slider",
+		"std" 	=> $default_values['advanceFontSizes']['headerSearch'],
+	 	"min" 	=> "8",
+	 	"max" 	=> "64" );
+
+/* ---------------------------------------------------------------- */
+/* Sidebar
+/* ---------------------------------------------------------------- */
+	$options[] = array(
+		"name" => __("Sidebar", 'mpcth'),
+		"type" => "accordion");
+
+	/* Colors */
+	$options['mpcth_colors_sidebar_background'] = array(
+		"id" 	=> "mpcth_colors_sidebar_background",
+		"name" 	=> __("Sidebar Background", 'mpcth'),
+		"desc" 	=> __("Specify sidebar background color.", 'mpcth'),
+		"type" 	=> "color",
+		"std" 	=> $default_values['advanceColors']['sidebarBackground'] );
+
+	$options['mpcth_colors_sidebar_border'] = array(
+		"id" 	=> "mpcth_colors_sidebar_border",
+		"name" 	=> __("Sidebar Border", 'mpcth'),
+		"desc" 	=> __("Specify sidebar border color.", 'mpcth'),
+		"type" 	=> "color",
+		"std" 	=> $default_values['advanceColors']['sidebarBorder'] );
+
+	$options['mpcth_colors_sidebar_font'] = array(
+		"id" 	=> "mpcth_colors_sidebar_font",
+		"name" 	=> __("Sidebar Font", 'mpcth'),
+		"desc" 	=> __("Specify sidebar font color.", 'mpcth'),
+		"type" 	=> "color",
+		"std" 	=> $default_values['advanceColors']['sidebarFont'] );
+
+	$options['mpcth_colors_sidebar_active'] = array(
+		"id" 	=> "mpcth_colors_sidebar_active",
+		"name" 	=> __("Sidebar Active/Hover", 'mpcth'),
+		"desc" 	=> __("Specify sidebar active/hover color.", 'mpcth'),
+		"type" 	=> "color",
+		"std" 	=> $default_values['advanceColors']['sidebarActive'] );
+
+	/* Sizes */
+	$options['mpcth_font_sizes_sidebar_header'] = array(
+		"id" 	=> "mpcth_font_sizes_sidebar_header",
+		"name" 	=> __("Sidebar Header", 'mpcth'),
+		"desc" 	=> __("Specify sidebar header font size.", 'mpcth'),
+		"type" 	=> "slider",
+		"std" 	=> $default_values['advanceFontSizes']['sidebarHeader'],
+	 	"min" 	=> "8",
+	 	"max" 	=> "64" );
+
+	$options['mpcth_font_sizes_sidebar_content'] = array(
+		"id" 	=> "mpcth_font_sizes_sidebar_content",
+		"name" 	=> __("Sidebar Content", 'mpcth'),
+		"desc" 	=> __("Specify sidebar content font size.", 'mpcth'),
+		"type" 	=> "slider",
+		"std" 	=> $default_values['advanceFontSizes']['sidebarContent'],
+	 	"min" 	=> "8",
+	 	"max" 	=> "64" );
+
+	$options['mpcth_font_sizes_sidebar_small'] = array(
+		"id" 	=> "mpcth_font_sizes_sidebar_small",
+		"name" 	=> __("Sidebar Small", 'mpcth'),
+		"desc" 	=> __("Specify sidebar small font size.", 'mpcth'),
+		"type" 	=> "slider",
+		"std" 	=> $default_values['advanceFontSizes']['sidebarSmall'],
+	 	"min" 	=> "8",
+	 	"max" 	=> "64" );
+
+/* ---------------------------------------------------------------- */
+/* Content
+/* ---------------------------------------------------------------- */
+	$options[] = array(
+		"name" => __("Content", 'mpcth'),
+		"type" => "accordion");
+
+	/* Colors */
+	$options['mpcth_colors_content_background'] = array(
+		"id" 	=> "mpcth_colors_content_background",
+		"name" 	=> __("Content Background", 'mpcth'),
+		"desc" 	=> __("Specify content background color.", 'mpcth'),
+		"type" 	=> "color",
+		"std" 	=> $default_values['advanceColors']['contentBackground'] );
+
+	$options['mpcth_colors_content_border'] = array(
+		"id" 	=> "mpcth_colors_content_border",
+		"name" 	=> __("Content Border", 'mpcth'),
+		"desc" 	=> __("Specify content border color.", 'mpcth'),
+		"type" 	=> "color",
+		"std" 	=> $default_values['advanceColors']['contentBorder'] );
+
+	$options['mpcth_colors_content_font'] = array(
+		"id" 	=> "mpcth_colors_content_font",
+		"name" 	=> __("Content Font", 'mpcth'),
+		"desc" 	=> __("Specify content font color.", 'mpcth'),
+		"type" 	=> "color",
+		"std" 	=> $default_values['advanceColors']['contentFont'] );
+
+	/* Sizes */
+	$options['mpcth_font_sizes_content_header'] = array(
+		"id" 	=> "mpcth_font_sizes_content_header",
+		"name" 	=> __("Content Header", 'mpcth'),
+		"desc" 	=> __("Specify content header font size.", 'mpcth'),
+		"type" 	=> "slider",
+		"std" 	=> $default_values['advanceFontSizes']['contentHeader'],
+	 	"min" 	=> "8",
+	 	"max" 	=> "64" );
+
+	$options['mpcth_font_sizes_content_content'] = array(
+		"id" 	=> "mpcth_font_sizes_content_content",
+		"name" 	=> __("Content Content", 'mpcth'),
+		"desc" 	=> __("Specify content content font size.", 'mpcth'),
+		"type" 	=> "slider",
+		"std" 	=> $default_values['advanceFontSizes']['contentContent'],
+	 	"min" 	=> "8",
+	 	"max" 	=> "64" );
+
+	$options['mpcth_font_sizes_content_small'] = array(
+		"id" 	=> "mpcth_font_sizes_content_small",
+		"name" 	=> __("Content Small", 'mpcth'),
+		"desc" 	=> __("Specify content small font size.", 'mpcth'),
+		"type" 	=> "slider",
+		"std" 	=> $default_values['advanceFontSizes']['contentSmall'],
+	 	"min" 	=> "8",
+	 	"max" 	=> "64" );
+
+/* ---------------------------------------------------------------- */
+/* Footer
+/* ---------------------------------------------------------------- */
+	$options[] = array(
+		"name" => __("Footer", 'mpcth'),
+		"type" => "accordion");
+
+	/* Colors */
+	$options['mpcth_colors_footer_background'] = array(
+		"id" 	=> "mpcth_colors_footer_background",
+		"name" 	=> __("Footer Background", 'mpcth'),
+		"desc" 	=> __("Specify footer background color.", 'mpcth'),
+		"type" 	=> "color",
+		"std" 	=> $default_values['advanceColors']['footerBackground'] );
+
+	$options['mpcth_colors_footer_border'] = array(
+		"id" 	=> "mpcth_colors_footer_border",
+		"name" 	=> __("Footer Border", 'mpcth'),
+		"desc" 	=> __("Specify footer border color.", 'mpcth'),
+		"type" 	=> "color",
+		"std" 	=> $default_values['advanceColors']['footerBorder'] );
+
+	$options['mpcth_colors_footer_font'] = array(
+		"id" 	=> "mpcth_colors_footer_font",
+		"name" 	=> __("Footer Font", 'mpcth'),
+		"desc" 	=> __("Specify footer font color.", 'mpcth'),
+		"type" 	=> "color",
+		"std" 	=> $default_values['advanceColors']['footerFont'] );
+
+	$options['mpcth_colors_footer_active'] = array(
+		"id" 	=> "mpcth_colors_footer_active",
+		"name" 	=> __("Footer Active/Hover", 'mpcth'),
+		"desc" 	=> __("Specify footer active/hover color.", 'mpcth'),
+		"type" 	=> "color",
+		"std" 	=> $default_values['advanceColors']['footerActive'] );
+
+	/* Sizes */
+	$options['mpcth_font_sizes_footer_header'] = array(
+		"id" 	=> "mpcth_font_sizes_footer_header",
+		"name" 	=> __("Footer Header", 'mpcth'),
+		"desc" 	=> __("Specify footer header font size.", 'mpcth'),
+		"type" 	=> "slider",
+		"std" 	=> $default_values['advanceFontSizes']['footerHeader'],
+	 	"min" 	=> "8",
+	 	"max" 	=> "64" );
+
+	$options['mpcth_font_sizes_footer_content'] = array(
+		"id" 	=> "mpcth_font_sizes_footer_content",
+		"name" 	=> __("Footer Content", 'mpcth'),
+		"desc" 	=> __("Specify footer content font size.", 'mpcth'),
+		"type" 	=> "slider",
+		"std" 	=> $default_values['advanceFontSizes']['footerContent'],
+	 	"min" 	=> "8",
+	 	"max" 	=> "64" );
+
+	$options['mpcth_font_sizes_footer_small'] = array(
+		"id" 	=> "mpcth_font_sizes_footer_small",
+		"name" 	=> __("Footer Small", 'mpcth'),
+		"desc" 	=> __("Specify footer small font size.", 'mpcth'),
+		"type" 	=> "slider",
+		"std" 	=> $default_values['advanceFontSizes']['footerSmall'],
+	 	"min" 	=> "8",
+	 	"max" 	=> "64" );
+
+/* ---------------------------------------------------------------- */
+/* Extended Footer
+/* ---------------------------------------------------------------- */
+	$options[] = array(
+		"name" => __("Extended Footer", 'mpcth'),
+		"type" => "accordion");
+
+	/* Colors */
+	$options['mpcth_colors_footer_ex_background'] = array(
+		"id" 	=> "mpcth_colors_footer_ex_background",
+		"name" 	=> __("Extended Footer Background", 'mpcth'),
+		"desc" 	=> __("Specify extended footer background color.", 'mpcth'),
+		"type" 	=> "color",
+		"std" 	=> $default_values['advanceColors']['footerExBackground'] );
+
+	$options['mpcth_colors_footer_ex_border'] = array(
+		"id" 	=> "mpcth_colors_footer_ex_border",
+		"name" 	=> __("Extended Footer Border", 'mpcth'),
+		"desc" 	=> __("Specify extended footer border color.", 'mpcth'),
+		"type" 	=> "color",
+		"std" 	=> $default_values['advanceColors']['footerExBorder'] );
+
+	$options['mpcth_colors_footer_ex_font'] = array(
+		"id" 	=> "mpcth_colors_footer_ex_font",
+		"name" 	=> __("Extended Footer Font", 'mpcth'),
+		"desc" 	=> __("Specify extended footer font color.", 'mpcth'),
+		"type" 	=> "color",
+		"std" 	=> $default_values['advanceColors']['footerExFont'] );
+
+	$options['mpcth_colors_footer_ex_active'] = array(
+		"id" 	=> "mpcth_colors_footer_ex_active",
+		"name" 	=> __("Extended Footer Active/Hover", 'mpcth'),
+		"desc" 	=> __("Specify extended footer active/hover color.", 'mpcth'),
+		"type" 	=> "color",
+		"std" 	=> $default_values['advanceColors']['footerExActive'] );
+
+	/* Sizes */
+	$options['mpcth_font_sizes_footer_ex_header'] = array(
+		"id" 	=> "mpcth_font_sizes_footer_ex_header",
+		"name" 	=> __("Extended Footer Header", 'mpcth'),
+		"desc" 	=> __("Specify extended footer header font size.", 'mpcth'),
+		"type" 	=> "slider",
+		"std" 	=> $default_values['advanceFontSizes']['footerExHeader'],
+	 	"min" 	=> "8",
+	 	"max" 	=> "64" );
+
+	$options['mpcth_font_sizes_footer_ex_content'] = array(
+		"id" 	=> "mpcth_font_sizes_footer_ex_content",
+		"name" 	=> __("Extended Footer Content", 'mpcth'),
+		"desc" 	=> __("Specify extended footer content font size.", 'mpcth'),
+		"type" 	=> "slider",
+		"std" 	=> $default_values['advanceFontSizes']['footerExContent'],
+	 	"min" 	=> "8",
+	 	"max" 	=> "64" );
+
+	$options['mpcth_font_sizes_footer_ex_small'] = array(
+		"id" 	=> "mpcth_font_sizes_footer_ex_small",
+		"name" 	=> __("Extended Footer Small", 'mpcth'),
+		"desc" 	=> __("Specify extended footer small font size.", 'mpcth'),
+		"type" 	=> "slider",
+		"std" 	=> $default_values['advanceFontSizes']['footerExSmall'],
+	 	"min" 	=> "8",
+	 	"max" 	=> "64" );
+
+/* ---------------------------------------------------------------- */
+/* Copyright
+/* ---------------------------------------------------------------- */
+	$options[] = array(
+		"name" => __("Copyright", 'mpcth'),
+		"type" => "accordion");
+
+	/* Colors */
+	$options['mpcth_colors_copyright_background'] = array(
+		"id" 	=> "mpcth_colors_copyright_background",
+		"name" 	=> __("Copyright Background", 'mpcth'),
+		"desc" 	=> __("Specify copyright background color.", 'mpcth'),
+		"type" 	=> "color",
+		"std" 	=> $default_values['advanceColors']['copyrightBackground'] );
+
+	$options['mpcth_colors_copyright_border'] = array(
+		"id" 	=> "mpcth_colors_copyright_border",
+		"name" 	=> __("Copyright Border", 'mpcth'),
+		"desc" 	=> __("Specify copyright border color.", 'mpcth'),
+		"type" 	=> "color",
+		"std" 	=> $default_values['advanceColors']['copyrightBorder'] );
+
+	$options['mpcth_colors_copyright_font'] = array(
+		"id" 	=> "mpcth_colors_copyright_font",
+		"name" 	=> __("Copyright Font", 'mpcth'),
+		"desc" 	=> __("Specify copyright font color.", 'mpcth'),
+		"type" 	=> "color",
+		"std" 	=> $default_values['advanceColors']['copyrightFont'] );
+
+	$options['mpcth_colors_copyright_active'] = array(
+		"id" 	=> "mpcth_colors_copyright_active",
+		"name" 	=> __("Copyright Active/Hover", 'mpcth'),
+		"desc" 	=> __("Specify copyright active/hover color.", 'mpcth'),
+		"type" 	=> "color",
+		"std" 	=> $default_values['advanceColors']['copyrightActive'] );
+
+	/* Sizes */
+	$options['mpcth_font_sizes_footer_copyright'] = array(
+		"id" 	=> "mpcth_font_sizes_footer_copyright",
+		"name" 	=> __("Copyright", 'mpcth'),
+		"desc" 	=> __("Specify copyright font size.", 'mpcth'),
+		"type" 	=> "slider",
+		"std" 	=> $default_values['advanceFontSizes']['footerCopyright'],
+	 	"min" 	=> "8",
+	 	"max" 	=> "64" );
 
 	return $options;
 }

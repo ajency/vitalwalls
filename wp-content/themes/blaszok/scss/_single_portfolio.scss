@@ -2,8 +2,6 @@
  * 3.7. Single Portfolio
  * ========================================================================== */
 
-// .vc_mobile .single-mpc_portfolio,
-// .vc_desktop .single-mpc_portfolio {
 .single-mpc_portfolio {
 	#mpcth_content_wrap {
 		padding: 0;
@@ -19,7 +17,7 @@
 
 		@extend .box-sizing;
 	}
-	.mpcth-vc-row-wrap .wpb_row .wpb_row {
+	.mpcth-vc-row-wrap .wpb_row {
 		padding-left: 0;
 		padding-right: 0;
 	}
@@ -31,8 +29,8 @@
 		background-image: none !important;
 
 		.mpcth-vc-row-wrap {
-			margin-left: 0;
-			margin-right: 0;
+			margin-left: -20px;
+			margin-right: -20px;
 		}
 	}
 
@@ -87,6 +85,10 @@
 	}
 	.mpcth-vc-row-wrap.mpcth-vc-row-wrap-parallax .mpcth-overlay-image {
 		background-attachment: fixed;
+
+		@media #{$screen-medium} {
+		    background-attachment: initial;
+		}
 	}
 	.mpcth-vc-row-wrap.wpb_animate_when_almost_visible .mpcth-overlay-image {
 		opacity: 0;
@@ -101,6 +103,7 @@
 				padding-left: 0;
 			}
 
+			.post-password-form,
 			#mpcth_content > article > .mpcth-post-header,
 			.mpcth-vc-row-wrap.mpcth-vc-row-wrap-full-width .wpb_row,
 			.mpcth-vc-row-wrap,
@@ -126,6 +129,17 @@
 						width: 100%;
 					}
 				}
+			}
+
+			.post-password-form {
+				clear: both;
+				padding-left: 20px;
+				padding-right: 20px;
+			}
+
+			.mpcth-vc-row-wrap .mpcth-vc-row-wrap {
+				margin-left: -20px;
+				margin-right: -20px;
 			}
 
 			.mpcth-vc-row-wrap.mpcth-vc-row-wrap-color,
@@ -156,7 +170,7 @@
 
 			.mpcth-vc-row-wrap .mpcth-vc-row-wrap,
 			.mpcth-vc-row-wrap .mpcth-vc-row-wrap .wpb_row {
-				width: 100%;
+				width: auto;
 			}
 
 			.mpcth-vc-row-wrap.mpcth-vc-row-wrap-image {
@@ -194,14 +208,14 @@
 					}
 
 					&:before {
-						border-left-width: 0;
-						border-right-width: 40px;
-						left: 0;
+						@include border-left-width(0); // border-left-width: 0;
+						@include border-right-width(40px); // border-right-width: 40px;
+						@include left(0); // left: 0;
 					}
 					&:after {
-						border-right-width: 0;
-						border-left-width: 40px;
-						right: 0;
+						@include border-right-width(0); // border-right-width: 0;
+						@include border-left-width(40px); // border-left-width: 40px;
+						@include right(0); // right: 0;
 					}
 				}
 			}
@@ -221,6 +235,7 @@
 			padding-top: 1.75em;
 
 			.mpcth-post-title {
+				font-size: 1.333em;
 				text-transform: uppercase;
 				border-bottom: 1px solid #eeeeee;
 				margin-bottom: 1.5em;
@@ -234,12 +249,12 @@
 			}
 
 			.mpcth-post-pagination {
-				float: right;
+				@include float(right); // float: right;
 			}
 		}
 
 		.mpcth-post-content {
-			margin: 0 0 2em 0;
+			margin: 0 0 2em;
 			font-size: 1.083em;
 
 			.mpcth-post-date {
@@ -264,6 +279,7 @@
 				@media #{$screen-medium} {
 					.mpcth-responsive & {
 						width: 100%;
+						padding: 0 20px;
 					}
 				}
 			}
@@ -273,10 +289,10 @@
 
 				.mpcth-categories {
 					display: inline-block;
-					padding-left: .25em;
-					padding-right: .75em;
-					margin-right: .75em;
-					border-right: 1px solid #eeeeee;
+					@include padding-left(.25em); // padding-left: .25em;
+					@include padding-right(.75em); // padding-right: .75em;
+					@include margin-right(.75em); // margin-right: .75em;
+					@include border-right(1px solid #eeeeee); // border-right: 1px solid #eeeeee;
 					line-height: 1em;
 				}
 				.mpcth-static-text {
@@ -294,9 +310,9 @@
 .mpcth-sidebar-none.single-mpc_portfolio {
 	.mpcth-post {
 		.mpcth-left-side {
-			float: left;
+			@include float(left); // float: left;
 			width: 75%;
-			padding-right: 20px;
+			@include padding-right(20px); // padding-right: 20px;
 			margin-bottom: 4.25em;
 		}
 
@@ -304,7 +320,8 @@
 			.mpcth-post-date {
 				padding: 0 20px;
 				margin-top: 0;
-				float: left;
+				@include float(left); // float: left;
+
 				@media #{$screen-normal} {
 					.mpcth-responsive & {
 						display: block;
@@ -315,12 +332,18 @@
 						margin-right: auto;
 					}
 				}
+				@media #{$screen-medium} {
+					.mpcth-responsive & {
+						width: 100%;
+						padding: 0 20px;
+					}
+				}
 			}
 
 			.mpcth-post-date + .mpcth-vc-row-wrap {
 				.wpb_row {
 					width: 25%;
-					float: left;
+					@include float(left); // float: left;
 				}
 			}
 

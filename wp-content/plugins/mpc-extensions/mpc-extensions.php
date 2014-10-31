@@ -4,7 +4,7 @@ Plugin Name: MPC Extensions
 Plugin URI: http://themeforest.net/user/mpc/
 Description: Collection of extensions (custom post types, Visual Composer components). Created as an extension for all MPC Themes but should work everywhere with default styles.
 Author: MassivePixelCreation
-Version: 1.3.1
+Version: 2.0
 Author URI: http://themeforest.net/user/mpc/
 */
 
@@ -20,24 +20,26 @@ define('MPC_EXTENSIONS_DIR', plugin_dir_path(__FILE__));
 /* Functions */
 add_action('admin_enqueue_scripts', 'mpc_ex_admin_enqueue_scripts', 10, 1);
 function mpc_ex_admin_enqueue_scripts($hook) {
-	wp_enqueue_style('font-awesome', MPC_EXTENSIONS_URL . '/fonts/font-awesome.css');
-	wp_enqueue_style('mpc-visual-composer-admin', MPC_EXTENSIONS_URL . '/css/mpc_vc_admin.css');
+	wp_enqueue_style('font-awesome', MPC_EXTENSIONS_URL . 'fonts/font-awesome.css');
+	wp_enqueue_style('mpc-visual-composer-admin', MPC_EXTENSIONS_URL . 'css/mpc_vc_admin.css');
 }
 
 add_action('wp_enqueue_scripts', 'mpc_ex_enqueue_scripts');
 function mpc_ex_enqueue_scripts($hook) {
 	if (! defined('MPC_THEME_ENABLED') || (defined('MPC_THEME_ENABLED') && ! MPC_THEME_ENABLED)) {
-		wp_enqueue_style('mpc-visual-composer', MPC_EXTENSIONS_URL . '/css/mpc_vc.css');
+		wp_enqueue_style('mpc-visual-composer', MPC_EXTENSIONS_URL . 'css/mpc_vc.css');
 
-		wp_enqueue_style('font-awesome', MPC_EXTENSIONS_URL . '/fonts/font-awesome.css');
-		wp_enqueue_style('flexslider-css', MPC_EXTENSIONS_URL . '/css/flexslider.min.css');
+		wp_enqueue_style('font-awesome', MPC_EXTENSIONS_URL . 'fonts/font-awesome.css');
+		wp_enqueue_style('flexslider-css', MPC_EXTENSIONS_URL . 'css/flexslider.min.css');
 
-		wp_enqueue_script('flexslider-js', MPC_EXTENSIONS_URL . '/js/jquery.flexslider.min.js', array('jquery'), '2.2.0', true);
-		wp_enqueue_script('mpc-ex-main-js', MPC_EXTENSIONS_URL . '/js/main.js', array('jquery'), '1.0', true);
+		wp_enqueue_script('flexslider-js', MPC_EXTENSIONS_URL . 'js/jquery.flexslider.min.js', array('jquery'), '2.2.0', true);
+		wp_enqueue_script('mpc-ex-main-js', MPC_EXTENSIONS_URL . 'js/main.js', array('jquery'), '1.0', true);
 	}
 }
 
 require_once('php/mpc_portfolio.php');
+
+require_once('php/mpc_grid.php');
 
 require_once('php/mpc_visual_composer.php');
 

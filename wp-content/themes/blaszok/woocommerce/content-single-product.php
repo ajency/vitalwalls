@@ -57,15 +57,21 @@ if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
 
 		<div class="summary entry-summary">
 			<div class="mpcth-post-pagination">
-				<?php previous_post_link('%link', '<i class="fa fa-angle-left"></i>', true, '', 'product_cat'); ?>
-				<?php next_post_link('%link', '<i class="fa fa-angle-right"></i>', true, '', 'product_cat'); ?>
+				<?php
+					if (! is_rtl()) {
+						previous_post_link('%link', '<i class="fa fa-angle-left"></i>', true, '', 'product_cat');
+						next_post_link('%link', '<i class="fa fa-angle-right"></i>', true, '', 'product_cat');
+					} else {
+						next_post_link('%link', '<i class="fa fa-angle-right"></i>', true, '', 'product_cat');
+						previous_post_link('%link', '<i class="fa fa-angle-left"></i>', true, '', 'product_cat');
+					}
+				?>
 			</div>
-			<h4 class="mpcth-post-title mpcth-deco-header">
+			<h1 itemprop="name" class="mpcth-post-title mpcth-deco-header">
 				<span class="mpcth-color-main-border">
 					<?php the_title(); ?>
 				</span>
-			</h4>
-			<?php woocommerce_breadcrumb(); ?>
+			</h1>
 			<?php
 				if (get_option('woocommerce_enable_review_rating') == 'yes') {
 					$count = $product->get_rating_count();
@@ -88,6 +94,7 @@ if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
 					<?php
 				}
 			?>
+			<?php woocommerce_breadcrumb(); ?>
 			<div class="product-price">
 				<?php woocommerce_template_single_price(); ?>
 			</div>

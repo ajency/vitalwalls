@@ -40,11 +40,11 @@ $hide_title = get_field('mpc_hide_title');
 						<article id="page-<?php the_ID(); ?>" <?php post_class('mpcth-page'); ?> >
 							<?php if (! $hide_title) { ?>
 							<header class="mpcth-page-header">
-								<h4 class="mpcth-page-title mpcth-deco-header">
+								<h1 class="mpcth-page-title mpcth-deco-header">
 									<span class="mpcth-color-main-border">
 										<?php the_title(); ?>
 									</span>
-								</h4>
+								</h1>
 							</header>
 							<?php } ?>
 							<section class="mpcth-page-content">

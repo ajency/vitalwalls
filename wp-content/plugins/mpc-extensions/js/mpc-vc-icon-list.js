@@ -1,10 +1,10 @@
 !function($) {
-	var $def_item = $('.wpb-element-edit-modal .mpc-vc-list-items-template .mpc-vc-list-single-item'),
-		$items_wrap = $('.wpb-element-edit-modal .mpc-vc-list-items-wrap'),
-		$icons_wrap = $('.wpb-element-edit-modal .mpc-vc-list-items-icons-wrap'),
-		$add_item = $('.wpb-element-edit-modal .mpc-vc-item-add'),
-		$code = $('.wpb-element-edit-modal .mpc-vc-icons-code'),
-		$save = $('.wpb-element-edit-modal .wpb_save_edit_form');
+	var $def_item = $('.wpb-edit-form .mpc-vc-list-items-template .mpc-vc-list-single-item'),
+		$items_wrap = $('.wpb-edit-form .mpc-vc-list-items-wrap'),
+		$icons_wrap = $('.wpb-edit-form .mpc-vc-list-items-icons-wrap'),
+		$add_item = $('.wpb-edit-form .mpc-vc-item-add'),
+		$code = $('.wpb-edit-form .mpc-vc-icons-code'),
+		$save = $('.wpb-element-edit-modal .wpb_save_edit_form, .vc_shortcode-edit-form .vc_panel-btn-save');
 
 	var edit_code = $code.val(),
 		list_items = '';

@@ -49,7 +49,7 @@
 					color: #666666;
 
 					i {
-						margin-left: .5em;
+						@include margin-left(.5em); // margin-left: .5em;
 						font-size: .875em;
 					}
 				}
@@ -63,7 +63,7 @@
 				}
 
 				.mpcth-read-more {
-					float: right;
+					@include float(right); // float: right;
 					background: #f3f3f3;
 					border: none;
 					border: $hover_border;
@@ -76,7 +76,7 @@
 					margin-bottom: 1em;
 
 					> i {
-						margin-left: .5em;
+						@include margin-left(.5em); // margin-left: .5em;
 					}
 
 					&:hover {
@@ -85,13 +85,13 @@
 				}
 
 				.mpcth-categories {
-					margin-left: .25em;
+					@include margin-left(.25em); // margin-left: .25em;
 					line-height: 1em;
 				}
 				.mpcth-comments {
-					padding-left: .5em;
-					margin-left: .5em;
-					border-left: 1px solid #eeeeee;
+					@include padding-left(.5em); // padding-left: .5em;
+					@include margin-left(.5em); // margin-left: .5em;
+					@include border-left(1px solid #eeeeee); // border-left: 1px solid #eeeeee;
 					line-height: 1em;
 					display: inline-block;
 				}
@@ -128,9 +128,9 @@
 						font-size: 3em;
 						position: absolute;
 						top: 50%;
-						left: 50%;
+						@include left(50%); // left: 50%;
 						margin-top: -.5em;
-						margin-left: -.5em;
+						@include margin-left(-.5em); // margin-left: -.5em;
 						color: #ffffff;
 					}
 				}
@@ -146,10 +146,10 @@
 		&.mpcth-blog-layout-small {
 			.mpcth-post {
 				.mpcth-post-thumbnail {
-					float: left;
+					@include float(left); // float: left;
 					width: 33.33%;
-					padding-right: 20px;
-					margin-right: 20px;
+					@include padding-right(20px); // padding-right: 20px;
+					@include margin-right(20px); // margin-right: 20px;
 
 					@extend .box-sizing;
 
@@ -163,7 +163,7 @@
 					.mpcth-post-thumbnail {
 						float: none;
 						width: 100%;
-						padding-right: 0;
+						@include padding-right(0); // padding-right: 0;
 					}
 				}
 			}

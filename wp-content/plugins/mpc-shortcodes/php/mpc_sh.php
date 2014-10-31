@@ -74,6 +74,27 @@ function mpc_sh_tooltip_shortcode($atts, $content = null) {
 	return $return;
 }
 
+/* Grid */
+add_shortcode('mpc_sh_grid', 'mpc_sh_grid_shortcode');
+function mpc_sh_grid_shortcode($atts, $content = null) {
+	extract(shortcode_atts(array(
+		'id' => '',
+		'spaces' => '',
+	), $atts));
+
+	if ($id == 'select')
+		return;
+
+	$grid = get_post($id);
+
+	$return = '<div id="mpcth_grid" ' . ($spaces == 'true' ? 'class="mpcth-grid-with-space"' : '') . '>';
+		$return .= $grid->post_content;
+	$return .= '</div>';
+
+	$return = mpc_sh_content_parser($return);
+	return $return;
+}
+
 /* Parse shortcode content */
 function mpc_sh_content_parser($content) {
 	$content = trim(do_shortcode(shortcode_unautop($content)));

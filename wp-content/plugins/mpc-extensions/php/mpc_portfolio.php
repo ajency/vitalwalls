@@ -38,7 +38,7 @@ function mpc_ex_portfolio() {
 		'labels' => $labels,
 		'public' => true,
 		'show_ui' => true,
-		'menu_icon' => MPC_EXTENSIONS_URL . 'icon/portfolio.png',
+		'menu_icon' => 'dashicons-format-image',
 		'capability_type' => 'post',
 		'hierarchical' => false,
 		'rewrite' => array(
@@ -46,7 +46,6 @@ function mpc_ex_portfolio() {
 			'with_front' => false
 		),
 		'supports' => array('title', 'editor', 'post-formats', 'thumbnail', 'comments', 'author'),
-		// 'taxonomies' => array('portfolio_tag')
 	);
 
 	register_post_type('mpc_portfolio', $portfolio_args);

@@ -15,6 +15,8 @@ global $blog_layout;
 $default = 1;
 if ($blog_layout == 'small')
 	$default += 1;
+else if ($blog_layout == 'masonry')
+	$default = 2;
 
 if (has_post_thumbnail()) {
 	the_post_thumbnail('mpcth-horizontal-columns-' . $default);

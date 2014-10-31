@@ -62,8 +62,9 @@
 }
 
 #mpcth_main_container,
-#mpcth_footer_container,
-#mpcth_page_header_container {
+#mpcth_footer_container .mpcth-footer-wrap,
+#mpcth_page_header_container .mpcth-header-wrap,
+.mpcth-boxed.mpcth-transparent-header #mpcth_page_header_wrap > div {
 	width: 960px;
 	margin: 0 auto;
 
@@ -82,4 +83,7 @@
 			width: 100%;
 		}
 	}
+}
+.mpcth-full-width-header #mpcth_page_header_container .mpcth-header-wrap {
+	width: 100%;
 }

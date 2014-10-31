@@ -19,10 +19,10 @@
 		}
 
 		.mpcth-comment {
-			padding-left: 80px;
 			position: relative;
 			min-height: 62px;
 			margin-bottom: 2em;
+			@include padding-left(80px); // padding-left: 80px;
 		}
 
 		.mpcth-comments-title {
@@ -46,7 +46,7 @@
 			.avatar {
 				position: absolute;
 				top: 0;
-				left: 0;
+				@include left(0); // left: 0;
 				border: 1px solid #eeeeee;
 				border-radius: 2px;
 			}
@@ -58,12 +58,12 @@
 			}
 
 			.comment-reply-link {
-				margin-left: .25em;
+				@include margin-left(.25em); // margin-left: .25em;
 				padding: 0 .25em;
 			}
 
 			.comment-edit-link {
-				float: right;
+				@include float(right); // float: right;
 			}
 		}
 
@@ -85,7 +85,7 @@
 			}
 
 			ul {
-				padding-left: 2em;
+				@include padding-left(2em); // padding-left: 2em;
 			}
 		}
 	}
@@ -129,11 +129,11 @@
 
 			input[type=submit] {
 				background: #f3f3f3;
-				padding: .5em 1em;
 				text-transform: uppercase;
 				border: none;
 				border: $hover_border;
 				border-radius: 2px;
+				padding: .5em 1em;
 			}
 
 			input,
@@ -163,8 +163,8 @@
 			.comment-form-author,
 			.comment-form-email,
 			.comment-form-url {
+				@include float(left); // float: left;
 				width: 32.5%;
-				float: left;
 				margin-bottom: 2em;
 
 				@extend .box-sizing;
@@ -172,7 +172,7 @@
 				label {
 					position: absolute;
 					top: 0;
-					left: 1em;
+					@include left(1em); // left: 1em;
 					z-index: 1;
 					font-style: italic;
 
@@ -189,21 +189,21 @@
 				}
 			}
 			.comment-form-author {
-				padding-right: 20px;
+				@include padding-right(20px); // padding-right: 20px;
 			}
 			.comment-form-email {
 				width: 35%;
 				padding: 0 20px;
 
 				label {
-					padding-left: 20px;
+					@include padding-left(20px); // padding-left: 20px;
 				}
 			}
 			.comment-form-url {
-				padding-left: 20px;
+				@include padding-left(20px); // padding-left: 20px;
 
 				label {
-					padding-left: 20px;
+					@include padding-left(20px); // padding-left: 20px;
 				}
 			}
 
@@ -213,11 +213,11 @@
 					.comment-form-email,
 					.comment-form-url {
 						width: 100%;
-						padding-left: 0;
-						padding-right: 0;
+						@include padding-left(0); // padding-left: 0;
+						@include padding-right(0); // padding-right: 0;
 
 						label {
-							padding-left: 0;
+							@include padding-left(0); // padding-left: 0;
 						}
 					}
 				}
@@ -230,7 +230,7 @@
 				label {
 					position: absolute;
 					top: 0;
-					left: 1em;
+					@include left(1em); // left: 1em;
 					z-index: 1;
 					font-style: italic;
 
@@ -248,11 +248,11 @@
 			}
 
 			.form-submit {
-				float: right;
+				@include float(right); // float: right;
 				width: 32.5%;
-				padding-left: 20px;
 				margin-bottom: 2em;
 				margin-top: 0;
+				@include padding-left(20px); // padding-left: 20px;
 
 				@extend .box-sizing;
 
@@ -272,7 +272,7 @@
 				@media #{$screen-small} {
 					.mpcth-responsive & {
 						width: 100%;
-						padding-left: 0;
+						@include padding-left(0); // padding-left: 0;
 					}
 				}
 			}

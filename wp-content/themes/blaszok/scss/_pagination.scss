@@ -23,11 +23,11 @@
 				height: 1.25em;
 				position: relative;
 				z-index: 2;
-				margin-left: -.7em;
+				margin-left: -.7em; // non-RTL
 				line-height: 1.4em;
 
 				i {
-					margin-left: .1em;
+					@include margin-left(.1em); // margin-left: .1em;
 				}
 			}
 			&:hover {
@@ -55,3 +55,45 @@
  		margin: .4em;
  	}
  }
+
+ /* Load More */
+#mpcth_load_more_wrapper,
+#mpcth_load_more {
+	display: none;
+}
+#mpcth_content_wrap.mpcth-load-more {
+	#mpcth_load_more {
+		position: relative;
+		display: inline-block;
+		padding: 1em;
+		text-transform: uppercase;
+
+		@include opacity(1);
+
+		.mpcth-load-more-icon {
+			position: absolute;
+			@include right(-23px); // right: -23px;
+			top: 1.75em;
+			width: 23px;
+			height: 6px;
+			margin-top: -4px;
+
+			background: url(images/load-more.gif) no-repeat center center;
+			background-size: 100% 100%;
+
+			@extend .transition;
+			@include opacity(0);
+		}
+
+		&.active {
+			@include opacity(.25);
+
+			.mpcth-load-more-icon {
+				@include opacity(1);
+			}
+		}
+	}
+	#mpcth_pagination .page-numbers {
+		display: none;
+	}
+}

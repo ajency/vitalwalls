@@ -9,10 +9,10 @@
 
 	li {
 		display: inline-block;
-		margin-left: .5em;
+		@include margin-left(.5em); // margin-left: .5em;
 
 		&:first-child {
-			margin-left: 0;
+			@include margin-left(0); // margin-left: 0;
 		}
 
 		a {

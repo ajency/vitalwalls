@@ -37,8 +37,6 @@ $query->query(array(
 	'tax_query' 		=> $limit_visible_categories
 ));
 
-$pagination_type = get_field('mpc_pagination_type');
-
 $portfolio_columns = 4;
 if (get_field('mpc_portfolio_columns'))
 	$portfolio_columns = get_field('mpc_portfolio_columns');
@@ -47,12 +45,17 @@ $enable_category_filters = false;
 if (get_field('mpc_enable_category_filters') && empty($limit_visible_categories))
 	$enable_category_filters = true;
 
+
+$portfolio_load_more = false;
+if (get_field('mpc_portfolio_load_more'))
+	$portfolio_load_more = get_field('mpc_portfolio_load_more');
+
 ?>
 
 <div id="mpcth_main">
 	<div id="mpcth_main_container">
 		<?php get_sidebar(); ?>
-		<div id="mpcth_content_wrap" <?php echo !$enable_category_filters ? 'class="mpcth-disable-filters"' : ''; ?>>
+		<div id="mpcth_content_wrap" class="<?php echo !$enable_category_filters ? 'mpcth-disable-filters' : ''; ?> <?php if ($portfolio_load_more) echo 'mpcth-load-more' ?>">
 			<div id="mpcth_page_content">
 				<?php //the_content(); ?>
 			</div>
@@ -177,7 +180,7 @@ if (get_field('mpc_enable_category_filters') && empty($limit_visible_categories)
 			<?php if ($query->max_num_pages > 1) { ?>
 			<div id="mpcth_pagination">
 				<?php
-					if ($pagination_type == 'loadmore')
+					if ($portfolio_load_more)
 						mpcth_display_load_more($query);
 					else
 						mpcth_display_pagination($query);

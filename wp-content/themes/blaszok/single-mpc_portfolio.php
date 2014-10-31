@@ -38,20 +38,29 @@ global $paged;
 							<header class="mpcth-post-header">
 								<div class="mpcth-top-side">
 									<div class="mpcth-post-pagination">
-										<?php previous_post_link('%link', '<i class="fa fa-angle-left"></i>'); ?>
-										<?php next_post_link('%link', '<i class="fa fa-angle-right"></i>'); ?>
+									<?php
+										if (! is_rtl()) {
+											previous_post_link('%link', '<i class="fa fa-angle-left"></i>');
+											next_post_link('%link', '<i class="fa fa-angle-right"></i>');
+										} else {
+											next_post_link('%link', '<i class="fa fa-angle-right"></i>');
+											previous_post_link('%link', '<i class="fa fa-angle-left"></i>');
+										}
+									?>
 									</div>
-									<h4 class="mpcth-post-title">
+									<h1 class="mpcth-post-title">
 										<span class="mpcth-color-main-border">
 											<?php echo $title; ?>
 										</span>
-									</h4>
+									</h1>
 								</div>
+								<?php if (! post_password_required()) { ?>
 								<div class="mpcth-left-side">
 									<div class="mpcth-post-thumbnail">
 										<?php get_template_part('post-format', $post_format); ?>
 									</div>
 								</div>
+								<?php } ?>
 							</header>
 							<section class="mpcth-post-content">
 								<a class="mpcth-post-date mpcth-color-main-color-hover" href="<?php echo get_month_link(get_the_time('Y'), get_the_time('m')); ?>"><time datetime="<?php echo get_the_date('c'); ?>"><?php the_time(get_option('date_format')); ?></time></a>

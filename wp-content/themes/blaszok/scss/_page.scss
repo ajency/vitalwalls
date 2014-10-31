@@ -24,6 +24,7 @@
 	.mpcth-page {
 		.mpcth-page-header {
 			.mpcth-page-title {
+				font-size: 1.333em;
 				text-transform: uppercase;
 				border-bottom: 1px solid #eeeeee;
 				margin-bottom: 1.5em;
@@ -60,6 +61,57 @@
 		}
 	}
 }
+.page-template-template-lookbook-php,
+.page-template-template-fullwidth-php,
+.page-template-template-fullwidth-with-sidebar-php {
+	.mpcth-transparent-header {
+		#mpcth_page_header_wrap {
+			position: fixed;
+			width: 100%;
+			top: 0px;
+			@include left(0px); // left: 0px;
+			background: none;
+			border-bottom: none;
+			box-shadow: none;
+		}
+
+		#mpcth_header_second_section,
+		#mpcth_header_section {
+			background: none;
+		}
+
+		#mpcth_page_header_secondary_content {
+			border: none;
+
+			#mpcth_secondary_menu:before,
+			#mpcth_secondary_mini_menu:before {
+				display: none;
+			}
+		}
+
+		#mpcth_page_header_wrap_spacer {
+			visibility: hidden;
+			height: 0 !important;
+		}
+
+		#mpcth_mini_cart:before,
+		#mpcth_mini_cart:after,
+		#mpcth_mini_search:before,
+		#mpcth_mini_search:after,
+		.sub-menu:before,
+		.sub-menu:after {
+			display: none;
+		}
+	}
+
+	&.admin-bar {
+		.mpcth-transparent-header {
+			#mpcth_page_header_wrap {
+				top: 32px;
+			}
+		}
+	}
+}
 
 .page-template-template-lookbook-php,
 .page-template-template-fullwidth-php {
@@ -80,7 +132,7 @@
 			margin-top: 0;
 		}
 
-		.mpcth-page-content,
+		.mpcth-page-content, // TODO: Add styles for the password protected pages.
 		.mpcth-page-header,
 		.mpcth-page-footer {
 			width: 960px;
@@ -114,8 +166,6 @@
 		width: 960px;
 		margin-left: auto;
 		margin-right: auto;
-		// padding-left: 20px;
-		// padding-right: 20px;
 
 		@extend .box-sizing;
 
@@ -137,12 +187,6 @@
 	}
 }
 
-// .vc_mobile .page-template-template-lookbook-php,
-// .vc_desktop .page-template-template-lookbook-php,
-// .vc_mobile .page-template-template-fullwidth-php,
-// .vc_desktop .page-template-template-fullwidth-php,
-// .vc_mobile .page-template-default,
-// .vc_desktop .page-template-default {
 .page-template-template-lookbook-php,
 .page-template-template-fullwidth-php,
 .page-template-template-fullwidth-with-sidebar-php,
@@ -161,7 +205,7 @@
 		@extend .box-sizing;
 
 	}
-	.mpcth-vc-row-wrap .wpb_row .wpb_row {
+	.mpcth-vc-row-wrap .wpb_row {
 		padding-left: 0;
 		padding-right: 0;
 	}
@@ -173,8 +217,8 @@
 		background-image: none !important;
 
 		.mpcth-vc-row-wrap {
-			margin-left: 0;
-			margin-right: 0;
+			margin-left: -20px;
+			margin-right: -20px;
 		}
 	}
 
@@ -229,6 +273,10 @@
 	}
 	.mpcth-vc-row-wrap.mpcth-vc-row-wrap-parallax .mpcth-overlay-image {
 		background-attachment: fixed;
+
+		@media #{$screen-medium} {
+		    background-attachment: initial;
+		}
 	}
 	.mpcth-vc-row-wrap.wpb_animate_when_almost_visible .mpcth-overlay-image {
 		opacity: 0;
@@ -271,6 +319,11 @@
 				}
 			}
 
+			.mpcth-vc-row-wrap .mpcth-vc-row-wrap {
+				margin-left: -20px;
+				margin-right: -20px;
+			}
+
 			.mpcth-vc-row-wrap.mpcth-vc-row-wrap-color,
 			.mpcth-vc-row-wrap.mpcth-vc-row-wrap-image,
 			.mpcth-vc-row-wrap.mpcth-vc-row-wrap-overlay {
@@ -299,7 +352,7 @@
 
 			.mpcth-vc-row-wrap .mpcth-vc-row-wrap,
 			.mpcth-vc-row-wrap .mpcth-vc-row-wrap .wpb_row {
-				width: 100%;
+				width: auto;
 			}
 
 			.mpcth-vc-row-wrap.mpcth-vc-row-wrap-image {
@@ -314,7 +367,7 @@
 
 				.mpcth-vc-row-wrap-arrow {
 					position: absolute;
-					left: 0;
+					@include left(0); // left: 0;
 					bottom: 0;
 					width: 100%;
 					height: 30px;
@@ -337,14 +390,14 @@
 					}
 
 					&:before {
-						border-left-width: 0;
-						border-right-width: 40px;
-						left: 0;
+						@include border-left-width(0); // border-left-width: 0;
+						@include border-right-width(40px); // border-right-width: 40px;
+						@include left(0); // left: 0;
 					}
 					&:after {
-						border-right-width: 0;
-						border-left-width: 40px;
-						right: 0;
+						@include border-right-width(0); // border-right-width: 0;
+						@include border-left-width(40px); // border-left-width: 40px;
+						@include right(0); // right: 0;
 					}
 				}
 			}
@@ -364,7 +417,7 @@
 	#mpcth_page_wrap #mpcth_main_container {
 		.mpcth-vc-row-wrap .mpcth-vc-row-wrap,
 		.mpcth-vc-row-wrap .mpcth-vc-row-wrap .wpb_row {
-			width: 100%;
+			width: auto;
 		}
 	}
 }

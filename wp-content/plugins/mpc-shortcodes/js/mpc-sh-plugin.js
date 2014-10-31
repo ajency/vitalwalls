@@ -38,6 +38,12 @@
 								title: 'Tooltip',
 								identifier: 'mpc_sh_tooltip'
 							});
+						} },
+						{ text: 'Grid', onclick: function() {
+							tinyMCE.activeEditor.execCommand('mpc_sh_popup', false, {
+								title: 'Grid',
+								identifier: 'mpc_sh_grid'
+							});
 						} }
 					]
 				});
@@ -58,6 +64,7 @@
 					self.showPopup(second, 'Highlight', 'mpc_sh_highlight');
 					self.showPopup(second, 'Lightbox', 'mpc_sh_lightbox');
 					self.showPopup(second, 'Tooltip', 'mpc_sh_tooltip');
+					self.showPopup(second, 'Grid', 'mpc_sh_grid');
 				});
 				return button;
 			}

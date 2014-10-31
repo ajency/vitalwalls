@@ -7,11 +7,12 @@ $header_font_family: Lato, Helvetica, Arial, sans-serif;
 $column_space: 40px;
 
 $hover_shadow: 0 0 6px rgba(0, 0, 0, 0.1);
-$hover_border: 1px solid rgba(0, 0, 0, 0.15);
+$hover_border: 1px solid rgba(0, 0, 0, 0.075);
 
 // use: @media #{$var} {
 // 	...
 // }
+$screen-tiny: "only screen and (max-width : 320px)";
 $screen-small: "only screen and (max-width : 480px)";
 $screen-medium: "only screen and (max-width : 767px)";
 $screen-normal: "only screen and (max-width: 979px)";
@@ -63,13 +64,6 @@ $screen-large: "only screen and (min-width : 1200px)";
 	@include opacity(0);
 }
 
-// use: .class { @include disable-responsive { ... } }
-// @mixin disable-responsive {
-// 	html.mpcth-non-responsive & {
-// 		@content;
-// 	}
-// }
-
 // use: .class { @extend .animation-slided; }
 .animation-slided {
 	visibility: visible;
@@ -103,44 +97,3 @@ $screen-large: "only screen and (min-width : 1200px)";
 	   -moz-box-sizing: border-box;
 	        box-sizing: border-box;
 }
-
-// .grandparent {
-// 	width: 100%;
-// 	.parent {
-// 		width: 75%;
-// 		.child {
-// 			width: 50%;
-
-// 			@include mpcth-not-responsive {
-// 				width: 25%;
-
-// 				.grandchild {
-// 					width: 10%;
-// 				}
-// 			}
-// 		}
-// 	}
-// }
-// .grandparent {
-// 	width: 100%;
-// 	.parent {
-// 		width: 75%;
-// 		.child {
-// 			width: 50%;
-// 			.mpcth-not-responsive & {
-// 				width: 25%;
-
-// 				.grandchild {
-// 					width: 10%;
-// 				}
-// 			}
-// 		}
-// 	}
-// }
-
-// .image {
-// 	background-image: url('some.png');
-// 	@include svg-supported {
-// 		background-image: url('some.svg');
-// 	}
-// }

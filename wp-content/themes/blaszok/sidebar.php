@@ -14,6 +14,11 @@
 <div id="mpcth_sidebar">
 	<div class="mpcth-sidebar-arrow"></div>
 	<ul class="mpcth-widget-column">
-		<?php dynamic_sidebar('mpcth_sidebar'); ?>
+		<?php
+			global $sidebar_position;
+
+			if ($sidebar_position != 'none')
+				dynamic_sidebar('mpcth_sidebar');
+		?>
 	</ul>
 </div>

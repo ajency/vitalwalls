@@ -150,6 +150,22 @@ jQuery(document).ready(function($) {
 	});
 	$('select.of-input[data-fun=hide]').trigger('change');
 
+	// select
+	$('select.of-input[data-fun=swap]').change(function() {
+		var $this = $(this),
+			show_class = '.' + $this.children(':checked').attr('class'),
+			select_parent = $this.parents('.mpcth-of-section');
+
+		var classes = '';
+		$this.children().each(function(i) {
+			classes += '.' + $(this).attr('class') + (i == 0 ? ', ' : '');
+		});
+
+		select_parent.siblings('.mpcth-of-section').filter(classes).not(show_class).slideUp();
+		select_parent.siblings(show_class).slideDown();
+	});
+	$('select.of-input[data-fun=swap]').trigger('change');
+
 	// checkbox
 	$('input.of-input[data-fun=hide]').change(function() {
 		var $this = $(this),
@@ -213,13 +229,22 @@ jQuery(document).ready(function($) {
 					googleFontsData.items[i] = {};
 					googleFontsData.items[i].family = data.items[i].family;
 					googleFontsData.items[i].variants = data.items[i].variants;
+					// googleFontsData.items[i].subsets = data.items[i].subsets;
 				}
 
-				$.post(ajaxurl, {
-					action: 'cache_google_webfonts',
-					google_webfonts: encodeURI(JSON.stringify(googleFontsData))
-				}, function(response) {
+				// $.post(ajaxurl, {
+				// 	action: 'mpcth_cache_google_webfonts',
+				// 	google_webfonts: encodeURI(JSON.stringify(googleFontsData))
+				// }, function(response) {
+				// 	console.log(response, "response");
+				// });
 
+				jQuery.ajax({
+					type: 'POST',
+					url: ajaxurl,
+					action: 'mpcth_cache_google_webfonts',
+					google_webfonts: JSON.stringify(googleFontsData),
+					dataType: 'json'
 				});
 
 				addGoogleFonts(data);
@@ -228,7 +253,7 @@ jQuery(document).ready(function($) {
 			fontSelectInit();
 		})
 	} else {
-		addGoogleFonts(JSON.parse(decodeURI(mpcthLocalize.googleFonts)));
+		addGoogleFonts(JSON.parse(mpcthLocalize.googleFonts));
 
 		fontSelectInit();
 	}
@@ -423,35 +448,77 @@ jQuery(document).ready(function($) {
 /* AJAX Save
 /* ---------------------------------------------------------------- */
 	var $themePanel = $('#mpcth_theme_panel'),
+		$updateMessage = $('#mpcth_update_msg'),
 		$submitButton = $themePanel.find('input.button-primary'),
 		$resetButton = $themePanel.find('input.button-secondary'),
 		$ajaxIndicator = $themePanel.find('.ajax-indicator'),
 		$ajaxMessage = $themePanel.find('.ajax-message');
+
+	$themePanel.on('click', function (e) {
+		$themePanel.data('submit-target', $(e.target));
+	});
 
 	$themePanel.on('submit', function(e) {
 		$submitButton.attr('disabled', 'disabled');
 		$resetButton.attr('disabled', 'disabled');
 		$ajaxIndicator.stop(true, true).fadeIn(250);
 
-		$.post(ajaxurl, {
-				data: $themePanel.serialize(),
-				action: 'mpcth_save_panel_options'
-			}, function(response) {
-				$submitButton.removeAttr('disabled');;
-				$resetButton.removeAttr('disabled');;
-				$ajaxIndicator.fadeOut(250);
+		if ($themePanel.data('submit-target')[0] == $submitButton[0]) {
+			$.post(ajaxurl, {
+					data: $themePanel.serialize(),
+					action: 'mpcth_save_panel_options'
+				}, function(response) {
+					$submitButton.removeAttr('disabled');
+					$resetButton.removeAttr('disabled');
+					$ajaxIndicator.fadeOut(250);
 
-				if(response == 1) {
-					$ajaxMessage.children('.ajax-saved').show();
-					$ajaxMessage.children('.ajax-error').hide();
-				} else {
-					$ajaxMessage.children('.ajax-saved').hide();
-					$ajaxMessage.children('.ajax-error').show();
+					$ajaxMessage.children('.ajax-label').hide();
+
+					if(response == 1)
+						$ajaxMessage.children('.ajax-options').show();
+					else if (response == 2)
+						$ajaxMessage.children('.ajax-styles').show();
+					else if (response == 3) {
+						$ajaxMessage.children('.ajax-saved').show();
+
+						$updateMessage.slideUp();
+					} else
+						$ajaxMessage.children('.ajax-error').show();
+
+					$ajaxMessage.delay(250).fadeIn().delay(2000).fadeOut();
 				}
+			);
 
-				$ajaxMessage.delay(250).fadeIn().delay(2000).fadeOut();
-		});
+			e.preventDefault();
+		} else {
+			$themePanel.prepend('<input type="hidden" name="reset" value="true" />');
+		}
+	});
+
+/* ---------------------------------------------------------------- */
+/* AJAX Export
+/* ---------------------------------------------------------------- */
+	var $exportButton = $('#export_settings_button');
+
+	$exportButton.on('click', function(e) {
+		var urlAjaxExport = ajaxurl + '?action=mpcth_export_settings';
+		location.href = urlAjaxExport;
 
 		e.preventDefault();
+	});
+
+/* ---------------------------------------------------------------- */
+/* AJAX Import
+/* ---------------------------------------------------------------- */
+	$('#mpcth_panel_url').val(location.href);
+
+	var $importButton = $('#import_settings_button'),
+		$importFile = $('#import_settings_file');
+
+	$importFile.on('change', function() {
+		if ($importFile.val() != '')
+			$importButton.removeAttr('disabled');
+		else
+			$importButton.attr('disabled', 'disabled');
 	});
 });

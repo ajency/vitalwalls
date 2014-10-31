@@ -1,10 +1,10 @@
 !function($) {
-	var $testimonial_template = $('.wpb-element-edit-modal .mpc-vc-testimonials-template .mpc-vc-single-testimonial'),
-		$testimonials_wrap = $('.wpb-element-edit-modal .mpc-vc-testimonials-wrap'),
-		$add_testimonial = $('.wpb-element-edit-modal .mpc-vc-testimonial-add'),
-		$content = $('.wpb-element-edit-modal .wpb_el_type_testimonials + .wpb_el_type_textarea .textarea.content'),
-		// $code = $('.wpb-element-edit-modal .mpc-vc-icons-code'),
-		$save = $('.wpb-element-edit-modal .wpb_save_edit_form');
+	var $testimonial_template = $('.wpb-edit-form .mpc-vc-testimonials-template .mpc-vc-single-testimonial'),
+		$testimonials_wrap = $('.wpb-edit-form .mpc-vc-testimonials-wrap'),
+		$add_testimonial = $('.wpb-edit-form .mpc-vc-testimonial-add'),
+		$content = $('.wpb-edit-form .wpb_el_type_testimonials + .wpb_el_type_textarea .textarea.content'),
+		// $code = $('.wpb-edit-form .mpc-vc-icons-code'),
+		$save = $('.wpb-element-edit-modal .wpb_save_edit_form, .vc_shortcode-edit-form .vc_panel-btn-save');
 
 	var edit_content = $content.val(),
 		testimonials = '';

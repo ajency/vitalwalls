@@ -19,6 +19,7 @@ global $woocommerce, $product, $post;
 			<?php foreach ( $attributes as $name => $options ) : ?>
 					<div class="value">
 						<select id="<?php echo esc_attr( sanitize_title($name) ); ?>" name="attribute_<?php echo sanitize_title($name); ?>">
+						<option value=""><?php echo wc_attribute_label( $name ); ?>&hellip;</option>
 						<?php
 							if ( is_array( $options ) ) {
 

@@ -120,3 +120,30 @@ $mpc_sh_options['mpc_sh_tooltip'] = array(
 		)
 	)
 );
+
+/* Grid */
+$base_grids = array('select' => __('- Select -', 'mpc_sh'));
+$grids = array();
+if (function_exists('list_grids'))
+	$grids = list_grids(true);
+
+$base_grids = $base_grids + $grids;
+
+$mpc_sh_options['mpc_sh_grid'] = array(
+	'shortcode' => '[mpc_sh_grid id="{{id}}" spaces="{{spaces}}"]',
+	'fields' => array(
+		'id' => array(
+			'std' => 'select',
+			'type' => 'select',
+			'title' => __('Grid', 'mpc_sh'),
+			'desc' => __('Select the grid to display.', 'mpc_sh'),
+			'options' => $base_grids
+		),
+		'spaces' => array(
+			'std' => 'checked',
+			'type' => 'checkbox',
+			'title' => __('Spaces', 'mpc_sh'),
+			'desc' => __('Specify if you want to display spaces between grid images.', 'mpc_sh')
+		),
+	)
+);

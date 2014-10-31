@@ -17,8 +17,6 @@ global $wp_query;
 
 $query = $wp_query;
 
-$pagination_type = get_field('mpc_pagination_type', $page_id);
-
 $layout = 'small';
 if (isset($mpcth_options['mpcth_enable_large_archive_thumbs']) && $mpcth_options['mpcth_enable_large_archive_thumbs']) $layout = 'full';
 
@@ -98,12 +96,7 @@ if (isset($mpcth_options['mpcth_enable_large_archive_thumbs']) && $mpcth_options
 			</div><!-- end #mpcth_content -->
 			<?php if ($query->max_num_pages > 1) { ?>
 			<div id="mpcth_pagination">
-				<?php
-					if ($pagination_type == 'loadmore')
-						mpcth_display_load_more($query);
-					else
-						mpcth_display_pagination($query);
-				?>
+				<?php mpcth_display_pagination($query); ?>
 			</div>
 			<?php } ?>
 		</div><!-- end #mpcth_content_wrap -->
