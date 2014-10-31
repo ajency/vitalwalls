@@ -1,0 +1,41 @@
+/* Twitter */
+.mpc-w-twitter-widget .tweet {
+	clear: both;
+}
+.mpc-w-twitter-widget .avatar {
+	float: left;
+	margin-right: .5em;
+}
+.mpc-w-twitter-widget .u-url,
+.mpc-w-twitter-widget .u-url * {
+	vertical-align: top;
+	line-height: 1em;
+}
+.mpc-w-twitter-widget .e-entry-content {
+	clear: both;
+}
+.mpc-w-twitter-widget .e-entry-title {
+	margin-bottom: .5em;
+}
+.mpc-w-twitter-widget .permalink {
+	float: right;
+}
+.mpc-w-twitter-widget:after {
+	content: '';
+	clear: both;
+	display: block;
+}
+
+/* Recent posts */
+.mpc-w-recent-posts-widget .mpc-w-recent-post {
+	clear: both;
+}
+.mpc-w-recent-posts-widget .mpc-w-recent-post-title img {
+	float: left;
+	margin-right: .5em;
+	width: 60px;
+	height: 60px;
+}
+.mpc-w-recent-posts-widget .mpc-w-recent-post-meta {
+	display: block;
+}

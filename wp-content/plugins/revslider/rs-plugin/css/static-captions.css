@@ -1,0 +1,91 @@
+@import url(http://fonts.googleapis.com/css?family=Dancing+Script);
+
+
+.tp-caption.big_caption_3,
+.tp-caption.big_caption_2,
+.tp-caption.big_caption_4,
+.tp-caption.big_caption_5,
+.tp-caption.big_caption_6,
+.tp-caption.big_caption_7,
+.tp-caption.big_caption_3_white,
+.tp-caption.big_caption_2_white,
+.tp-caption.big_caption_4_white{
+            position: absolute; 
+			color: #e14f4f; 
+			text-shadow: none; 
+			
+			font-size: 80px; 
+			line-height: 80px; 
+			 
+            font-family: "Roboto Slab";
+			border-width: 0px; 
+			border-style: none; 
+ 
+								
+		}
+    .tp-caption.big_caption_2, .tp-caption.big_caption_2_white {font-size:48px;}
+.tp-caption.big_caption_4, .tp-caption.big_caption_4_white {font-size:100px; color:#fff;}
+.tp-caption.big_caption_5  {font-size:54px;color:#fff;}
+.tp-caption.big_caption_6 {font-size:178px;color:#fff;}
+.tp-caption.big_caption_7 {font-size:65px;color:#fff;}
+
+.tp-caption.handwriting, .tp-caption.handwriting_white{
+            position: absolute; 
+			color: #e14f4f; 
+			text-shadow: none; 
+			 
+			font-size: 44px; 
+			line-height: 44px; 
+			 font-family: "Dancing Script";
+			padding:15px 40px 15px 40px;
+			margin: 0px; 
+			border-width: 0px; 
+			border-style: none; 
+  
+								
+		}
+
+.tp-caption.store_button, .tp-caption.store_button_white {
+            position: absolute; 
+			color: #e14f4f !important; 
+			text-shadow: none; 
+			
+			font-size: 18px; 
+			line-height: 18px; 
+			 font-family: "Roboto";
+			padding:15px 0px 15px 0px !important;
+			margin: 0px; 
+  			cursor:pointer;
+      		border: 2px solid #e14f4f;
+ 						
+}
+    .tp-caption.store_button_white {border: 2px solid #fff;color:#fff !important;}
+.tp-caption.store_button a, .tp-caption.store_button_white a {
+	color: #e14f4f !important; 
+  	padding:15px 40px 15px 40px !important;
+}
+.tp-caption.store_button_white a {color:#fff !important;}
+.tp-caption.store_button a:hover, .tp-caption.store_button_white a:hover{
+   text-decoration:underline;
+ }
+
+.tp-caption a {
+color:#ff7302;
+text-shadow:none;
+-webkit-transition:all 0.2s ease-out;
+-moz-transition:all 0.2s ease-out;
+-o-transition:all 0.2s ease-out;
+-ms-transition:all 0.2s ease-out;
+}
+
+.tp-caption a:hover {
+color:#ffa902;
+}
+
+.tp-caption.big_caption_3_white,
+.tp-caption.big_caption_2_white,
+.tp-caption.big_caption_4_white,
+.tp-caption.handwriting_white{
+    color:#fff;
+    
+    }

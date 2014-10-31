@@ -1,0 +1,37 @@
+.mpc-vc-icons-list ul {
+	margin: 0 0 1.5em 0;
+	padding: 0 0 0 .5em;
+}
+.mpc-vc-icons-list li {
+	list-style: none;
+}
+.mpc-vc-icons-list i {
+	margin-right: .5em;
+}
+
+.mpcth-socials-list {
+	font-size: 14px;
+	display: inline-block;
+}
+.mpcth-socials-list-text {
+	text-transform: uppercase;
+}
+
+.mpc-sc-portfolio-meta {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	text-transform: uppercase;
+	margin-bottom: 1.5em;
+}
+.mpc-sc-portfolio-meta li {
+	margin-bottom: .25em;
+}
+.mpc-sc-portfolio-meta .mpcth-portfolio-meta-name {
+	font-weight: bold;
+	margin-right: .5em;
+}
+
+.mpcth-items-slider .slides > li {
+	margin-right: 40px;
+}

@@ -1,0 +1,162 @@
+/* ========================================================================== *
+ * 2.2. Sidebar
+ * ========================================================================== */
+
+#mpcth_sidebar {
+	position: relative;
+	width: 25%;
+	@extend .transition;
+
+	.mpcth-sidebar-arrow {
+		position: absolute;
+		width: 100%;
+
+		&:after,
+		&:before {
+			content: '';
+			position: absolute;
+			top: 1.5em;
+			border-top: 20px solid transparent;
+			border-bottom: 20px solid transparent;
+		}
+	}
+
+	> ul {
+		list-style: none;
+
+		@extend .box-sizing;
+
+		> li > ul {
+			margin: 0;
+			padding: 0;
+			list-style: none;
+		}
+	}
+
+	a {
+		color: inherit;
+	}
+}
+
+.mpcth-sidebar-none #mpcth_sidebar,
+.mpcth-sidebar-none #mpcth_toggle_mobile_sidebar {
+	display: none;
+}
+
+.mpcth-sidebar-left #mpcth_sidebar {
+	float: left;
+	border-right: 1px solid #eeeeee;
+	margin-right: -1px;
+
+	.mpcth-sidebar-arrow {
+		&:after,
+		&:before {
+			right: 0;
+			margin-right: -12px;
+			border-right: 0 solid transparent;
+			border-left: 12px solid #eeeeee;
+		}
+		&:after {
+			right: 1px;
+			border-left: 12px solid #ffffff;
+		}
+	}
+}
+.mpcth-sidebar-left #mpcth_content_wrap {
+	float: right;
+	width: 75%;
+	border-left: 1px solid #eeeeee;
+
+	@extend .box-sizing;
+
+	@media #{$screen-normal} {
+		.mpcth-responsive & {
+			float: none;
+			width: 100%;
+			border-left: none;
+		}
+	}
+}
+
+.mpcth-sidebar-right #mpcth_sidebar {
+	float: right;
+	border-left: 1px solid #eeeeee;
+	margin-left: -1px;
+
+	.mpcth-sidebar-arrow {
+		&:after,
+		&:before {
+			left: 0;
+			margin-left: -12px;
+			border-right: 12px solid #eeeeee;
+			border-left: 0 solid transparent;
+		}
+		&:after {
+			left: 1px;
+			border-right: 12px solid #ffffff;
+		}
+	}
+}
+.mpcth-sidebar-right #mpcth_content_wrap {
+	float: left;
+	width: 75%;
+	border-right: 1px solid #eeeeee;
+
+	@extend .box-sizing;
+
+	@media #{$screen-normal} {
+		.mpcth-responsive & {
+			float: none;
+			width: 100%;
+			border-right: none;
+		}
+	}
+}
+
+.mpcth-sidebar-left #mpcth_sidebar,
+.mpcth-sidebar-right #mpcth_sidebar {
+	@media #{$screen-normal} {
+		.mpcth-responsive & {
+			position: fixed;
+			z-index: 1021;
+			top: 0;
+			right: -320px;
+			height: 100%;
+			background: #ffffff;
+			background: rgba(255, 255, 255, 0.95);
+			box-shadow: 0 0 25px rgba(0, 0, 0, 0.1);
+			border: none;
+			width: auto;
+			float: none;
+
+			&.active {
+				z-index: 1022;
+				right: 0;
+				box-shadow: 0 0 25px rgba(0, 0, 0, 0.25);
+
+				&:hover {
+					right: 0;
+				}
+			}
+
+			&:hover {
+				right: -310px;
+				box-shadow: 0 0 25px rgba(0, 0, 0, 0.25);
+
+				// #mpcth_toggle_mobile_sidebar {
+				// 	right: 9px;
+				// }
+			}
+
+			> ul {
+				width: 320px;
+				height: 100%;
+				overflow: auto;
+			}
+
+			.mpcth-sidebar-arrow {
+				display: none;
+			}
+		}
+	}
+}

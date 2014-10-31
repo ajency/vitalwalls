@@ -1,0 +1,15 @@
+<wpml-config>
+	<custom-types>
+		<custom-type translate="1">mpc_portfolio</custom-type>
+	</custom-types>
+	<taxonomies>
+		<taxonomy translate="1">mpc_portfolio_cat</taxonomy>
+	</taxonomies>
+	<admin-texts>
+		<key name="mpcth_options_theme_customizer">
+			<key name="mpcth_text_logo" />
+			<key name="mpcth_newsletter_text" />
+			<key name="mpcth_copyright_text" />
+		</key>
+	</admin-texts>
+</wpml-config>

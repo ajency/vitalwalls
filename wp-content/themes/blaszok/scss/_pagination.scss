@@ -1,0 +1,57 @@
+/* ========================================================================== *
+ * 5. Pagination
+ * ========================================================================== */
+
+.single .mpcth-post {
+	.mpcth-post-pagination {
+	 	font-size: 1.167em;
+	 	margin-top: -.5em;
+
+	 	a {
+	 		display: inline-block;
+	 		padding: .5em;
+	 		background: #ffffff;
+	 		border-radius: 100%;
+	 		border: 1px solid #eeeeee;
+	 		width: 1em;
+	 		height: 1em;
+			text-align: center;
+			line-height: 1em;
+
+			&[rel=next] {
+				width: 1.25em;
+				height: 1.25em;
+				position: relative;
+				z-index: 2;
+				margin-left: -.7em;
+				line-height: 1.4em;
+
+				i {
+					margin-left: .1em;
+				}
+			}
+			&:hover {
+				background: #f3f3f3;
+			}
+	 	}
+ 	}
+ }
+
+ .page-template-template-portfolio-php {
+	 #mpcth_pagination {
+ 		margin-top: -1em;
+ 	}
+ }
+
+ #mpcth_pagination {
+ 	text-align: center;
+ 	clear: both;
+ 	font-size: 1.167em;
+ 	margin-bottom: 1.714em;
+
+ 	> * {
+ 		display: inline-block;
+ 		padding: .5em;
+ 		margin: .4em;
+ 	}
+ }

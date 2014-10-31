@@ -1,0 +1,51 @@
+/* Slider Blocks */
+.block-slider-slide {
+	background: #fff;
+	border: 1px solid #d8d8d8;
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+	border-radius: 3px;
+}
+.block-slider-slides-list {
+	position: relative;
+}
+.block-slider-slide-head,
+.block-slider-slide-body {
+	padding: 10px;
+	position: relative;
+}
+	.block-slider-slide-title {
+		margin-right: 20px;
+		float: left;
+	}
+	.block-slider-slide-body {
+		padding-top: 0;
+		display: none;
+	}
+
+.block-slider-slide-head-handle {
+	float: right;
+}
+	.block-slider-slide-head-handle a {
+		position: absolute;
+		right: 0px;
+		top: 0;
+		display: block;
+		width: 30px;
+		height: 30px;
+		text-indent: -999em;
+		background: transparent url(../images/tab-arrows.png) no-repeat 8px -64px;
+		border-bottom-color: #eee;
+	}
+		.block-slider-slide-head-handle a:hover {
+			background-position: 8px 0px;
+		}
+.block-tabs-add-new {
+	margin-top: 10px;
+}
+.block-slider-slide-delete {
+	font-style: normal;
+}
+
+.js .tmce-active .wp-editor-area{color:#000000 !important}
+	

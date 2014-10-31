@@ -1,0 +1,2264 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Blaszok\n"
+"POT-Creation-Date: 2014-05-14 15:23+0100\n"
+"PO-Revision-Date: 2014-05-14 15:23+0100\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: en\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.6.3\n"
+"X-Poedit-Basepath: .\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Poedit-KeywordsList: __;_e\n"
+"X-Poedit-SearchPath-0: ..\n"
+
+#: ../404.php:27
+msgid "404 Error"
+msgstr ""
+
+#: ../404.php:34 ../archive.php:97 ../author.php:92 ../category.php:91
+#: ../index.php:100 ../search.php:87 ../single-mpc_portfolio.php:83
+#: ../single.php:92 ../tag.php:91 ../taxonomy-mpc_portfolio_cat.php:94
+#: ../template-blog.php:101 ../template-portfolio.php:169
+msgid ""
+"Apologies, but no results were found for the requested archive. Perhaps "
+"searching will help find a related post."
+msgstr ""
+
+#: ../archive.php:34
+msgid "Archives"
+msgstr ""
+
+#: ../archive.php:36 ../archive.php:38 ../archive.php:40
+msgid " for "
+msgstr ""
+
+#: ../archive.php:79 ../author.php:74 ../category.php:73 ../index.php:82
+#: ../search.php:69 ../tag.php:73 ../taxonomy-mpc_portfolio_cat.php:76
+#: ../template-blog.php:83
+msgid "Continue Reading"
+msgstr ""
+
+#: ../archive.php:87 ../author.php:82 ../category.php:81 ../index.php:90
+#: ../search.php:77 ../single-mpc_portfolio.php:76 ../single.php:85
+#: ../tag.php:81 ../taxonomy-mpc_portfolio_cat.php:84 ../template-blog.php:91
+#: ../template-portfolio.php:162
+msgid "Nothing Found"
+msgstr ""
+
+#: ../author.php:34
+msgid "All posts by "
+msgstr ""
+
+#: ../category.php:32 ../tag.php:32 ../taxonomy-mpc_portfolio_cat.php:35
+msgid "Archives for "
+msgstr ""
+
+#: ../comments.php:21 ../functions.php:615
+msgid "0 comments"
+msgstr ""
+
+#: ../comments.php:21 ../functions.php:615
+msgid "1 comment"
+msgstr ""
+
+#: ../comments.php:21 ../functions.php:615
+#, php-format
+msgid "% comments"
+msgstr ""
+
+#: ../comments.php:37
+msgid "Older Comments"
+msgstr ""
+
+#: ../comments.php:38
+msgid "Newer Comments"
+msgstr ""
+
+#: ../comments.php:42
+msgid "Comments are closed."
+msgstr ""
+
+#: ../comments.php:48 ../functions.php:188
+msgid "NAME"
+msgstr ""
+
+#: ../comments.php:49 ../functions.php:189
+msgid "EMAIL"
+msgstr ""
+
+#: ../comments.php:50 ../functions.php:190
+msgid "WEBSITE"
+msgstr ""
+
+#: ../comments.php:51 ../functions.php:191
+msgid "MESSAGE"
+msgstr ""
+
+#: ../comments.php:63
+msgid "Leave a Reply"
+msgstr ""
+
+#: ../comments.php:64 ../woocommerce/single-product-reviews.php:52
+#, php-format
+msgid "Leave a Reply to %s"
+msgstr ""
+
+#: ../comments.php:65
+msgid "- Cancel Reply"
+msgstr ""
+
+#: ../comments.php:66
+msgid "Leave a Comment"
+msgstr ""
+
+#: ../footer.php:24
+msgid "Display extended footer"
+msgstr ""
+
+#: ../footer.php:34
+msgid "Display footer"
+msgstr ""
+
+#: ../functions.php:69
+msgid "Page "
+msgstr ""
+
+#: ../functions.php:219
+msgid "Main Sidebar"
+msgstr ""
+
+#: ../functions.php:220
+msgid "This is a standard sidebar."
+msgstr ""
+
+#: ../functions.php:234
+msgid "Main Menu"
+msgstr ""
+
+#: ../functions.php:235
+msgid "This is a mega menu."
+msgstr ""
+
+#: ../functions.php:249
+msgid "Smart Search"
+msgstr ""
+
+#: ../functions.php:250
+msgid "This is a smart search."
+msgstr ""
+
+#: ../functions.php:264
+msgid "Main Footer"
+msgstr ""
+
+#: ../functions.php:265
+msgid "This is a standard footer."
+msgstr ""
+
+#: ../functions.php:279 ../panel/admin-options.php:597
+msgid "Extended Footer"
+msgstr ""
+
+#: ../functions.php:280
+msgid "This is an extended footer."
+msgstr ""
+
+#: ../functions.php:293
+msgid "Main Navigation Menu"
+msgstr ""
+
+#: ../functions.php:294
+msgid "Mobile Navigation Menu"
+msgstr ""
+
+#: ../functions.php:299
+msgid "Secondary Navigation Menu"
+msgstr ""
+
+#: ../functions.php:397
+msgid "Pingback:"
+msgstr ""
+
+#: ../functions.php:397
+msgid "[Edit]"
+msgstr ""
+
+#: ../functions.php:409
+msgid "at"
+msgstr ""
+
+#: ../functions.php:420
+msgid "Your comment is awaiting moderation."
+msgstr ""
+
+#: ../functions.php:464
+msgid "Load More"
+msgstr ""
+
+#: ../functions.php:514
+msgid "Wishlist"
+msgstr ""
+
+#: ../functions.php:519 ../woocommerce/myaccount/form-login.php:23
+#: ../woocommerce/myaccount/form-login.php:44
+msgid "Login"
+msgstr ""
+
+#: ../functions.php:521
+msgid "My Account"
+msgstr ""
+
+#: ../functions.php:561
+msgid "Sign up for our newsletter"
+msgstr ""
+
+#: ../functions.php:603
+msgid "Posted on"
+msgstr ""
+
+#: ../functions.php:608 ../single.php:61
+msgid ", "
+msgstr ""
+
+#: ../functions.php:611
+msgid "in"
+msgstr ""
+
+#: ../functions.php:614
+msgid "View post comments"
+msgstr ""
+
+#: ../functions.php:779 ../php/class-tgm-plugin-activation.php:155
+msgid "Install Required Plugins"
+msgstr ""
+
+#: ../functions.php:780 ../php/class-tgm-plugin-activation.php:156
+msgid "Install Plugins"
+msgstr ""
+
+#: ../functions.php:781 ../php/class-tgm-plugin-activation.php:157
+#, php-format
+msgid "Installing Plugin: %s"
+msgstr ""
+
+#: ../functions.php:782
+msgid "Something went wrong with the plugin API."
+msgstr ""
+
+#: ../functions.php:793 ../php/class-tgm-plugin-activation.php:169
+msgid "Return to Required Plugins Installer"
+msgstr ""
+
+#: ../functions.php:794 ../php/class-tgm-plugin-activation.php:171
+#: ../php/class-tgm-plugin-activation.php:1840
+msgid "Plugin activated successfully."
+msgstr ""
+
+#: ../functions.php:795
+#, php-format
+msgid "All plugins installed and activated successfully. %s"
+msgstr ""
+
+#: ../functions.php:923
+msgid "From: "
+msgstr ""
+
+#: ../functions.php:996 ../woocommerce/myaccount/my-orders.php:88
+msgid "View"
+msgstr ""
+
+#: ../functions.php:999 ../template-portfolio.php:82
+#: ../template-portfolio.php:95 ../vc_templates/vc_posts_grid.php:126
+msgid "All"
+msgstr ""
+
+#: ../functions.php:1038 ../header.php:251
+#: ../woocommerce/cart/mini-cart.php:59
+msgid "Subtotal"
+msgstr ""
+
+#: ../functions.php:1081 ../woocommerce/cart/cart.php:59
+#: ../woocommerce/cart/cart.php:151
+msgid "Remove this item"
+msgstr ""
+
+#: ../functions.php:1087 ../woocommerce/wishlist.php:77
+#: ../woocommerce/wishlist.php:197
+msgid "Unit Price"
+msgstr ""
+
+#: ../functions.php:1088 ../woocommerce/cart/cart.php:41
+#: ../woocommerce/cart/cart.php:185
+msgid "Quantity"
+msgstr ""
+
+#: ../functions.php:1095 ../woocommerce/cart/mini-cart.php:51
+msgid "No products in the cart."
+msgstr ""
+
+#: ../functions.php:1099 ../woocommerce/cart/cart-totals.php:21
+msgid "Cart Subtotal"
+msgstr ""
+
+#: ../functions.php:1101 ../woocommerce/cart/mini-cart.php:64
+msgid "View Cart"
+msgstr ""
+
+#: ../functions.php:1102 ../woocommerce/cart/cart.php:222
+msgid "Proceed to Checkout"
+msgstr ""
+
+#: ../header.php:289
+msgid "-&nbsp;&nbsp;&nbsp;OR&nbsp;&nbsp;&nbsp;-"
+msgstr ""
+
+#: ../header.php:290
+msgid "Search for products"
+msgstr ""
+
+#: ../header.php:292 ../product-searchform.php:16 ../searchform.php:16
+msgid "Search..."
+msgstr ""
+
+#: ../header.php:296
+msgid "Find my items"
+msgstr ""
+
+#: ../page.php:44 ../page.php:45 ../template-fullwidth-with-sidebar.php:51
+#: ../template-fullwidth-with-sidebar.php:52 ../woocommerce/cart/cart.php:25
+msgid "Shopping Cart"
+msgstr ""
+
+#: ../page.php:47 ../template-fullwidth-with-sidebar.php:54
+#: ../woocommerce/cart/cart.php:27 ../woocommerce/cart/cart.php:28
+msgid "Checkout Details"
+msgstr ""
+
+#: ../page.php:49 ../template-fullwidth-with-sidebar.php:56
+#: ../woocommerce/cart/cart.php:30
+msgid "Order Complete"
+msgstr ""
+
+#: ../search.php:32
+msgid "Search results for "
+msgstr ""
+
+#: ../single.php:64
+msgid "Tagged as "
+msgstr ""
+
+#: ../template-portfolio.php:61
+msgid "Order by:"
+msgstr ""
+
+#: ../template-portfolio.php:64 ../template-portfolio.php:70
+#: ../woocommerce/myaccount/my-orders.php:37
+msgid "Date"
+msgstr ""
+
+#: ../template-portfolio.php:65 ../template-portfolio.php:71
+#: ../autoimport/custom_metaboxes.php:471
+#: ../autoimport/custom_metaboxes.php:776
+#: ../woocommerce/single-product-reviews.php:56
+msgid "Name"
+msgstr ""
+
+#: ../template-portfolio.php:66 ../template-portfolio.php:72
+msgid "Shuffle"
+msgstr ""
+
+#: ../template-portfolio.php:76
+msgid "Filter by:"
+msgstr ""
+
+#: ../autoimport/custom_metaboxes.php:69 ../panel/admin-options.php:359
+msgid "Sidebar"
+msgstr ""
+
+#: ../autoimport/custom_metaboxes.php:73
+msgid "Custom Sidebar Position"
+msgstr ""
+
+#: ../autoimport/custom_metaboxes.php:76
+msgid ""
+"Check this if you want to specify custom position for this post sidebar."
+msgstr ""
+
+#: ../autoimport/custom_metaboxes.php:82
+msgid "Sidebar Position"
+msgstr ""
+
+#: ../autoimport/custom_metaboxes.php:85
+msgid "Select the position of sidebar for this single post."
+msgstr ""
+
+#: ../autoimport/custom_metaboxes.php:98
+msgid "Left"
+msgstr ""
+
+#: ../autoimport/custom_metaboxes.php:99
+msgid "None"
+msgstr ""
+
+#: ../autoimport/custom_metaboxes.php:100
+msgid "Right"
+msgstr ""
+
+#: ../autoimport/custom_metaboxes.php:338
+msgid "Lightbox Settings"
+msgstr ""
+
+#: ../autoimport/custom_metaboxes.php:342
+#: ../autoimport/custom_metaboxes.php:346
+msgid "Enable Lightbox"
+msgstr ""
+
+#: ../autoimport/custom_metaboxes.php:345
+msgid "Check this to enable lightbox for current post."
+msgstr ""
+
+#: ../autoimport/custom_metaboxes.php:351
+msgid "Lightbox Type"
+msgstr ""
+
+#: ../autoimport/custom_metaboxes.php:354
+msgid "Select the kind of Lightbox you want to display for the post."
+msgstr ""
+
+#: ../autoimport/custom_metaboxes.php:376
+msgid "Lightbox Source"
+msgstr ""
+
+#: ../autoimport/custom_metaboxes.php:379
+msgid "Select the lightbox source from your Media Library."
+msgstr ""
+
+#: ../autoimport/custom_metaboxes.php:401
+msgid "Lightbox Source URL"
+msgstr ""
+
+#: ../autoimport/custom_metaboxes.php:404
+msgid ""
+"Specify the URL address of your lightbox (Vimeo, Youtube, Google Maps, etc)."
+msgstr ""
+
+#: ../autoimport/custom_metaboxes.php:422
+msgid "Source URL"
+msgstr ""
+
+#: ../autoimport/custom_metaboxes.php:461
+msgid "Portfolio Metadata"
+msgstr ""
+
+#: ../autoimport/custom_metaboxes.php:465
+msgid "Metadata"
+msgstr ""
+
+#: ../autoimport/custom_metaboxes.php:484 ../panel/admin-options.php:326
+msgid "Text"
+msgstr ""
+
+#: ../autoimport/custom_metaboxes.php:525
+msgid "Portfolio Settings"
+msgstr ""
+
+#: ../autoimport/custom_metaboxes.php:529
+msgid "Display Posts Number"
+msgstr ""
+
+#: ../autoimport/custom_metaboxes.php:532
+msgid "Specify the number of portfolio items displayed."
+msgstr ""
+
+#: ../autoimport/custom_metaboxes.php:536
+msgid "Posts"
+msgstr ""
+
+#: ../autoimport/custom_metaboxes.php:543
+msgid "Portfolio Columns"
+msgstr ""
+
+#: ../autoimport/custom_metaboxes.php:546
+msgid "Select the number of portfolio columns."
+msgstr ""
+
+#: ../autoimport/custom_metaboxes.php:550
+msgid "Columns"
+msgstr ""
+
+#: ../autoimport/custom_metaboxes.php:557
+msgid "Enable Category Filters"
+msgstr ""
+
+#: ../autoimport/custom_metaboxes.php:560
+msgid ""
+"Select this if you want to display category filter at the top of your page."
+msgstr ""
+
+#: ../autoimport/custom_metaboxes.php:561
+msgid "Enable"
+msgstr ""
+
+#: ../autoimport/custom_metaboxes.php:566
+msgid "Limit Visible Categories"
+msgstr ""
+
+#: ../autoimport/custom_metaboxes.php:569
+msgid ""
+"Select the categories for posts you wish to display. Only the posts that "
+"contains at least one of selected category will be displayed. Selecting "
+"<em>None</em> will show all posts."
+msgstr ""
+
+#: ../autoimport/custom_metaboxes.php:641
+msgid "Post Type: Audio"
+msgstr ""
+
+#: ../autoimport/custom_metaboxes.php:645
+msgid "Audio Type"
+msgstr ""
+
+#: ../autoimport/custom_metaboxes.php:648
+msgid "Select the audio type you want to show as the post thumbnail."
+msgstr ""
+
+#: ../autoimport/custom_metaboxes.php:650
+#: ../autoimport/custom_metaboxes.php:1049
+#: ../panel/options-medialibrary-uploader.php:118
+msgid "Upload"
+msgstr ""
+
+#: ../autoimport/custom_metaboxes.php:651
+#: ../autoimport/custom_metaboxes.php:1048
+msgid "Embed"
+msgstr ""
+
+#: ../autoimport/custom_metaboxes.php:659
+msgid "MP3 File"
+msgstr ""
+
+#: ../autoimport/custom_metaboxes.php:662
+msgid "Select the MP3 file from you Media Library."
+msgstr ""
+
+#: ../autoimport/custom_metaboxes.php:679
+#: ../autoimport/custom_metaboxes.php:1077
+msgid "OGG File"
+msgstr ""
+
+#: ../autoimport/custom_metaboxes.php:682
+#: ../autoimport/custom_metaboxes.php:1080
+msgid "Select the OGG file from you Media Library."
+msgstr ""
+
+#: ../autoimport/custom_metaboxes.php:699
+#: ../autoimport/custom_metaboxes.php:1097
+msgid "Embed Source"
+msgstr ""
+
+#: ../autoimport/custom_metaboxes.php:702
+#: ../autoimport/custom_metaboxes.php:1100
+msgid "Specify the embed source."
+msgstr ""
+
+#: ../autoimport/custom_metaboxes.php:766
+msgid "Post Type: Chat"
+msgstr ""
+
+#: ../autoimport/custom_metaboxes.php:770
+msgid "Chat"
+msgstr ""
+
+#: ../autoimport/custom_metaboxes.php:789
+msgid "Message"
+msgstr ""
+
+#: ../autoimport/custom_metaboxes.php:835
+msgid "Post Type: Gallery"
+msgstr ""
+
+#: ../autoimport/custom_metaboxes.php:839
+msgid "Gallery Images"
+msgstr ""
+
+#: ../autoimport/custom_metaboxes.php:892
+msgid "Post Type: Link"
+msgstr ""
+
+#: ../autoimport/custom_metaboxes.php:896
+msgid "Link URL"
+msgstr ""
+
+#: ../autoimport/custom_metaboxes.php:899
+msgid "Specify the URL to replace post title permalink."
+msgstr ""
+
+#: ../autoimport/custom_metaboxes.php:901
+msgid "URL"
+msgstr ""
+
+#: ../autoimport/custom_metaboxes.php:938
+msgid "Post Type: Quote"
+msgstr ""
+
+#: ../autoimport/custom_metaboxes.php:942
+msgid "Quote Text"
+msgstr ""
+
+#: ../autoimport/custom_metaboxes.php:945
+msgid "Specify the quote text."
+msgstr ""
+
+#: ../autoimport/custom_metaboxes.php:947
+msgid "Quote text"
+msgstr ""
+
+#: ../autoimport/custom_metaboxes.php:953
+msgid "Quote Author"
+msgstr ""
+
+#: ../autoimport/custom_metaboxes.php:956
+msgid "Specify the quote author."
+msgstr ""
+
+#: ../autoimport/custom_metaboxes.php:958
+msgid "Quote author"
+msgstr ""
+
+#: ../autoimport/custom_metaboxes.php:995
+msgid "Post Type: Status"
+msgstr ""
+
+#: ../autoimport/custom_metaboxes.php:999
+#: ../autoimport/custom_metaboxes.php:1004
+msgid "Twitter Embed"
+msgstr ""
+
+#: ../autoimport/custom_metaboxes.php:1002
+msgid "Specify the Twitter Embed code."
+msgstr ""
+
+#: ../autoimport/custom_metaboxes.php:1039
+msgid "Post Type: Video"
+msgstr ""
+
+#: ../autoimport/custom_metaboxes.php:1043
+msgid "Video Type"
+msgstr ""
+
+#: ../autoimport/custom_metaboxes.php:1046
+msgid "Select the video type you want to show as the post thumbnail."
+msgstr ""
+
+#: ../autoimport/custom_metaboxes.php:1057
+msgid "MP4 File"
+msgstr ""
+
+#: ../autoimport/custom_metaboxes.php:1060
+msgid "Select the MP4 file from you Media Library."
+msgstr ""
+
+#: ../autoimport/custom_metaboxes.php:1113
+msgid "Insert your embed code here..."
+msgstr ""
+
+#: ../panel/admin-options.php:33
+msgid "MPC Theme"
+msgstr ""
+
+#: ../panel/admin-options.php:49
+msgid "Sign up to newsletter"
+msgstr ""
+
+#: ../panel/admin-options.php:69
+msgid "Copyright MassivePixelCreation 2013"
+msgstr ""
+
+#: ../panel/admin-options.php:87
+msgid "Fullwidth"
+msgstr ""
+
+#: ../panel/admin-options.php:88
+msgid "Boxed"
+msgstr ""
+
+#: ../panel/admin-options.php:89
+msgid "Floating Boxed"
+msgstr ""
+
+#: ../panel/admin-options.php:93
+msgid "Logo, Menu, Search"
+msgstr ""
+
+#: ../panel/admin-options.php:94
+msgid "Logo, Search, Menu"
+msgstr ""
+
+#: ../panel/admin-options.php:95
+msgid "Menu, Center Logo, Search"
+msgstr ""
+
+#: ../panel/admin-options.php:96
+msgid "Menu, Top Logo, Search"
+msgstr ""
+
+#: ../panel/admin-options.php:97
+msgid "Logo, Right Menu, Search"
+msgstr ""
+
+#: ../panel/admin-options.php:98
+msgid "Menu, Search, Right Logo"
+msgstr ""
+
+#: ../panel/admin-options.php:99
+msgid "Logo, Center Menu & Search"
+msgstr ""
+
+#: ../panel/admin-options.php:103
+msgid "Newsletter, Socials, Menu"
+msgstr ""
+
+#: ../panel/admin-options.php:104
+msgid "Socials, Menu, Newsletter"
+msgstr ""
+
+#: ../panel/admin-options.php:105
+msgid "Menu, Newsletter, Socials"
+msgstr ""
+
+#: ../panel/admin-options.php:108
+msgid "Top"
+msgstr ""
+
+#: ../panel/admin-options.php:109
+msgid "Bottom"
+msgstr ""
+
+#: ../panel/admin-options.php:113 ../panel/options-sanitize.php:263
+msgid "Top Left"
+msgstr ""
+
+#: ../panel/admin-options.php:114 ../panel/options-sanitize.php:264
+msgid "Top Center"
+msgstr ""
+
+#: ../panel/admin-options.php:115 ../panel/options-sanitize.php:265
+msgid "Top Right"
+msgstr ""
+
+#: ../panel/admin-options.php:116
+msgid "Center Left"
+msgstr ""
+
+#: ../panel/admin-options.php:117
+msgid "Center Center"
+msgstr ""
+
+#: ../panel/admin-options.php:118
+msgid "Center Right"
+msgstr ""
+
+#: ../panel/admin-options.php:119 ../panel/options-sanitize.php:269
+msgid "Bottom Left"
+msgstr ""
+
+#: ../panel/admin-options.php:120 ../panel/options-sanitize.php:270
+msgid "Bottom Center"
+msgstr ""
+
+#: ../panel/admin-options.php:121 ../panel/options-sanitize.php:271
+msgid "Bottom Right"
+msgstr ""
+
+#: ../panel/admin-options.php:125 ../panel/admin-options.php:131
+#: ../panel/options-interface.php:156
+msgid "default"
+msgstr ""
+
+#: ../panel/admin-options.php:126
+msgid "slim"
+msgstr ""
+
+#: ../panel/admin-options.php:127
+msgid "center"
+msgstr ""
+
+#: ../panel/admin-options.php:132
+msgid "gray"
+msgstr ""
+
+#: ../panel/admin-options.php:133
+msgid "gold"
+msgstr ""
+
+#: ../panel/admin-options.php:134
+msgid "dark"
+msgstr ""
+
+#: ../panel/admin-options.php:137
+msgid "custom"
+msgstr ""
+
+#: ../panel/admin-options.php:140
+msgid "none"
+msgstr ""
+
+#: ../panel/admin-options.php:141
+msgid "color"
+msgstr ""
+
+#: ../panel/admin-options.php:142
+msgid "custom background"
+msgstr ""
+
+#: ../panel/admin-options.php:143
+msgid "pattern background"
+msgstr ""
+
+#: ../panel/admin-options.php:203
+msgid "General"
+msgstr ""
+
+#: ../panel/admin-options.php:211
+msgid "Fav Icon"
+msgstr ""
+
+#: ../panel/admin-options.php:216
+msgid "Enable Fav Icon"
+msgstr ""
+
+#: ../panel/admin-options.php:217
+msgid "Check this option to enable fav icon."
+msgstr ""
+
+#: ../panel/admin-options.php:225
+msgid "Upload Fav Icon"
+msgstr ""
+
+#: ../panel/admin-options.php:226
+msgid ""
+"Use the upload to upload your custom fav icon. To learn more about the Fav "
+"Icon please read <a href='http://en.wikipedia.org/wiki/Favicon' "
+"target='_blank'>this article</a>."
+msgstr ""
+
+#: ../panel/admin-options.php:234
+msgid "Google Analytics"
+msgstr ""
+
+#: ../panel/admin-options.php:239
+msgid "Enable Google Analytics"
+msgstr ""
+
+#: ../panel/admin-options.php:240
+msgid "Check this option to enable Google Analytics."
+msgstr ""
+
+#: ../panel/admin-options.php:248
+msgid "Google Analytics Code"
+msgstr ""
+
+#: ../panel/admin-options.php:249
+msgid ""
+"Insert your google analytics code, for more information read <a href="
+"\"https://support.google.com/analytics/bin/answer.py?"
+"hl=en&utm_medium=et&utm_campaign=en_us&utm_source=SetupChecklist&answer=1008080\">this</"
+"a>. Don't worry that your script tags where removed, they will be added "
+"automatically."
+msgstr ""
+
+#: ../panel/admin-options.php:258
+msgid "Fonts"
+msgstr ""
+
+#: ../panel/admin-options.php:266
+msgid "Font Family"
+msgstr ""
+
+#: ../panel/admin-options.php:271
+msgid "Heading Font"
+msgstr ""
+
+#: ../panel/admin-options.php:272
+msgid "Specify headings font."
+msgstr ""
+
+#: ../panel/admin-options.php:278
+msgid "Content Font"
+msgstr ""
+
+#: ../panel/admin-options.php:279
+msgid "Specify content font."
+msgstr ""
+
+#: ../panel/admin-options.php:287
+msgid "Font Size"
+msgstr ""
+
+#: ../panel/admin-options.php:292
+msgid "Base Font Size"
+msgstr ""
+
+#: ../panel/admin-options.php:293
+msgid "Specify base font size."
+msgstr ""
+
+#: ../panel/admin-options.php:303
+msgid "Elements"
+msgstr ""
+
+#: ../panel/admin-options.php:311
+msgid "Logo"
+msgstr ""
+
+#: ../panel/admin-options.php:316
+msgid "Use Text Logo"
+msgstr ""
+
+#: ../panel/admin-options.php:317
+msgid "Check it if you want to use text logo."
+msgstr ""
+
+#: ../panel/admin-options.php:327
+msgid "Specify your site logo text."
+msgstr ""
+
+#: ../panel/admin-options.php:334
+msgid "Upload Logo"
+msgstr ""
+
+#: ../panel/admin-options.php:335
+msgid "Upload your logo here."
+msgstr ""
+
+#: ../panel/admin-options.php:342
+msgid "Upload Retina Logo"
+msgstr ""
+
+#: ../panel/admin-options.php:343
+msgid "Upload your retina logo here."
+msgstr ""
+
+#: ../panel/admin-options.php:350
+#: ../woocommerce/single-product/tabs/tabs.php:19
+msgid "Description"
+msgstr ""
+
+#: ../panel/admin-options.php:351
+msgid ""
+"Specify if the description (tagline) for your site should be displayed next "
+"to a logo."
+msgstr ""
+
+#: ../panel/admin-options.php:364
+msgid "Default Sidebar Position"
+msgstr ""
+
+#: ../panel/admin-options.php:365
+msgid "Set the default sidebar position for all pages."
+msgstr ""
+
+#: ../panel/admin-options.php:376
+msgid "Default Blog Post Sidebar Position"
+msgstr ""
+
+#: ../panel/admin-options.php:377
+msgid "Set the default sidebar position for all of blog posts."
+msgstr ""
+
+#: ../panel/admin-options.php:389
+msgid "Default Portfolio Post Sidebar Position"
+msgstr ""
+
+#: ../panel/admin-options.php:390
+msgid "Set the default sidebar position for all of portfolio posts."
+msgstr ""
+
+#: ../panel/admin-options.php:402
+msgid "Default Search Sidebar Position"
+msgstr ""
+
+#: ../panel/admin-options.php:403
+msgid "Set the default sidebar position for Search page."
+msgstr ""
+
+#: ../panel/admin-options.php:414
+msgid "Default Archive Sidebar Position"
+msgstr ""
+
+#: ../panel/admin-options.php:415
+msgid "Set the default sidebar position for Archive page."
+msgstr ""
+
+#: ../panel/admin-options.php:426
+msgid "Default 404 Error Sidebar Position"
+msgstr ""
+
+#: ../panel/admin-options.php:427
+msgid "Set the default sidebar position for 404 Error page."
+msgstr ""
+
+#: ../panel/admin-options.php:440
+msgid "Header"
+msgstr ""
+
+#: ../panel/admin-options.php:445
+msgid "Main Header Layout"
+msgstr ""
+
+#: ../panel/admin-options.php:446
+msgid "Choose one of main header layouts."
+msgstr ""
+
+#: ../panel/admin-options.php:454
+msgid "Enable Mega Menu"
+msgstr ""
+
+#: ../panel/admin-options.php:455
+msgid "Specify if you want to display mega menu."
+msgstr ""
+
+#: ../panel/admin-options.php:462
+msgid "Enable Search"
+msgstr ""
+
+#: ../panel/admin-options.php:463
+msgid "Specify if you want to display search in header."
+msgstr ""
+
+#: ../panel/admin-options.php:470
+msgid "Enable Smart Search"
+msgstr ""
+
+#: ../panel/admin-options.php:471
+msgid "Specify if you want to display smart search."
+msgstr ""
+
+#: ../panel/admin-options.php:478
+msgid "Enable Sticky Header"
+msgstr ""
+
+#: ../panel/admin-options.php:479
+msgid "Specify if you want to show sticky header at the top of page."
+msgstr ""
+
+#: ../panel/admin-options.php:488
+msgid "Secondary Header"
+msgstr ""
+
+#: ../panel/admin-options.php:493
+msgid "Enable Secondary Header"
+msgstr ""
+
+#: ../panel/admin-options.php:494
+msgid "Uncheck this option to disable secondary header."
+msgstr ""
+
+#: ../panel/admin-options.php:502
+msgid "Secondary Header Layout"
+msgstr ""
+
+#: ../panel/admin-options.php:503
+msgid "Choose one of secondary header layouts."
+msgstr ""
+
+#: ../panel/admin-options.php:511
+msgid "Secondary Header Position"
+msgstr ""
+
+#: ../panel/admin-options.php:512
+msgid "Choose secondary header position."
+msgstr ""
+
+#: ../panel/admin-options.php:520
+msgid "Enable Subscribe Form"
+msgstr ""
+
+#: ../panel/admin-options.php:521
+msgid "Uncheck this option to disable subscribe form."
+msgstr ""
+
+#: ../panel/admin-options.php:530
+msgid "Newsletter Text"
+msgstr ""
+
+#: ../panel/admin-options.php:531
+msgid "Specify your newsletter message."
+msgstr ""
+
+#: ../panel/admin-options.php:538
+msgid "Secondary Header Message"
+msgstr ""
+
+#: ../panel/admin-options.php:539
+msgid ""
+"Specify the message you want to display in place of subscribe form. Leave "
+"empty to display default subscribe form."
+msgstr ""
+
+#: ../panel/admin-options.php:546
+msgid "Enable Secondary Header Menu"
+msgstr ""
+
+#: ../panel/admin-options.php:547
+msgid "Check this option to enable secondary header menu."
+msgstr ""
+
+#: ../panel/admin-options.php:556
+msgid "Footer"
+msgstr ""
+
+#: ../panel/admin-options.php:561
+msgid "Enable Footer"
+msgstr ""
+
+#: ../panel/admin-options.php:562
+msgid "Uncheck this option to disable footer."
+msgstr ""
+
+#: ../panel/admin-options.php:570
+msgid "Footer Columns Number"
+msgstr ""
+
+#: ../panel/admin-options.php:571
+msgid "Specify default number of footer columns."
+msgstr ""
+
+#: ../panel/admin-options.php:579
+msgid "Enable Toggle Footer"
+msgstr ""
+
+#: ../panel/admin-options.php:580
+msgid "Uncheck this option to disable mobile toggle footer button."
+msgstr ""
+
+#: ../panel/admin-options.php:587
+msgid "Back To Top Position"
+msgstr ""
+
+#: ../panel/admin-options.php:588
+msgid "Specify the position of \"Back to Top\" button."
+msgstr ""
+
+#: ../panel/admin-options.php:602
+msgid "Enable Extended Footer"
+msgstr ""
+
+#: ../panel/admin-options.php:603
+msgid "Uncheck this option to disable extended footer."
+msgstr ""
+
+#: ../panel/admin-options.php:611
+msgid "Extended Footer Columns Number"
+msgstr ""
+
+#: ../panel/admin-options.php:612
+msgid "Specify default number of extended footer columns."
+msgstr ""
+
+#: ../panel/admin-options.php:620
+msgid "Enable Toggle Extended Footer"
+msgstr ""
+
+#: ../panel/admin-options.php:621
+msgid "Uncheck this option to disable mobile toggle extended footer button."
+msgstr ""
+
+#: ../panel/admin-options.php:630
+msgid "Copyrights"
+msgstr ""
+
+#: ../panel/admin-options.php:635
+msgid "Enable Copyrights & Socials"
+msgstr ""
+
+#: ../panel/admin-options.php:636
+msgid ""
+"Uncheck this option to disable copyrights/socials section below the footer."
+msgstr ""
+
+#: ../panel/admin-options.php:644
+msgid "Copyright Text"
+msgstr ""
+
+#: ../panel/admin-options.php:645
+msgid "Specify your copyrights."
+msgstr ""
+
+#: ../panel/admin-options.php:654
+msgid "Social Networks"
+msgstr ""
+
+#: ../panel/admin-options.php:659
+msgid "Socials"
+msgstr ""
+
+#: ../panel/admin-options.php:660
+msgid "Select the socials you want to display."
+msgstr ""
+
+#: ../panel/admin-options.php:669
+msgid "Specify the URL to your account."
+msgstr ""
+
+#: ../panel/admin-options.php:678
+msgid "Visuals"
+msgstr ""
+
+#: ../panel/admin-options.php:686 ../panel/admin-options.php:689
+msgid "Colors"
+msgstr ""
+
+#: ../panel/admin-options.php:693
+msgid "Main Color"
+msgstr ""
+
+#: ../panel/admin-options.php:694
+msgid "Specify main color for the theme."
+msgstr ""
+
+#: ../panel/admin-options.php:703
+msgid "Display"
+msgstr ""
+
+#: ../panel/admin-options.php:708
+msgid "Disable Responsive"
+msgstr ""
+
+#: ../panel/admin-options.php:709
+msgid "Check this option if you want to disable responsive layout."
+msgstr ""
+
+#: ../panel/admin-options.php:715
+msgid "Large Archive Thumbnails"
+msgstr ""
+
+#: ../panel/admin-options.php:716
+msgid ""
+"Check this option if you want to display archive thumbnails in fullwidth."
+msgstr ""
+
+#: ../panel/admin-options.php:722
+msgid "Theme Layout Type"
+msgstr ""
+
+#: ../panel/admin-options.php:723
+msgid ""
+"Specify if you want to display the page as boxed, floating boxed or "
+"fullwidth site."
+msgstr ""
+
+#: ../panel/admin-options.php:730
+msgid "Skin"
+msgstr ""
+
+#: ../panel/admin-options.php:731
+msgid "Select theme skin."
+msgstr ""
+
+#: ../panel/admin-options.php:739
+msgid "Disable Mobile Sliders Navigation"
+msgstr ""
+
+#: ../panel/admin-options.php:740
+msgid ""
+"Uncheck this option if you want to display sliders navigation on mobile "
+"devices."
+msgstr ""
+
+#: ../panel/admin-options.php:748
+msgid "Background"
+msgstr ""
+
+#: ../panel/admin-options.php:753 ../php/class-tgm-plugin-activation.php:1293
+msgid "Type"
+msgstr ""
+
+#: ../panel/admin-options.php:754 ../panel/admin-options.php:825
+msgid "Select background type for your site."
+msgstr ""
+
+#: ../panel/admin-options.php:764
+msgid "Background Color"
+msgstr ""
+
+#: ../panel/admin-options.php:765
+msgid "Specify background color."
+msgstr ""
+
+#: ../panel/admin-options.php:772 ../panel/admin-options.php:810
+msgid "Background Image"
+msgstr ""
+
+#: ../panel/admin-options.php:773
+msgid "Upload your background image here."
+msgstr ""
+
+#: ../panel/admin-options.php:779
+msgid "Repeat Background"
+msgstr ""
+
+#: ../panel/admin-options.php:780
+msgid "Check this option if you want to use your custom background as pattern."
+msgstr ""
+
+#: ../panel/admin-options.php:787
+msgid "Background Pattern"
+msgstr ""
+
+#: ../panel/admin-options.php:788
+msgid "Choose background pattern for your site."
+msgstr ""
+
+#: ../panel/admin-options.php:803
+msgid "Dropdowns Backgrounds"
+msgstr ""
+
+#: ../panel/admin-options.php:811
+msgid "Upload your dropdown background image here."
+msgstr ""
+
+#: ../panel/admin-options.php:817
+msgid "Paddings"
+msgstr ""
+
+#: ../panel/admin-options.php:818
+msgid "Specify your dropdown padding."
+msgstr ""
+
+#: ../panel/admin-options.php:824
+msgid "Alignment"
+msgstr ""
+
+#: ../panel/admin-options.php:838
+msgid "WooCommerce"
+msgstr ""
+
+#: ../panel/admin-options.php:843
+msgid "Products Number"
+msgstr ""
+
+#: ../panel/admin-options.php:844
+msgid "Specify the products number you want to display in the \"Shop\" page."
+msgstr ""
+
+#: ../panel/admin-options.php:850
+msgid "Masonry Shop"
+msgstr ""
+
+#: ../panel/admin-options.php:851
+msgid "Check this option if you want to enable masonry on \"Shop\" page."
+msgstr ""
+
+#: ../panel/admin-options.php:859
+msgid "Shop Load More"
+msgstr ""
+
+#: ../panel/admin-options.php:860
+msgid "Check this option if you want to enable load more on \"Shop\" page."
+msgstr ""
+
+#: ../panel/admin-options.php:867
+msgid "Shop Style"
+msgstr ""
+
+#: ../panel/admin-options.php:868
+msgid "Choose one of shop styles."
+msgstr ""
+
+#: ../panel/admin-options.php:875
+#: ../woocommerce/content-single-product.php:115
+#: ../woocommerce/content-single-product.php:123
+msgid "Size Guide"
+msgstr ""
+
+#: ../panel/admin-options.php:876
+msgid "Check this option if you want to enable size guide for products."
+msgstr ""
+
+#: ../panel/admin-options.php:884
+msgid "Size Guide Image"
+msgstr ""
+
+#: ../panel/admin-options.php:885
+msgid "Upload your size guide image here."
+msgstr ""
+
+#: ../panel/admin-options.php:891
+msgid "Disable Header Cart"
+msgstr ""
+
+#: ../panel/admin-options.php:892
+msgid "Check this option if you want to disable the cart icon in the header."
+msgstr ""
+
+#: ../panel/admin-options.php:898
+msgid "Disable Products \"Add to Cart\""
+msgstr ""
+
+#: ../panel/admin-options.php:899
+msgid ""
+"Check this option if you want to disable \"Add to Cart\" in the products."
+msgstr ""
+
+#: ../panel/admin-options.php:907
+msgid "Disable Products \"Price\""
+msgstr ""
+
+#: ../panel/admin-options.php:908
+msgid "Check this option if you want to disable \"Price\" in the products."
+msgstr ""
+
+#: ../panel/admin-options.php:915
+msgid "Disable Products Hover Effect"
+msgstr ""
+
+#: ../panel/admin-options.php:916
+msgid ""
+"Check this option if you want to disable the hover effect for the products."
+msgstr ""
+
+#: ../panel/admin-options.php:924
+msgid "Custom CSS"
+msgstr ""
+
+#: ../panel/admin-options.php:929
+msgid "CSS"
+msgstr ""
+
+#: ../panel/admin-options.php:930
+msgid "Insert your custom CSS."
+msgstr ""
+
+#: ../panel/options-framework.php:158 ../panel/options-framework.php:426
+msgid "Theme Options"
+msgstr ""
+
+#: ../panel/options-framework.php:186
+msgid "Short sample text."
+msgstr ""
+
+#: ../panel/options-framework.php:187
+msgid ""
+"There is problem with access to Google Webfonts. Please try again later. If "
+"this message keeps appearing please contact our support at <a href=\"http://"
+"mpc.ticksy.com/\">mpc.ticksy.com</a>."
+msgstr ""
+
+#: ../panel/options-framework.php:220
+msgid "Welcome to Massive Panel"
+msgstr ""
+
+#: ../panel/options-framework.php:221
+msgid "use it wisely to customize your theme."
+msgstr ""
+
+#: ../panel/options-framework.php:222
+msgid "Support"
+msgstr ""
+
+#: ../panel/options-framework.php:233
+msgid ""
+"If you want to reset all settings to default values click OK. All your "
+"changes will be overwriten."
+msgstr ""
+
+#: ../panel/options-framework.php:236 ../panel/options-framework.php:314
+msgid "Options saved."
+msgstr ""
+
+#: ../panel/options-framework.php:237
+msgid "Something went wrong. Try again."
+msgstr ""
+
+#: ../panel/options-framework.php:271
+msgid "Default options restored."
+msgstr ""
+
+#: ../panel/options-medialibrary-uploader.php:23
+msgid "Theme Options Media"
+msgstr ""
+
+#: ../panel/options-medialibrary-uploader.php:141
+msgid "View File"
+msgstr ""
+
+#: ../panel/options-medialibrary-uploader.php:272
+msgid "Gallery"
+msgstr ""
+
+#: ../panel/options-medialibrary-uploader.php:272
+msgid "Previously Uploaded"
+msgstr ""
+
+#: ../panel/options-sanitize.php:247
+msgid "No Repeat"
+msgstr ""
+
+#: ../panel/options-sanitize.php:248
+msgid "Repeat Horizontally"
+msgstr ""
+
+#: ../panel/options-sanitize.php:249
+msgid "Repeat Vertically"
+msgstr ""
+
+#: ../panel/options-sanitize.php:250
+msgid "Repeat All"
+msgstr ""
+
+#: ../panel/options-sanitize.php:266
+msgid "Middle Left"
+msgstr ""
+
+#: ../panel/options-sanitize.php:267
+msgid "Middle Center"
+msgstr ""
+
+#: ../panel/options-sanitize.php:268
+msgid "Middle Right"
+msgstr ""
+
+#: ../panel/options-sanitize.php:284
+msgid "Scroll Normally"
+msgstr ""
+
+#: ../panel/options-sanitize.php:285
+msgid "Fixed in Place"
+msgstr ""
+
+#: ../panel/options-sanitize.php:357
+msgid "Normal"
+msgstr ""
+
+#: ../panel/options-sanitize.php:358
+msgid "Italic"
+msgstr ""
+
+#: ../panel/options-sanitize.php:359
+msgid "Bold"
+msgstr ""
+
+#: ../panel/options-sanitize.php:360
+msgid "Bold Italic"
+msgstr ""
+
+#: ../php/class-tgm-plugin-activation.php:158
+msgid "Something went wrong."
+msgstr ""
+
+#: ../php/class-tgm-plugin-activation.php:170
+msgid "Return to the dashboard"
+msgstr ""
+
+#: ../php/class-tgm-plugin-activation.php:172
+msgid "The following plugin was activated successfully:"
+msgstr ""
+
+#: ../php/class-tgm-plugin-activation.php:173
+#, php-format
+msgid "All plugins installed and activated successfully. %1$s"
+msgstr ""
+
+#: ../php/class-tgm-plugin-activation.php:174
+msgid "Dismiss this notice"
+msgstr ""
+
+#: ../php/class-tgm-plugin-activation.php:1085
+msgid "External Link"
+msgstr ""
+
+#: ../php/class-tgm-plugin-activation.php:1090
+msgid "Private Repository"
+msgstr ""
+
+#: ../php/class-tgm-plugin-activation.php:1093
+msgid "Pre-Packaged"
+msgstr ""
+
+#: ../php/class-tgm-plugin-activation.php:1097
+msgid "WordPress Repository"
+msgstr ""
+
+#: ../php/class-tgm-plugin-activation.php:1100
+msgid "Required"
+msgstr ""
+
+#: ../php/class-tgm-plugin-activation.php:1100
+msgid "Recommended"
+msgstr ""
+
+#: ../php/class-tgm-plugin-activation.php:1103
+msgid "Not Installed"
+msgstr ""
+
+#: ../php/class-tgm-plugin-activation.php:1105
+msgid "Installed But Not Activated"
+msgstr ""
+
+#: ../php/class-tgm-plugin-activation.php:1275
+#, php-format
+msgid ""
+"No plugins to install or activate. <a href=\"%1$s\" title=\"Return to the "
+"Dashboard\">Return to the Dashboard</a>"
+msgstr ""
+
+#: ../php/class-tgm-plugin-activation.php:1291
+msgid "Plugin"
+msgstr ""
+
+#: ../php/class-tgm-plugin-activation.php:1292
+msgid "Source"
+msgstr ""
+
+#: ../php/class-tgm-plugin-activation.php:1294
+#: ../woocommerce/myaccount/my-orders.php:38
+msgid "Status"
+msgstr ""
+
+#: ../php/class-tgm-plugin-activation.php:1312
+msgid "Install"
+msgstr ""
+
+#: ../php/class-tgm-plugin-activation.php:1313
+msgid "Activate"
+msgstr ""
+
+#: ../php/class-tgm-plugin-activation.php:1823
+msgid "Install package not available."
+msgstr ""
+
+#: ../php/class-tgm-plugin-activation.php:1824
+#, php-format
+msgid "Downloading install package from <span class=\"code\">%s</span>&#8230;"
+msgstr ""
+
+#: ../php/class-tgm-plugin-activation.php:1825
+msgid "Unpacking the package&#8230;"
+msgstr ""
+
+#: ../php/class-tgm-plugin-activation.php:1826
+msgid "Installing the plugin&#8230;"
+msgstr ""
+
+#: ../php/class-tgm-plugin-activation.php:1827
+msgid "Plugin install failed."
+msgstr ""
+
+#: ../php/class-tgm-plugin-activation.php:1828
+msgid "Plugin installed successfully."
+msgstr ""
+
+#: ../php/class-tgm-plugin-activation.php:1839
+msgid "Plugin activation failed."
+msgstr ""
+
+#: ../php/class-tgm-plugin-activation.php:1949
+msgid ""
+"The installation and activation process is starting. This process may take a "
+"while on some hosts, so please be patient."
+msgstr ""
+
+#: ../php/class-tgm-plugin-activation.php:1950
+#, php-format
+msgid "%1$s installed and activated successfully."
+msgstr ""
+
+#: ../php/class-tgm-plugin-activation.php:1950
+#: ../php/class-tgm-plugin-activation.php:1959
+msgid "Show Details"
+msgstr ""
+
+#: ../php/class-tgm-plugin-activation.php:1950
+#: ../php/class-tgm-plugin-activation.php:1959
+msgid "Hide Details"
+msgstr ""
+
+#: ../php/class-tgm-plugin-activation.php:1951
+msgid "All installations and activations have been completed."
+msgstr ""
+
+#: ../php/class-tgm-plugin-activation.php:1952
+#, php-format
+msgid "Installing and Activating Plugin %1$s (%2$d/%3$d)"
+msgstr ""
+
+#: ../php/class-tgm-plugin-activation.php:1956
+msgid ""
+"The installation process is starting. This process may take a while on some "
+"hosts, so please be patient."
+msgstr ""
+
+#: ../php/class-tgm-plugin-activation.php:1957
+#, php-format
+msgid "An error occurred while installing %1$s: <strong>%2$s</strong>."
+msgstr ""
+
+#: ../php/class-tgm-plugin-activation.php:1958
+#, php-format
+msgid "The installation of %1$s failed."
+msgstr ""
+
+#: ../php/class-tgm-plugin-activation.php:1959
+#, php-format
+msgid "%1$s installed successfully."
+msgstr ""
+
+#: ../php/class-tgm-plugin-activation.php:1960
+msgid "All installations have been completed."
+msgstr ""
+
+#: ../php/class-tgm-plugin-activation.php:1961
+#, php-format
+msgid "Installing Plugin %1$s (%2$d/%3$d)"
+msgstr ""
+
+#: ../php/class-tgm-plugin-activation.php:2052
+msgid "Return to the Dashboard"
+msgstr ""
+
+#: ../vc_templates/vc_accordion_tab.php:5
+msgid "Section"
+msgstr ""
+
+#: ../vc_templates/vc_accordion_tab.php:12
+msgid "Empty section. Edit page to add content here."
+msgstr ""
+
+#: ../vc_templates/vc_cta_button.php:9
+msgid "Text on the button"
+msgstr ""
+
+#: ../vc_templates/vc_posts_grid.php:150
+#: ../vc_templates/vc_posts_slider.php:187
+msgid "Nothing found."
+msgstr ""
+
+#: ../vc_templates/vc_tabs.php:44
+msgid "Previous slide"
+msgstr ""
+
+#: ../vc_templates/vc_tabs.php:44
+msgid "Next slide"
+msgstr ""
+
+#: ../vc_templates/vc_toggle.php:4
+msgid "Click to toggle"
+msgstr ""
+
+#: ../vc_templates/post_block/_item.php:18
+#, php-format
+msgid "Permalink to %s"
+msgstr ""
+
+#: ../vc_templates/post_block/_item.php:18
+msgid "Read more"
+msgstr ""
+
+#: ../woocommerce/content-product.php:52
+msgid "Quickview"
+msgstr ""
+
+#: ../woocommerce/content-single-product.php:81
+#, php-format
+msgid "Rated %s out of 5"
+msgstr ""
+
+#: ../woocommerce/content-single-product.php:83
+#: ../woocommerce/single-product/review.php:45
+msgid "out of 5"
+msgstr ""
+
+#: ../woocommerce/content-single-product.php:144 ../woocommerce/share.php:26
+msgid "Share"
+msgstr ""
+
+#: ../woocommerce/share.php:30
+msgid "Facebook"
+msgstr ""
+
+#: ../woocommerce/share.php:33
+msgid "Twitter"
+msgstr ""
+
+#: ../woocommerce/single-product-reviews.php:38
+msgid "There are no reviews yet."
+msgstr ""
+
+#: ../woocommerce/single-product-reviews.php:51
+msgid "Add a review"
+msgstr ""
+
+#: ../woocommerce/single-product-reviews.php:51
+msgid "Be the first to review"
+msgstr ""
+
+#: ../woocommerce/single-product-reviews.php:58
+msgid "Email"
+msgstr ""
+
+#: ../woocommerce/single-product-reviews.php:61
+msgid "Submit"
+msgstr ""
+
+#: ../woocommerce/single-product-reviews.php:68
+msgid "Rate&hellip;"
+msgstr ""
+
+#: ../woocommerce/single-product-reviews.php:69
+msgid "Perfect"
+msgstr ""
+
+#: ../woocommerce/single-product-reviews.php:70
+msgid "Good"
+msgstr ""
+
+#: ../woocommerce/single-product-reviews.php:71
+msgid "Average"
+msgstr ""
+
+#: ../woocommerce/single-product-reviews.php:72
+msgid "Not that bad"
+msgstr ""
+
+#: ../woocommerce/single-product-reviews.php:73
+msgid "Very Poor"
+msgstr ""
+
+#: ../woocommerce/single-product-reviews.php:77
+msgid "Your Review"
+msgstr ""
+
+#: ../woocommerce/single-product-reviews.php:86
+msgid ""
+"Only logged in customers who have purchased this product may leave a review."
+msgstr ""
+
+#: ../woocommerce/wishlist.php:75 ../woocommerce/cart/cart.php:38
+msgid "Thumbnail"
+msgstr ""
+
+#: ../woocommerce/wishlist.php:76 ../woocommerce/cart/cart.php:39
+#: ../woocommerce/order/order-details.php:24
+msgid "Product"
+msgstr ""
+
+#: ../woocommerce/wishlist.php:78 ../woocommerce/wishlist.php:214
+msgid "Stock Status"
+msgstr ""
+
+#: ../woocommerce/wishlist.php:100 ../woocommerce/wishlist.php:189
+msgid "Remove this product"
+msgstr ""
+
+#: ../woocommerce/wishlist.php:120 ../woocommerce/wishlist.php:207
+msgid "Free!"
+msgstr ""
+
+#: ../woocommerce/wishlist.php:133 ../woocommerce/wishlist.php:221
+msgid "Out of Stock"
+msgstr ""
+
+#: ../woocommerce/wishlist.php:136 ../woocommerce/wishlist.php:224
+msgid "In Stock"
+msgstr ""
+
+#: ../woocommerce/wishlist.php:154 ../woocommerce/wishlist.php:242
+msgid "No products were added to the wishlist"
+msgstr ""
+
+#: ../woocommerce/cart/cart-empty.php:17
+msgid "Your cart is currently empty."
+msgstr ""
+
+#: ../woocommerce/cart/cart-empty.php:21
+msgid "Return To Shop"
+msgstr ""
+
+#: ../woocommerce/cart/cart-shipping.php:16
+#, php-format
+msgid "Shipping #%d"
+msgstr ""
+
+#: ../woocommerce/cart/cart-shipping.php:18
+#: ../woocommerce/cart/cart-shipping.php:93
+msgid "Shipping"
+msgstr ""
+
+#: ../woocommerce/cart/cart-shipping.php:55
+msgid ""
+"No shipping methods were found; please recalculate your shipping or continue "
+"to checkout and enter your full address to see if there is shipping "
+"available to your location."
+msgstr ""
+
+#: ../woocommerce/cart/cart-shipping.php:59
+msgid "Please fill in your details to see available shipping methods."
+msgstr ""
+
+#: ../woocommerce/cart/cart-shipping.php:69
+#: ../woocommerce/cart/cart-shipping.php:77
+#, php-format
+msgid "Sorry, shipping is unavailable %s."
+msgstr ""
+
+#: ../woocommerce/cart/cart-shipping.php:69
+#: ../woocommerce/cart/cart-shipping.php:77
+msgid ""
+"If you require assistance or wish to make alternate arrangements please "
+"contact us."
+msgstr ""
+
+#: ../woocommerce/cart/cart-totals.php:16
+msgid "Cart Totals"
+msgstr ""
+
+#: ../woocommerce/cart/cart-totals.php:27
+#: ../woocommerce/cart/cart-totals.php:67
+msgid "Coupon:"
+msgstr ""
+
+#: ../woocommerce/cart/cart-totals.php:75
+msgid "Order Total"
+msgstr ""
+
+#: ../woocommerce/cart/cart-totals.php:87
+#, php-format
+msgid " (taxes estimated for %s)"
+msgstr ""
+
+#: ../woocommerce/cart/cart-totals.php:90
+#, php-format
+msgid ""
+"Note: Shipping and taxes are estimated%s and will be updated during checkout "
+"based on your billing and shipping information."
+msgstr ""
+
+#: ../woocommerce/cart/cart.php:40 ../woocommerce/cart/cart.php:167
+msgid "Price"
+msgstr ""
+
+#: ../woocommerce/cart/cart.php:42 ../woocommerce/cart/cart.php:202
+#: ../woocommerce/myaccount/my-orders.php:39
+#: ../woocommerce/order/order-details.php:25
+msgid "Total"
+msgstr ""
+
+#: ../woocommerce/cart/cart.php:86 ../woocommerce/cart/cart.php:180
+msgid "Available on backorder"
+msgstr ""
+
+#: ../woocommerce/cart/cart.php:222
+msgid "Update Cart"
+msgstr ""
+
+#: ../woocommerce/cart/cart.php:228
+msgid "Coupon Code"
+msgstr ""
+
+#: ../woocommerce/cart/cart.php:233
+msgid "Coupon"
+msgstr ""
+
+#: ../woocommerce/cart/cart.php:234 ../woocommerce/checkout/form-coupon.php:25
+msgid "Coupon code"
+msgstr ""
+
+#: ../woocommerce/cart/cart.php:235 ../woocommerce/checkout/form-coupon.php:29
+msgid "Apply Coupon"
+msgstr ""
+
+#: ../woocommerce/cart/cross-sells.php:38
+msgid "You may be interested in&hellip;"
+msgstr ""
+
+#: ../woocommerce/cart/mini-cart.php:65
+msgid "Checkout"
+msgstr ""
+
+#: ../woocommerce/cart/shipping-calculator.php:22
+msgid "Calculate Shipping"
+msgstr ""
+
+#: ../woocommerce/cart/shipping-calculator.php:27
+msgid "Select a country&hellip;"
+msgstr ""
+
+#: ../woocommerce/cart/shipping-calculator.php:42
+#: ../woocommerce/cart/shipping-calculator.php:48
+#: ../woocommerce/cart/shipping-calculator.php:60
+msgid "State / county"
+msgstr ""
+
+#: ../woocommerce/cart/shipping-calculator.php:49
+msgid "Select a state&hellip;"
+msgstr ""
+
+#: ../woocommerce/cart/shipping-calculator.php:67
+msgid "City"
+msgstr ""
+
+#: ../woocommerce/cart/shipping-calculator.php:73
+msgid "Postcode / Zip"
+msgstr ""
+
+#: ../woocommerce/cart/shipping-calculator.php:77
+msgid "Update Totals"
+msgstr ""
+
+#: ../woocommerce/checkout/form-billing.php:15
+msgid "Billing &amp; Shipping"
+msgstr ""
+
+#: ../woocommerce/checkout/form-billing.php:19
+#: ../woocommerce/myaccount/form-edit-address.php:14
+#: ../woocommerce/myaccount/my-address.php:19
+#: ../woocommerce/myaccount/my-address.php:25
+#: ../woocommerce/order/order-details.php:128
+msgid "Billing Address"
+msgstr ""
+
+#: ../woocommerce/checkout/form-billing.php:38
+msgid "Create an account?"
+msgstr ""
+
+#: ../woocommerce/checkout/form-billing.php:49
+msgid ""
+"Create an account by entering the information below. If you are a returning "
+"customer please login at the top of the page."
+msgstr ""
+
+#: ../woocommerce/checkout/form-checkout.php:20
+msgid "You must be logged in to checkout."
+msgstr ""
+
+#: ../woocommerce/checkout/form-checkout.php:43
+msgid "Your order"
+msgstr ""
+
+#: ../woocommerce/checkout/form-coupon.php:17
+msgid "Have a coupon?"
+msgstr ""
+
+#: ../woocommerce/checkout/form-coupon.php:18
+msgid "Click here to enter your code"
+msgstr ""
+
+#: ../woocommerce/checkout/form-shipping.php:30
+msgid "Ship to a different address?"
+msgstr ""
+
+#: ../woocommerce/checkout/form-shipping.php:57
+#: ../woocommerce/single-product/tabs/additional-information.php:14
+msgid "Additional Information"
+msgstr ""
+
+#: ../woocommerce/loop/add-to-cart.php:22
+msgid "Add to Cart"
+msgstr ""
+
+#: ../woocommerce/loop/no-products-found.php:16
+msgid "No products were found matching your selection."
+msgstr ""
+
+#: ../woocommerce/loop/pagination.php:18
+msgid "Load more"
+msgstr ""
+
+#: ../woocommerce/loop/result-count.php:28
+msgid "Viewing the single result"
+msgstr ""
+
+#: ../woocommerce/loop/result-count.php:30
+#, php-format
+msgid "Viewing all %d products"
+msgstr ""
+
+#: ../woocommerce/loop/sale-flash.php:16
+#: ../woocommerce/single-product/sale-flash.php:16
+msgid "Sale!"
+msgstr ""
+
+#: ../woocommerce/loop/sold-out-flash.php:16
+#: ../woocommerce/single-product/sold-out-flash.php:16
+msgid "Sold Out!"
+msgstr ""
+
+#: ../woocommerce/myaccount/form-add-payment-method.php:40
+msgid ""
+"Sorry, it seems that there are no payment methods which support adding a new "
+"payment method. Please contact us if you require assistance or wish to make "
+"alternate arrangements."
+msgstr ""
+
+#: ../woocommerce/myaccount/form-add-payment-method.php:48
+msgid "Add Payment Method"
+msgstr ""
+
+#: ../woocommerce/myaccount/form-edit-address.php:14
+#: ../woocommerce/myaccount/my-address.php:20
+#: ../woocommerce/order/order-details.php:147
+msgid "Shipping Address"
+msgstr ""
+
+#: ../woocommerce/myaccount/form-edit-address.php:43
+msgid "Save Address"
+msgstr ""
+
+#: ../woocommerce/myaccount/form-login.php:32
+msgid "Username or email address"
+msgstr ""
+
+#: ../woocommerce/myaccount/form-login.php:36
+#: ../woocommerce/myaccount/form-login.php:88
+msgid "Password"
+msgstr ""
+
+#: ../woocommerce/myaccount/form-login.php:46
+msgid "Remember me"
+msgstr ""
+
+#: ../woocommerce/myaccount/form-login.php:50
+msgid "Lost your password?"
+msgstr ""
+
+#: ../woocommerce/myaccount/form-login.php:65
+#: ../woocommerce/myaccount/form-login.php:100
+msgid "Register"
+msgstr ""
+
+#: ../woocommerce/myaccount/form-login.php:76
+msgid "Username"
+msgstr ""
+
+#: ../woocommerce/myaccount/form-login.php:83
+msgid "Email address"
+msgstr ""
+
+#: ../woocommerce/myaccount/form-login.php:93
+msgid "Anti-spam"
+msgstr ""
+
+#: ../woocommerce/myaccount/my-address.php:17
+msgid "My Addresses"
+msgstr ""
+
+#: ../woocommerce/myaccount/my-address.php:23
+msgid "My Address"
+msgstr ""
+
+#: ../woocommerce/myaccount/my-address.php:39
+msgid "The following addresses will be used on the checkout page by default."
+msgstr ""
+
+#: ../woocommerce/myaccount/my-address.php:52
+msgid "Edit"
+msgstr ""
+
+#: ../woocommerce/myaccount/my-address.php:72
+msgid "You have not set up this type of address yet."
+msgstr ""
+
+#: ../woocommerce/myaccount/my-orders.php:28
+msgid "Recent Orders"
+msgstr ""
+
+#: ../woocommerce/myaccount/my-orders.php:36
+msgid "Order"
+msgstr ""
+
+#: ../woocommerce/myaccount/my-orders.php:75
+msgid "Pay"
+msgstr ""
+
+#: ../woocommerce/myaccount/my-orders.php:82
+msgid "Cancel"
+msgstr ""
+
+#: ../woocommerce/order/order-details.php:18
+msgid "Order Details"
+msgstr ""
+
+#: ../woocommerce/order/order-details.php:70
+#, php-format
+msgid "Download file%s"
+msgstr ""
+
+#: ../woocommerce/order/order-details.php:103
+msgid "Customer details"
+msgstr ""
+
+#: ../woocommerce/order/order-details.php:109
+msgid "Email:"
+msgstr ""
+
+#: ../woocommerce/order/order-details.php:110
+msgid "Telephone:"
+msgstr ""
+
+#: ../woocommerce/order/order-details.php:134
+#: ../woocommerce/order/order-details.php:153
+msgid "N/A"
+msgstr ""
+
+#: ../woocommerce/order/tracking.php:18
+#, php-format
+msgid "Order %s which was made %s has the status &ldquo;%s&rdquo;"
+msgstr ""
+
+#: ../woocommerce/order/tracking.php:18
+msgid "ago"
+msgstr ""
+
+#: ../woocommerce/order/tracking.php:20
+msgid "and was completed"
+msgstr ""
+
+#: ../woocommerce/order/tracking.php:20
+msgid " ago"
+msgstr ""
+
+#: ../woocommerce/order/tracking.php:33
+msgid "Order Updates"
+msgstr ""
+
+#: ../woocommerce/order/tracking.php:41
+msgid "l jS \\o\\f F Y, h:ia"
+msgstr ""
+
+#: ../woocommerce/single-product/meta.php:20
+msgid "SKU:"
+msgstr ""
+
+#: ../woocommerce/single-product/meta.php:20
+msgid "n/a"
+msgstr ""
+
+#: ../woocommerce/single-product/related.php:36
+msgid "Related Products"
+msgstr ""
+
+#: ../woocommerce/single-product/review.php:26
+msgid "Your comment is awaiting approval"
+msgstr ""
+
+#: ../woocommerce/single-product/review.php:35
+msgid "verified owner"
+msgstr ""
+
+#: ../woocommerce/single-product/review.php:44
+#, php-format
+msgid "Rated %d out of 5"
+msgstr ""
+
+#: ../woocommerce/single-product/up-sells.php:42
+msgid "You may also like&hellip;"
+msgstr ""
+
+#: ../woocommerce/single-product/add-to-cart/variable.php:83
+msgid "Add to cart"
+msgstr ""

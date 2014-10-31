@@ -1,0 +1,323 @@
+/* Icon List shortcode */
+.wpb-element-edit-modal .wpb_edit_form_elements .mpc-vc-list-items-template {
+	display: none;
+}
+.wpb-element-edit-modal .wpb_edit_form_elements .mpc-vc-list-items-icons-wrap {
+	display: none;
+	padding: 5px;
+	background: #fff;
+	border: 1px solid #eeeeee;
+	border-radius: 3px;
+	cursor: pointer;
+}
+.wpb-element-edit-modal .wpb_edit_form_elements .mpc-vc-list-items-icons-wrap i {
+	display: inline-block;
+	font-size: 24px;
+	width: 32px;
+	height: 32px;
+	line-height: 30px;
+	text-align: center;
+	color: #515151;
+}
+.wpb-element-edit-modal .wpb_edit_form_elements .mpc-vc-list-single-item {
+	position: relative;
+	margin-bottom: 8px;
+}
+.wpb-element-edit-modal .wpb_edit_form_elements .mpc-vc-item-add i,
+.wpb-element-edit-modal .wpb_edit_form_elements .mpc-vc-list-items-wrap .mpc-vc-item-up i,
+.wpb-element-edit-modal .wpb_edit_form_elements .mpc-vc-list-items-wrap .mpc-vc-item-down i,
+.wpb-element-edit-modal .wpb_edit_form_elements .mpc-vc-list-items-wrap .mpc-vc-item-duplicate i,
+.wpb-element-edit-modal .wpb_edit_form_elements .mpc-vc-list-items-wrap .mpc-vc-item-delete i,
+.wpb-element-edit-modal .wpb_edit_form_elements .mpc-vc-list-items-wrap .mpc-vc-item-icon i {
+	width: 31px;
+	height: 31px;
+	display: inline-block;
+	line-height: 31px;
+	text-align: center;
+	font-size: 14px;
+}
+.wpb-element-edit-modal .wpb_edit_form_elements .mpc-vc-list-items-wrap .mpc-vc-item-text-wrap {
+  position: absolute;
+  top: 0;
+  left: 32px;
+  right: 164px;
+  width: auto;
+}
+.wpb-element-edit-modal .wpb_edit_form_elements .mpc-vc-list-items-wrap .mpc-vc-item-text {
+  padding: 6px;
+	border-radius: 0px 3px 3px 0px;
+}
+.wpb-element-edit-modal .wpb_edit_form_elements .mpc-vc-item-add,
+.wpb-element-edit-modal .wpb_edit_form_elements .mpc-vc-list-items-wrap .mpc-vc-item-icon,
+.wpb-element-edit-modal .wpb_edit_form_elements .mpc-vc-list-items-wrap .mpc-vc-item-up,
+.wpb-element-edit-modal .wpb_edit_form_elements .mpc-vc-list-items-wrap .mpc-vc-item-down,
+.wpb-element-edit-modal .wpb_edit_form_elements .mpc-vc-list-items-wrap .mpc-vc-item-duplicate,
+.wpb-element-edit-modal .wpb_edit_form_elements .mpc-vc-list-items-wrap .mpc-vc-item-delete {
+	position: absolute;
+	top: 0;
+	width: 31px;
+	height: 31px;
+	border-radius: 3px;
+	overflow: hidden;
+	background: #ffffff;
+	color: #515151;
+	border: 1px solid #eeeeee;
+}
+.wpb-element-edit-modal .wpb_edit_form_elements .mpc-vc-list-items-wrap .mpc-vc-item-delete {
+  right: 0;
+}
+.wpb-element-edit-modal .wpb_edit_form_elements .mpc-vc-list-items-wrap .mpc-vc-item-duplicate {
+  right: 41px;
+}
+.wpb-element-edit-modal .wpb_edit_form_elements .mpc-vc-list-items-wrap .mpc-vc-item-down {
+	right: 82px;
+}
+.wpb-element-edit-modal .wpb_edit_form_elements .mpc-vc-list-items-wrap .mpc-vc-item-up {
+	right: 123px;
+}
+.wpb-element-edit-modal .wpb_edit_form_elements .mpc-vc-list-items-wrap .mpc-vc-item-icon {
+	position: relative;
+	background: #f5f5f5;
+	border: 1px solid #eeeeee;
+	border-radius: 3px 0px 0px 3px;
+	display: block;
+	margin-bottom: 8px;
+}
+.wpb-element-edit-modal .wpb_edit_form_elements .mpc-vc-item-add {
+	position: relative;
+	display: block;
+}
+
+/* Testimonials Slider shortcode */
+.wpb-element-edit-modal .wpb_edit_form_elements .mpc-vc-testimonials-template {
+  display: none;
+}
+.wpb-element-edit-modal .wpb_edit_form_elements .mpc-vc-single-testimonial {
+  position: relative;
+  margin-bottom: 10px;
+  padding-bottom: 10px;
+  border-bottom: 1px dashed #ccc;
+}
+.wpb-element-edit-modal .wpb_edit_form_elements .mpc-vc-testimonial-add i,
+.wpb-element-edit-modal .wpb_edit_form_elements .mpc-vc-testimonials-wrap .mpc-vc-testimonial-up i,
+.wpb-element-edit-modal .wpb_edit_form_elements .mpc-vc-testimonials-wrap .mpc-vc-testimonial-down i,
+.wpb-element-edit-modal .wpb_edit_form_elements .mpc-vc-testimonials-wrap .mpc-vc-testimonial-duplicate i,
+.wpb-element-edit-modal .wpb_edit_form_elements .mpc-vc-testimonials-wrap .mpc-vc-testimonial-delete i,
+.wpb-element-edit-modal .wpb_edit_form_elements .mpc-vc-testimonials-wrap .mpc-vc-testimonial-icon i {
+  width: 31px;
+  height: 31px;
+  display: inline-block;
+  line-height: 31px;
+  text-align: center;
+  font-size: 14px;
+}
+.wpb-element-edit-modal .wpb_edit_form_elements .mpc-vc-testimonials-wrap .mpc-vc-testimonial-author-wrap {
+  position: relative;
+  width: 559px;
+  display: block;
+  margin-bottom: 8px;
+}
+.wpb-element-edit-modal .wpb_edit_form_elements .mpc-vc-testimonials-wrap .mpc-vc-testimonial-text-wrap {
+  /*position: absolute;
+  top: 0;
+  left: 168px;
+  right: 164px;
+  width: auto;*/
+}
+.wpb-element-edit-modal .wpb_edit_form_elements .mpc-vc-testimonials-wrap .mpc-vc-testimonial-author {
+  padding: 6px;
+  border-radius: 3px;
+  border: 1px solid #eeeeee;
+  box-shadow: none;
+
+  -webkit-transition: all .25s;
+  transition: all .25s;
+}
+.wpb-element-edit-modal .wpb_edit_form_elements .mpc-vc-testimonials-wrap .mpc-vc-testimonial-text {
+  width: 100%;
+  max-width: 100%;
+  min-width: 100%;
+  display: block;
+  padding: 6px;
+  border-radius: 3px;
+  border: 1px solid #eeeeee;
+  box-shadow: none;
+
+  -webkit-transition: all .25s;
+  transition: all .25s;
+}
+.wpb-element-edit-modal .wpb_edit_form_elements .mpc-vc-testimonials-wrap .mpc-vc-testimonial-author:focus,
+.wpb-element-edit-modal .wpb_edit_form_elements .mpc-vc-testimonials-wrap .mpc-vc-testimonial-author:hover,
+.wpb-element-edit-modal .wpb_edit_form_elements .mpc-vc-testimonials-wrap .mpc-vc-testimonial-text:focus,
+.wpb-element-edit-modal .wpb_edit_form_elements .mpc-vc-testimonials-wrap .mpc-vc-testimonial-text:hover {
+  border: 1px solid #dddddd;
+  box-shadow: inset 0 1px 2px rgba(0,0,0,.07);
+  background: #f9f9f9;
+}
+.wpb-element-edit-modal .wpb_edit_form_elements .mpc-vc-testimonial-add,
+.wpb-element-edit-modal .wpb_edit_form_elements .mpc-vc-testimonials-wrap .mpc-vc-testimonial-up,
+.wpb-element-edit-modal .wpb_edit_form_elements .mpc-vc-testimonials-wrap .mpc-vc-testimonial-down,
+.wpb-element-edit-modal .wpb_edit_form_elements .mpc-vc-testimonials-wrap .mpc-vc-testimonial-duplicate,
+.wpb-element-edit-modal .wpb_edit_form_elements .mpc-vc-testimonials-wrap .mpc-vc-testimonial-delete {
+  position: absolute;
+  top: 0;
+  width: 31px;
+  height: 31px;
+  border-radius: 3px;
+  overflow: hidden;
+  background: #ffffff;
+  color: #515151;
+  border: 1px solid #eeeeee;
+
+  -webkit-transition: all .25s;
+  transition: all .25s;
+}
+.wpb-element-edit-modal .wpb_edit_form_elements .mpc-vc-testimonial-add:hover,
+.wpb-element-edit-modal .wpb_edit_form_elements .mpc-vc-testimonials-wrap .mpc-vc-testimonial-up:hover,
+.wpb-element-edit-modal .wpb_edit_form_elements .mpc-vc-testimonials-wrap .mpc-vc-testimonial-down:hover,
+.wpb-element-edit-modal .wpb_edit_form_elements .mpc-vc-testimonials-wrap .mpc-vc-testimonial-duplicate:hover,
+.wpb-element-edit-modal .wpb_edit_form_elements .mpc-vc-testimonials-wrap .mpc-vc-testimonial-delete:hover {
+  border: 1px solid #dddddd;
+  background: #f9f9f9;
+}
+.wpb-element-edit-modal .wpb_edit_form_elements .mpc-vc-testimonials-wrap .mpc-vc-testimonial-delete {
+  right: 0;
+}
+.wpb-element-edit-modal .wpb_edit_form_elements .mpc-vc-testimonials-wrap .mpc-vc-testimonial-duplicate {
+  right: 41px;
+}
+.wpb-element-edit-modal .wpb_edit_form_elements .mpc-vc-testimonials-wrap .mpc-vc-testimonial-down {
+  right: 82px;
+}
+.wpb-element-edit-modal .wpb_edit_form_elements .mpc-vc-testimonials-wrap .mpc-vc-testimonial-up {
+  right: 123px;
+}
+.wpb-element-edit-modal .wpb_edit_form_elements .mpc-vc-testimonial-add {
+  position: relative;
+  display: block;
+}
+.wpb-element-edit-modal .wpb_edit_form_elements .wpb_el_type_testimonials {
+  border-bottom: none;
+  padding-bottom: 0;
+  margin-bottom: 0;
+}
+.wpb-element-edit-modal .wpb_edit_form_elements .wpb_el_type_testimonials + .wpb_el_type_textarea {
+  display: none;
+}
+
+/* Hide activation notices */
+.vc-license-activation-notice {
+	display: none;
+}
+a[href='#vc-settings-updater'] {
+	display: none;
+}
+.rs-update-notice-wrap {
+	display: none;
+}
+a[name=activateplugin] + div + div.title_line + div#benefitscontent + div,
+a[name=activateplugin] + div + div.title_line + div#benefitscontent,
+a[name=activateplugin] + div + div.title_line,
+a[name=activateplugin] + div {
+	display: none;
+}
+
+/* Lookbook badge */
+.mpcth-lookbook-badge,
+.mpcth-lookbook-badge-double {
+  position: relative;
+  display: block;
+  width: 70px;
+  height: 70px;
+  font-weight: bold;
+  font-size: 14px;
+  text-align: center;
+  line-height: 70px;
+  border-radius: 35px;
+  color: white;
+  background: rgba(148, 81, 132, 0.8);
+  border-color: rgba(148, 81, 132, 0.8);
+  text-decoration: none;
+}
+.mpcth-lookbook-badge .mpcth-lookbook-badge-price-wrap,
+.mpcth-lookbook-badge-double .mpcth-lookbook-badge-price-wrap {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+.mpcth-lookbook-badge .mpcth-lookbook-badge-price-wrap:hover + .mpcth-lookbook-badge-tooltip,
+.mpcth-lookbook-badge-double .mpcth-lookbook-badge-price-wrap:hover + .mpcth-lookbook-badge-tooltip {
+  visibility: visible;
+  margin-bottom: 1.5em !important;
+  opacity: 1;
+  filter: alpha(opacity=100);
+}
+.mpcth-lookbook-badge .mpcth-lookbook-badge-label,
+.mpcth-lookbook-badge-double .mpcth-lookbook-badge-label {
+  display: block;
+  font-weight: normal;
+  text-transform: uppercase;
+}
+.mpcth-lookbook-badge .mpcth-lookbook-badge-price,
+.mpcth-lookbook-badge-double .mpcth-lookbook-badge-price {
+  display: block;
+}
+.mpcth-lookbook-badge .mpcth-lookbook-badge-tooltip,
+.mpcth-lookbook-badge-double .mpcth-lookbook-badge-tooltip {
+  position: absolute;
+  left: 50%;
+  bottom: 100%;
+  margin-bottom: 0 !important;
+  padding: 0.5em 0.75em;
+  border-radius: 3px;
+  font-size: 12px;
+  line-height: 1.25em;
+  white-space: nowrap;
+  visibility: hidden;
+  z-index: 2;
+  background: inherit;
+  border: 0 solid transparent;
+  border-color: inherit;
+  -webkit-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  transform: translateX(-50%);
+  opacity: 0;
+  filter: alpha(opacity=0);
+}
+.mpcth-lookbook-badge .mpcth-lookbook-badge-tooltip:after,
+.mpcth-lookbook-badge-double .mpcth-lookbook-badge-tooltip:after {
+  content: '';
+  position: absolute;
+  bottom: -0.5em;
+  left: 50%;
+  margin-left: -.5em;
+  width: 0;
+  height: 0;
+  border: 0.5em solid transparent;
+  border-bottom: 0px solid transparent;
+  border-top-color: inherit;
+}
+.mpcth-lookbook-badge:hover,
+.mpcth-lookbook-badge-double:hover {
+  color: white !important;
+}
+
+.mpcth-lookbook-badge-double {
+  line-height: 20px;
+}
+.mpcth-lookbook-badge-double .mpcth-lookbook-badge-price-wrap {
+  padding: 15px 0;
+}
+
+.ie .mpcth-lookbook-badge .mpcth-lookbook-badge-tooltip,
+.ie .mpcth-lookbook-badge-double .mpcth-lookbook-badge-tooltip {
+  left: 0;
+}
+.ie .mpcth-lookbook-badge .mpcth-lookbook-badge-tooltip:after,
+.ie .mpcth-lookbook-badge-double .mpcth-lookbook-badge-tooltip:after {
+  left: 35px;
+}
+
+.wpb-element-edit-modal .wpb_el_type_hidden_fb {
+  display: none;
+}
