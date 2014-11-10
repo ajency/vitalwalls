@@ -239,7 +239,7 @@ function vitalwalls_add_tryit_link() {
                 if ($productmeta_id) { ?>
                 <div id="personalized-popup">
                 <?php
-               // include_once('personalized-option.php'); ?>
+                include_once('personalized-option.php'); ?>
                 </div>
                 <?php }
                 ?>                	
