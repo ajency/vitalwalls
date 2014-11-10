@@ -60,3 +60,13 @@ body
 
 #mpcth_page_wrap #mpcth_smart_search_wrap #s:-ms-input-placeholder,#mpcth_page_wrap #mpcth_smart_search_wrap #s:-ms-input-placeholder
 		{ color: #ed1b24; }
+
+
+.brown_wood_frame img{
+    border-style: solid;
+    border-width: 35px;
+    -moz-border-image: url(images/brown_wood_frame.jpg) 128 repeat;
+    -webkit-border-image: url(images/brown_wood_frame.jpg) 128 repeat;
+    -o-border-image: url(images/brown_wood_frame.jpg) 128 repeat;
+    border-image: url(images/brown_wood_frame.jpg) 128 repeat;
+}
