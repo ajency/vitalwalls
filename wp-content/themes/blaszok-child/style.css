@@ -49,6 +49,10 @@ Version:        1.0
 	margin: 0 -20px;
 }
 
+#size-drop{
+	width:130px !important;
+}
+
 /**** TRY IT STYLES ****/
 #toolbar{position:fixed; z-index:3; right:5%; top:60px; padding:5px; background:url('images/fs_img_g_bg.png');}
 #toolbar img{border:none;}
@@ -403,6 +407,14 @@ border: 9px solid #000;
 
 .bx-wrapper .bx-pager {
 padding-top: 0px !important;
+}
+
+.frame-title{
+z-index: 9999;
+position: relative;
+text-align: center;
+margin-top: 20px;
+color:#FFF;
 }
 
 
