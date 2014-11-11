@@ -402,6 +402,14 @@ border: 9px solid #000;
 padding-top: 0px !important;
 }
 
+.frame-title{
+z-index: 9999;
+position: relative;
+text-align: center;
+margin-top: 20px;
+color:#FFF;
+}
+
 
 .woocommerce-page.single-product #mpcth_page_wrap #mpcth_content > .product .product_meta .pa_size-chart{
 display: block;

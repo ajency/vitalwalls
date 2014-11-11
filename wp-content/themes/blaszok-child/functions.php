@@ -445,11 +445,13 @@ function vitalwalls_add_tryit_link() {
                 <!--###################################END VARIATION DROPDOWN12345#####################################-->
 			</div>
 
+			<div class="frame-title"></div>
+
 			<div id="tryit-picture">
 				<div id="frame">
 					<ul class="bxslider">
 					  <li>
-					  	<div class="oneinchwood fullframe" title="Gallery wrap on 1 inch wood"></div>
+					  	<div class="oneinchwood fullframe" title="Gallery wrap on 1 inch wood" onClick="changeFrameTitle();"></div>
 					  </li>
 					  <li>
 					  	<div class="oneinchbrown fullframe" title="Gallery wrap on 1 inch wood"></div>
@@ -543,6 +545,14 @@ function vitalwalls_add_tryit_link() {
             jQuery(document).ready(function(){
 
 
+            	
+            	jQuery('.frame-title').html('Gallery wrap on 1 inch wood');
+				
+
+
+
+
+
                 //var mediumVar = jsSizeVariationsArr['medium'];
                 //alert(mediumVar);
                 //jQuery(".variations #size").val('small');
@@ -627,7 +637,10 @@ function vitalwalls_add_tryit_link() {
 					}
 				});
 
-				
+
+
+
+
 				// Orange Box Settings
 				oB.settings.contentBorderWidth= 1;
     			oB.settings.fadeControls = true;
@@ -701,6 +714,10 @@ function vitalwalls_add_tryit_link() {
                     }
     			});
 
+
+
+
+
                 jQuery(document).bind('oB_closed',function(){
                     //alert("On close event of popup");
 					//var frame_popup = jQuery("#frames_popup").val();
@@ -743,6 +760,10 @@ function vitalwalls_add_tryit_link() {
                 });
 
                 jQuery('#box-frames select').customSelect({customClass:'mpcthSelect'});
+
+
+                
+
             });
 		</script>
 	<?php
