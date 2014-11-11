@@ -475,25 +475,7 @@ function vitalwalls_add_tryit_link() {
 			<div class="frame-title"></div>
 
 			<div id="tryit-picture">
-				<div id="frame">
-					<ul class="bxslider">
-					  <li>
-					  	<div class="oneinchwood fullframe" title="Gallery wrap on 1 inch wood" onClick="changeFrameTitle();"></div>
-					  </li>
-					  <li>
-					  	<div class="oneinchbrown fullframe" title="Gallery wrap on 1 inch wood"></div>
-					  </li>
-					  <li>
-					  	<div class="onefiveinchbrown fullframe" title="Gallery wrap on 1 inch wood"></div>
-					  </li>
-					  <li>
-					  	<div class="onefiveinchwhite fullframe" title="Gallery wrap on 1 inch wood"></div>
-					  </li>
-					  <li>
-					  	<div class="twoinchblack fullframe" title="Gallery wrap on 1 inch wood"></div>
-					  </li>
-					</ul>
-				</div>
+
 				<div id="img-holder" class="brown_wood_frame">
 					<?php echo get_the_post_thumbnail(); ?>
 				</div>
