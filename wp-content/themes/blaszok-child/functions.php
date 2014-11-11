@@ -262,7 +262,7 @@ function vitalwalls_add_tryit_link() {
 
                 
 
-                Size: <select name="size-drop" id="size-drop" style="width:130px !important;">
+                Size: <select name="size-drop" id="size-drop" >
                 <option value="Small" data-width="<?php echo getWidth('small'); ?>" data-height="<?php echo getHeight('small'); ?>">Small</option>
                 <option value="Medium" data-width="<?php echo getWidth('medium'); ?>" data-height="<?php echo getHeight('medium'); ?>">Medium</option>
                 <option value="Large" data-width="<?php echo getWidth('large'); ?>" data-height="<?php echo getHeight('large'); ?>">Large</option>
@@ -270,7 +270,31 @@ function vitalwalls_add_tryit_link() {
 
 
 
-                
+                <script type="text/javascript">
+                	jQuery(document).ready(function() {
+                	    //set default dimension
+                	    var defaultWidth = parseInt(jQuery( "#size-drop option:selected" ).attr('data-width'))*50;
+                	    var defaultHeight = parseInt(jQuery( "#size-drop option:selected" ).attr('data-height'))*50;
+                	    jQuery("#img-holder>img").css({"width": defaultWidth,"height":defaultHeight});
+
+
+                	    jQuery('.frames_holder li').on('click', function(){
+                	    	var newClass = jQuery(this).attr('class');
+                	        jQuery('.frames_holder li').removeClass('current');
+                	        jQuery(this).addClass('current');
+                	        jQuery("#img-holder").removeAttr('class');
+                	        jQuery("#img-holder").addClass(newClass);
+
+                	     });
+
+
+                	    jQuery('#size-drop').change(function(){
+                	    var width = parseInt(jQuery( "option:selected",this ).attr('data-width'))*50;
+                	    var height = parseInt(jQuery( "option:selected",this ).attr('data-height'))*50;
+                	    jQuery("#img-holder>img").css({"width": width,"height":height});
+                	    });
+                	});
+                </script>
 
 
 
@@ -479,6 +503,17 @@ function vitalwalls_add_tryit_link() {
 				<div id="img-holder" class="brown_wood_frame">
 					<?php echo get_the_post_thumbnail(); ?>
 				</div>
+
+				<div class="frames_holder">
+					<ul>
+						<li class="brown_wood_frame current"></li>
+						<li></li>
+						<li></li>
+						<li></li>
+						<li></li>
+					</ul>
+				</div>
+
 			</div>
 			<!--<div id="toolbar">
 				<a href="#" title="Maximize" onClick="ImageViewMode('full');return false"><img src="<?php echo get_stylesheet_directory_uri(); ?>/images/toolbar_fs_icon.png" width="50" height="50"  /></a>
@@ -713,7 +748,7 @@ function vitalwalls_add_tryit_link() {
     					/*var h = jQuery('#tryit-picture').height();
 						jQuery('#frame img').height(h);*/
 
-						slider.reloadSlider();
+						// slider.reloadSlider();
     					jQuery(window).trigger('resize');
     				}, 500)
 
