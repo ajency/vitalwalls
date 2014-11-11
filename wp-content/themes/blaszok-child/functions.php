@@ -467,7 +467,7 @@ function vitalwalls_add_tryit_link() {
 					  </li>
 					</ul>
 				</div>
-				<div id="img-holder">
+				<div id="img-holder" class="brown_wood_frame">
 					<?php echo get_the_post_thumbnail(); ?>
 				</div>
 			</div>
