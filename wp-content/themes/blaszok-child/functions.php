@@ -280,6 +280,8 @@ function vitalwalls_add_tryit_link() {
 
                 	    jQuery('.frames_holder li').on('click', function(){
                 	    	var newClass = jQuery(this).attr('class');
+                	    	var frameName = jQuery(this).attr('title')
+                	    	jQuery('.frame-title').html(frameName);
                 	        jQuery('.frames_holder li').removeClass('current');
                 	        jQuery(this).addClass('current');
                 	        jQuery("#img-holder").removeAttr('class');
@@ -506,11 +508,11 @@ function vitalwalls_add_tryit_link() {
 
 				<div class="frames_holder">
 					<ul>
-						<li class="brown_wood_frame current"></li>
-						<li></li>
-						<li></li>
-						<li></li>
-						<li></li>
+						<li class="brown_wood_frame current" title="Gallery wrap on 1 inch wood"></li>
+						<li title="second frame"></li>
+						<li title="third frame"></li>
+						<li title="fourth frame"></li>
+						<li title="fifth frame"></li>
 					</ul>
 				</div>
 
