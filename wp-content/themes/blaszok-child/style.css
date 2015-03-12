@@ -106,3 +106,12 @@ font-weight: normal;
 float: none;
 clear:both;
 }
+
+
+.woocommerce-message {
+font-size: 17px !important;
+}
+
+.woocommerce-message .fa {
+top: 0.550em !important;
+}

@@ -7,6 +7,21 @@ var boxes		= new Array();	//checking bound connection
 
 jQuery(function($){
 
+	//alert dialogue for product remove from cart
+	$('.product-remove a').click(function(){
+		return confirm('Are you sure want to remove the product?');
+	});
+
+	//highlight update button when quantity change
+	$('.quantity input').change(function(){
+		$(".cart-totals-wrap input[name*='update_cart']").css('border','2px dotted #ed1b24');
+	});
+
+
+
+
+
+
 	$('.nm-productmeta-box select').each(function(){
 		$(this).customSelect({customClass:'mpcthSelect'});
 		this.style.setProperty( 'width', 'auto', 'important' );
