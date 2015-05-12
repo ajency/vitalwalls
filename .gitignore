@@ -3,3 +3,4 @@ wp-content/uploads
 wp-config.php
 wp-content/plugins/js_composer
 wp-content/plugins/woocommerce-csvimport
+wp-content/plugins/woocommerce-product-csv-import-suite
