@@ -187,3 +187,130 @@ add_action('woocommerce_single_product_beforeprice', 'getSizeChart', 25);
 
 
 
+
+
+
+
+
+
+
+
+
+//Add author box in product add/edit page
+function author_meta_box() {
+
+  $screens = array( 'product' );
+
+  foreach ( $screens as $screen ) {
+
+    add_meta_box(
+      'product_author',
+      __( 'Author', '' ),
+      'seller_meta_box_callback',
+      $screen,'normal','default'
+    );
+  }
+}
+
+
+if( current_user_can('administrator') ) {
+  add_action( 'add_meta_boxes', 'author_meta_box' );
+}
+
+
+
+function seller_meta_box_callback( $post ) {
+
+	$default_seller_id = DEFAULT_SELLER_ID;
+
+	global $current_user;
+
+	$output = "<select id=\"post_author_override\" name=\"post_author_override\" class=\"\">";
+
+
+	$author_list = get_users( array( 'role' => 'author' ) );
+
+	$output .= '<option value="'.$current_user->ID.'">'.$current_user->display_name.'</option>';
+
+	foreach($author_list as $author)
+	{
+
+		global $current_screen;
+		if( $current_screen->post_type =='product' && $current_screen->action == 'add'){
+			$sel = ($default_seller_id == $author->ID)?"selected='selected'":'';
+		}else{
+			$sel = ($post->post_author == $author->ID)?"selected='selected'":'';
+		}
+
+		$output .= '<option value="'.$author->ID.'"'.$sel.'>'.$author->display_name.'</option>';
+	}
+	$output .= "</select>";
+	echo $output;
+
+}
+
+
+
+
+
+
+
+//Adding author tab to single product page
+add_filter( 'woocommerce_product_tabs', 'wmp_seller_product_tab' );
+function wmp_seller_product_tab( $tabs ) {
+//checking if product belongs to author
+	global $post;
+	$role = get_user_role($post->post_author);
+	
+	if($role == 'author'){
+
+		$tabs['author_tab'] = array(
+			'title'     => __( 'Author', 'woocommerce' ),
+			'priority'  => 50,
+			'callback'  => 'author_tab_content'
+			);
+	}
+	return $tabs;
+}
+
+//Author Tab Content
+function author_tab_content(){
+	global $post;
+	$author_id = $post->post_author;
+	$author = get_userdata( $author_id );
+	echo $author->display_name;
+}
+
+
+
+//get user role
+   function get_user_role($uid) {
+   	global $wpdb;
+   	if ( is_multisite() ) { 
+   		$role = $wpdb->get_var("SELECT meta_value FROM {$wpdb->usermeta} WHERE meta_key = 'wp_".get_current_blog_id()."_capabilities' AND user_id = {$uid}");
+   	}else{
+   		$role = $wpdb->get_var("SELECT meta_value FROM {$wpdb->usermeta} WHERE meta_key = 'wp_capabilities' AND user_id = {$uid}");
+   	}
+   	if(!$role) return 'non-user';
+   	$rarr = unserialize($role);
+   	$roles = is_array($rarr) ? array_keys($rarr) : array('non-user');
+   	return $roles[0];
+   }
+
+
+
+
+
+
+
+
+//add_action('template_redirect', 'show_my_author');
+function show_my_author(){
+	global $post;
+	print_r($post->post_author);
+	//echo "test author";
+}
+
+
+
+
