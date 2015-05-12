@@ -264,8 +264,8 @@ function wmp_seller_product_tab( $tabs ) {
 	
 	if($role == 'author'){
 
-		$tabs['author_tab'] = array(
-			'title'     => __( 'Author', 'woocommerce' ),
+		$tabs['artist_tab'] = array(
+			'title'     => __( 'Artist', 'woocommerce' ),
 			'priority'  => 50,
 			'callback'  => 'author_tab_content'
 			);
