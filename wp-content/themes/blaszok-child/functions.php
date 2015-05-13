@@ -984,3 +984,24 @@ function author_tab_content(){
 
 
 
+
+
+
+   function is_painting($product_id){
+   	global $wpdb;
+
+   	$product_meta_id = get_post_meta($product_id, '_product_meta_id', true);
+   	if($product_meta_id>0){
+
+   		$meta_name = $wpdb->get_var( "SELECT productmeta_name FROM wp_nm_personalized WHERE productmeta_id=$product_meta_id" );
+
+   		if($meta_name == 'Painting Options'){
+   			return true;
+   		}else{
+   			return false;
+   		}
+
+   	}else{
+   		return false;
+   	}
+   }

@@ -15,11 +15,7 @@ global $post, $product;
 
 	<?php do_action( 'woocommerce_product_meta_start' ); ?>
 
-	<?php if ( wc_product_sku_enabled() && ( $product->get_sku() || $product->is_type( 'variable' ) ) ) : ?>
-
-		<span class="sku_wrapper"><?php _e( 'SKU:', 'woocommerce' ); ?> <span class="sku" itemprop="sku"><?php echo ( $sku = $product->get_sku() ) ? $sku : __( 'n/a', 'woocommerce' ); ?></span>.</span>
-
-	<?php endif; ?>
+	
 
 	<?php echo $product->get_categories( ', ', '<span class="posted_in">' . _n( 'Category:', 'Categories:', sizeof( get_the_terms( $post->ID, 'product_cat' ) ), 'woocommerce' ) . ' ', '</span>' ); ?>
 
@@ -28,3 +24,4 @@ global $post, $product;
 	<?php do_action( 'woocommerce_product_meta_end' ); ?>
 
 </div>
+
