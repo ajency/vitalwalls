@@ -115,3 +115,132 @@ font-size: 17px !important;
 .woocommerce-message .fa {
 top: 0.550em !important;
 }
+
+/*custom*/
+.woocommerce-cart #mpcth_page_wrap .mpcth-page-content > .woocommerce > form .shop_table_wrap .shop_table .product-name{
+	width: 200px;
+}
+.woocommerce-cart #mpcth_page_wrap .mpcth-page-content > .woocommerce > form .shop_table_wrap .shop_table .product-thumbnail img{
+	max-width: 80px;
+}
+#mpcth_page_wrap .woocommerce .products .product .mpcth-post-content, .woocommerce #mpcth_page_wrap .products .product .mpcth-post-content{
+	height: 3em;
+}
+#mpcth_page_wrap .woocommerce .products .product .mpcth-post-title, .woocommerce #mpcth_page_wrap .products .product .mpcth-post-title{
+	line-height: 1.5em;
+	padding: 0 13px;
+}
+
+/*style_custom.css file code starts*/
+
+body
+		{ font-size: 13px; }
+
+#mpcth_page_wrap #mpcth_sidebar a:hover,#mpcth_page_wrap #mpcth_footer a:hover,a
+		{ color: #ed1b24; }
+
+#mpcth_page_wrap .mpcth-color-main-color,#mpcth_page_wrap .mpcth-color-main-color-hover:hover
+		{ color: #ed1b24; }
+
+#mpcth_page_wrap .mpcth-color-main-background,#mpcth_page_wrap .mpcth-color-main-background-hover:hover
+		{ background-color: #ed1b24; }
+
+#mpcth_page_wrap .mpcth-color-main-border,#mpcth_page_wrap .mpcth-color-main-border-hover:hover
+		{ border-color: #ed1b24 !important; }
+
+.bbpress #mpcth_content .bbp-replies .reply .bbp-reply-header .bbp-reply-permalink:hover,
+.bbpress #mpcth_content .bbp-replies .topic .bbp-reply-header .bbp-reply-permalink:hover,
+.bbpress #mpcth_content .bbp-replies .reply .bbp-reply-admin-links .bbp-admin-links a:hover,
+.bbpress #mpcth_content .bbp-replies .topic .bbp-reply-admin-links .bbp-admin-links a:hover,
+.bbpress #mpcth_content #bbp-user-wrapper #bbp-single-user-details #bbp-user-navigation .current a,
+.bbpress #mpcth_content #bbp-user-wrapper #bbp-single-user-details #bbp-user-navigation a:hover,
+#mpcth_page_wrap #mpcth_page_header_wrap.mpcth-simple-buttons-enabled #mpcth_controls_wrap #mpcth_controls_container > a.active, #mpcth_page_wrap #mpcth_page_header_wrap.mpcth-simple-buttons-enabled #mpcth_controls_wrap #mpcth_controls_container > a:hover,#jckqv .woocommerce-product-rating .star-rating span:before,#mpcth_page_wrap .woocommerce .mpcth-post-header .mpcth-quick-view .fa:hover,.woocommerce-page #mpcth_page_wrap .mpcth-post-header .mpcth-quick-view .fa:hover,#mpcth_back_to_top:hover,.woocommerce #mpcth_page_wrap .mpcth-shop-style-slim .products .product .mpcth-post-content .fa,.woocommerce #mpcth_page_wrap .mpcth-shop-style-slim .products .product .mpcth-post-content a:hover,.woocommerce #mpcth_page_wrap .mpcth-shop-style-center .products .product .mpcth-post-content .fa,.woocommerce #mpcth_page_wrap .mpcth-shop-style-center .products .product .mpcth-post-content a:hover,.woocommerce #mpcth_page_wrap .mpcth-shop-style-slim .products .product .mpcth-post-content .add_to_cart_button i,.page-template-template-blog-php #mpcth_content .mpcth-post .mpcth-post-title > a:hover,.archive #mpcth_page_wrap #mpcth_content .mpcth-post .mpcth-post-title > a:hover,#mpcth_page_wrap .mpcth-mobile-menu .page_item > a:hover,#mpcth_page_wrap .mpcth-mobile-menu .menu-item > a:hover,#mpcth_page_wrap .mpcth-mobile-menu .page_item.current-menu-item > a,#mpcth_page_wrap .mpcth-mobile-menu .menu-item.current-menu-item > a,.woocommerce-page.single-product #mpcth_page_wrap #mpcth_content > .product .summary .stock.out-of-stock,.woocommerce-wishlist #mpcth_page_wrap #mpcth_content .yith-wcwl-share li a:hover,#mpcth_page_wrap .wpcf7 .contact-form-input label,#mpcth_page_wrap .wpcf7 .contact-form-message label,#mpcth_page_wrap .woocommerce.widget.widget_layered_nav .chosen a,#mpcth_page_wrap #mpcth_page_header_secondary_content #mpcth_newsletter input[type=submit]:hover,#mpcth_page_wrap #mpcth_smart_search_wrap .mpcthSelect,.woocommerce-page.single-product #mpcth_page_wrap #mpcth_content > .product .star-rating span,#mpcth_page_wrap .widget_product_categories .product-categories .cat-item.current-cat > a,#mpcth_page_wrap .products .product .mpcth-post-content .product_type_variable:hover,#mpcth_page_wrap .products .product .mpcth-post-content .add_to_cart_button:hover,.woocommerce-page.single-product #mpcth_page_wrap #mpcth_content > .product .woocommerce-tabs #review_form_wrapper .stars a:hover,#mpcth_page_wrap #mpcth_comments #mpcth_comments_wrap .mpcth-comment-header a:hover,#mpcth_page_wrap .widget .product_list_widget li .star-rating > span,#mpcth_page_wrap .widget .product_list_widget li a,#mpcth_page_wrap #mpcth_main .nivoSlider .nivo-directionNav a,#mpcth_page_wrap #mpcth_main .rev_slider_wrapper .tparrows.default,#mpcth_page_wrap #mpcth_main .flexslider .flex-direction-nav a,#mpcth_page_wrap #mpcth_main .widget a:hover,#mpcth_page_wrap #mpcth_main .widget.widget_text a,#mpcth_page_wrap .widget.mpc-w-twitter-widget a,#mpcth_page_wrap .mpc-sc-tooltip-wrap .mpc-sc-tooltip-text,#mpcth_page_wrap #mpcth_smart_search_wrap select,#mpcth_page_wrap #mpcth_smart_search_wrap input,#mpcth_page_wrap #mpcth_page_header_secondary_content a:hover,#mpcth_page_wrap #mpcth_main .vc_text_separator > div,.woocommerce-page.single-product #mpcth_page_wrap #mpcth_content > .product .woocommerce-tabs .tabs li.active a,.woocommerce-page.single-product #mpcth_page_wrap #mpcth_content > .product .woocommerce-tabs .tabs li:hover a,.woocommerce-page.single-product #mpcth_page_wrap #mpcth_content > .product .woocommerce-accordions h6.active a,.woocommerce-page.single-product #mpcth_page_wrap #mpcth_content > .product .woocommerce-accordions h6:hover a,.woocommerce-page #mpcth_page_wrap .woocommerce-breadcrumb a,#mpcth_page_wrap #mpcth_main #mpcth_content_wrap .wpb_accordion_header.ui-state-active a,#mpcth_page_wrap #mpcth_main #mpcth_content_wrap .wpb_accordion_header:hover a,#mpcth_page_wrap #mpcth_main #mpcth_content_wrap .wpb_toggle.wpb_toggle_title_active .mpcth-title-wrap,#mpcth_page_wrap #mpcth_main #mpcth_content_wrap .wpb_toggle:hover .mpcth-title-wrap,#mpcth_page_wrap #mpcth_main #mpcth_content_wrap .wpb_toggle.wpb_toggle_title_active .mpcth-toggle-mark,#mpcth_page_wrap #mpcth_main #mpcth_content_wrap .wpb_toggle:hover .mpcth-toggle-mark,#mpcth_page_wrap #mpcth_main #mpcth_content_wrap .wpb_tabs .wpb_tabs_nav > li.ui-state-active > a,#mpcth_page_wrap #mpcth_main #mpcth_content_wrap .wpb_tabs .wpb_tabs_nav > li.ui-state-hover > a,#mpcth_page_wrap #mpcth_main #mpcth_content_wrap .wpb_tour .wpb_tabs_nav > li.ui-state-active > a > span,#mpcth_page_wrap #mpcth_main #mpcth_content_wrap .wpb_tour .wpb_tabs_nav > li.ui-state-hover > a > span,#mpcth_page_wrap .mpcth-menu .page_item:hover > a,#mpcth_page_wrap #mpcth_mini_cart a.mpcth-mini-cart-title,#mpcth_page_wrap #mpcth_page_header_wrap #mpcth_nav .mpcth-menu .menu-item:hover > a,body #mpcth_page_wrap #mpcth_page_header_wrap #mpcth_nav .mpcth-menu .page_item.current-menu-item > a,body #mpcth_page_wrap #mpcth_page_header_wrap #mpcth_nav .mpcth-menu .menu-item.current-menu-item > a,body #mpcth_page_wrap #mpcth_page_header_wrap #mpcth_nav #mpcth_mega_menu .widget ul .menu-item > a:hover,body #mpcth_page_wrap #mpcth_page_header_wrap #mpcth_nav #mpcth_mega_menu .widget .sub-container > .sub-menu li > a:hover,body #mpcth_page_wrap #mpcth_page_header_wrap #mpcth_nav #mpcth_mega_menu .widget ul .menu-item.current-page-ancestor > a,body #mpcth_page_wrap #mpcth_page_header_wrap #mpcth_nav #mpcth_mega_menu .widget ul .menu-item.current-menu-item > a,body #mpcth_page_wrap #mpcth_page_header_wrap #mpcth_nav .current-page-ancestor > a,body #mpcth_page_wrap #mpcth_page_header_wrap #mpcth_nav .current-menu-ancestor > a,body #mpcth_page_wrap #mpcth_page_header_wrap #mpcth_nav .current_page_ancestor > a,#mpcth_page_wrap .widget_nav_menu .page_item.current-menu-item > a,#mpcth_page_wrap .widget_nav_menu .menu-item.current-menu-item > a,#mpcth_page_wrap .widget_nav_menu .current-page-ancestor > a,#mpcth_page_wrap .widget_nav_menu .current-menu-ancestor > a,#mpcth_page_wrap .widget_nav_menu .current_page_ancestor > a,#mpcth_page_wrap .mpcth-socials-list li a:hover,#mpcth_page_wrap #mpcth_content .product .mpcth-post-content .price ins .amount,.woocommerce-page #mpcth_page_wrap #mpcth_content .products .product .mpcth-post-categories a:hover,.page-template-template-portfolio-php #mpcth_page_wrap #mpcth_content .mpcth-post .mpcth-post-content .mpcth-post-categories a:hover,.page-template-template-portfolio-php #mpcth_page_wrap #mpcth_portfolio_sorts li.active,.page-template-template-portfolio-php #mpcth_page_wrap #mpcth_portfolio_filters li.active
+		{ color: #ed1b24; }
+
+.page-template-template-blog-php #mpcth_page_wrap #mpcth_content .mpcth-post .mpcth-post-footer .mpcth-read-more:hover,#mpcth_page_wrap .format-chat .mpcth-post-thumbnail .mpcth-chat-message-odd .mpcth-chat-message-text,#mpcth_page_wrap .gform_wrapper input[type=submit]:hover,.bbpress #mpcth_content .bbp-body .bbp-topic-pagination a:hover,.bbpress #mpcth_page_wrap #mpcth_content .button:hover,#mpcth_mini_search #searchsubmit:hover, #jckqv #jckqv_summary .onsale,#jckqv #jckqv_summary .yith-wcwl-add-to-wishlist a:hover,#jckqv #jckqv_summary .single_add_to_cart_button,#jckqv #jckqv_summary h1:after,#jckqv #jckqv_summary .product_meta:after,.woocommerce-wishlist #mpcth_page_wrap #mpcth_content a.button,#mpcth_page_wrap #mpcth_mini_cart .button:hover,#mpcth_page_wrap #mpcth_mini_cart .button.alt,.woocommerce-page.single-product #mpcth_page_wrap #mpcth_content > .product .summary .yith-wcwl-add-to-wishlist a:hover,.page-template-template-blog-php #mpcth_content .mpcth-post .mpcth-post-footer .mpcth-read-more:hover,.archive #mpcth_page_wrap #mpcth_content .mpcth-post .mpcth-post-footer .mpcth-read-more:hover,.blog #mpcth_page_wrap #mpcth_content .mpcth-post .mpcth-post-footer .mpcth-read-more:hover,.woocommerce-page.single-product #mpcth_page_wrap .cart .quantity .plus-wrap:hover,.woocommerce-page.single-product #mpcth_page_wrap .cart .quantity .minus-wrap:hover,.woocommerce-cart #mpcth_page_wrap .cart .quantity .plus-wrap:hover,.woocommerce-cart #mpcth_page_wrap .cart .quantity .minus-wrap:hover,#mpcth_page_wrap #mpcth_main #mpcth_content_wrap .vc_separator.mpcth-separator .vc_sep_holder_l .vc_sep_line:before,#mpcth_page_wrap #mpcth_smart_search_wrap #searchsubmit,#mpcth_page_wrap .s2_form_widget form input[type=submit]:hover,#mpcth_page_wrap .mpcth-menu-label-hot,#mpcth_page_wrap .bra-photostream-widget ul li:hover a,.woocommerce-page.single-product #mpcth_page_wrap .cart .single_add_to_cart_button:hover,.woocommerce-cart #mpcth_page_wrap .cart .single_add_to_cart_button:hover,#mpcth_page_wrap .wpcf7 .form-submit .wpcf7-submit:hover,#mpcth_page_wrap #review_form_wrapper #submit:hover,#mpcth_page_wrap .widget #searchform #searchsubmit:hover,#mpcth_page_wrap .widget #searchform #searchsubmit.alt,.woocommerce-page.single-product #mpcth_page_wrap #mpcth_content > .product .product_meta:after,.woocommerce-page.single-product #mpcth_page_wrap #mpcth_content > .product .product_share:after,#mpcth_page_wrap .woocommerce #review_form_wrapper #submit:hover,#mpcth_page_wrap .woocommerce button.button:hover,#mpcth_page_wrap .woocommerce input.button:hover,#mpcth_page_wrap .woocommerce a.button:hover,.woocommerce #mpcth_page_wrap #review_form_wrapper #submit:hover,.woocommerce #mpcth_page_wrap button.button:hover,.woocommerce #mpcth_page_wrap input.button:hover,.woocommerce #mpcth_page_wrap a.button:hover,#mpcth_page_wrap .woocommerce #review_form_wrapper #submit.alt,#mpcth_page_wrap .woocommerce button.button.alt,#mpcth_page_wrap .woocommerce input.button.alt,#mpcth_page_wrap .woocommerce a.button.alt,.woocommerce #mpcth_page_wrap #review_form_wrapper #submit.alt,.woocommerce #mpcth_page_wrap button.button.alt,.woocommerce #mpcth_page_wrap input.button.alt,.woocommerce #mpcth_page_wrap a.button.alt,#mpcth_page_wrap #mpcth_main .wpb_separator:before,#mpcth_page_wrap #mpcth_main .vc_text_separator:before,#mpcth_page_wrap .woocommerce.widget.widget_layered_nav_filters .chosen a,#mpcth_page_wrap #mpcth_page_header_content #mpcth_controls_wrap #mpcth_controls_container > a:hover,#mpcth_page_wrap #mpcth_page_header_content #mpcth_controls_wrap #mpcth_controls_container > a.active,#mpcth_page_wrap .woocommerce.widget.widget_price_filter .ui-slider-handle,#mpcth_page_wrap .woocommerce.widget.widget_price_filter .ui-slider-range,#mpcth_page_wrap .woocommerce.widget.widget_price_filter .button:hover,#mpcth_page_wrap #mpcth_comments #respond #mpcth_comment_form .form-submit input:hover,.blog #mpcth_page_wrap #mpcth_content .post .mpcth-post-thumbnail .mpcth-lightbox,.page-template-template-blog-php #mpcth_page_wrap #mpcth_content .post .mpcth-post-thumbnail .mpcth-lightbox,#mpcth_page_wrap #mpcth_main .vc_carousel .vc_carousel-indicators li,#mpcth_page_wrap #mpcth_main .wpb_posts_slider .nivo-controlNav a,#mpcth_page_wrap #mpcth_main .flexslider .flex-control-nav li a,#mpcth_page_wrap #mpcth_main .rev_slider_wrapper .tp-bullets.simplebullets.round .bullet
+		{ background-color: #ed1b24; }
+
+#mpcth_back_to_top:hover,#mpcth_page_wrap .mpc-sc-tooltip-wrap .mpc-sc-tooltip-text,#mpcth_page_wrap .mpcth-deco-header span,.woocommerce-page.single-product #mpcth_page_wrap #mpcth_content > .product .woocommerce-tabs #review_form_wrapper #reply-title,.woocommerce-page.single-product #mpcth_page_wrap #mpcth_content > .product .woocommerce-tabs .tabs li.active a,.woocommerce-page.single-product #mpcth_page_wrap #mpcth_content > .product .woocommerce-tabs .tabs li:hover a,#mpcth_page_wrap #mpcth_main #mpcth_content_wrap .wpb_accordion_header.ui-state-active a,#mpcth_page_wrap #mpcth_main #mpcth_content_wrap .wpb_accordion_header:hover a,#mpcth_page_wrap #mpcth_main #mpcth_content_wrap .wpb_toggle.wpb_toggle_title_active .mpcth-title-wrap,#mpcth_page_wrap #mpcth_main #mpcth_content_wrap .wpb_toggle:hover .mpcth-title-wrap,#mpcth_page_wrap #mpcth_main #mpcth_content_wrap .wpb_toggle.wpb_toggle_title_active .mpcth-toggle-mark,#mpcth_page_wrap #mpcth_main #mpcth_content_wrap .wpb_toggle:hover .mpcth-toggle-mark,#mpcth_page_wrap #mpcth_main #mpcth_content_wrap .wpb_tabs .wpb_tabs_nav > li.ui-state-active > a,#mpcth_page_wrap #mpcth_main #mpcth_content_wrap .wpb_tabs .wpb_tabs_nav > li.ui-state-hover > a,#mpcth_page_wrap #mpcth_main #mpcth_content_wrap .wpb_tour .wpb_tabs_nav > li.ui-state-active > a > span,#mpcth_page_wrap #mpcth_main #mpcth_content_wrap .wpb_tour .wpb_tabs_nav > li.ui-state-hover > a > span,#mpcth_page_wrap #mpcth_comments #reply-title,#mpcth_page_wrap #mpcth_main .vc_carousel .vc_carousel-indicators li.vc-active,#mpcth_page_wrap #mpcth_main .wpb_posts_slider .nivo-controlNav a.active,#mpcth_page_wrap #mpcth_main .flexslider .flex-control-nav li a.flex-active,#mpcth_page_wrap #mpcth_main .rev_slider_wrapper .tp-bullets.simplebullets.round .bullet.selected,#mpcth_page_wrap .page_item.menu-item-has-children:after,#mpcth_page_wrap .menu-item.menu-item-has-children:after,#mpcth_page_wrap .page_item.menu-item-has-children:after,#mpcth_page_wrap .menu-item.menu-item-has-children:after
+		{ border-color: #ed1b24; }
+
+.woocommerce-page.single-product #mpcth_page_wrap #mpcth_content > .product .woocommerce-accordions h6.active a span,
+.woocommerce-page.single-product #mpcth_page_wrap #mpcth_content > .product .woocommerce-accordions h6:hover a span,
+#mpcth_page_wrap #mpcth_main .wpb_call_to_action.cta_align_bottom .wpb_button_a:after
+		{ border-bottom-color: #ed1b24; }
+
+#mpcth_page_wrap .mpcth-list-item:before,#mpcth_page_wrap ul li:before, #mpcth_page_wrap #mpcth_main ul li:before,ol li:before,#mpcth_page_wrap #mpcth_page_header_secondary_content #mpcth_newsletter .mpcth-newsletter-toggle:before,#mpcth_page_wrap #mpcth_page_header_secondary_content #mpcth_newsletter form:before,#mpcth_page_wrap #mpcth_page_header_secondary_content #mpcth_newsletter .mpcth-newsletter-subscribe:before,#mpcth_page_wrap #mpcth_main .wpb_call_to_action.cta_align_left .wpb_button_a:after
+		{ border-left-color: #ed1b24; }
+
+#mpcth_page_wrap #mpcth_main .wpb_call_to_action.cta_align_right .wpb_button_a:after
+		{ border-right-color: #ed1b24; }
+
+#jckqv #jckqv_summary .mpcth-sale-wrap:before, #mpcth_page_wrap .woocommerce .mpcth-sale-wrap:before, .woocommerce-page #mpcth_page_wrap .mpcth-sale-wrap:before
+		{ border-bottom-color: #d4020b; }
+
+#mpcth_page_wrap .woocommerce .mpcth-sale-wrap:after, .woocommerce-page #mpcth_page_wrap .mpcth-sale-wrap:after
+		{ border-left-color: #d4020b; }
+
+#jckqv #jckqv_summary .mpcth-sale-wrap:after, #mpcth_page_wrap .mpcth-thumbs-sale-swap #jckWooThumbs_img_wrap + .mpcth-sale-wrap:after
+		{ border-right-color: #d4020b; }
+
+#mpcth_page_wrap #mpcth_smart_search_wrap #s::-webkit-input-placeholder,#mpcth_page_wrap #mpcth_smart_search_wrap #s::-webkit-input-placeholder
+		{ color: #ed1b24; }
+
+#mpcth_page_wrap #mpcth_smart_search_wrap #s:-moz-placeholder,#mpcth_page_wrap #mpcth_smart_search_wrap #s:-moz-placeholder
+		{ color: #ed1b24; }
+
+#mpcth_page_wrap #mpcth_smart_search_wrap #s::-moz-placeholder,#mpcth_page_wrap #mpcth_smart_search_wrap #s::-moz-placeholder
+		{ color: #ed1b24; }
+
+#mpcth_page_wrap #mpcth_smart_search_wrap #s:-ms-input-placeholder,#mpcth_page_wrap #mpcth_smart_search_wrap #s:-ms-input-placeholder
+		{ color: #ed1b24; }
+
+#img-holder img{
+	-webkit-transition: all 0.2s ease-in-out;
+	   -moz-transition: all 0.2s ease-in-out;
+	  	 -o-transition: all 0.2s ease-in-out;
+	  		transition: all 0.2s ease-in-out;
+}
+.brown_wood_frame img{
+    border-style: solid;
+    border-width: 35px;
+    -webkit-border-image: url(images/brown_wood_frame.jpg) 128 repeat;
+       -moz-border-image: url(images/brown_wood_frame.jpg) 128 repeat;
+    	 -o-border-image: url(images/brown_wood_frame.jpg) 128 repeat;
+    		border-image: url(images/brown_wood_frame.jpg) 128 repeat;
+}
+
+.frames_holder{
+	position: absolute;
+	right: 20%;
+	top: 0;
+}
+
+.frames_holder ul{
+	padding: 0;
+	margin: 0;
+}
+
+.frames_holder ul li{
+	display: block;
+	height: 50px;
+	width: 50px;
+	margin-bottom: 10px;
+	cursor: pointer;
+	box-shadow: 1px 1px 4px #000;
+}
+
+.frames_holder ul li.current{
+	box-shadow: 0px 0px 10px #DD1111;
+	-webkit-transition: all 0.2s ease-in-out;
+	   -moz-transition: all 0.2s ease-in-out;
+	  	 -o-transition: all 0.2s ease-in-out;
+	  		transition: all 0.2s ease-in-out;
+}
+
+.frames_holder ul li.brown_wood_frame{
+	background: url(images/brown_wood_thumb.png);
+	background-size: 225%;
+	background-position: bottom left;
+}
+/*style_custom.css file code ends*/
