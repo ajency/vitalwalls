@@ -12,8 +12,22 @@ function mpcth_child_enqueue_scripts() {
 
 //Override script for personalized product plugin
 function personalizedproduct_script(){
-	//wp_dequeue_script( 'nm_personalizedproduct-scripts' );
+	global $post, $product;
 	wp_enqueue_script( 'new_personalizedproduct-scripts', get_stylesheet_directory_uri() . '/js/personalizedproduct/script.js', array(), '3.0', false);
+
+	$regular_price = get_post_meta($post->ID, '_regular_price', true);
+	$sale_price = get_post_meta($post->ID, '_sale_price', true);
+	$options = array(
+	'regular_price' => $regular_price
+	);
+	if($sale_price){
+		$options['is_sale'] = 'yes';
+		$options['sale_price'] = $sale_price;
+		$options['sale_amount'] = $regular_price - $sale_price;
+	}
+
+wp_localize_script( 'new_personalizedproduct-scripts', 'custom_options', $options );
+
 	
 }
 add_action('wp_enqueue_scripts','personalizedproduct_script', 100);
@@ -226,6 +240,7 @@ function vitalwalls_add_tryit_link() {
 	?>
 		<a href="#tryit-window" class="tryit-link" data-ob="tryitout">Try it before you buy it!</a>
 		<div id="tryit-window" style="display:none;">
+			<div id="close-try-it">Close</div>
 			<header id="tryit-header">
 				<h5>You have chosen <?php echo the_title();?></h5>
 				<div class="wall-size">
@@ -592,6 +607,7 @@ function vitalwalls_add_tryit_link() {
 
 
             	
+            	
             	jQuery('.frame-title').html('Gallery wrap on 1 inch wood');
 				
 
@@ -692,6 +708,18 @@ function vitalwalls_add_tryit_link() {
     			oB.settings.fadeControls = true;
     			oB.settings.searchTerm = 'tryitout';
     			oB.settings.addThis = false;
+
+    			jQuery( "#close-try-it" ).on('click', function(){
+            		jQuery( "#ob_overlay" ).css('display','none');
+            		jQuery( "#ob_container" ).css('display','none');
+            	});
+
+            	jQuery( ".tryit-link" ).on('click', function(){
+            		jQuery( "#ob_overlay" ).css('display','block');
+            		jQuery( "#ob_container" ).css('display','block');
+            	});
+
+            	
 
     			jQuery(document).bind('oB_init', function() {
 
@@ -1004,4 +1032,65 @@ function author_tab_content(){
    	}else{
    		return false;
    	}
+   }
+
+
+
+
+
+
+
+
+   /**
+* Load the persistent cart if exists
+*
+* @return void
+*/
+function adian_load_persistent_cart(){
+
+    global $current_user;
+    global $woocommerce;
+
+    if( ! $current_user )
+    return false;
+
+    $saved_cart = get_user_meta( $current_user->ID, '_woocommerce_persistent_cart', true );
+
+    if ( $saved_cart ){
+        if ( empty( WC()->session->cart ) || ! is_array( WC()->session->cart ) || sizeof( WC()->session->cart ) == 0 ){
+            //WC()->session->set('cart', $saved_cart['cart'] );   
+        }
+    }
+
+}
+
+add_action( 'init', 'adian_load_persistent_cart', 10, 1 );
+
+
+
+
+
+
+
+
+
+
+
+   //add_action('template_redirect','get_linked_user');
+   function get_linked_user(){
+   	global $wpdb;
+$query = "SELECT DISTINCT user_id
+    FROM $wpdb->usermeta
+    WHERE meta_key = 'first_name'
+    AND meta_value = 'Robiul'";
+$author_id = $wpdb->get_results($query);
+$listq = new WP_Query(array( 
+    'post_type' => 'product', 
+    'post_author' => $author_id[0]->user_id, 
+    'posts_per_page' => '10' ,  
+    )
+);
+
+print_r($listq);
+
    }

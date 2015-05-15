@@ -107,7 +107,7 @@ Version:        1.0
 	transform: translate(-50%, -20%);
 	height: 50%;
 	width: 100%;
-	z-index: 1010;
+	z-index: 0;
 }
 
 #tryit-picture #frame {
@@ -438,6 +438,50 @@ font-weight: normal;
 float: none;
 clear:both;
 }
+
+
+
+#close-try-it{
+	position: absolute;
+	z-index: 9999;
+	bottom: 0;
+	right: 0;
+	margin-right: 10px;
+	padding: 03px;
+	background: #E14F4F;
+	color: #FFF;
+	cursor: pointer;
+	border-radius:03px;
+}
+
+#close-try-it:hover{
+	background: #E46161;
+}
+
+.strike-price{
+text-decoration: line-through;
+color: #B8B8B8;
+padding-right: 10px;
+font-size: 16px;
+}
+
+
+#mpcth_page_wrap .woocommerce .products .product .mpcth-post-thumbnail, .woocommerce #mpcth_page_wrap .products .product .mpcth-post-thumbnail {
+  max-height: none !important;
+  height:200px !important;
+}
+
+#mpcth_page_wrap .woocommerce .products .product .mpcth-post-thumbnail .wp-post-image, .woocommerce #mpcth_page_wrap .products .product .mpcth-post-thumbnail .wp-post-image {
+  width: auto;
+  margin: 0 auto;
+}
+
+.woocommerce-page.single-product #mpcth_page_wrap #mpcth_content > .product .images img {
+  height: auto;
+  width: auto;
+  margin: 0 auto;
+}
+
 
 
 

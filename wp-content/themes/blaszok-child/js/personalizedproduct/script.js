@@ -52,7 +52,12 @@ $("#before-cart-btn #box-option_frame_small").css("display", "block");
 
 var html = '<div class="amount-options">';
 html += '<div class="optionrow">';
-html += '<div class="optionlabel">' + default_value + ': </div><div class="optionprice">'+ nm_personalizedproduct_vars.woo_currency + default_price + '</div><div style="clear:both"></div>';
+if (custom_options.hasOwnProperty("is_sale") && custom_options.is_sale == 'yes') {
+default_price = custom_options.sale_price;
+html += '<div class="optionlabel">' + default_value + ': </div><div class="optionprice"><span class="strike-price">'+ nm_personalizedproduct_vars.woo_currency + custom_options.regular_price + ' </span><span> '+ nm_personalizedproduct_vars.woo_currency + custom_options.sale_price + '</span></div><div style="clear:both"></div>';
+}else{
+html += '<div class="optionlabel">' + default_value + ': </div><div class="optionprice">'+ nm_personalizedproduct_vars.woo_currency + custom_options.regular_price + '</div><div style="clear:both"></div>';
+}
 html += '</div>';
 
 html += '<div class="optionrow">';
@@ -158,7 +163,7 @@ $('#before-cart-btn .nm-productmeta-box').append(html);
 			var parsed_conditions 	= $.parseJSON ($(p_box).attr('data-rules'));
 			var box_id				= $(p_box).attr('id');
 			var element_box = new Array();
-			console.log( parsed_conditions );
+			//console.log( parsed_conditions );
 			
 			if(parsed_conditions !== null){
 			
@@ -336,7 +341,7 @@ $('#before-cart-btn .nm-productmeta-box').append(html);
             base_amount = parseFloat(base_amount_arr[1]).toFixed(2);
 		}
 
-		console.log(base_amount);
+		//console.log(base_amount);
 		
 		$("#before-cart-btn .amount-options").remove();
 		
@@ -355,12 +360,18 @@ $('#before-cart-btn .nm-productmeta-box').append(html);
 
 			
 			option_price = $("option:selected", this).attr('data-price');
+
+			var select_id = $(this).attr("id");
 			
 				
 			if(option_price != undefined && option_price != '' && $(this).parent('p').css('display') != 'none'){
 				
 
 					updated_price = parseFloat(updated_price, 2) +  parseFloat(option_price, 2);
+
+					if (custom_options.hasOwnProperty("is_sale") && custom_options.is_sale == 'yes') {
+					var option_sale_price = parseInt(option_price) - parseInt(custom_options.sale_amount);
+				    }
 				
 				
 
@@ -369,7 +380,13 @@ $('#before-cart-btn .nm-productmeta-box').append(html);
 
 
 				html += '<div class="optionrow">';
-				html += '<div class="optionlabel">' + $(this).val() + ': </div><div class="optionprice">' + option_price + '</div><div style="clear:both"></div>';
+
+				if (custom_options.hasOwnProperty("is_sale") && custom_options.is_sale == 'yes' && select_id == 'option_size') {
+					html += '<div class="optionlabel">' + $(this).val() + ': </div><div class="optionprice"><span class="strike-price">' + option_price + '</span><span>' + nm_personalizedproduct_vars.woo_currency + option_sale_price + '</span></div><div style="clear:both"></div>';
+				}else{
+					html += '<div class="optionlabel">' + $(this).val() + ': </div><div class="optionprice">' + option_price + '</div><div style="clear:both"></div>';
+				}
+
 				html += '</div>';
 
 				/*if($("option:selected", this).val() == '0'){
@@ -415,6 +432,11 @@ $('#before-cart-btn .nm-productmeta-box').append(html);
 			//total_price = parseFloat(updated_price,2)+ parseFloat(base_amount,2);
 			//total_price = Number((total_price).toFixed(2));
 			total_price = parseFloat(updated_price,2);
+
+			if (custom_options.hasOwnProperty("is_sale") && custom_options.is_sale == 'yes') {
+				total_price = total_price - parseInt(custom_options.sale_amount);
+				//console.log(total_price);
+			}
 
 			var noframerow;
 
