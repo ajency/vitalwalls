@@ -991,7 +991,7 @@ function author_tab_content(){
 	global $post;
 	$author_id = $post->post_author;
 	$author = get_userdata( $author_id );
-	echo $author->display_name;
+	echo '<a href="'.get_author_posts_url( $author_id, $author->nice_name ).'">'.$author->display_name.'</a>';
 }
 
 

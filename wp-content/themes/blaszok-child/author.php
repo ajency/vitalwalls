@@ -40,7 +40,7 @@ $curauth = (get_query_var('author_name')) ? get_user_by('slug', get_query_var('a
 				<div class="author-info">
 					<?php 
 						// Author Thumbnail
-						echo '<div class="author-pic">' .get_avatar($curauth->ID, 256). '</div>'; 
+						//echo '<div class="author-pic">' .get_avatar($curauth->ID, 256). '</div>'; 
 
 						// Author Description
 						echo $curauth->description; 
