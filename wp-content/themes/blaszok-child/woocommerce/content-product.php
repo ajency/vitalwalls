@@ -86,13 +86,13 @@ if (isset($jckqv)) {
 					<?php woocommerce_template_loop_price(); ?>
 					<h6 class="mpcth-post-title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h6>
 					<?php mpcth_wc_product_categories(); ?>
-					<div class="mpcth-cart-wrap">
+					<!-- <div class="mpcth-cart-wrap">
 						<?php woocommerce_template_loop_add_to_cart(); ?>
 						<?php if (shortcode_exists('yith_wcwl_add_to_wishlist')) echo do_shortcode('[yith_wcwl_add_to_wishlist]'); ?>
 						<?php if (class_exists('jckqv')) { ?>
 							<a href="<?php the_permalink(); ?>" class="mpcth-quick-view" data-jckqvpid="<?php the_ID(); ?>"><i class="fa fa-fw fa-<?php echo $quickview_icon; ?>"></i><span><?php echo $quickview_text; ?></span></a>
 						<?php } ?>
-					</div>
+					</div> -->
 				</div>
 			<?php } elseif ($shop_style == 'center') { ?>
 				<div class="mpcth-post-content-wrap">
@@ -102,27 +102,27 @@ if (isset($jckqv)) {
 					<div class="mpcth-price-wrap">
 						<?php woocommerce_template_loop_price(); ?>
 					</div>
-					<div class="mpcth-cart-wrap">
+					<!-- <div class="mpcth-cart-wrap">
 						<?php woocommerce_template_loop_add_to_cart(); ?>
 						<?php if (shortcode_exists('yith_wcwl_add_to_wishlist')) echo do_shortcode('[yith_wcwl_add_to_wishlist]'); ?>
 						<?php if (class_exists('jckqv')) { ?>
 							<a href="<?php the_permalink(); ?>" class="mpcth-quick-view" data-jckqvpid="<?php the_ID(); ?>"><i class="fa fa-fw fa-<?php echo $quickview_icon; ?>"></i><span><?php echo $quickview_text; ?></span></a>
 						<?php } ?>
-					</div>
+					</div> -->
 				</div>
 			<?php } else { ?>
-				<div class="mpcth-cart-wrap">
+				<!-- <div class="mpcth-cart-wrap">
 					<?php woocommerce_template_loop_price(); ?>
 					<?php woocommerce_template_loop_add_to_cart(); ?>
-				</div>
+				</div> -->
 				<h6 class="mpcth-post-title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h6>
 				<?php mpcth_wc_product_categories(); ?>
 			<?php } ?>
 		<?php } else { ?>
-			<div class="mpcth-cart-wrap">
+			<!-- <div class="mpcth-cart-wrap">
 				<?php woocommerce_template_loop_price(); ?>
 				<?php woocommerce_template_loop_add_to_cart(); ?>
-			</div>
+			</div> -->
 			<h6 class="mpcth-post-title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h6>
 			<?php mpcth_wc_product_categories(); ?>
 		<?php } ?>
