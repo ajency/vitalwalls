@@ -57,7 +57,7 @@ Version:        1.0
 #toolbar{position:fixed; z-index:3; right:5%; top:60px; padding:5px; background:url('images/fs_img_g_bg.png');}
 #toolbar img{border:none;}
 /*#img_title{position:fixed; z-index:3; left:10px; top:40px; padding:10px; background:rgba(0, 0, 0, 0.5); color:#FFF; font-family:'Josefin Sans Std Light', arial, serif; font-size:24px; text-transform:uppercase;}*/
-#bg{position:fixed; z-index:1; overflow:hidden; width:90%; height:85%;-webkit-transform:translate3d(0,0,0);}
+#bg{position:fixed; z-index:1; overflow:hidden; width:90%; height:85%;-webkit-transform:translate3d(0,0,0);z-index: 0;}
 #bgimg{display:none; -ms-interpolation-mode: bicubic; width: auto; position: absolute; bottom: 0; left: 50%; -webkit-transform: translate(-50%, 0); transform: translate(-50%, 0); margin-left: 0 !important;}
 #preloader{position:relative; z-index:3; width:32px; padding:20px; top:80px; margin:auto; background:#000;}
 #thumbnails_wrapper{z-index:2; position:fixed; bottom:6.8%; width:90%; background:rgba(0, 0, 0, 0); /* stupid ie needs a background value to understand hover area */}
@@ -482,11 +482,7 @@ font-size: 16px;
   margin: 0 auto;
 }
 
-<<<<<<< HEAD
 
-
-
-=======
 .woocommerce-message .fa {
 top: 0.550em !important;
 }
@@ -522,14 +518,14 @@ section.products .mpcth-product-wrap .mpcth-sale-wrap{
 section.products .mpcth-product-wrap .mpcth-sale-wrap:before{
 	border-bottom-color: #d4020b !important;
 	left: 0;
-  	top: -.6em;
+  	top: -.5em;
   	content: '';
   	position: absolute;
   	border: .5em solid transparent;
 }
 section.products .mpcth-product-wrap .mpcth-sale-wrap:after{
 	border-left-color: #d4020b !important;
-	right: -.6em;
+	right: -.5em;
   	bottom: 0em;
   	content: '';
   	position: absolute;
@@ -553,6 +549,20 @@ section.products .mpcth-product-wrap .mpcth-sale-wrap .onsale{
   	-webkit-transform: rotate(45deg);
   	transform: rotate(45deg);
 }
+.flex-active-slide{
+	border: 1px solid #eee;
+}
+.woocommerce-page.single-product #mpcth_page_wrap #mpcth_content > .product .summary .woocommerce-product-rating + .woocommerce-breadcrumb{
+	float: left;
+	width: 100%;
+}
+#mpcth_page_wrap .woocommerce .mpcth-sale-wrap:before, .woocommerce-page #mpcth_page_wrap .mpcth-sale-wrap:before{
+	top: -.4em;
+}
+#mpcth_page_wrap .woocommerce .mpcth-sale-wrap:before, .woocommerce-page #mpcth_page_wrap .mpcth-sale-wrap:after{
+	right: -.4em;
+}
+
 /*custom*/
 
 /*style_custom.css file code starts*/
@@ -668,4 +678,4 @@ body
 	background-position: bottom left;
 }
 /*style_custom.css file code ends*/
->>>>>>> 426abe29fd4bab98b50ecb6ecf54cafaf79de0c2
+
