@@ -15,6 +15,7 @@
 
 #color-selector select {
 	width: auto !important;
+	min-width: 130px;
 	height: 28px !important;
 }
 

@@ -40,7 +40,7 @@ $curauth = (get_query_var('author_name')) ? get_user_by('slug', get_query_var('a
 				<div class="author-info">
 					<?php 
 						// Author Thumbnail
-						echo '<div class="author-pic">' .get_avatar($curauth->ID, 256). '</div>'; 
+						//echo '<div class="author-pic">' .get_avatar($curauth->ID, 256). '</div>'; 
 
 						// Author Description
 						echo $curauth->description; 
@@ -52,7 +52,7 @@ $curauth = (get_query_var('author_name')) ? get_user_by('slug', get_query_var('a
 			</header>
 			<div id="mpcth_content" class="author-products mpcth-blog-layout-<?php echo $layout; ?>">
 				<h4 class="mpcth-deco-header">
-					<?php echo __('Products by ', 'mpcth') .  $curauth->display_name; ?>
+					<?php echo __('Paintings by ', 'mpcth') .  $curauth->display_name; ?>
 				</h4>
 				<?php 
 
