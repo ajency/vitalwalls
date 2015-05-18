@@ -211,13 +211,15 @@ add_action('woocommerce_single_product_beforeprice', 'getSizeChart', 25);
 
 function getWidth($size){
 	global $product;
-	$dimension = explode('x', $product->get_attribute( 'pa_'.$size ));
+	$att = strtolower($product->get_attribute( 'pa_'.$size ));
+	$dimension = explode('x', $att);
 	return $dimension[0];
 }
 
 function getHeight($size){
 	global $product;
-	$dimension = explode('x', $product->get_attribute( 'pa_'.$size ));
+	$att = strtolower($product->get_attribute( 'pa_'.$size ));
+	$dimension = explode('x', $att);
 	return $dimension[1];
 }
 
@@ -288,8 +290,8 @@ function vitalwalls_add_tryit_link() {
                 <script type="text/javascript">
                 	jQuery(document).ready(function() {
                 	    //set default dimension
-                	    var defaultWidth = parseInt(jQuery( "#size-drop option:selected" ).attr('data-width'))*50;
-                	    var defaultHeight = parseInt(jQuery( "#size-drop option:selected" ).attr('data-height'))*50;
+                	    var defaultWidth = parseInt(jQuery( "#size-drop option:selected" ).attr('data-width'))*3;
+                	    var defaultHeight = parseInt(jQuery( "#size-drop option:selected" ).attr('data-height'))*3;
                 	    jQuery("#img-holder>img").css({"width": defaultWidth,"height":defaultHeight});
 
 
@@ -306,8 +308,8 @@ function vitalwalls_add_tryit_link() {
 
 
                 	    jQuery('#size-drop').change(function(){
-                	    var width = parseInt(jQuery( "option:selected",this ).attr('data-width'))*50;
-                	    var height = parseInt(jQuery( "option:selected",this ).attr('data-height'))*50;
+                	    var width = parseInt(jQuery( "option:selected",this ).attr('data-width'))*3;
+                	    var height = parseInt(jQuery( "option:selected",this ).attr('data-height'))*3;
                 	    jQuery("#img-holder>img").css({"width": width,"height":height});
                 	    });
                 	});
@@ -1073,24 +1075,64 @@ add_action( 'init', 'adian_load_persistent_cart', 10, 1 );
 
 
 
+function author_base_rewrite() {
+$GLOBALS['wp_rewrite']->author_base = 'artist';
+}
+add_action('init', 'author_base_rewrite');
+
+
+
+
+
+
+
+
+//add_filter('wp_handle_upload_prefilter','custom_image_size_rules');
+function custom_image_size_rules($file)
+{
+
+	$img=getimagesize($file['tmp_name']);
+	$minimum = array('width' => '2000');
+	$width= $img[0];
+	$height =$img[1];
+
+	/*$aspect_ratio = '7:4';
+	list($awidth, $aheight) = explode(':', $aspect_ratio);
+	if ($awidth * $height != $aheight * $width) {
+		return array("error"=>"The image is the wrong aspect ratio; the aspect ratio needed is $aspect_ratio");
+	}*/
+
+
+	if ($width < $minimum['width'] ){
+		return array("error"=>"Image dimensions are too small. Minimum width is {$minimum['width']}px. Uploaded image width is $width px");
+	}
+
+	return $file; 
+}
+
+
+
+
+
+
+
 
 
 
    //add_action('template_redirect','get_linked_user');
    function get_linked_user(){
-   	global $wpdb;
-$query = "SELECT DISTINCT user_id
-    FROM $wpdb->usermeta
-    WHERE meta_key = 'first_name'
-    AND meta_value = 'Robiul'";
-$author_id = $wpdb->get_results($query);
-$listq = new WP_Query(array( 
-    'post_type' => 'product', 
-    'post_author' => $author_id[0]->user_id, 
-    'posts_per_page' => '10' ,  
-    )
-);
-
-print_r($listq);
+   	$width= 3300;
+    $height = 2000;
+    
+    for($x=$height;$x>1;$x--) {
+    	if(($width%$x)==0 && ($height % $x)==0) {
+    		$width = $width/$x;
+    		$height = $height/$x;
+    	}
+    }
+    echo "$width : $height";
 
    }
+
+
+
