@@ -197,9 +197,38 @@ function getSizeChart(){
 
 	echo $out;
 }
-add_action('woocommerce_single_product_beforeprice', 'getSizeChart', 25);
+add_action('woocommerce_single_product_beforeprice', 'productSizeChart', 25);
 
 
+
+
+function productSizeChart(){
+	global $product;
+	$small = $product->get_attribute( 'pa_small' );
+	$medium = $product->get_attribute( 'pa_medium' );
+	$large = $product->get_attribute( 'pa_large' );
+
+	$html = '<div class="product_meta">';
+	$html .= '<span class="pa_size-chart">Small: '.str_replace("X"," X ",strtoupper($small)).' cm.</span>';
+	$html .= '<span class="pa_size-chart">Medium: '.str_replace("X"," X ",strtoupper($medium)).' cm.</span>';
+	$html .= '<span class="pa_size-chart">Large: '.str_replace("X"," X ",strtoupper($large)).' cm.</span>';
+	$html .= '</div>';
+	echo $html;
+}
+
+
+
+
+
+
+
+add_filter( 'woocommerce_product_tabs', 'sb_woo_remove_reviews_tab', 98);
+function sb_woo_remove_reviews_tab($tabs) {
+
+ unset($tabs['reviews']);
+
+ return $tabs;
+}
 
 
 
