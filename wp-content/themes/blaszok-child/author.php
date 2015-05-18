@@ -27,6 +27,7 @@ $curauth = (get_query_var('author_name')) ? get_user_by('slug', get_query_var('a
 
 ?>
 
+<div id="mpcth_page_wrap">
 <div id="mpcth_main">
 	<div id="mpcth_main_container">
 		<?php get_sidebar(); ?>
