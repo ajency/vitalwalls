@@ -1125,15 +1125,11 @@ function custom_image_size_rules($file)
 	$width= $img[0];
 	$height =$img[1];
 
-	/*$aspect_ratio = '7:4';
-	list($awidth, $aheight) = explode(':', $aspect_ratio);
-	if ($awidth * $height != $aheight * $width) {
-		return array("error"=>"The image is the wrong aspect ratio; the aspect ratio needed is $aspect_ratio");
-	}*/
+	if (isset($_REQUEST['post_id']) && isset($_REQUEST['action']) && ($_REQUEST['action'] == 'upload-attachment')){
 
-
-	if ($width < $minimum['width'] ){
-		return array("error"=>"Image dimensions are too small. Minimum width is {$minimum['width']}px. Uploaded image width is $width px");
+		if($width < $minimum['width']){
+			return array("error"=>"Image dimensions are too small. Minimum width is {$minimum['width']}px. Uploaded image width is $width px");
+		}
 	}
 
 	return $file; 
