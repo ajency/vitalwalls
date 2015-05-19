@@ -271,10 +271,11 @@ function vitalwalls_add_tryit_link() {
 	?>
 		<a href="#tryit-window" class="tryit-link" data-ob="tryitout">Try it before you buy it!</a>
 		<div id="tryit-window" style="display:none;">
-			<div id="close-try-it">Close</div>
+			<!-- <div id="close-try-it">Close</div> -->
 			<header id="tryit-header">
 				<h5>You have chosen <?php echo the_title();?></h5>
-				<div class="wall-size">
+				<div class="frame-title pull-left"></div>
+				<div class="wall-size pull-right">
 					Wall Size: 5'10" x 6'10"
 				</div>
 			</header>
@@ -282,6 +283,33 @@ function vitalwalls_add_tryit_link() {
 				<!--<a href="#" class="nextImageBtn" title="next"></a>
 				<a href="#" class="prevImageBtn" title="previous"></a>-->
 				<img src="<?php echo get_stylesheet_directory_uri(); ?>/images/Living_room.png" width="1680" height="1050" alt="Living Room" title="Living Room" id="bgimg" />
+				<div id="close-try-it">Close</div>
+				<div id="thumbnails_wrapper">
+					<div id="info-half">
+						<h6>See It In Your Room</h6>
+						<div class="current">Currently Trying <span id="img_title"></span></div>
+					</div>
+					<!--<a href="#" class="nextImageBtnl" title="next"></a>
+					<a href="#" class="prevImageBtnl" title="previous"></a>-->
+					<div id="outer_container">
+						<div class="thumbScroller">
+							<div class="container">
+						    	<div class="tcontent">
+						        	<div><a href="<?php echo get_stylesheet_directory_uri(); ?>/images/Living_room.png"><img src="<?php echo get_stylesheet_directory_uri(); ?>/images/Living_room.png" title="Living Room" alt="Living Room" class="thumb" /></a></div>
+						        </div>
+						        <div class="tcontent">
+						        	<div><a href="<?php echo get_stylesheet_directory_uri(); ?>/images/Kitchen.png"><img src="<?php echo get_stylesheet_directory_uri(); ?>/images/Kitchen.png" title="Hall Room" alt="Hall Room" class="thumb" /></a></div>
+						        </div>
+						    	<div class="tcontent">
+	                                <div><a href="<?php echo get_stylesheet_directory_uri(); ?>/images/Dining.png"><img src="<?php echo get_stylesheet_directory_uri(); ?>/images/Dining.png" title="Hall Room" alt="Hall Room" class="thumb" /></a></div>
+	                            </div>
+	                            <div class="tcontent">
+	                                <div><a href="<?php echo get_stylesheet_directory_uri(); ?>/images/Bedroom.png"><img src="<?php echo get_stylesheet_directory_uri(); ?>/images/Bedroom.png" title="Hall Room" alt="Hall Room" class="thumb" /></a></div>
+	                            </div>
+							</div>
+						</div>
+					</div>
+				</div>
 			</div>
 			<div id="preloader"><img src="<?php echo get_stylesheet_directory_uri(); ?>/images/ajax-loader_dark.gif" width="32" height="32" /></div>
 			
@@ -544,7 +572,7 @@ function vitalwalls_add_tryit_link() {
                 <!--###################################END VARIATION DROPDOWN12345#####################################-->
 			</div>
 
-			<div class="frame-title"></div>
+			<!-- <div class="frame-title"></div> -->
 
 			<div id="tryit-picture">
 
@@ -567,14 +595,14 @@ function vitalwalls_add_tryit_link() {
 				<a href="#" title="Maximize" onClick="ImageViewMode('full');return false"><img src="<?php echo get_stylesheet_directory_uri(); ?>/images/toolbar_fs_icon.png" width="50" height="50"  /></a>
 			</div>-->
 
-			<div id="thumbnails_wrapper">
+			<!-- <div id="thumbnails_wrapper">
 				<div id="info-half">
 					<h6>See It In Your Room</h6>
 					<div class="current">Currently Trying <span id="img_title"></span></div>
-				</div>
+				</div> -->
 				<!--<a href="#" class="nextImageBtnl" title="next"></a>
 				<a href="#" class="prevImageBtnl" title="previous"></a>-->
-				<div id="outer_container">
+				<!-- <div id="outer_container">
 					<div class="thumbScroller">
 						<div class="container">
 					    	<div class="tcontent">
@@ -591,8 +619,8 @@ function vitalwalls_add_tryit_link() {
                             </div>
 						</div>
 					</div>
-				</div>
-			</div>
+				</div> -->
+			<!-- </div> -->
 		</div>
 		<script type="text/javascript" src="<?php echo get_stylesheet_directory_uri(); ?>/js/big-slide.js"></script>
 		<script type="text/javascript">
