@@ -691,7 +691,8 @@ function vitalwalls_add_tryit_link() {
 
 				jQuery("#full").spectrum({
 				    allowEmpty:true,
-				    color: "#E14F4F",
+				    // color: "#E14F4F",
+				    color: "#fff",
 				    className: "full-spectrum sp-dark",
 				    showInitial: true,
 				    showInput: false,
