@@ -153,14 +153,16 @@ if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
 				<?php echo do_shortcode('[mpc_vc_share_list title="' . __('Share', 'mpcth') . ':" facebook="1" twitter="1" google_plus="1" pinterest="1"]'); ?>
 			</div><!-- .product_share -->
 
+			<div class="mpcth-product-content">
+				<div class="mpcth-vc-row-wrap">
+					<?php the_content(); ?>
+				</div>
+			</div>
+
 		</div><!-- .info -->
 	</div><!-- .mpcth-product-header -->
 
-	<div class="mpcth-product-content">
-		<div class="mpcth-vc-row-wrap">
-		<?php the_content(); ?>
-	</div>
-	</div>
+	
 
 	<?php
 		global $sidebar_position;
