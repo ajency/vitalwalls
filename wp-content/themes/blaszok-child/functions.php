@@ -772,6 +772,7 @@ function vitalwalls_add_tryit_link() {
     			jQuery( "#close-try-it" ).on('click', function(){
             		jQuery( "#ob_overlay" ).css('display','none');
             		jQuery( "#ob_container" ).css('display','none');
+            		jQuery( ".sp-container" ).css('display','none');
             	});
 
             	jQuery( ".tryit-link" ).on('click', function(){

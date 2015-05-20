@@ -500,6 +500,7 @@ top: 0.550em !important;
 #mpcth_page_wrap .woocommerce .products .product .mpcth-post-title, .woocommerce #mpcth_page_wrap .products .product .mpcth-post-title{
 	line-height: 1.5em;
 	padding: 0 13px;
+	text-align: center;
 }
 #mpcth_page_wrap #mpcth_main .widget .product_list_widget li a, #mpcth_page_wrap #mpcth_footer .widget .product_list_widget li a{
 	max-height: 80px;
