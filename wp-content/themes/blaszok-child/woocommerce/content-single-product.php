@@ -154,6 +154,7 @@ if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
 			</div><!-- .product_share -->
 
 			<div class="mpcth-product-content">
+				<h6>DETAILED PRODUCT DESCRIPTION</h6>
 				<div class="mpcth-vc-row-wrap">
 					<?php the_content(); ?>
 				</div>

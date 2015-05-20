@@ -569,6 +569,25 @@ section.products .mpcth-product-wrap .mpcth-sale-wrap .onsale{
 #mpcth_page_wrap .woocommerce .products .product, .woocommerce #mpcth_page_wrap .products .product{
 	width: 25%;
 }
+#mpcth_page_wrap #mpcth_mini_cart .mpcth-mini-cart-products .mpcth-mini-cart-thumbnail{
+	margin: 0 5px 5px 0;
+}
+#mpcth_page_wrap #mpcth_mini_cart .mpcth-mini-cart-products .mpcth-mini-cart-title{
+	display: initial;
+	margin-left: 0;
+}
+#mpcth_page_wrap #mpcth_mini_cart .mpcth-mini-cart-products .mpcth-mini-cart-price, #mpcth_page_wrap #mpcth_mini_cart .mpcth-mini-cart-products .mpcth-mini-cart-quantity{
+	display: block;
+	margin-left: 0;
+}
+.mpcth-product-content h6{
+	color: #ed1b24;
+	margin: 0;
+	font-size: 13px;
+}
+.woocommerce-page.single-product #mpcth_page_wrap #mpcth_content > .product .mpcth-product-content{
+	text-align: justify;
+}
 /*custom*/
 
 /*style_custom.css file code starts*/
