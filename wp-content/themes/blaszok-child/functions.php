@@ -1116,12 +1116,13 @@ function adian_load_persistent_cart(){
     return false;
 
     $saved_cart = get_user_meta( $current_user->ID, '_woocommerce_persistent_cart', true );
-
+if(!is_admin()){
     if ( $saved_cart ){
         if ( empty( WC()->session->cart ) || ! is_array( WC()->session->cart ) || sizeof( WC()->session->cart ) == 0 ){
-            //WC()->session->set('cart', $saved_cart['cart'] );   
+            WC()->session->set('cart', $saved_cart['cart'] );   
         }
     }
+}
 
 }
 
