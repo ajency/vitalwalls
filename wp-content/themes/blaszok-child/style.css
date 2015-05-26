@@ -557,12 +557,6 @@ section.products .mpcth-product-wrap .mpcth-sale-wrap .onsale{
 	float: left;
 	width: 100%;
 }
-#mpcth_page_wrap .woocommerce .mpcth-sale-wrap:before, .woocommerce-page #mpcth_page_wrap .mpcth-sale-wrap:before{
-	top: -.4em;
-}
-#mpcth_page_wrap .woocommerce .mpcth-sale-wrap:before, .woocommerce-page #mpcth_page_wrap .mpcth-sale-wrap:after{
-	right: -.4em;
-}
 .mpcth-product-content .mpcth-vc-row-wrap{
 	width: 100% !important;
 }
@@ -587,6 +581,24 @@ section.products .mpcth-product-wrap .mpcth-sale-wrap .onsale{
 }
 .woocommerce-page.single-product #mpcth_page_wrap #mpcth_content > .product .mpcth-product-content{
 	text-align: justify;
+}
+.mpcth-product-wrap .mpcth-cart-wrap{
+	display: none;
+}
+.mpcth-product-wrap a{
+	font-weight: bold;
+}
+.woocommerce-page #mpcth_page_wrap .mpcth-sale-wrap:before,
+#mpcth_page_wrap .woocommerce .mpcth-sale-wrap:before{
+	top: -0.4em;
+}
+.woocommerce-page #mpcth_page_wrap .mpcth-sale-wrap:after,
+#mpcth_page_wrap .woocommerce .mpcth-sale-wrap:after{
+	right: -0.4em;
+}
+.woocommerce #mpcth_page_wrap .products .product .mpcth-post-thumbnail .wp-post-image{
+	width: 100%;
+	height: 100%;
 }
 /*custom*/
 
