@@ -600,6 +600,12 @@ section.products .mpcth-product-wrap .mpcth-sale-wrap .onsale{
 	width: 100%;
 	height: 100%;
 }
+
+/*artist*/
+.mpcth-grid-title-wrap>h4{
+	font-size: 1.167em;
+	text-align: center;
+}
 /*custom*/
 
 /*style_custom.css file code starts*/
