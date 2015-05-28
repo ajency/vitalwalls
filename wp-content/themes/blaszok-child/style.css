@@ -606,6 +606,11 @@ section.products .mpcth-product-wrap .mpcth-sale-wrap .onsale{
 	font-size: 1.167em;
 	text-align: center;
 }
+
+/*woocommerce plugin hidden-like,fb,twitter,share*/
+.woocommerce-main-image{
+	display: none;
+}
 /*custom*/
 
 /*style_custom.css file code starts*/
