@@ -57,21 +57,31 @@ $curauth = (get_query_var('author_name')) ? get_user_by('slug', get_query_var('a
 				</h4>
 				<?php 
 
+				if ( get_query_var('paged') ) { $paged = get_query_var('paged'); } else if ( get_query_var('page') ) {$paged = get_query_var('page'); } else {$paged = 1; }
+
+
+				$temp = $wp_query;  // re-sets query
+    			$wp_query = null;   // re-sets query
+
 					// Author Product Loop Arguments
 					$args = array(
 						'author' => $curauth->ID, 
 						'post_type' => 'product',
 						'posts_per_page' => 12,
-						'paged' => get_query_var('paged')
+						'paged' => $paged
 					);
 
 					// The Loop
-					$loop = new WP_Query( $args );
+					//$loop = new WP_Query( $args );
 
-					if ($loop->have_posts()) : ?>
+					$wp_query = new WP_Query();
+
+					$loop = $wp_query->query($args);
+
+					if ($wp_query->have_posts()) : ?>
 					<?php woocommerce_product_loop_start(); ?>
 						
-						<?php while ($loop->have_posts()) : $loop->the_post();
+						<?php while ($wp_query->have_posts()) : $wp_query->the_post();
 							global $more;
 							$more = 0;
 
@@ -95,6 +105,14 @@ $curauth = (get_query_var('author_name')) ? get_user_by('slug', get_query_var('a
 							
 
 						<?php endwhile; ?>
+
+						<nav>
+							<?php 
+							paginate(); 
+							$wp_query = null;
+							$wp_query = $temp;
+							?>
+						</nav>
 
 					<?php woocommerce_product_loop_end(); ?>
 
@@ -123,16 +141,7 @@ $curauth = (get_query_var('author_name')) ? get_user_by('slug', get_query_var('a
 					wp_reset_postdata();
 				?>
 			</div><!-- end #mpcth_content -->
-			<?php if ($query->max_num_pages > 1) { ?>
-			<div id="mpcth_pagination">
-				<?php
-					if ($pagination_type == 'loadmore')
-						mpcth_display_load_more($query);
-					else
-						mpcth_display_pagination($query);
-				?>
-			</div>
-			<?php } ?>
+			
 		</div><!-- end #mpcth_content_wrap -->
 	</div><!-- end #mpcth_main_container -->
 </div><!-- end #mpcth_main -->
