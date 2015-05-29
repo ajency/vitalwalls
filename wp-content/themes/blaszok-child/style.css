@@ -726,8 +726,8 @@ body
 	background-position: bottom left;
 }
 
-li.fbc_wc_tabs_tab{
-	display:none;
+.fbc_wc_tabs_tab{
+	display:none !important;
 }
 /*style_custom.css file code ends*/
 
