@@ -725,6 +725,10 @@ body
 	background-size: 225%;
 	background-position: bottom left;
 }
+
+li.fbc_wc_tabs_tab{
+	display:none;
+}
 /*style_custom.css file code ends*/
 
 
