@@ -777,4 +777,11 @@ ul.page-numbers span.current {
 
 /*style_custom.css file code ends*/
 
-
+/*custom*/
+/*pagination styled*/
+ul.page-numbers a,
+ul.page-numbers span{
+	background: initial;
+	padding: 8px 12px;
+}
+/*custom*/
