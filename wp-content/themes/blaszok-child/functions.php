@@ -576,15 +576,15 @@ function vitalwalls_add_tryit_link() {
 
 			<div id="tryit-picture">
 
-				<div id="img-holder" class="brown_wood_frame">
+				<div id="img-holder" class="brown_wood_frame light_brown_wood_frame lined_brown_wood_frame">
 					<?php echo get_the_post_thumbnail(); ?>
 				</div>
 
 				<div class="frames_holder">
 					<ul>
 						<li class="brown_wood_frame current" title="Gallery wrap on 1 inch wood"></li>
-						<li title="second frame"></li>
-						<li title="third frame"></li>
+						<li class="light_brown_wood_frame" title="Gallery wrap on 1 inch wood"></li>
+						<li class="lined_brown_wood_frame" title="Gallery wrap on 1 inch wood"></li>
 						<li title="fourth frame"></li>
 						<li title="fifth frame"></li>
 					</ul>

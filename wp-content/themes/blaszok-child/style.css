@@ -784,4 +784,31 @@ ul.page-numbers span{
 	background: initial;
 	padding: 8px 12px;
 }
+/*frames*/
+.frames_holder ul li.light_brown_wood_frame{
+	background: url(images/light_brown_wood_thumb.png);
+	background-size: 225%;
+	background-position: bottom left;
+}
+.light_brown_wood_frame img{
+    border-style: solid;
+    border-width: 35px;
+    -webkit-border-image: url(images/light_brown_wood_frame.jpg) 128 repeat;
+       -moz-border-image: url(images/light_brown_wood_frame.jpg) 128 repeat;
+    	 -o-border-image: url(images/light_brown_wood_frame.jpg) 128 repeat;
+    		border-image: url(images/light_brown_wood_frame.jpg) 128 repeat;
+}
+.frames_holder ul li.lined_brown_wood_frame{
+	background: url(images/lined_brown_wood_thumb.png);
+	background-size: 225%;
+	background-position: bottom left;
+}
+.lined_brown_wood_frame img{
+    border-style: solid;
+    border-width: 35px;
+    -webkit-border-image: url(images/lined_brown_wood_frame.jpg) 128 repeat;
+       -moz-border-image: url(images/lined_brown_wood_frame.jpg) 128 repeat;
+    	 -o-border-image: url(images/lined_brown_wood_frame.jpg) 128 repeat;
+    		border-image: url(images/lined_brown_wood_frame.jpg) 128 repeat;
+}
 /*custom*/
