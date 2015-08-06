@@ -575,14 +575,21 @@ function vitalwalls_add_tryit_link() {
 			<!-- <div class="frame-title"></div> -->
 
 			<div id="tryit-picture">
+				<?php if (has_post_thumbnail( $post->ID ) ): ?>
+				<?php $image = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'single-post-thumbnail' ); ?>
+					<div id="img-holder" class="brown_wood_frame light_brown_wood_frame lined_brown_wood_frame gallery-wrap" style="background-image: url('<?php echo $image[0]; ?>')">
+						<?php echo get_the_post_thumbnail(); ?>
+					</div>
+				<?php endif; ?>
 
-				<div id="img-holder" class="brown_wood_frame light_brown_wood_frame lined_brown_wood_frame">
-					<?php echo get_the_post_thumbnail(); ?>
-				</div>
+
+
+
 
 				<div class="frames_holder">
 					<ul>
-						<li class="brown_wood_frame current" title="Gallery wrap on 1 inch wood"></li>
+						<li class="gallery-wrap current" title="gallery wrap"></li>
+						<li class="brown_wood_frame" title="Gallery wrap on 1 inch wood"></li>
 						<li class="light_brown_wood_frame" title="Gallery wrap on 1 inch wood"></li>
 						<li class="lined_brown_wood_frame" title="Gallery wrap on 1 inch wood"></li>
 						<li title="fourth frame"></li>
@@ -1218,5 +1225,6 @@ if( !empty($wp_query->query_vars['s']) )
 
 echo paginate_links( $pagination );
 }
+
 
 

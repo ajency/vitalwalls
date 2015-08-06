@@ -811,4 +811,45 @@ ul.page-numbers span{
     	 -o-border-image: url(images/lined_brown_wood_frame.jpg) 128 repeat;
     		border-image: url(images/lined_brown_wood_frame.jpg) 128 repeat;
 }
+.gallery-wrap{
+	position: relative;
+	display: inline-block;
+	-webkit-box-shadow: inset 0 0 2px rgba(0,0,0,.8), inset 2px 2px 0 rgba(255,255,255,.5), inset -7px -7px 0 rgba(0,0,0,.6), inset -9px -9px 0 rgba(255,255,255,.3);
+    -moz-box-shadow: inset 0 0 2px rgba(0,0,0,.8), inset 2px 2px 0 rgba(255,255,255,.5), inset -7px -7px 0 rgba(0,0,0,.6), inset -9px -9px 0 rgba(255,255,255,.3);
+    box-shadow: inset 0 0 2px rgba(0,0,0,.8), inset 2px 2px 0 rgba(255,255,255,.5), inset -7px -7px 0 rgba(0,0,0,.6), inset -9px -9px 0 rgba(255,255,255,.3);
+    -webkit-border-radius: 0 12px;
+    -moz-border-radius: 0 12px;
+    border-radius: 0 12px;
+    /*background: url("http://localhost/vitalwalls/wp-content/uploads/2014/10/darthnevets.png")no-repeat;*/
+    height: 200px;
+    width: 200px;
+}
+.gallery-wrap img{
+	opacity: 0;
+}
+#tryit-picture #img-holder.gallery-wrap{
+	left: 40%;
+}
+
+/*popup-modal*/
+.mfp-content .mfp-bottom-bar{
+	display: none;
+}
+/*slider nav-icons*/
+.mpcth-post-thumbnail .flex-direction-nav{
+	display: none;
+}
+#img-holder{
+	display: inline-block;
+	position: absolute;
+	left: 40%;
+}
+li.gallery-wrap{
+	-webkit-box-shadow: inset 0 0 2px rgba(0,0,0,.8), inset 2px 2px 0 rgba(255,255,255,.5), inset -4px -4px 0 rgba(0,0,0,.6), inset -9px -9px 0 rgba(255,255,255,.3) !important;
+    -moz-box-shadow: inset 0 0 2px rgba(0,0,0,.8), inset 2px 2px 0 rgba(255,255,255,.5), inset -4px -4px 0 rgba(0,0,0,.6), inset -9px -9px 0 rgba(255,255,255,.3) !important;
+    box-shadow: inset 0 0 2px rgba(0,0,0,.8), inset 2px 2px 0 rgba(255,255,255,.5), inset -4px -4px 0 rgba(0,0,0,.6), inset -9px -9px 0 rgba(255,255,255,.3) !important;
+    -webkit-border-radius: 0 4px;
+    -moz-border-radius: 0 4px;
+    border-radius: 0 4px;
+}
 /*custom*/
