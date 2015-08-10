@@ -821,8 +821,8 @@ ul.page-numbers span{
     -moz-border-radius: 0 12px;
     border-radius: 0 12px;
     /*background: url("http://localhost/vitalwalls/wp-content/uploads/2014/10/darthnevets.png")no-repeat;*/
-    height: 200px;
-    width: 200px;
+    /*height: 200px;
+    width: 200px;*/
 }
 .gallery-wrap img{
 	opacity: 0;

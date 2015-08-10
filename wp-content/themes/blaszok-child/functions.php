@@ -577,7 +577,7 @@ function vitalwalls_add_tryit_link() {
 			<div id="tryit-picture">
 				<?php if (has_post_thumbnail( $post->ID ) ): ?>
 				<?php $image = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'single-post-thumbnail' ); ?>
-					<div id="img-holder" class="brown_wood_frame light_brown_wood_frame lined_brown_wood_frame gallery-wrap" style="background-image: url('<?php echo $image[0]; ?>')">
+					<div id="img-holder" class="brown_wood_frame light_brown_wood_frame lined_brown_wood_frame gallery-wrap" style="background-image: url('<?php echo $image[0]; ?>'); background-size: contain;">
 						<?php echo get_the_post_thumbnail(); ?>
 					</div>
 				<?php endif; ?>
